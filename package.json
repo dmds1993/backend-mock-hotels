@@ -1,0 +1,26 @@
+{
+  "name": "CVC-Backend-Mock",
+  "version": "0.0.1",
+  "description": "backend-mock-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.7.0",
+    "node-trello": "^1.1.2",
+    "underscore": "^1.8.3"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
