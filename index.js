@@ -1,6 +1,6 @@
-var express    = require('express');
-var app        = express();
-var bodyParser = require('body-parser');
+var express     = require('express');
+var app         = express();
+var bodyParser  = require('body-parser');
 var logger      = require('morgan');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,25 +17,30 @@ app.set('port', (process.env.PORT || 5050));
 
 // Validate the Header
 app.use(function (req, res, next) {
-  if(req.originalUrl !== '/dev/login/') {
-
-    if(!req.headers['gtw-sec-user-token']) {
-      return res.status(400).send({ 
-        code: 400, 
-        message: 'Missing header : Gtw-Sec-User-Token' 
-      });
-    } else if (!req.headers['gtw-transaction-id']) {
-      return res.status(400).send({ 
-        code: 400, 
-        message: 'Missing header : Gtw-Transaction-Id' 
-      });
-    } else {
-      next();
-    }
-
-  } else {
-    next();
+  if(!req.headers['gtw-sec-user-token']) {
+    return res.status(400).send({ 
+      code: 400, 
+      message: 'Missing header: Gtw-Sec-User-Token' 
+    });
   }
+
+  if (!req.headers['gtw-transaction-id']) {
+    return res.status(400).send({ 
+      code: 400, 
+      message: 'Missing header: Gtw-Transaction-Id' 
+    });
+  }
+
+  console.log(req.headers['content-type']);
+
+  if (!req.headers['content-type'] || (req.headers['content-type'] !== 'application/json') ) {
+    return res.status(400).send({ 
+      code: 400, 
+      message: 'Missing header: Content-Type = application/json' 
+    });
+  }
+
+  next();
 });
 
 //Routes 
@@ -51,6 +56,9 @@ app.use('/dev/pesqinc', pesqinc);
 var packages = require('./routes/packages');
 app.use('/dev/packages', packages);
 
+var orders = require('./routes/orders');
+app.use('/dev/orders', orders);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -65,6 +73,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
 
 app.listen(app.get('port'), function() {
   console.log('Mock Pacotes CVC is running on port', app.get('port'));

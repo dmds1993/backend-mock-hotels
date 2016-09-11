@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-	res.json({ title: 'Welcome to Trello and BitBucket Integration App! :)' });
+	res.json({ title: 'Packages API! :)' });
 });
 
 router.get('/originZones', function (req, res, next) {
