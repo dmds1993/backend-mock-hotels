@@ -15,16 +15,35 @@ app.use(function(req, res, next) {
 
 app.set('port', (process.env.PORT || 5050));
 
-var router = express.Router();
+// Validate the Header
+app.use(function (req, res, next) {
+  if(req.originalUrl !== '/dev/login/') {
 
-router.use(function(req, res, next) {
-  console.log('Request...');
-  next();
+    if(!req.headers['gtw-sec-user-token']) {
+      return res.status(400).send({ 
+        code: 400, 
+        message: 'Missing header : Gtw-Sec-User-Token' 
+      });
+    } else if (!req.headers['gtw-transaction-id']) {
+      return res.status(400).send({ 
+        code: 400, 
+        message: 'Missing header : Gtw-Transaction-Id' 
+      });
+    } else {
+      next();
+    }
+    
+  } else {
+    next();
+  }
 });
 
 //Routes 
 var main = require('./routes/main');
 app.use('/dev', main);
+
+var login = require('./routes/login');
+app.use('/dev/login', login);
 
 var packages = require('./routes/packages');
 app.use('/dev/packages', packages);
