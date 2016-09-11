@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
     } else {
       next();
     }
-    
+
   } else {
     next();
   }
@@ -44,6 +44,9 @@ app.use('/dev', main);
 
 var login = require('./routes/login');
 app.use('/dev/login', login);
+
+var pesqinc = require('./routes/pesqinc');
+app.use('/dev/pesqinc', pesqinc);
 
 var packages = require('./routes/packages');
 app.use('/dev/packages', packages);
