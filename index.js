@@ -15,7 +15,12 @@ app.use(function(req, res, next) {
 
 app.set('port', (process.env.PORT || 5050));
 
-// Validate the Header
+// Rota Login
+var login = require('./routes/login');
+app.use('/dev/login', login);
+
+
+// Middleware Validate the Header
 app.use(function (req, res, next) {
   if(!req.headers['gtw-sec-user-token']) {
     return res.status(400).send({ 
@@ -46,9 +51,6 @@ app.use(function (req, res, next) {
 //Routes 
 var main = require('./routes/main');
 app.use('/dev', main);
-
-var login = require('./routes/login');
-app.use('/dev/login', login);
 
 var pesqinc = require('./routes/pesqinc');
 app.use('/dev/pesqinc', pesqinc);
