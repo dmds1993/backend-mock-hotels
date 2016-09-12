@@ -59,6 +59,9 @@ app.use('/dev/packages', packages);
 var orders = require('./routes/orders');
 app.use('/dev/orders', orders);
 
+var hotels = require('./routes/hotels');
+app.use('/dev/hotels', hotels);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
