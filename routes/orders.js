@@ -7,12 +7,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	console.log(req.body);
-
   res.json({
   'orderId': (Math.floor(Math.random()*90000) + 10000),
   'status': 'SUCCESS'
 	});
+});
+
+router.post('/estimates', function(req, res, next) {
+  res.json(orderEstimates);
 });
 
 module.exports = router;
@@ -329,4 +331,253 @@ var orders = {
       ]
     }
   ]
+};
+
+var orderEstimates = {
+  "orderId": 5648,
+  "opportunityId": 123432,
+  "hotels": [{
+    "meta": {
+      "checkIn": "2016-06-03",
+      "checkOut": "2016-06-04",
+      "rooms": [
+        [
+          30,
+          30,
+          7
+        ],
+        [
+          30,
+          30
+        ]
+      ]
+    },
+    "item": {
+      "id": "34121985",
+      "name": "River Park Hotel & Suites",
+      "description": "O hotel, renovado em 2005, compreende 10 andares com um total de 284 quartos. À sua espera, um hall de entrada climatizado com recepção (disponível 24 h por dia), cofre, guichet para câmbio monetário e elevadores. As instalações gastronómicas do hotel contam com um bar e um restaurante com cadeiras para crianças e área exterior. Terá também um quiosque e acesso à Internet à disposição. Os serviços de quartos e de lavandaria completam as ofertas do hotel. Poderá estacionar o seu automóvel no parque de estacionamento do hotel.",
+      "award": 3,
+      "isPreferential": false,
+      "location": {
+        "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA",
+        "coordinates": {
+          "latitude": -30.055,
+          "longitude": -51.22972
+        }
+      },
+      "rooms": [{
+        "description": "Este quarto possui ampla sacada",
+        "mealPlan": "Café da Manhã",
+        "minPax": 0,
+        "maxPax": 4,
+        "quantityAvailable": 1,
+        "isAvailable": true,
+        "rates": [{
+          "packageGroup": "STANDALONE",
+          "currency": "BRL",
+          "priceWithTax": 527.86,
+          "priceWithoutTax": 527.86,
+          "pricePerDayWithTax": 527.86,
+          "pricePerDayWithoutTax": 496.24,
+          "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+          "taxes": [{
+            "code": "TX_REM",
+            "description": "Taxa de Remessa",
+            "percent": 0.06,
+            "amount": 31.62,
+            "inTotal": true
+          }],
+          "loyalty": {
+            "parity": 0.025,
+            "min": {
+              "points": 2000,
+              "discount": 0.05
+            },
+            "max": {
+              "points": 30021,
+              "discount": 0.5
+            }
+          }
+        }],
+        "cancellationPolicies": [{
+          "nonRefundable": false
+        }],
+        "contents": [{
+          "code": "extras",
+          "name": "Extras",
+          "items": [{
+            "code": "MT",
+            "name": "Mesa de Trabalho"
+          }, {
+            "code": "WG",
+            "name": "Wifi Grátis"
+          }]
+        }, {
+          "code": "amenities",
+          "name": "Amenities",
+          "items": [{
+            "code": "MT",
+            "name": "Mesa de Trabalho"
+          }, {
+            "code": "WG",
+            "name": "Wifi Grátis"
+          }]
+        }]
+      }],
+      "links": {
+        "thumbnailImage": {
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        },
+        "images": [{
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img02.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img03.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img04.jpg"
+        }]
+      },
+      "contents": [{
+        "code": "optional-items",
+        "items": [{
+          "code": "MT",
+          "name": "Mesa de Trabalho"
+        }, {
+          "code": "WG",
+          "name": "Wifi Grátis"
+        }]
+      }, {
+        "code": "resort-fee",
+        "description": "A prática cotidiana prova que a expansão dos mercados mundiais maximiza as possibilidades por conta do fluxo de informações."
+      }, {
+        "code": "setting-cancellation-policies",
+        "name": "Politicas de Cancelamento",
+        "description": "Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o fenômeno da Internet possibilita uma melhor visão global da gestão inovadora da qual fazemos parte"
+      }, {
+        "code": "Descrição Completa",
+        "name": "full-description",
+        "description": "Caros amigos, a estrutura atual da organização causa impacto indireto na reavaliação do processo de comunicação como um todo."
+      }]
+    }
+  }],
+  "packages": [{
+    "meta": {
+      "rooms": [
+        [
+          30,
+          30,
+          7
+        ],
+        [
+          30,
+          30
+        ]
+      ]
+    },
+    "item": {
+      "id": 173171109,
+      "type": "AIR",
+      "isAvailable": true,
+      "startDate": "2016-07-25",
+      "endDate": "2016-07-30",
+      "days": 5,
+      "baseDestination": 363,
+      "hotels": [{
+        "id": 3713945,
+        "name": "HOTEL PORTAL DO MUNDAÍ _ REDE SOBERANO",
+        "description": "Localizado a apenas 300 metros do Complexo de Lazer Tôa Tôa, o hotel fica a 5 quilômetros do centro da cidade e a 5,7 quilômetros do aeroporto de Porto Seguro. Oferece restaurante, bar, café da manhã, internet wi-fi, 2 piscinas para adultos e uma para crianças, sauna, playground, salão de jogos e quadra de vôlei. Os quartos são equipados com TV a cabo, ar-condicionado, varanda, frigobar, cofre e telefone.",
+        "award": 3,
+        "isPreferential": "false",
+        "location": {
+          "address": "PORTO SEGURO",
+          "coordinates": {
+            "latitude": -16.469255,
+            "longitude": -39.156742
+          }
+        },
+        "category": "HOTEL DE PRAIA CONFORTAVEL",
+        "links": {
+          "thumbnailImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          }
+        }
+      }, {
+        "award": 2,
+        "location": {
+          "address": "PORTO SEGURO",
+          "coordinates": {
+            "latitude": -16.469255,
+            "longitude": -39.156742
+          }
+        },
+        "id": 4947747,
+        "name": "HOTEL PRAIA MAR _ REDE SOBERANO",
+        "category": "HOTEL URBANO SIMPLES",
+        "room": {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard"
+        },
+        "description": "Localizado no centro de Porto Seguro, o hotel fica próximo a famosa Passarela do Álcool, shoppings, restaurantes e com fácil acesso as principais praias. Oferece piscinas adulto e infantil, estacionamento, internet wi-fi, café da manhã, room service, churrasqueira, lan house e baby copa. Os quartos são equipados com TV, ar-condicionado, telefone e frigobar.",
+        "isPreferential": "false",
+        "links": {
+          "thumbnailImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          }
+        }
+      }],
+      "alternativeRooms": [{
+        "mealPlan": "Diária com café da manhã",
+        "category": "Apartamento Standard",
+        "packageId": 124356
+      }],
+      "flights": [{
+        "id": "167427368",
+        "number": "91559",
+        "period": "Nightly",
+        "departure": {
+          "date": "2016-08-29T15:50:00-03:00",
+          "code": "GRU",
+          "description": "SÃO PAULO- GUARULHOS"
+        },
+        "arrival": {
+          "date": "2016-08-29T17:40:00-03:00",
+          "code": "BPS",
+          "description": "PORTO SEGURO"
+        },
+        "operatingAirline": {
+          "code": "G3",
+          "name": "GOL"
+        }
+      }, {
+        "id": "167427369",
+        "number": "17732",
+        "period": "Nightly",
+        "departure": {
+          "date": "2016-09-05T18:20:00-03:00",
+          "code": "BPS",
+          "description": "PORTO SEGURO"
+        },
+        "arrival": {
+          "date": "2016-09-05T20:30:00-03:00",
+          "code": "GRU",
+          "description": "SÃO PAULO- GUARULHOS"
+        },
+        "operatingAirline": {
+          "code": "G3",
+          "name": "GOL"
+        }
+      }]
+    }
+  }],
+  "contents": [{
+    "code": "alerts",
+    "items": [{
+      "description": "Os serviços prestados nos hotéis são de inteira responsabilidade do estabelecimento e podem ou não estar incluídos no valor da compra."
+    }, {
+      "description": "Não inclui taxas."
+    }, {
+      "description": "Para voos dentro do Brasil, é preciso apresentar-se com pelo menos 1 hora de antecedência ao voo. Para voos internacionais, procure chegar com 2 horas de antecedência."
+    }]
+  }]
 };

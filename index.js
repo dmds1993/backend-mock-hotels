@@ -1,8 +1,10 @@
 var express     = require('express');
 var app         = express();
+var http        = require('http')
+var server      = http.createServer(app);
+var io          = require('socket.io')(server);
 var bodyParser  = require('body-parser');
 var logger      = require('morgan');
-var expressWs   = require('express-ws')(app);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -15,6 +17,20 @@ app.use(function(req, res, next) {
 });
 
 app.set('port', (process.env.PORT || 5050));
+
+io.on('connection', function (socket) {
+
+  io.emit('news', { msg: 'One more person is online'})
+  socket.emit('private', { msg: 'Welcome you are the person here' })
+
+  socket.on('message', function (msg) {
+    io.emit({message: 'Message Teste' + msg});
+  });
+
+  socket.on('disconnect', function() {
+    io.emit('news', { msg: 'Disconnect'})
+  });
+});
 
 // Rota Login
 var login = require('./routes/login');
@@ -81,6 +97,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.listen(app.get('port'), function() {
+server.listen(app.get('port'), function() {
   console.log('Mock Pacotes CVC is running on port', app.get('port'));
 });

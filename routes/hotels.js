@@ -7,15 +7,6 @@ router.get('/', function(req, res, next) {
   res.json(hotels);
 });
 
-router.ws('/', function(ws, req) {
-  ws.on('message', function(msg) {
-    console.log(msg);
-    ws.send(hotels);
-  });
-  console.log('socket', req.testing);
-  next();
-});
-
 router.get('/:hotel_id', function(req, res, next) {
 	res.json(hotel);
 });
