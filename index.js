@@ -53,8 +53,6 @@ app.use(function (req, res, next) {
     });
   }
 
-  console.log(req.headers['content-type']);
-
   // if (!req.headers['content-type'] || (req.headers['content-type'] !== 'application/json') ) {
   //   return res.status(400).send({ 
   //     code: 400, 
