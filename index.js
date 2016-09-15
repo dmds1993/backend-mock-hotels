@@ -87,6 +87,9 @@ app.use('/dev/flights', flights);
 var cars = require('./routes/cars');
 app.use('/dev/cars', cars);
 
+var payments = require('./routes/payments');
+app.use('/dev/payments', payments);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

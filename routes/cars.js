@@ -28,7 +28,6 @@ router.get('/locations/:location_id', function(req, res, next) {
 });
 
 
-
 module.exports = router;
 
 var cars = {};

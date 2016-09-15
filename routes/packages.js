@@ -2,8 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-	res.json({ title: 'Packages API! :)' });
+	res.json(packages);
 });
+
+// router.get('/:package_id', function (req, res, next) {
+//   res.json(packages);
+// });
 
 router.get('/originZones', function (req, res, next) {
 	res.json(zones);
@@ -35,7 +39,1246 @@ router.get('/originzones/:originzone_id/baseDestinations/:baseDestination_id/dat
 
 module.exports = router;
 
-
+var packages = {
+  "packages": [
+    {
+      "id": 172384640,
+      "startDate": "2016-11-04",
+      "endDate": "2016-11-07",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172383669,
+      "startDate": "2016-10-21",
+      "endDate": "2016-10-24",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172383672,
+      "startDate": "2016-10-28",
+      "endDate": "2016-10-31",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172384874,
+      "startDate": "2016-12-09",
+      "endDate": "2016-12-12",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172383656,
+      "startDate": "2016-10-14",
+      "endDate": "2016-10-17",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172384685,
+      "startDate": "2016-11-25",
+      "endDate": "2016-11-28",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172384628,
+      "startDate": "2016-11-18",
+      "endDate": "2016-11-21",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-18",
+            "checkOut": "2016-11-19"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    },
+    {
+      "id": 172384872,
+      "startDate": "2016-12-02",
+      "endDate": "2016-12-05",
+      "days": 3,
+      "type": "Rodoviários",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IjgiIG9yaWdpbkNvdW50cnk9IkJSIiBvcmlnaW5TdGF0ZT0iU1AiIG9yaWdpbkNpdHk9IjgxNiIgZGVzdGluYXRpb25Db3VudHJ5PSJCUiIgZGVzdGluYXRpb25TdGF0ZT0iUkoiIGRlc3RpbmF0aW9uQ2l0eT0iNyIgYWdlbnRTaWduPSJXIiBicmFuY2hDb2RlPSIxMDAwIiBzYWxlRGF0ZT0iMjAxNi0wOS0xNVoiLz4=",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-18",
+            "checkOut": "2016-11-19"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-02",
+            "checkOut": "2016-12-03"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null
+    }
+  ]
+};
 
 var zones = {
   "zones": [
