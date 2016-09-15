@@ -38,30 +38,30 @@ app.use('/dev/login', login);
 
 
 // Middleware Validate the Header
-app.use(function (req, res, next) {
-  if(!req.headers['gtw-sec-user-token']) {
-    return res.status(400).send({ 
-      code: 400, 
-      message: 'Missing header: Gtw-Sec-User-Token' 
-    });
-  }
+// app.use(function (req, res, next) {
+//   if(!req.headers['gtw-sec-user-token']) {
+//     return res.status(400).send({ 
+//       code: 400, 
+//       message: 'Missing header: Gtw-Sec-User-Token' 
+//     });
+//   }
 
-  if (!req.headers['gtw-transaction-id']) {
-    return res.status(400).send({ 
-      code: 400, 
-      message: 'Missing header: Gtw-Transaction-Id' 
-    });
-  }
+//   if (!req.headers['gtw-transaction-id']) {
+//     return res.status(400).send({ 
+//       code: 400, 
+//       message: 'Missing header: Gtw-Transaction-Id' 
+//     });
+//   }
 
-  // if (!req.headers['content-type'] || (req.headers['content-type'] !== 'application/json') ) {
-  //   return res.status(400).send({ 
-  //     code: 400, 
-  //     message: 'Missing header: Content-Type = application/json' 
-  //   });
-  // }
+//   // if (!req.headers['content-type'] || (req.headers['content-type'] !== 'application/json') ) {
+//   //   return res.status(400).send({ 
+//   //     code: 400, 
+//   //     message: 'Missing header: Content-Type = application/json' 
+//   //   });
+//   // }
 
-  next();
-});
+//   next();
+// });
 
 //Routes 
 var main = require('./routes/main');
