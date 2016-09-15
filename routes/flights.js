@@ -5,8 +5,17 @@ router.get('/', function(req, res, next) {
 	res.json(flights);
 });
 
-router.get('/:tokenized_ratetokens', function(req, res, next) {
-	res.json(flights);
+router.get('/:rate_token', function(req, res, next) {
+  var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
+  
+  if (rateToken.includes('hot:rateToken')) {
+  	res.json(flights);
+  } else {
+    return res.status(500).send({ 
+      code: 500, 
+      message: 'Invalid Rate Token' 
+    });
+  }
 });
 
 router.get('/priceHistory', function(req, res, next) {
