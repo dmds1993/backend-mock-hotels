@@ -12,7 +12,7 @@ router.get('/locations', function(req, res, next) {
 router.get('/:rate_token', function(req, res, next) {
   var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
 	
-	if (rateToken.includes('hot:rateToken')) {
+	if (rateToken.includes('rateToken')) {
 		res.json(cars);
 	} else {
 		return res.status(500).send({ 

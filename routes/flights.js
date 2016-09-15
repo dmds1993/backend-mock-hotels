@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 router.get('/:rate_token', function(req, res, next) {
   var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
   
-  if (rateToken.includes('hot:rateToken')) {
+  if (rateToken.includes('rateToken')) {
   	res.json(flights);
   } else {
     return res.status(500).send({ 
@@ -60,7 +60,7 @@ var flights = {
           "departureDate": "2016-12-01T05:47:39.997Z",
           "arrival": "SAO",
           "arrivalDate": "2016-12-01T06:55:28.799Z",
-          "rateToken": "qUkGA2teW",
+          "rateToken": "PGhvdDpyYXRlVG9rZW4geG1sbnM6aG90PSJodHRwOi8vY3ZjLmNvbS5ici9tb2RlbC9ob3RlbHMiIHBsYT0iMzYiIGNtaT0iMzYiIGNtYz0iMzYwMDEiIHJ0az0iZDM5MWEyNzktMzlkNC00MDAxLThjYzctMjMzZmEzM2ZmOWFlLTUwMDMiIHJ0cD0iNDgyMDQwIiBydGM9IjIwNDc3ODc1NSIgY2hhPSI3NzUuNjAiIG5hZD0iMSIgYmV0PSIxMyIgY3VyPSJCUkwiIGl6bz0iMzM4MzAiIGFncz0iVyIgYnJjPSIxMDAwIiBsYW49InB0X0JSIiBkaW49IjIwMTYtMTAtMjgiIGRvdT0iMjAxNi0xMC0yOSIgcGtnPSJWSEkiIHB4cz0iMzAiLz4",
           "operatedBy": {
             "name": "TAM",
             "iata": "JJ"
@@ -94,7 +94,7 @@ var flights = {
           "departureDate": "2016-12-05T05:47:39.997Z",
           "arrival": "MIA",
           "arrivalDate": "2016-12-05T06:55:28.799Z",
-          "rateToken": "qUkGA2teW",
+          "rateToken": "PGhvdDpyYXRlVG9rZW4geG1sbnM6aG90PSJodHRwOi8vY3ZjLmNvbS5ici9tb2RlbC9ob3RlbHMiIHBsYT0iMzYiIGNtaT0iMzYiIGNtYz0iMzYwMDEiIHJ0az0iZDM5MWEyNzktMzlkNC00MDAxLThjYzctMjMzZmEzM2ZmOWFlLTUwMDMiIHJ0cD0iNDgyMDQwIiBydGM9IjIwNDc3ODc1NSIgY2hhPSI3NzUuNjAiIG5hZD0iMSIgYmV0PSIxMyIgY3VyPSJCUkwiIGl6bz0iMzM4MzAiIGFncz0iVyIgYnJjPSIxMDAwIiBsYW49InB0X0JSIiBkaW49IjIwMTYtMTAtMjgiIGRvdT0iMjAxNi0xMC0yOSIgcGtnPSJWSEkiIHB4cz0iMzAiLz4",
           "operatedBy": {
             "name": "TAM",
             "iata": "JJ"
