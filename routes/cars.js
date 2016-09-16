@@ -46,6 +46,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -86,6 +89,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -126,6 +132,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -166,6 +175,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -206,6 +218,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -246,6 +261,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -286,6 +304,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -326,6 +347,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -366,6 +390,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
@@ -406,6 +433,9 @@ var cars = {
 				}]
 			}]
 		},
+		"player": {
+      "code": "ZT"
+    },
 		"rates": [{
 			"description": "Km Livre",
 			"currency": "USD",
