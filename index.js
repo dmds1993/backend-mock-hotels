@@ -64,7 +64,7 @@ app.use(function (req, res, next) {
 
 //Routes 
 var main = require('./routes/main');
-app.use('/dev', main);
+app.use('/', main);
 
 var pesqinc = require('./routes/pesqinc');
 app.use('/dev/pesqinc', pesqinc);
