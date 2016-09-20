@@ -90,6 +90,15 @@ app.use('/dev/cars', cars);
 var payments = require('./routes/payments');
 app.use('/dev/payments', payments);
 
+var branches = require('./routes/branches');
+app.use('/dev/branches', branches);
+
+var vendors = require('./routes/vendors');
+app.use('/dev/vendors', vendors);
+
+var salestypes = require('./routes/salestypes');
+app.use('/dev/salestypes', salestypes);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
