@@ -99,6 +99,9 @@ app.use('/dev/vendors', vendors);
 var salestypes = require('./routes/salestypes');
 app.use('/dev/salestypes', salestypes);
 
+var abroadcourses = require('./routes/abroadcourses');
+app.use('/dev/abroadcourses', abroadcourses);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
