@@ -85,7 +85,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172383669,
@@ -162,7 +225,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172383672,
@@ -270,7 +396,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172384874,
@@ -409,7 +598,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172383656,
@@ -579,7 +831,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172384685,
@@ -780,7 +1095,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172384628,
@@ -1012,7 +1390,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     },
     {
       "id": 172384872,
@@ -1275,7 +1716,70 @@ var packages = {
           "category": "Standard - Duplo"
         }
       ],
-      "flight": null
+      "flight": {
+        "id": 175937871,
+        "outbound": {
+          "number": "37951",
+          "period": "D",
+          "departureLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "arrivalLocation": {
+            "iata": "CGH",
+            "description": "SÃO PAULO- CONGONHAS"
+          },
+          "departureDate": "2016-11-30T16:05:00.000Z",
+          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "arrivalLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "departureDate": "2016-11-30T16:05:00.000Z",
+              "arrivalDate": "2016-11-30T17:15:00.000Z",
+              "operatedBy": "JJ"
+            }
+          ]
+        },
+        "inbound": {
+          "number": "31521",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "GIG",
+            "description": "RIO DE JAN -GALEÃO"
+          },
+          "departureDate": "2016-11-26T06:00:00.000Z",
+          "duration": 60,
+          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "CGH",
+                "description": "SÃO PAULO- CONGONHAS"
+              },
+              "arrivalLocation": {
+                "iata": "GIG",
+                "description": "RIO DE JAN -GALEÃO"
+              },
+              "departureDate": "2016-11-26T06:00:00.000Z",
+              "arrivalDate": "2016-11-26T07:00:00.000Z",
+              "flightNumber": "31521",
+              "operatedBy": "JJ",
+              "duration": 60
+            }
+          ]
+        }
+      }
     }
   ]
 };
