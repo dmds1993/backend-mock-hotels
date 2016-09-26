@@ -27,6 +27,10 @@ router.get('/accommodations', function(req, res, next) {
 	res.json(accommodations);
 });
 
+router.get('/destinations', function(req, res, next) {
+  res.json(destinations);
+});
+
 router.get('/', function(req, res, next) {
 	res.json(abroadcourses);
 });
@@ -530,4 +534,24 @@ var accommodations = {
       }
     ]
   }
+};
+
+var destinations = {
+  "destinations": [
+    {
+      "id": 9860,
+      "name": "CALGARY - ALBERTA, CANADA, Todos os aeroportos (YYC)",
+      "iata": "YYC"
+    },
+    {
+      "id": 9866,
+      "name": "VANCOUVER - BRITISH COLUMBIA, CANADA, Todos os aeroportos (YVR)",
+      "iata": "YVR"
+    },
+    {
+      "id": 9871,
+      "name": "VICTORIA - BRITISH COLUMBIA, CANADA, Todos os aeroportos (YYJ)",
+      "iata": "YYJ"
+    }
+  ]
 };
