@@ -102,6 +102,9 @@ app.use('/dev/abroadcourses', abroadcourses);
 var mails = require('./routes/mails');
 app.use('/dev/mails', mails);
 
+var contactUs = require('./routes/contact-us');
+app.use('/dev/contactUs', contactUs);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
