@@ -51,679 +51,1731 @@ module.exports = router;
 var packages = {
   "packages": [
     {
-      "id": 172384640,
+      "id": 177528727,
       "startDate": "2016-11-04",
       "endDate": "2016-11-07",
       "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        }
+      ],
+      "flight": null,
+      "taxes": [
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
+    },
+    {
+      "id": 174669688,
+      "startDate": "2016-11-08",
+      "endDate": "2016-11-15",
+      "days": 7,
       "type": "AIR",
       "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+      "price": 240,
       "currency": "BRL",
-      "baseDestination": 225683,
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        }
+      ],
       "flight": {
-        "id": 175937871,
+        "id": 176652023,
         "outbound": {
-          "number": "37951",
+          "number": "35492",
           "period": "D",
           "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
           "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
+            "iata": "GRU",
+            "description": "GUARULHOS"
           },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
               "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
             }
           ]
         },
         "inbound": {
-          "number": "31521",
+          "number": "93949",
           "period": "D",
           "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
               "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
               "operatedBy": "JJ",
-              "duration": 60
+              "duration": 123
             }
           ]
         }
-      }
-    },
-    {
-      "id": 172383545,
-      "startDate": "2016-09-30",
-      "endDate": "2016-10-03",
-      "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
-      "currency": "BRL",
-      "baseDestination": 225683,
-      "flight": {
-        "id": 175937871,
-        "outbound": {
-          "number": "37951",
-          "period": "D",
-          "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
-          },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
-            }
-          ]
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
         },
-        "inbound": {
-          "number": "31521",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
-              "operatedBy": "JJ",
-              "duration": 60
-            }
-          ]
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
         }
-      }
+      ]
     },
     {
-      "id": 172383669,
-      "startDate": "2016-10-21",
-      "endDate": "2016-10-24",
-      "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
-      "currency": "BRL",
-      "baseDestination": 225683,
-      "flight": {
-        "id": 175937871,
-        "outbound": {
-          "number": "37951",
-          "period": "D",
-          "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
-          },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
-            }
-          ]
-        },
-        "inbound": {
-          "number": "31521",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
-              "operatedBy": "JJ",
-              "duration": 60
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 172383672,
-      "startDate": "2016-10-28",
-      "endDate": "2016-10-31",
-      "days": 3,
-      "type": "Aéreo",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
-      "currency": "BRL",
-      "baseDestination": 225683,
-      "flight": {
-        "id": 175937871,
-        "outbound": {
-          "number": "37951",
-          "period": "D",
-          "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
-          },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
-            }
-          ]
-        },
-        "inbound": {
-          "number": "31521",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
-              "operatedBy": "JJ",
-              "duration": 60
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 172383408,
-      "startDate": "2016-09-23",
-      "endDate": "2016-09-26",
-      "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
-      "currency": "BRL",
-      "baseDestination": 225683,
-      "flight": {
-        "id": 175937871,
-        "outbound": {
-          "number": "37951",
-          "period": "D",
-          "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
-          },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
-            }
-          ]
-        },
-        "inbound": {
-          "number": "31521",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
-          },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
-          "legs": [
-            {
-              "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
-              },
-              "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
-              },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
-              "operatedBy": "JJ",
-              "duration": 60
-            }
-          ]
-        }
-      }
-    },
-    {
-      "id": 172383656,
+      "id": 167476768,
       "startDate": "2016-10-14",
       "endDate": "2016-10-17",
       "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9Ik1HIiBlemk9IjEwMTMiIGZncj0iMTc2NjUyMDIzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGlkPSIxNjc0NzY3NjgiIHBraT0iMTY3NDc2NzY4IiBwb3Q9IjEyMCIgcHJkPSJDVkMgUGFja2FnZSIgcHhzPSIzMCIgc2N0PSJCUiIgc2R0PSIyMDE2LTA5LTI2WiIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
+      "price": 240,
       "currency": "BRL",
-      "baseDestination": 225683,
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 5608756,
+          "name": "JOIA HOTEL",
+          "description": "TRÊS ESTRELAS SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - RIO GRANDE DO SUL, 1223",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "*Apartamento Standard*",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2262",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/275345.jpg"
+              }
+            }
+          },
+          "category": "*Apartamento Standard*"
+        }
+      ],
       "flight": {
-        "id": 175937871,
+        "id": 176652023,
         "outbound": {
-          "number": "37951",
+          "number": "35492",
           "period": "D",
           "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
           "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
+            "iata": "GRU",
+            "description": "GUARULHOS"
           },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
               "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
             }
           ]
         },
         "inbound": {
-          "number": "31521",
+          "number": "93949",
           "period": "D",
           "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
               "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
               "operatedBy": "JJ",
-              "duration": 60
+              "duration": 123
             }
           ]
         }
-      }
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
+        },
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
     },
     {
-      "id": 172384685,
-      "startDate": "2016-11-25",
-      "endDate": "2016-11-28",
+      "id": 177528667,
+      "startDate": "2016-10-14",
+      "endDate": "2016-10-17",
       "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+      "price": 240,
       "currency": "BRL",
-      "baseDestination": 225683,
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 5608756,
+          "name": "JOIA HOTEL",
+          "description": "TRÊS ESTRELAS SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - RIO GRANDE DO SUL, 1223",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "*Apartamento Standard*",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2262",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/275345.jpg"
+              }
+            }
+          },
+          "category": "*Apartamento Standard*"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        }
+      ],
       "flight": {
-        "id": 175937871,
+        "id": 176652023,
         "outbound": {
-          "number": "37951",
+          "number": "35492",
           "period": "D",
           "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
           "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
+            "iata": "GRU",
+            "description": "GUARULHOS"
           },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
               "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
             }
           ]
         },
         "inbound": {
-          "number": "31521",
+          "number": "93949",
           "period": "D",
           "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
               "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
               "operatedBy": "JJ",
-              "duration": 60
+              "duration": 123
             }
           ]
         }
-      }
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
+        },
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
     },
     {
-      "id": 172383559,
-      "startDate": "2016-10-07",
-      "endDate": "2016-10-10",
+      "id": 177528645,
+      "startDate": "2016-10-21",
+      "endDate": "2016-10-24",
       "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0yNCIgZHRpPSIyMDE2LTEwLTIxIiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY0NSIgcGtpPSIxNzc1Mjg2NDUiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+      "price": 240,
       "currency": "BRL",
-      "baseDestination": 225683,
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 5608756,
+          "name": "JOIA HOTEL",
+          "description": "TRÊS ESTRELAS SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - RIO GRANDE DO SUL, 1223",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "*Apartamento Standard*",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2262",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/275345.jpg"
+              }
+            }
+          },
+          "category": "*Apartamento Standard*"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        }
+      ],
       "flight": {
-        "id": 175937871,
+        "id": 176652023,
         "outbound": {
-          "number": "37951",
+          "number": "35492",
           "period": "D",
           "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
           "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
+            "iata": "GRU",
+            "description": "GUARULHOS"
           },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
               "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
             }
           ]
         },
         "inbound": {
-          "number": "31521",
+          "number": "93949",
           "period": "D",
           "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
               "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
               "operatedBy": "JJ",
-              "duration": 60
+              "duration": 123
             }
           ]
         }
-      }
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
+        },
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
     },
     {
-      "id": 172384628,
-      "startDate": "2016-11-18",
+      "id": 177528590,
+      "startDate": "2016-10-28",
+      "endDate": "2016-10-31",
+      "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0zMSIgZHRpPSIyMDE2LTEwLTI4IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODU5MCIgcGtpPSIxNzc1Mjg1OTAiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+      "price": 240,
+      "currency": "BRL",
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 5608756,
+          "name": "JOIA HOTEL",
+          "description": "TRÊS ESTRELAS SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - RIO GRANDE DO SUL, 1223",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "*Apartamento Standard*",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2262",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/275345.jpg"
+              }
+            }
+          },
+          "category": "*Apartamento Standard*"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        }
+      ],
+      "flight": {
+        "id": 176652023,
+        "outbound": {
+          "number": "35492",
+          "period": "D",
+          "departureLocation": {
+            "iata": "REC",
+            "description": "RECIFE"
+          },
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "GUARULHOS"
+          },
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "REC",
+                "description": "RECIFE"
+              },
+              "arrivalLocation": {
+                "iata": "GRU",
+                "description": "GUARULHOS"
+              },
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
+            }
+          ]
+        },
+        "inbound": {
+          "number": "93949",
+          "period": "D",
+          "arrivalLocation": {
+            "iata": "REC",
+            "description": "RECIFE"
+          },
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
+          "operatedBy": "JJ",
+          "class": "Economico",
+          "legs": [
+            {
+              "departureLocation": {
+                "iata": "GRU",
+                "description": "GUARULHOS"
+              },
+              "arrivalLocation": {
+                "iata": "REC",
+                "description": "RECIFE"
+              },
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
+              "operatedBy": "JJ",
+              "duration": 123
+            }
+          ]
+        }
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
+        },
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
+    },
+    {
+      "id": 174439074,
+      "startDate": "2016-11-05",
       "endDate": "2016-11-21",
-      "days": 3,
-      "type": "AIR",
-      "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
+      "days": 16,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTA1IiBlY3Q9IkJSIiBlc3Q9IlNDIiBlemk9IjEzNCIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDQzOTA3NCIgcGtpPSIxNzQ0MzkwNzQiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+      "price": 240,
       "currency": "BRL",
-      "baseDestination": 225683,
+      "baseDestination": 128776,
+      "hotels": [
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 3146461,
+          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+          "description": "HOTEL DE PRAIA CONFORTAVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 6,
+            "checkIn": "2016-11-08",
+            "checkOut": "2016-11-13"
+          },
+          "location": {
+            "address": "AVENIDA - BEIRA MAR, 0",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com meia pensão",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/266886.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 5608756,
+          "name": "JOIA HOTEL",
+          "description": "TRÊS ESTRELAS SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": " - RIO GRANDE DO SUL, 1223",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "*Apartamento Standard*",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2262",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/275345.jpg"
+              }
+            }
+          },
+          "category": "*Apartamento Standard*"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-14",
+            "checkOut": "2016-10-15"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-21",
+            "checkOut": "2016-10-22"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 8078041,
+          "name": "POUSADA CONDADO BRASILEIRO",
+          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-10-28",
+            "checkOut": "2016-10-29"
+          },
+          "location": {
+            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "310",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/292855.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 1016992,
+          "name": "RIO BRANCO APART HOTEL",
+          "description": "HOTEL URBANO SIMPLES",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "AVENIDA - RIO BRANCO, 369",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Apartamento Standard",
+            "mealPlan": "Diária com café da manhã",
+            "category": "3",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/286516.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Standard"
+        },
+        {
+          "id": 1869,
+          "name": "PLAZA SÃO RAFAEL HOTEL",
+          "description": "HOTEL URBANO CONFORTÁVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ALBERTO BINS, 514",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Apartamento. Standard ",
+            "mealPlan": "Diária com café da manhã",
+            "category": "238",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/296574.jpg"
+              }
+            }
+          },
+          "category": "Apartamento. Standard "
+        },
+        {
+          "id": 2233,
+          "name": "BERTELLI HOTEL",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": "RODOVIA - BR 471, 471",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 3,
+            "description": "Apartamento Standard",
+            "mealPlan": "Diária com meia pensão",
+            "category": "3",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/306120.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Standard"
+        },
+        {
+          "id": 2030,
+          "name": "FALLS GALLI HOTEL",
+          "description": "HOTEL URBANO CONFORTÁVEL",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-06"
+          },
+          "location": {
+            "address": "AVENIDA - COSTA E SILVA, 1602",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 4,
+            "description": "Apartamento Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "1208",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/310645.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Luxo"
+        },
+        {
+          "id": 10491759,
+          "name": "CRYSTAL PALACE MONTEVIDÉU NACIONAL",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-06",
+            "checkOut": "2016-11-07"
+          },
+          "location": {
+            "address": " - INDUSTRIAL, 600",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 5,
+            "description": "* Apartamento ",
+            "mealPlan": "Diária com café da manhã",
+            "category": "6480",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/350586.jpg"
+              }
+            }
+          },
+          "category": "* Apartamento "
+        },
+        {
+          "id": 3716527,
+          "name": "HOTEL OBELISCO CENTER - NACIONAL",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 3,
+            "checkIn": "2016-11-07",
+            "checkOut": "2016-11-09"
+          },
+          "location": {
+            "address": " - ROQUE SAENZ PEÑA, 991",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 6,
+            "description": "Apartamento Standard",
+            "mealPlan": "Diária com café da manhã",
+            "category": "3",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/350786.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Standard"
+        },
+        {
+          "id": 8957408,
+          "name": "BOURBON CONMEBOL ASSUNCION NACIONAL",
+          "description": "TRÊS ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-09",
+            "checkOut": "2016-11-10"
+          },
+          "location": {
+            "address": " - INDUSTRIAL, 600",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 7,
+            "description": "Apartamento Superior",
+            "mealPlan": "Diária com café da manhã",
+            "category": "1752",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/350805.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Superior"
+        },
+        {
+          "id": 2381419,
+          "name": "HOTEL PRESIDENTE ROSÁRIO-NACIONAL",
+          "description": "TURÍSTICA SUPERIOR",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-10",
+            "checkOut": "2016-11-10"
+          },
+          "location": {
+            "address": " - AV. CORRIENTES 919, ",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 8,
+            "description": "Apartamento Standard",
+            "mealPlan": "Diária com café da manhã",
+            "category": "3",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/356071.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Standard"
+        },
+        {
+          "id": 5341597,
+          "name": "AMERIAN HOTEL CASINO GALA NACIONAL",
+          "description": "SUPERIOR",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-10",
+            "checkOut": "2016-11-10"
+          },
+          "location": {
+            "address": " - J D PERON, 330",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 9,
+            "description": "Luxo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "218",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/359487.jpg"
+              }
+            }
+          },
+          "category": "Luxo"
+        },
+        {
+          "id": 10056247,
+          "name": "HARBOR SAINT MICHEL",
+          "description": "QUATRO ESTRELAS",
+          "award": 5,
+          "isPreferential": true,
+          "timeSpan": {
+            "nights": 1,
+            "checkIn": "2016-11-10",
+            "checkOut": "2016-11-10"
+          },
+          "location": {
+            "address": " - LAMENHA LINS, 712",
+            "coordinates": {
+              "latitude": 0,
+              "longitude": 0
+            }
+          },
+          "room": {
+            "rph": 10,
+            "description": "Apartamento Superior",
+            "mealPlan": "Diária com café da manhã",
+            "category": "1752",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/343988.jpg"
+              }
+            }
+          },
+          "category": "Apartamento Superior"
+        }
+      ],
       "flight": {
-        "id": 175937871,
+        "id": 176652023,
         "outbound": {
-          "number": "37951",
+          "number": "35492",
           "period": "D",
           "departureLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
           "arrivalLocation": {
-            "iata": "CGH",
-            "description": "SÃO PAULO- CONGONHAS"
+            "iata": "GRU",
+            "description": "GUARULHOS"
           },
-          "departureDate": "2016-11-30T16:05:00.000Z",
-          "arrivalDate": "2016-11-30T17:15:00.000Z",
+          "departureDate": "2016-11-14T10:48:00.000Z",
+          "duration": 257,
+          "arrivalDate": "2016-11-14T15:05:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
               "arrivalLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
-              "departureDate": "2016-11-30T16:05:00.000Z",
-              "arrivalDate": "2016-11-30T17:15:00.000Z",
-              "operatedBy": "JJ"
+              "departureDate": "2016-11-14T10:48:00.000Z",
+              "arrivalDate": "2016-11-14T15:05:00.000Z",
+              "operatedBy": "JJ",
+              "duration": 257
             }
           ]
         },
         "inbound": {
-          "number": "31521",
+          "number": "93949",
           "period": "D",
           "arrivalLocation": {
-            "iata": "GIG",
-            "description": "RIO DE JAN -GALEÃO"
+            "iata": "REC",
+            "description": "RECIFE"
           },
-          "departureDate": "2016-11-26T06:00:00.000Z",
-          "duration": 60,
-          "arrivalDate": "2016-11-26T07:00:00.000Z",
+          "departureDate": "2016-11-08T13:40:00.000Z",
+          "duration": 123,
+          "arrivalDate": "2016-11-08T15:43:00.000Z",
           "operatedBy": "JJ",
           "class": "Economico",
           "legs": [
             {
               "departureLocation": {
-                "iata": "CGH",
-                "description": "SÃO PAULO- CONGONHAS"
+                "iata": "GRU",
+                "description": "GUARULHOS"
               },
               "arrivalLocation": {
-                "iata": "GIG",
-                "description": "RIO DE JAN -GALEÃO"
+                "iata": "REC",
+                "description": "RECIFE"
               },
-              "departureDate": "2016-11-26T06:00:00.000Z",
-              "arrivalDate": "2016-11-26T07:00:00.000Z",
-              "flightNumber": "31521",
+              "departureDate": "2016-11-08T13:40:00.000Z",
+              "arrivalDate": "2016-11-08T15:43:00.000Z",
+              "flightNumber": "93949",
               "operatedBy": "JJ",
-              "duration": 60
+              "duration": 123
             }
           ]
         }
-      }
+      },
+      "taxes": [
+        {
+          "code": "TE",
+          "description": "Taxa de Embarque",
+          "percent": 69.36,
+          "amount": 1
+        },
+        {
+          "code": "PackageTaxes_11",
+          "description": "TAXA DE REMESSA",
+          "percent": 0.5
+        }
+      ]
     }
   ]
 };
