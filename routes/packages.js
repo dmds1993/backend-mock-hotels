@@ -493,7 +493,7 @@ var baseDestinations = {
         "price": 3736,
         "departureDate": "2016-11-10Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -522,7 +522,7 @@ var baseDestinations = {
         "price": 3196,
         "departureDate": "2016-11-10Z"
       },
-      "type": "AEREO",
+      "type": "AIR_ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -551,7 +551,7 @@ var baseDestinations = {
         "price": 5696,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR_ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -576,7 +576,7 @@ var baseDestinations = {
         "price": 2896,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR_ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -601,7 +601,7 @@ var baseDestinations = {
         "price": 3456,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -626,7 +626,7 @@ var baseDestinations = {
         "price": 6116,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -658,7 +658,7 @@ var baseDestinations = {
         "price": 3876,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "ROAD",
       "dayByDay": [
         {
           "label": 1,
@@ -690,7 +690,7 @@ var baseDestinations = {
         "price": 3336,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -711,7 +711,7 @@ var baseDestinations = {
         "price": 5976,
         "departureDate": "2016-11-10Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -739,7 +739,7 @@ var baseDestinations = {
         "price": 3896,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -770,7 +770,7 @@ var baseDestinations = {
         "price": 4036,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -801,7 +801,7 @@ var baseDestinations = {
         "price": 6276,
         "departureDate": "2016-11-11Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "dayByDay": [
         {
           "label": 1,
@@ -832,7 +832,7 @@ var baseDestinations = {
         "price": 2196,
         "departureDate": "2016-12-10Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "contents": [
         {
           "items": [
@@ -887,7 +887,7 @@ var baseDestinations = {
         "price": 1996,
         "departureDate": "2016-10-08Z"
       },
-      "type": "AEREO",
+      "type": "AIR",
       "contents": [
         {
           "items": [
@@ -985,7 +985,7 @@ var baseDestination = {
     "type": "AEREO",
     "links": [
       {
-        "href": "http://cvc.com.br/images/375872.jpg",
+        "href": "http://www.cvc.com.br/images/375872.jpg",
         "title": "são paulo",
         "description": " FORMULA 1",
         "tooltip": "São Paulo - São Paulo - Brasil"
