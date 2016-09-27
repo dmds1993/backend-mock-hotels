@@ -365,7 +365,7 @@ var packages = {
         }
       ],
       "flight": {
-        "id": 176652023,
+        "id": 176652024,
         "outbound": {
           "number": "35492",
           "period": "D",
@@ -449,7 +449,7 @@ var packages = {
       "startDate": "2016-10-14",
       "endDate": "2016-10-17",
       "days": 3,
-      "type": "ROAD",
+      "type": "AIR",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
       "price": 240,
@@ -582,7 +582,7 @@ var packages = {
         }
       ],
       "flight": {
-        "id": 176652023,
+        "id": 176652025,
         "outbound": {
           "number": "35492",
           "period": "D",
@@ -830,7 +830,7 @@ var packages = {
         }
       ],
       "flight": {
-        "id": 176652023,
+        "id": 176652026,
         "outbound": {
           "number": "35492",
           "period": "D",
@@ -1109,7 +1109,7 @@ var packages = {
         }
       ],
       "flight": {
-        "id": 176652023,
+        "id": 176652027,
         "outbound": {
           "number": "35492",
           "period": "D",
@@ -1698,7 +1698,7 @@ var packages = {
         }
       ],
       "flight": {
-        "id": 176652023,
+        "id": 176652028,
         "outbound": {
           "number": "35492",
           "period": "D",
@@ -2113,6 +2113,20 @@ var baseDestinations = {
         "departureDate": "2016-11-10Z"
       },
       "type": "AIR",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2142,6 +2156,20 @@ var baseDestinations = {
         "departureDate": "2016-11-10Z"
       },
       "type": "AIR_ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2171,6 +2199,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR_ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2196,6 +2238,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR_ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2221,6 +2277,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2246,6 +2316,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2278,6 +2362,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "ROAD",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2310,6 +2408,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2359,6 +2471,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2390,6 +2516,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
@@ -2421,6 +2561,20 @@ var baseDestinations = {
         "departureDate": "2016-11-11Z"
       },
       "type": "AIR",
+			"contents": [
+	      {
+	        "items": [
+	          {
+	            "code": "flightIcon",
+	            "name": "Transporte aéreo - ida e volta."
+	          },
+	          {
+	            "code": "hotelIcon",
+	            "name": "Hospedagem - 4 diárias com café da manhã."
+	          }
+	        ]
+	      }
+	    ],
       "dayByDay": [
         {
           "label": 1,
