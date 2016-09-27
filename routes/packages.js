@@ -2114,19 +2114,26 @@ var baseDestinations = {
       },
       "type": "AIR",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2157,19 +2164,26 @@ var baseDestinations = {
       },
       "type": "AIR_ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2200,19 +2214,26 @@ var baseDestinations = {
       },
       "type": "AIR_ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2239,19 +2260,26 @@ var baseDestinations = {
       },
       "type": "AIR_ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2278,19 +2306,26 @@ var baseDestinations = {
       },
       "type": "ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2317,19 +2352,26 @@ var baseDestinations = {
       },
       "type": "ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2363,19 +2405,26 @@ var baseDestinations = {
       },
       "type": "ROAD",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2409,19 +2458,26 @@ var baseDestinations = {
       },
       "type": "AIR",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2443,6 +2499,27 @@ var baseDestinations = {
         "departureDate": "2016-11-10Z"
       },
       "type": "AIR",
+      "contents": [
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2472,19 +2549,26 @@ var baseDestinations = {
       },
       "type": "AIR",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2517,19 +2601,26 @@ var baseDestinations = {
       },
       "type": "AIR",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2562,19 +2653,26 @@ var baseDestinations = {
       },
       "type": "AIR",
 			"contents": [
-	      {
-	        "items": [
-	          {
-	            "code": "flightIcon",
-	            "name": "Transporte aéreo - ida e volta."
-	          },
-	          {
-	            "code": "hotelIcon",
-	            "name": "Hospedagem - 4 diárias com café da manhã."
-	          }
-	        ]
-	      }
-	    ],
+        {
+          "items": [
+            {
+              "code": "flightIcon",
+              "name": "Transporte aéreo - ida e volta."
+            },
+            {
+              "code": "transferIcon",
+              "name": "Transporte - aeroporto / hotel / aeroporto."
+            },
+            {
+              "code": "hotelIcon",
+              "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+            },
+            {
+              "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+            }
+          ]
+        }
+      ],
       "dayByDay": [
         {
           "label": 1,
@@ -2757,19 +2855,26 @@ var baseDestination = {
     },
     "type": "AIR",
 		"contents": [
-			{
-				"items": [
-					{
-						"code": "flightIcon",
-						"name": "Transporte aéreo - ida e volta."
-					},
-					{
-						"code": "hotelIcon",
-						"name": "Hospedagem - 4 diárias com café da manhã."
-					}
-				]
-			}
-		],
+      {
+        "items": [
+          {
+            "code": "flightIcon",
+            "name": "Transporte aéreo - ida e volta."
+          },
+          {
+            "code": "transferIcon",
+            "name": "Transporte - aeroporto / hotel / aeroporto."
+          },
+          {
+            "code": "hotelIcon",
+            "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
+          },
+          {
+            "name": "Atividades - passeio aos principais pontos turísticos da cidade."
+          }
+        ]
+      }
+    ],
     "links": [
       {
         "href": "http://www.cvc.com.br/images/375872.jpg",
