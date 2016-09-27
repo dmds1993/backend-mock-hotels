@@ -285,8 +285,8 @@ var orders = {
       "reservations": [
         {
           "id": 177668623,
-          "departureDate": "2016-06-06T00:00:00.000-03:00",
-          "arrivalDate": "2016-06-11T00:00:00.000-03:00",
+          "departureDate": "2016-11-06T00:00:00.000-03:00",
+          "arrivalDate": "2016-11-11T00:00:00.000-03:00",
           "reservationDate": "2016-03-14T14:33:24.000-03:00",
           "expiresDate": "2016-03-19T14:33:24.000-03:00",
           "type": "DYNAMIC",
