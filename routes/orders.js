@@ -21,8 +21,8 @@ router.get('/estimates', function(req, res, next) {
       "opportunityId": 123432,
       "hotels": [{
         "meta": {
-          "checkIn": "2016-06-03",
-          "checkOut": "2016-06-04",
+          "checkIn": "2016-11-03",
+          "checkOut": "2016-11-04",
           "rooms": [
             [
               30,
