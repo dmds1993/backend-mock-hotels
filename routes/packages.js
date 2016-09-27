@@ -2756,6 +2756,20 @@ var baseDestination = {
       "departureDate": "2016-11-10Z"
     },
     "type": "AIR",
+		"contents": [
+			{
+				"items": [
+					{
+						"code": "flightIcon",
+						"name": "Transporte aéreo - ida e volta."
+					},
+					{
+						"code": "hotelIcon",
+						"name": "Hospedagem - 4 diárias com café da manhã."
+					}
+				]
+			}
+		],
     "links": [
       {
         "href": "http://www.cvc.com.br/images/375872.jpg",
