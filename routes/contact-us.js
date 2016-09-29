@@ -16,7 +16,7 @@ router.post('/', function(req, res, next) {
 
 router.get('/subjects', function(req, res, next) {
 	res.json({
-		subjects: ['Ajuda', 'Comercial', 'Este Array é só um Exemplo']
+		subjects: ['Hotel', 'Aéreo', 'Rodoviário', 'Navio', 'Receptivo', 'Loja CVC', 'Agente de Viagem', 'Cadastro', 'Lista de Presentes', 'Publicidade', 'Portal CVC', 'Outros']
 	})
 });
 
