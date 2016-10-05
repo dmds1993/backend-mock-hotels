@@ -116,7 +116,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078042,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -271,7 +271,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078043,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -457,7 +457,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078044,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -674,7 +674,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078045,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -922,7 +922,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078046,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1201,7 +1201,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078041,
+          "id": 8078047,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
