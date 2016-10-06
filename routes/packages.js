@@ -76,8 +76,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -284,8 +284,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213217,
+              "longitude": -45.5715443
             }
           },
           "room": {
@@ -687,8 +687,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213093,
+              "longitude": -45.5717363
             }
           },
           "room": {
@@ -935,8 +935,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1214,8 +1214,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.723573,
+              "longitude": -45.5583256
             }
           },
           "room": {
