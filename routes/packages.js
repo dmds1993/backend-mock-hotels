@@ -2853,7 +2853,7 @@ var baseDestination = {
       "price": 1868,
       "departureDate": "2016-11-10Z"
     },
-    "type": "AIR",
+    "type": "ROAD",
 		"contents": [
       {
         "items": [
