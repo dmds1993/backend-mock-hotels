@@ -105,6 +105,9 @@ app.use('/dev/mails', mails);
 var contactUs = require('./routes/contact-us');
 app.use('/dev/contactUs', contactUs);
 
+var promotions = require('./routes/promotions');
+app.use('/dev/promotions', promotions);
+
 // Set Error 
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
