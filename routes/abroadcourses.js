@@ -20,7 +20,11 @@ router.get('/courses/dates', function(req, res, next) {
 });
 
 router.get('/courses', function(req, res, next) {
-	res.json(courses);
+  var allCourses = [];
+  for (var i=0; i<100; i++) {
+    allCourses.push(courses.courses[0]);
+  }
+  res.json({courses: allCourses, meta: courses.meta});
 });
 
 router.get('/accommodations', function(req, res, next) {
@@ -32,7 +36,11 @@ router.get('/destinations', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-	res.json(abroadcourses);
+  var allCourses = [];
+  for (var i=0; i<100; i++) {
+    allCourses.push(abroadcourses.AbroadCourses[0]);
+  }
+  res.json({AbroadCourses: allCourses, meta: abroadcourses.meta});
 });
 
 router.get('/:rate_token', function(req, res, next) {
