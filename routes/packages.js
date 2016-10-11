@@ -2129,6 +2129,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2179,6 +2180,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2229,6 +2231,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2275,6 +2278,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2321,6 +2325,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2367,6 +2372,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2420,6 +2426,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2473,6 +2480,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2515,6 +2523,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2564,6 +2573,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2616,6 +2626,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2668,6 +2679,7 @@ var baseDestinations = {
               "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - passeio aos principais pontos turísticos da cidade."
             }
           ]
@@ -2712,6 +2724,7 @@ var baseDestinations = {
               "name": "Hospedagem - 05 diárias com café da manhã"
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - Visita ao Santuário Mãe de Deus, Campos do Jordão, Guaratinguetá e Aparecida"
             },
             {
@@ -2767,6 +2780,7 @@ var baseDestinations = {
               "name": "Hospedagem - 05 diárias com café da manhã"
             },
             {
+							"code": "activitiesIcon",
               "name": "Atividades - Visita ao Santuário Mãe de Deus, Campos do Jordão, Guaratinguetá e Aparecida"
             },
             {
@@ -2870,6 +2884,7 @@ var baseDestination = {
             "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
           },
           {
+						"code": "activitiesIcon",
             "name": "Atividades - passeio aos principais pontos turísticos da cidade."
           }
         ]
