@@ -21,7 +21,7 @@ router.get('/courses/dates', function(req, res, next) {
 
 router.get('/courses', function(req, res, next) {
   var allCourses = [];
-  for (var i=0; i<100; i++) {
+  for (var i=0; i<20; i++) {
     allCourses.push(courses.courses[0]);
   }
   res.json({courses: allCourses, meta: courses.meta});
@@ -37,7 +37,7 @@ router.get('/destinations', function(req, res, next) {
 
 router.get('/', function(req, res, next) {
   var allCourses = [];
-  for (var i=0; i<100; i++) {
+  for (var i=0; i<20; i++) {
     allCourses.push(abroadcourses.AbroadCourses[0]);
   }
   res.json({AbroadCourses: allCourses, meta: abroadcourses.meta});
