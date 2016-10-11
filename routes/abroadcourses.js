@@ -342,6 +342,7 @@ var abroadcourses = {
         "href": "http://www.cvc.com.br/destinos/estados-unidos/miami.aspx"
       }
     },
+    "countCourses": 100,
     "price": {
       "minWithTax": 1050.18,
       "minWithoutTax": 1050.18,
