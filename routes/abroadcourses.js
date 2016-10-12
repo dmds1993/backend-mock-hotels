@@ -21,7 +21,7 @@ router.get('/courses/dates', function(req, res, next) {
 
 router.get('/courses', function(req, res, next) {
   var allCourses = [];
-  for (var i=0; i<20; i++) {
+  for (var i=0; i<10; i++) {
     allCourses.push(courses.courses[0]);
   }
   res.json({courses: allCourses, meta: courses.meta});
@@ -37,7 +37,7 @@ router.get('/destinations', function(req, res, next) {
 
 router.get('/', function(req, res, next) {
   var allCourses = [];
-  for (var i=0; i<20; i++) {
+  for (var i=0; i<10; i++) {
     allCourses.push(abroadcourses.AbroadCourses[0]);
   }
   res.json({AbroadCourses: allCourses, meta: abroadcourses.meta});
@@ -403,26 +403,112 @@ var rateTokenCourse = {
   "AbroadCourse": {
     "abroadCourseToken": "PGhvdDpyYXRlVG9rZW4geG1sbnM6aG90PSJodHRwOi8vY3ZjLmNvbS5ici9tb2RlbC9ob3RlbHMiIHBsYT0iMzYiIGNtaT0iMzYiIGNtYz0iMzYwMDEiIHJ0az0iZDM5MWEyNzktMzlkNC00MDAxLThjYzctMjMzZmEzM2ZmOWFlLTUwMDMiIHJ0cD0iNDgyMDQwIiBydGM9IjIwNDc3ODc1NSIgY2hhPSI3NzUuNjAiIG5hZD0iMSIgYmV0PSIxMyIgY3VyPSJCUkwiIGl6bz0iMzM4MzAiIGFncz0iVyIgYnJjPSIxMDAwIiBsYW49InB0X0JSIiBkaW49IjIwMTYtMTAtMjgiIGRvdT0iMjAxNi0xMC0yOSIgcGtnPSJWSEkiIHB4cz0iMzAiLz4",
     "course": {
-      "@TODO": "ADD SAMPLE COURSE"
-    },
-    "institution": {
-      "id": "10792060",
-      "name": "LSI NOVA YORK INTERCAMBIO",
-      "description": "É importante questionar o quanto a consulta aos diversos militantes nos obriga à análise do fluxo de informações. As experiências acumuladas demonstram que a determinação clara de objetivos deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro.",
-      "zone": {
-        "id": 25651,
-        "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
-        "city": {
-          "name": "NEW YORK"
+      "name": "Standard English",
+      "language": {
+        "id": "2",
+        "name": "Inglês"
+      },
+      "category": {
+        "id": "1",
+        "name": "Geral de Idioma"
+      },
+      "institution": {
+        "id": "10792060",
+        "name": "LSI NOVA YORK INTERCAMBIO",
+        "description": "É importante questionar o quanto a consulta aos diversos militantes nos obriga à análise do fluxo de informações. As experiências acumuladas demonstram que a determinação clara de objetivos deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro.",
+        "zone": {
+          "id": 25651,
+          "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
+          "city": {
+            "name": "NEW YORK"
+          },
+          "state": {
+            "name": "NEW YORK"
+          },
+          "country": {
+            "name": "ESTADOS UNIDOS DA AMERICA"
+          },
+          "latitude": 40.723143,
+          "longitude": -74.00764
+        }
+      },
+      "durationWeeks": 1,
+      "classesPerWeek": 20,
+      "classPeriod": "manhã",
+      "start": "2016-08-22",
+      "end": "2016-08-26",
+      "minimumProficiency": {
+        "id": 2,
+        "name": "Básico"
+      },
+      "minimumAge": 18,
+      "maximumAge": 99,
+      "description": "No Standard English Course, você concentra na aprendizagem através da comunicação na vida real (fala, escuta, leitura, escrita) dentro e fora da sala de aula. Este é um curso geral de lingua inglesa de 20 aulas por semana, ministrado em turmas pequenas, o que permite que nossos experientes professores fornecerem feedback individual e aconselhamento sobre como melhorar e desenvolver competências linguísticas.",
+      "keyFeatures": [{
+        "features": [{
+          "label": "Duração:",
+          "value": "4 semanas + 1 semana grátis20 aulas por semana",
+          "note": ""
+        }, {
+          "value": "20 aulas por semana"
+        }]
+      }, {
+        "features": [{
+          "label": "Início:",
+          "value": "21/12"
+        }, {
+          "label": "Término:",
+          "value": "01/01"
+        }]
+      }, {
+        "features": [{
+          "label": "Nível Mínimo:",
+          "value": "Intermediário",
+          "note": "O help deverá vir aqui"
+        }]
+      }, {
+        "features": [{
+          "label": "Recesso:",
+          "value": "de 21/12 a 01/01"
+        }]
+      }],
+      "contents": [{
+        "code": "features",
+        "items": [{
+          "name": "Até 10 alunos por sala."
+        }, {
+          "name": "A escola oferece um coordenador que dará todo o suporte necessário durante o curso."
+        }, {
+          "name": "30 aulas de inglês geral por semana, cada uma com 45 minutos de duração"
+        }]
+      }, {
+        "code": "requirements",
+        "items": [{
+          "name": "Cópia do passaporte"
+        }, {
+          "name": "Ficha de matrícula CVC"
+        }]
+      }, {
+        "code": "documents",
+        "description": "Para realizar este curso você precisará ter o passaporte válido por no mínimo 6 meses e providenciar um visto de turismo junto ao consulado no Brasil. Verifique o tempo necessário junto ao consulado. Recomendamos que a matrícula seja feita com a maior antecedência possível."
+      }, {
+        "code": "promotional-info",
+        "description": "15% de desconto para este curso."
+      }],
+      "rate": {
+        "courseToken": "ZS4R5DFCFDESRDVDDEWEWFZFZEGSREGE4==",
+        "currency": "BRL",
+        "pricePerPerson": {
+          "withTax": 1891.07,
+          "withoutTax": 1891.07
         },
-        "state": {
-          "name": "NEW YORK"
-        },
-        "country": {
-          "name": "ESTADOS UNIDOS DA AMERICA"
-        },
-        "latitude": 40.723143,
-        "longitude": -74.00764
+        "taxes": [{
+          "code": "TX_REM",
+          "description": "Taxa de Remessa",
+          "percent": 0.06,
+          "amount": 31.62,
+          "inTotal": true
+        }]
       }
     },
     "accommodation": {
