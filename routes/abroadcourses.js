@@ -405,6 +405,26 @@ var rateTokenCourse = {
     "course": {
       "@TODO": "ADD SAMPLE COURSE"
     },
+    "institution": {
+      "id": "10792060",
+      "name": "LSI NOVA YORK INTERCAMBIO",
+      "description": "É importante questionar o quanto a consulta aos diversos militantes nos obriga à análise do fluxo de informações. As experiências acumuladas demonstram que a determinação clara de objetivos deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro.",
+      "zone": {
+        "id": 25651,
+        "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
+        "city": {
+          "name": "NEW YORK"
+        },
+        "state": {
+          "name": "NEW YORK"
+        },
+        "country": {
+          "name": "ESTADOS UNIDOS DA AMERICA"
+        },
+        "latitude": 40.723143,
+        "longitude": -74.00764
+      }
+    },
     "accommodation": {
       "@TODO": "ADD SAMPLE ACCOMMODATION"
     },
