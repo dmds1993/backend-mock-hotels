@@ -59,7 +59,7 @@ var hotels = {
           "rates": [
             {
               "packageGroup": "VHI",
-              "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJyYz0iMTAwMCIgY2F0PSIyNDMzIiBjbWM9IjQ1MDAxIiBjbWk9IjQ1IiBjdXI9IkJSTCIgZGluPSIyMDE2LTEwLTI2IiBkb3U9IjIwMTYtMTAtMjkiIGRzYz0iU1RBTkRBUkQgLSBTSU5HTEUiIGZlZT0iMCIgaG90PSI0NTEwNjYwMDIzIiBpem89IjcxMTAiIGxhbj0icHRfQlIiIGxvZD0iSG90ZWwiIG1lbD0iREnDgVJJQShTKSBTRU0gQ0FGw4kgREEgTUFOSMODIiBta3A9IjAuNjM0OCIgcGtnPSJWSEkiIHBsYT0iNDUiIHByYz0iNDQxIiBweHM9IjMwIiByZXQ9IiIgcm9tPSI2MTQ2NjY1Ii8+",
+              "rateToken": "PHJhdGVUb2tlbiBwa2c9InVuZGVmaW5lZCIgcGxhPSIzOCIgY21pPSIzOCIgaXpvPSI5NjI2IiBhZ3M9IlciIGJyYz0iMTAwMCIgbGFuPSJwdF9CUiIgZGluPSIyMDE2LTA3LTI4IiBkb3U9IjIwMTYtMDctMjkiIHB4cz0iMzAsMzAiLz4+",
               "currency": "BRL",
               "priceWithTax": 694.71,
               "priceWithoutTax": 694.71,
