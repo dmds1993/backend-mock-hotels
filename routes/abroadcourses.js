@@ -45,13 +45,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/:rate_token', function(req, res, next) {
 	var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
-	
+
 	if (rateToken.includes('rateToken')) {
 		res.json(rateTokenCourse);
 	} else {
-		return res.status(500).send({ 
-		  code: 500, 
-		  message: 'Invalid Rate Token' 
+		return res.status(500).send({
+		  code: 500,
+		  message: 'Invalid Rate Token'
 		});
 	}
 });
@@ -397,7 +397,7 @@ var abroadcourses = {
       }
     }]
   }
-};  
+};
 
 var rateTokenCourse = {
   "AbroadCourse": {
@@ -512,7 +512,86 @@ var rateTokenCourse = {
       }
     },
     "accommodation": {
-      "@TODO": "ADD SAMPLE ACCOMMODATION"
+      "broker": "ITC",
+      "category": {
+        "id": 12,
+        "name": "Residencia Estudantil"
+      },
+      "name": "BSL BROOKLYN CROWN HEIGHTS INTERCAMBIO",
+      "description": "Esta casa é compartilhada apenas com outros estudantes de Brooklyn School of Languages, e tem 5 quartos (incluindo 3 singles, 1 duplo e 1 twin), 2 banheiros e uma cozinha grande. A cozinha tem uma gama completa de aparelhos modernos, incluindo um grande frigorífico e microondas.",
+      "allowExtraDays": true,
+      "earliestCheckIn": "2016-08-19",
+      "earliestCheckOut": "2016-08-28",
+      "latestCheckOut": "2016-08-29",
+      "checkIn": "2016-08-21",
+      "checkOut": "2016-08-27",
+      "zone": {
+        "id": 25651,
+        "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
+        "latitude": 40.723143,
+        "longitude": -74.00764
+      },
+      "rooms": [{
+        "id": "400",
+        "category": {
+          "id": 1,
+          "name": "SINGLE"
+        },
+        "bathroomCategory": {
+          "id": 1,
+          "name": "COMPARTILHADO"
+        },
+        "mealPlan": {
+          "id": 1,
+          "name": "SEM REFEICOES"
+        },
+        "capacity": 1,
+        "rate": {
+          "accommodationToken": "LKJVASDLJIV98WKNL98LKWAEXZ==",
+          "currency": "BRL",
+          "pricePerPerson": {
+            "withTax": 1891.07,
+            "withoutTax": 1891.07
+          },
+          "taxes": [{
+            "code": "TX_REM",
+            "description": "Taxa de Remessa",
+            "percent": 0.06,
+            "amount": 31.62,
+            "inTotal": true
+          }]
+        }
+      }],
+      "contents": [{
+        "code": "included-services",
+        "items": [{
+          "code": "lazer",
+          "name": "Lazer",
+          "items": [{
+            "name": "Sala de TV"
+          }, {
+            "name": "Sala de Jogos"
+          }]
+        }, {
+          "code": "gastronomy",
+          "name": "Gastronomia",
+          "items": [{
+            "name": "Bar"
+          }, {
+            "name": "Café da Manhã"
+          }]
+        }, {
+          "code": "services",
+          "name": "Serviços",
+          "items": [{
+            "name": "Wifi"
+          }, {
+            "name": "Recepção 24h"
+          }, {
+            "name": "Estacionamento Gratuito"
+          }]
+        }]
+      }]
     },
     "isCustomizable": true,
     "rate": {
@@ -530,7 +609,78 @@ var rateTokenCourse = {
           "inTotal": true
         }
       ]
-    }
+    },
+    "contents": [{
+      "code": "features",
+      "itens": [{
+        "code": "hotel",
+        "name": "Hotel"
+      }, {
+        "code": "car",
+        "name": "Aluguel de Carros"
+      }, {
+        "code": "assistance",
+        "name": "Assistência Viagem"
+      }]
+    }]
+  },
+  "meta": {
+    "links": {
+      "coverImage": {
+        "href": "http://img.cvc.com.br/images/369213.jpg",
+        "title": "Porto Seguro",
+        "description": "Bahia - Brasil"
+      },
+      "destinationDetail": {
+        "href": "http://www.cvc.com.br/destinos/estados-unidos/miami.aspx"
+      }
+    },
+    "countCourses": 1,
+    "price": {
+      "minWithTax": 1050.18,
+      "minWithoutTax": 1050.18,
+      "maxWithTax": 1647.75,
+      "maxWithoutTax": 1647.75
+    },
+    "languages": [{
+      "id": "2",
+      "name": "Inglês",
+      "amount": 10
+    }],
+    "categories": [{
+      "id": "1",
+      "name": "Geral de Idioma",
+      "amount": 10
+    }],
+    "loadsTimeCourse": [{
+      "id": "3",
+      "description": "20 a 25 aulas por semana",
+      "amount": 10
+    }, {
+      "id": "4",
+      "name": "mais de 26 aulas por semana",
+      "amount": 10
+    }],
+    "institutions": [{
+      "id": "10792060",
+      "name": "LSI NOVA YORK INTERCAMBIO",
+      "description": "É importante questionar o quanto a consulta aos diversos militantes nos obriga à análise do fluxo de informações. As experiências acumuladas demonstram que a determinação clara de objetivos deve passar por modificações independentemente das diretrizes de desenvolvimento para o futuro.",
+      "zone": {
+        "id": 25651,
+        "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
+        "city": {
+          "name": "NEW YORK"
+        },
+        "state": {
+          "name": "NEW YORK"
+        },
+        "country": {
+          "name": "ESTADOS UNIDOS DA AMERICA"
+        },
+        "latitude": 40.723143,
+        "longitude": -74.00764
+      }
+    }]
   }
 };
 
