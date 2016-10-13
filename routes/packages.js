@@ -2110,7 +2110,7 @@ var baseDestinations = {
       "days": 4,
       "lowestPackage": {
         "price": 3736,
-        "departureDate": "2016-11-10Z"
+        "departureDate": "2016-12-09Z"
       },
       "type": "AIR",
 			"contents": [
