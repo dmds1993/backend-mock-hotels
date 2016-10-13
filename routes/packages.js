@@ -2865,7 +2865,7 @@ var baseDestination = {
     "days": 4,
     "lowestPackage": {
       "price": 1868,
-      "departureDate": "2016-11-10Z"
+      "departureDate": "2016-12-09Z"
     },
     "type": "ROAD",
 		"contents": [
