@@ -3,7 +3,9 @@ var router = express.Router();
 
 router.post('/', function(req, res, next) {
 	if(req.body.availableItens) {
-  	res.json(availableItens);
+    setTimeout(function() {
+  	 res.json(availableItens);
+    }, 2000);
 	} else {
   	res.json({ reason: 'Missing body "availableItens" in payload' });
 	}
