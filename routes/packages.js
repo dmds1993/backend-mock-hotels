@@ -116,7 +116,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078042,
+          "id": 8078031,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -302,7 +302,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 3146461,
+          "id": 3146462,
           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
           "description": "HOTEL DE PRAIA CONFORTAVEL",
           "award": 5,
@@ -488,7 +488,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 3146461,
+          "id": 3146463,
           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
           "description": "HOTEL DE PRAIA CONFORTAVEL",
           "award": 5,
@@ -519,7 +519,7 @@ var packages = {
           "category": "Apartamento. Standard "
         },
         {
-          "id": 5608756,
+          "id": 5608757,
           "name": "JOIA HOTEL",
           "description": "TRÊS ESTRELAS SIMPLES",
           "award": 5,
@@ -550,7 +550,7 @@ var packages = {
           "category": "*Apartamento Standard*"
         },
         {
-          "id": 8078041,
+          "id": 8078042,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -705,7 +705,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 3146461,
+          "id": 3146464,
           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
           "description": "HOTEL DE PRAIA CONFORTAVEL",
           "award": 5,
@@ -736,7 +736,7 @@ var packages = {
           "category": "Apartamento. Standard "
         },
         {
-          "id": 5608756,
+          "id": 5608758,
           "name": "JOIA HOTEL",
           "description": "TRÊS ESTRELAS SIMPLES",
           "award": 5,
@@ -767,7 +767,7 @@ var packages = {
           "category": "*Apartamento Standard*"
         },
         {
-          "id": 8078041,
+          "id": 8078055,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -798,7 +798,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 8078041,
+          "id": 8078056,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -953,7 +953,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 3146461,
+          "id": 3146465,
           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
           "description": "HOTEL DE PRAIA CONFORTAVEL",
           "award": 5,
@@ -984,7 +984,7 @@ var packages = {
           "category": "Apartamento. Standard "
         },
         {
-          "id": 5608756,
+          "id": 5608759,
           "name": "JOIA HOTEL",
           "description": "TRÊS ESTRELAS SIMPLES",
           "award": 5,
@@ -1015,7 +1015,7 @@ var packages = {
           "category": "*Apartamento Standard*"
         },
         {
-          "id": 8078041,
+          "id": 8078095,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1046,7 +1046,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 8078041,
+          "id": 8078026,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1077,7 +1077,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 8078041,
+          "id": 8078047,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1201,7 +1201,7 @@ var packages = {
       "baseDestination": 128776,
       "hotels": [
         {
-          "id": 8078047,
+          "id": 8078077,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1232,7 +1232,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 3146461,
+          "id": 3146466,
           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
           "description": "HOTEL DE PRAIA CONFORTAVEL",
           "award": 5,
@@ -1263,7 +1263,7 @@ var packages = {
           "category": "Apartamento. Standard "
         },
         {
-          "id": 5608756,
+          "id": 5608766,
           "name": "JOIA HOTEL",
           "description": "TRÊS ESTRELAS SIMPLES",
           "award": 5,
@@ -1294,7 +1294,7 @@ var packages = {
           "category": "*Apartamento Standard*"
         },
         {
-          "id": 8078041,
+          "id": 8078048,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1325,7 +1325,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 8078041,
+          "id": 8078049,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
@@ -1356,7 +1356,7 @@ var packages = {
           "category": "Apartamento Luxo"
         },
         {
-          "id": 8078041,
+          "id": 8078051,
           "name": "POUSADA CONDADO BRASILEIRO",
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
