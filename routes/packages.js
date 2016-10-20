@@ -57,10 +57,17 @@ var packages = {
       "days": 3,
       "type": "ROAD",
       "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 240,
-      "currency": "BRL",
+			"currency": "BRL",
       "baseDestination": 128776,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "hotels": [
         {
           "id": 8078041,
@@ -68,6 +75,7 @@ var packages = {
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
           "isPreferential": true,
+					"category": "Apartamento Luxo",
           "timeSpan": {
             "nights": 2,
             "checkIn": "2016-11-04",
@@ -82,19 +90,29 @@ var packages = {
           },
           "room": {
             "rph": 1,
-            "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            "category": "310"
           },
-          "category": "Apartamento Luxo"
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					}
         }
       ],
-      "flight": null,
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": null,
       "taxes": [
         {
           "code": "PackageTaxes_11",
@@ -110,10 +128,17 @@ var packages = {
       "days": 7,
       "type": "AIR",
       "isAvailable": false,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": 240,
-      "currency": "BRL",
+			"currency": "BRL",
       "baseDestination": 128776,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "hotels": [
         {
           "id": 8078031,
@@ -121,6 +146,7 @@ var packages = {
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
           "isPreferential": true,
+					"category": "Apartamento Luxo",
           "timeSpan": {
             "nights": 2,
             "checkIn": "2016-11-04",
@@ -135,16 +161,14 @@ var packages = {
           },
           "room": {
             "rph": 1,
-            "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            "category": "310"
           },
-          "category": "Apartamento Luxo"
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					}
         },
         {
           "id": 3146461,
@@ -166,80 +190,127 @@ var packages = {
           },
           "room": {
             "rph": 1,
-            "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
-            "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
+            "category": "238"
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652023,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
@@ -266,7 +337,14 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9Ik1HIiBlemk9IjEwMTMiIGZncj0iMTc2NjUyMDIzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGlkPSIxNjc0NzY3NjgiIHBraT0iMTY3NDc2NzY4IiBwb3Q9IjEyMCIgcHJkPSJDVkMgUGFja2FnZSIgcHhzPSIzMCIgc2N0PSJCUiIgc2R0PSIyMDE2LTA5LTI2WiIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
-      "price": 240,
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "currency": "BRL",
       "baseDestination": 128776,
       "hotels": [
@@ -290,15 +368,14 @@ var packages = {
           },
           "room": {
             "rph": 1,
-            "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            "category": "310"
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -321,15 +398,14 @@ var packages = {
           },
           "room": {
             "rph": 1,
-            "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -355,77 +431,125 @@ var packages = {
             "description": "*Apartamento Standard*",
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/275345.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/275345.jpg"
+						}
+					},
           "category": "*Apartamento Standard*"
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652024,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
@@ -452,7 +576,14 @@ var packages = {
       "type": "AIR",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": 240,
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "currency": "BRL",
       "baseDestination": 128776,
       "hotels": [
@@ -479,12 +610,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -510,12 +641,12 @@ var packages = {
             "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -541,12 +672,12 @@ var packages = {
             "description": "*Apartamento Standard*",
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/275345.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/275345.jpg"
+						}
+					},
           "category": "*Apartamento Standard*"
         },
         {
@@ -572,77 +703,125 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652025,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
@@ -669,7 +848,14 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0yNCIgZHRpPSIyMDE2LTEwLTIxIiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY0NSIgcGtpPSIxNzc1Mjg2NDUiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": 240,
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "currency": "BRL",
       "baseDestination": 128776,
       "hotels": [
@@ -696,12 +882,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -727,12 +913,12 @@ var packages = {
             "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -758,12 +944,12 @@ var packages = {
             "description": "*Apartamento Standard*",
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/275345.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/275345.jpg"
+						}
+					},
           "category": "*Apartamento Standard*"
         },
         {
@@ -789,12 +975,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -820,77 +1006,125 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652026,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
@@ -917,7 +1151,14 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0zMSIgZHRpPSIyMDE2LTEwLTI4IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODU5MCIgcGtpPSIxNzc1Mjg1OTAiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": 240,
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "currency": "BRL",
       "baseDestination": 128776,
       "hotels": [
@@ -944,12 +1185,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -975,12 +1216,12 @@ var packages = {
             "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -1006,12 +1247,12 @@ var packages = {
             "description": "*Apartamento Standard*",
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/275345.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/275345.jpg"
+						}
+					},
           "category": "*Apartamento Standard*"
         },
         {
@@ -1037,12 +1278,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1068,12 +1309,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1099,77 +1340,125 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652027,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
@@ -1196,7 +1485,14 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTA1IiBlY3Q9IkJSIiBlc3Q9IlNDIiBlemk9IjEzNCIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDQzOTA3NCIgcGtpPSIxNzQ0MzkwNzQiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": 240,
+			"price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
       "currency": "BRL",
       "baseDestination": 128776,
       "hotels": [
@@ -1223,12 +1519,12 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1254,12 +1550,12 @@ var packages = {
             "description": "Apartamento. Standard ",
             "mealPlan": "Diária com meia pensão",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/266886.jpg"
-              }
-            }
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/266886.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -1285,12 +1581,13 @@ var packages = {
             "description": "*Apartamento Standard*",
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/275345.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/275345.jpg"
+						}
+					},
           "category": "*Apartamento Standard*"
         },
         {
@@ -1316,12 +1613,13 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1347,12 +1645,13 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1378,12 +1677,13 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "310",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/292855.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/292855.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1409,12 +1709,13 @@ var packages = {
             "description": "Apartamento Standard",
             "mealPlan": "Diária com café da manhã",
             "category": "3",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/286516.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/286516.jpg"
+						}
+					},
           "category": "Apartamento Standard"
         },
         {
@@ -1440,12 +1741,13 @@ var packages = {
             "description": "Apartamento. Standard ",
             "mealPlan": "Diária com café da manhã",
             "category": "238",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/296574.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/296574.jpg"
+						}
+					},
           "category": "Apartamento. Standard "
         },
         {
@@ -1471,12 +1773,13 @@ var packages = {
             "description": "Apartamento Standard",
             "mealPlan": "Diária com meia pensão",
             "category": "3",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/306120.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/306120.jpg"
+						}
+					},
           "category": "Apartamento Standard"
         },
         {
@@ -1502,12 +1805,13 @@ var packages = {
             "description": "Apartamento Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "1208",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/310645.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/310645.jpg"
+						}
+					},
           "category": "Apartamento Luxo"
         },
         {
@@ -1533,12 +1837,13 @@ var packages = {
             "description": "* Apartamento ",
             "mealPlan": "Diária com café da manhã",
             "category": "6480",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/350586.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/350586.jpg"
+						}
+					},
           "category": "* Apartamento "
         },
         {
@@ -1564,12 +1869,13 @@ var packages = {
             "description": "Apartamento Standard",
             "mealPlan": "Diária com café da manhã",
             "category": "3",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/350786.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/350786.jpg"
+						}
+					},
           "category": "Apartamento Standard"
         },
         {
@@ -1595,12 +1901,13 @@ var packages = {
             "description": "Apartamento Superior",
             "mealPlan": "Diária com café da manhã",
             "category": "1752",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/350805.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/350805.jpg"
+						}
+					},
           "category": "Apartamento Superior"
         },
         {
@@ -1626,12 +1933,13 @@ var packages = {
             "description": "Apartamento Standard",
             "mealPlan": "Diária com café da manhã",
             "category": "3",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/356071.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/356071.jpg"
+						}
+					},
           "category": "Apartamento Standard"
         },
         {
@@ -1657,12 +1965,13 @@ var packages = {
             "description": "Luxo",
             "mealPlan": "Diária com café da manhã",
             "category": "218",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/359487.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/359487.jpg"
+						}
+					},
           "category": "Luxo"
         },
         {
@@ -1688,77 +1997,126 @@ var packages = {
             "description": "Apartamento Superior",
             "mealPlan": "Diária com café da manhã",
             "category": "1752",
-            "links": {
-              "thumbnailImage": {
-                "href": "http://www.cvc.com.br/images/343988.jpg"
-              }
-            }
+            
           },
+					"links": {
+						"thumbnailImage": {
+							"href": "http://www.cvc.com.br/images/343988.jpg"
+						}
+					},
           "category": "Apartamento Superior"
         }
       ],
-      "flight": {
+			"alternativeRooms": [
+        {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard",
+          "packageRateToken": "ldjkfsapdflj==",
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            }
+          }
+        }
+      ],
+      "flights": {
         "id": 176652028,
-        "outbound": {
-          "number": "35492",
-          "period": "D",
+				"inbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-08-29T15:50:00-03:00",
+          "duration": 190,
+          "arrivalDate": "2016-08-29T19:00:00-03:00",
+					"class": "Económico",
           "departureLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
           },
           "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
+            "iata": "OPO",
+            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
           },
-          "departureDate": "2016-11-14T10:48:00.000Z",
-          "duration": 257,
-          "arrivalDate": "2016-11-14T15:05:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-08-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-08-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
               "arrivalLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
-              "departureDate": "2016-11-14T10:48:00.000Z",
-              "arrivalDate": "2016-11-14T15:05:00.000Z",
-              "operatedBy": "JJ",
-              "duration": 257
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
+            },
+            {
+							"flightNumber": "4321",
+              "departureDate": "2016-08-29T18:50:00-03:00",
+              "duration": 60,
+              "arrivalDate": "2016-08-29T19:00:00-03:00",
+							"class": "Económico",
+              "departureLocation": {
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+              },
+              "arrivalLocation": {
+                "iata": "OPO",
+                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+              },
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         },
-        "inbound": {
-          "number": "93949",
-          "period": "D",
-          "arrivalLocation": {
-            "iata": "REC",
-            "description": "RECIFE"
+				"outbound": {
+          "period": "NIGHTLY",
+					"departureDate": "2016-09-29T15:50:00-03:00",
+          "duration": 130,
+          "arrivalDate": "2016-09-29T19:00:00-03:00",
+					"class": "Económico",
+          "departureLocation": {
+            "iata": "LIS",
+            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
           },
-          "departureDate": "2016-11-08T13:40:00.000Z",
-          "duration": 123,
-          "arrivalDate": "2016-11-08T15:43:00.000Z",
-          "operatedBy": "JJ",
-          "class": "Economico",
+          "arrivalLocation": {
+            "iata": "GRU",
+            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+          },
+          "operatingAirline": {
+            "code": "G3",
+            "name": "GOL"
+          },
           "legs": [
             {
+							"flightNumber": "1234",
+              "departureDate": "2016-09-29T15:50:00-03:00",
+              "duration": 130,
+              "arrivalDate": "2016-09-29T18:00:00-03:00",
+							"class": "Económico",
               "departureLocation": {
-                "iata": "GRU",
-                "description": "GUARULHOS"
+                "iata": "LIS",
+                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
               },
               "arrivalLocation": {
-                "iata": "REC",
-                "description": "RECIFE"
+                "iata": "GRU",
+                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
               },
-              "departureDate": "2016-11-08T13:40:00.000Z",
-              "arrivalDate": "2016-11-08T15:43:00.000Z",
-              "flightNumber": "93949",
-              "operatedBy": "JJ",
-              "duration": 123
+              "operatingAirline": {
+                "code": "G3",
+                "name": "GOL"
+              }
             }
           ]
         }
