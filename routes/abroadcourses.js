@@ -46,7 +46,7 @@ router.get('/', function(req, res, next) {
 router.get('/:rate_token', function(req, res, next) {
 	var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
 
-	if (rateToken.includes('rateToken')) {
+	if (rateToken.includes('Token')) {
 		res.json(rateTokenCourse);
 	} else {
 		return res.status(500).send({
