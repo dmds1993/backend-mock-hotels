@@ -17,17 +17,23 @@ router.get('/:hotel_id/rooms', function(req, res, next) {
 
 router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
 	var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
-	
+
 	res.json(rateTokenRoom);
  //  if (rateToken.includes('rateToken')) {
 	// } else {
-	// 	return res.status(500).send({ 
-	// 	  code: 500, 
-	// 	  message: 'Invalid Rate Token' 
+	// 	return res.status(500).send({
+	// 	  code: 500,
+	// 	  message: 'Invalid Rate Token'
 	// 	});
 	// }
 
 });
+
+// Query Example /hotels/booking/JUNIPER/JC23J
+router.get('/booking/:vendor/:locatorCode', function(req, res, next) {
+  res.json(reservation);
+});
+
 
 module.exports = router;
 
@@ -1732,4 +1738,159 @@ var rateTokenRoom = {
       }
     ]
   }
+};
+
+var reservation = {
+  "hotelsBooking": [
+    {
+      "meta": {
+        "rateToken": "NYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdX==",
+        "cancellationPolicies": [
+          {
+            "nonRefundable": false,
+            "start": "2016-07-19",
+            "end": "2016-08-19",
+            "amount": 123.03,
+            "percentageOfTotal": 0.15
+          }
+        ],
+        "previousReservations": [
+          {
+            "id": 4321354123,
+            "status": "CANCELED",
+            "creation": {
+              "date": "2016-07-19T17:37:01"
+            },
+            "cancellation": {
+              "date": "2016-07-19T17:37:01"
+            }
+          }
+        ]
+      },
+      "hotelDetail": {
+        "id": "34121985",
+        "name": "River Park Hotel & Suites",
+        "description": "O hotel, renovado em 2005, compreende 10 andares com um total de 284 quartos. À sua espera, um hall de entrada climatizado com recepção (disponível 24 h por dia), cofre, guichet para câmbio monetário e elevadores. As instalações gastronómicas do hotel contam com um bar e um restaurante com cadeiras para crianças e área exterior. Terá também um quiosque e acesso à Internet à disposição. Os serviços de quartos e de lavandaria completam as ofertas do hotel. Poderá estacionar o seu automóvel no parque de estacionamento do hotel.",
+        "award": 3,
+        "benefit": 3,
+        "isPreferential": false,
+        "isPlus": false,
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA",
+          "coordinates": {
+            "latitude": -30.055,
+            "longitude": -51.22972
+          }
+        },
+        "links": {
+          "thumbnailImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          },
+          "mapImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          },
+          "images": [
+            {
+              "href": "http://www.cvc.com.br/static/img01.jpg"
+            },
+            {
+              "href": "http://www.cvc.com.br/static/img02.jpg"
+            },
+            {
+              "href": "http://www.cvc.com.br/static/img03.jpg"
+            },
+            {
+              "href": "http://www.cvc.com.br/static/img04.jpg"
+            }
+          ]
+        },
+        "contents": [
+          {
+            "code": "optional-items",
+            "items": [
+              {
+                "code": "MT",
+                "name": "Mesa de Trabalho"
+              },
+              {
+                "code": "WG",
+                "name": "Wifi Grátis"
+              }
+            ]
+          },
+          {
+            "code": "resort-fee",
+            "description": "A prática cotidiana prova que a expansão dos mercados mundiais maximiza as possibilidades por conta do fluxo de informações."
+          },
+          {
+            "code": "setting-cancellation-policies",
+            "name": "Politicas de Cancelamento",
+            "description": "Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o fenômeno da Internet possibilita uma melhor visão global da gestão inovadora da qual fazemos parte"
+          },
+          {
+            "code": "Descrição Completa",
+            "name": "full-description",
+            "description": "Caros amigos, a estrutura atual da organização causa impacto indireto na reavaliação do processo de comunicação como um todo."
+          }
+        ]
+      },
+      "booking": {
+        "id": 34306398,
+        "rooms": [
+          {
+            "rph": "1",
+            "channelManager": {
+              "id": 34,
+              "reservationCode": "128803360723|260633276",
+              "price": 123.03,
+              "grossProfit": 23.03,
+              "currency": "DOLAR_COMERCIAL"
+            },
+            "player": {
+              "id": 5,
+              "reservationCode": "12/4323432"
+            },
+            "price": 2343.03,
+            "currency": "REAL",
+            "description": "Quarto Twin Standard, 2 camas de Solteiro",
+            "checkIn": "2016-06-03",
+            "checkOut": "2016-06-04",
+            "paxsId": [
+              1,
+              2,
+              3
+            ],
+            "nightsAmount": 1,
+            "markup": 0.6,
+            "packageGroup": "vhi",
+            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+            "mealPlan": "Sem Café"
+          }
+        ]
+      }
+    }
+  ],
+  "paxs": [
+    {
+      "id": 1,
+      "name": "FLAVIOA",
+      "surname": "SOUSA",
+      "gender": "M",
+      "birthday": "1986-08-19"
+    },
+    {
+      "id": 2,
+      "name": "FLAVIOB",
+      "surname": "SOUSA",
+      "gender": "M",
+      "birthday": "1986-08-19"
+    },
+    {
+      "id": 3,
+      "name": "FLAVIOC",
+      "surname": "SOUSA",
+      "gender": "M",
+      "birthday": "2000-08-19"
+    }
+  ]
 };

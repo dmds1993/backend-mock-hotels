@@ -38,31 +38,31 @@ app.use('/dev/login', login);
 app.use(function (req, res, next) {
   if(req.method != 'OPTIONS') {
     // if(!req.headers['gtw-sec-user-token']) {
-    //   return res.status(400).send({ 
-    //     code: 400, 
-    //     message: 'Missing header: Gtw-Sec-User-Token' 
+    //   return res.status(400).send({
+    //     code: 400,
+    //     message: 'Missing header: Gtw-Sec-User-Token'
     //   });
     // }
 
     // if (!req.headers['gtw-transaction-id']) {
-    //   return res.status(400).send({ 
-    //     code: 400, 
-    //     message: 'Missing header: Gtw-Transaction-Id' 
+    //   return res.status(400).send({
+    //     code: 400,
+    //     message: 'Missing header: Gtw-Transaction-Id'
     //   });
     // }
 
     // if (!req.headers['content-type'] || (req.headers['content-type'] !== 'application/json') ) {
-    //   return res.status(400).send({ 
-    //     code: 400, 
-    //     message: 'Missing header: Content-Type = application/json' 
+    //   return res.status(400).send({
+    //     code: 400,
+    //     message: 'Missing header: Content-Type = application/json'
     //   });
     // }
   }
-  
+
   next();
 });
 
-//Routes 
+//Routes
 var main = require('./routes/main');
 app.use('/', main);
 
@@ -108,7 +108,7 @@ app.use('/dev/contactUs', contactUs);
 var promotions = require('./routes/promotions');
 app.use('/dev/promotions', promotions);
 
-// Set Error 
+// Set Error
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
