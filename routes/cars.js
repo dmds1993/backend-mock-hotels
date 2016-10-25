@@ -36,724 +36,855 @@ module.exports = router;
 
 var carReal = {
   "cars": [
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 51.68,
-          "priceWithoutTax": 28.68,
-          "pricePerDayWithTax": 51.68,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389706.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+  {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 51.68,
-          "priceWithoutTax": 28.68,
-          "pricePerDayWithTax": 51.68,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389706.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 51.68,
-          "priceWithoutTax": 28.68,
-          "pricePerDayWithTax": 51.68,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389706.jpg"
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQosdfsdfJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 51.68,
-          "priceWithoutTax": 28.68,
-          "pricePerDayWithTax": 51.68,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389706.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 52.75,
-          "priceWithoutTax": 29.75,
-          "pricePerDayWithTax": 52.75,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzUiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389707.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 52.75,
-          "priceWithoutTax": 29.75,
-          "pricePerDayWithTax": 52.75,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzUiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389707.jpg"
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYxcxcvxcvXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 52.75,
-          "priceWithoutTax": 29.75,
-          "pricePerDayWithTax": 52.75,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzUiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389707.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 52.75,
-          "priceWithoutTax": 29.75,
-          "pricePerDayWithTax": 52.75,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzUiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389707.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ICAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 57.67,
-          "priceWithoutTax": 34.67,
-          "pricePerDayWithTax": 57.67,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzQiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389750.jpg"
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZG21213UNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ICAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 57.67,
-          "priceWithoutTax": 34.67,
-          "pricePerDayWithTax": 57.67,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzQiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-27T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-28T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389750.jpg"
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCsdf231sdf1glzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
-    }
-  ],
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyqweqwDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdqweqwelbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }],
   "meta": {
     "price": {
-      "minWithTax": 51.68,
-      "minWithoutTax": 28.68,
-      "maxWithTax": 141.25,
-      "maxWithoutTax": 118.25
+      "minWithTax": 326.03,
+      "minWithoutTax": 306.03,
+      "maxWithTax": 726.03,
+      "maxWithoutTax": 706.03
     },
-    "counterCars": 94,
+    "countCars": 10,
     "categories": [
       {
-        "code": "ICAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO"
-      },
-      {
-        "code": "IDAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO"
-      },
-      {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO "
-      },
-      {
-        "code": "EDAR",
-        "name": "CARRO ECONÔMICO "
-      },
-      {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO"
-      },
-      {
-        "code": "CDAR",
-        "name": "CARRO COMPACTO"
-      },
-      {
-        "code": "XXAR"
-      },
-      {
-        "code": "SCAR",
-        "name": "CARRO STANDARD"
-      },
-      {
-        "code": "FCAR",
-        "name": "CARRO GRANDE  FULLSIZE"
-      },
-      {
-        "code": "PCAR",
-        "name": "CARRO PREMIUM"
-      },
-      {
-        "code": "MVAR",
-        "name": "MINI VAN"
-      },
-      {
-        "code": "IFAR",
-        "name": "SUV MÉDIO"
-      },
-      {
-        "code": "LCAR",
-        "name": "CARRO LUXO"
+        "code": "carro-economico",
+        "name": "Carro econômico"
+      }, {
+        "code": "carro-economico-com-ar",
+        "name": "Carro econômico com ar"
+      }, {
+        "code": "suv",
+        "name": "SUV"
+      }, {
+        "code": "utilitario",
+        "name": "Utilitário"
       }
     ],
     "rentalCompanies": [
       {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      {
-        "code": "ZT",
-        "name": "THRIFTY  EUA"
-      },
-      {
-        "code": "ZI",
-        "name": "AVIS"
-      },
-      {
-        "code": "AL",
-        "name": "ALAMO  EUA"
+        "code": "hertz",
+        "name": "Hertz"
+      }, {
+        "code": "unidas",
+        "name": "Unidas"
+      }, {
+        "code": "localiza",
+        "name": "Localiza"
       }
     ],
     "features": [
       {
         "code": "ar-condicionado",
-        "name": "Ar Condicionado"
-      },
-      {
-        "code": "automatico",
-        "name": "Automático"
+        "name": "Ar condicionado"
+      }, {
+        "code": "direcao-hidraulica",
+        "name": "Direção hidráulica"
+      }, {
+        "code": "radio-am-fm",
+        "name": "Rádio AM/FM"
+      }, {
+        "code": "vidro-eletrico",
+        "name": "Vidro elétrico"
       }
     ]
   }
@@ -761,716 +892,855 @@ var carReal = {
 
 var carsPerCategory = {
   "cars": [
-    {
-      "carsPerCategory": true,
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "LCAR",
-        "name": "CARRO LUXO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "AL",
-        "name": "ALAMO  EUA"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 82.28,
-          "priceWithoutTax": 59.28,
-          "pricePerDayWithTax": 82.28,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9IjMxNTciIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IkFMIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389761.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+  {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CDAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "name": "TOYOTA COROLLA OR SIMILAR",
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ICAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 90,
-          "priceWithoutTax": 67,
-          "pricePerDayWithTax": 90,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzQiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389750.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "name": "CHEVROLET AVEO OR SIMILAR",
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 101,
-          "priceWithoutTax": 78,
-          "pricePerDayWithTax": 101,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389706.jpg"
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQosdfsdfJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "name": "CHEVY AVEO OR SIMILAR",
-      "description": "COMPLETO - Quilometragem livre- Proteção do veículo (CDW)- Proteção a terceiros (EP)- 1 tanque de combustível- 1 motorista adicional- GPS",
-      "category": {
-        "code": "EDAR",
-        "name": "CARRO ECONÔMICO ",
-        "numberDoors": 4,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 101,
-          "priceWithoutTax": 78,
-          "pricePerDayWithTax": 101,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzMiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389541.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO GP* COM GPS: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "ICAR",
+      "name": "CARRO MÉDIO  INTERMEDIARIO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "name": "FORD FOCUS OR SIMILAR",
-      "description": "F2 *NECESSÁRIO VOUCHER DA LOCADORA*- Quilometragem livre- Proteção do veículo (LDW)- Proteção a terceiros (ALI)- 1 tanque de combustível- 1 motorista adicional",
-      "category": {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 103,
-          "priceWithoutTax": 80,
-          "pricePerDayWithTax": 103,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzUiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389707.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO F2*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "name": "COMPACT OR HIGHER OR SIMILAR",
-      "category": {
-        "code": "XXAR",
-        "name": "CARRO COMPACTO 2",
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 103,
-          "priceWithoutTax": 80,
-          "pricePerDayWithTax": 103,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iU3BlY2lhbCIgY21pPSIyIiBjdXI9IlVTRCIgcHVwPSJNSUEiIHZwZj0iWlIiLz4=",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYxcxcvxcvXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "name": "MITSUBISHI GALANT OR SIMILAR",
-      "description": "COMPLETO - Quilometragem livre- Proteção do veículo (CDW)- Proteção a terceiros (EP)- 1 tanque de combustível- 1 motorista adicional- GPS",
-      "category": {
-        "code": "SCAR",
-        "name": "CARRO STANDARD",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 104,
-          "priceWithoutTax": 81,
-          "pricePerDayWithTax": 104,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3NDIiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389543.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO GP* COM GPS: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "ECAR",
+      "name": "CARRO ECONÔMICO ",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
     },
-    {
-      "name": "FORD FUSION FWD/SIMILAR",
-      "description": "COMPLETO - Quilometragem livre- Proteção do veículo (CDW)- Proteção a terceiros (EP)- 1 tanque de combustível- 1 motorista adicional- GPS",
-      "category": {
-        "code": "FCAR",
-        "name": "CARRO GRANDE  FULLSIZE",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZI",
-        "name": "AVIS"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 122.5,
-          "priceWithoutTax": 99.5,
-          "pricePerDayWithTax": 122.5,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzYiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpJIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389616.jpg"
-        }
-      },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO GP* COM GPS: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-        }
-      ]
+    "player": {
+      "code": "AL"
     },
-    {
-      "name": "MITSUBISHI GALANT OR SIMILAR",
-      "description": "COMPLETO - Quilometragem livre- Proteção do veículo (CDW)- Proteção a terceiros (EP)- 1 tanque de combustível- 1 motorista adicional- GPS",
-      "category": {
-        "code": "SMCAR",
-        "name": "CARRO MUITO STANDARD",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 104,
-          "priceWithoutTax": 81,
-          "pricePerDayWithTax": 104,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3NDIiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpSIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389543.jpg"
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZG21213UNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO GP* COM GPS: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
     },
-    {
-      "name": "FORD FUSION FWD/SIMILAR",
-      "description": "COMPLETO - Quilometragem livre- Proteção do veículo (CDW)- Proteção a terceiros (EP)- 1 tanque de combustível- 1 motorista adicional- GPS",
-      "category": {
-        "code": "FCARM",
-        "name": "CARRO GRANDE FULLSIZE MASTER",
-        "numberDoors": 2,
-        "contents": [
-          {
-            "code": "optional-items",
-            "name": "Itens Opcionais",
-            "items": [
-              {
-                "code": "ar-condicionado",
-                "name": "Ar Condicionado"
-              },
-              {
-                "code": "automatico",
-                "name": "Automático"
-              }
-            ]
-          }
-        ]
-      },
-      "player": {
-        "code": "ZI",
-        "name": "AVIS"
-      },
-      "rates": [
-        {
-          "description": "Km Livre",
-          "currency": "USD",
-          "priceWithTax": 122.5,
-          "priceWithoutTax": 99.5,
-          "pricePerDayWithTax": 122.5,
-          "rateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGNhdD0iQ2FyIiBjZ2M9Ijg3MzYiIGNtaT0iMiIgY3VyPSJVU0QiIHB1cD0iTUlBIiB2cGY9IlpJIi8+",
-          "pickup": {
-            "date": "2016-10-24T11:00:00"
-          },
-          "return": {
-            "date": "2016-10-25T11:00:00"
-          },
-          "taxes": [
-            {
-              "code": "CarTaxes_13",
-              "description": "TAXA DE REMESSA",
-              "amount": 23
-            }
-          ]
-        }
-      ],
-      "links": {
-        "thumbnailImage": {
-          "href": "http://img.cvc.com.br/carros/locadoras/389616.jpg"
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "EDAR",
+      "name": "CARRO ECONÔMICO ",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCsdf231sdf1glzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
       },
-      "contents": [
-        {
-          "code": "car-full-descriptions",
-          "name": "Descrição Completa",
-          "description": "*PLANO GP* COM GPS: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condições de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o veículo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
         }
-      ]
-    }
-  ],
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "CCAR",
+      "name": "CARRO COMPACTO",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyqweqwDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdqweqwelbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "XXAR",
+      "name": "CARRO COMPACTO 2",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "SCAR",
+      "name": "CARRO STANDARD",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "FCAR",
+      "name": "CARRO GRANDE  FULLSIZE",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "SMCAR",
+      "name": "CARRO MUITO STANDARD",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }, {
+    "name": "GOL 1.0 OR SI",
+    "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+    "category": {
+      "code": "FCARM",
+      "name": "CARRO GRANDE FULLSIZE MASTER",
+      "numberDoors": 2,
+      "numberBags": 1,
+      "maxPassengers": 5,
+      "contents": [{
+        "code": "optional-items",
+        "name": "Itens Opcionais",
+        "itens": [{
+          "code": "ar-condicionado",
+          "name": "Ar Condicionado"
+        }, {
+          "code": "automatico",
+          "name": "Automático"
+        }, {
+          "code": "radio-am-fm",
+          "name": "Rádio AM/FM"
+        }]
+      }]
+    },
+    "player": {
+      "code": "AL"
+    },
+    "rates": [{
+      "description": "Km Livre",
+      "currency": "BRL",
+      "priceWithTax": 527.86,
+      "priceWithoutTax": 527.86,
+      "pricePerDayWithTax": 527.86,
+      "pricePerDayWithoutTax": 496.24,
+      "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "pickup": {
+        "name": "MIAMI INTERNTNL",
+        "id": "87645",
+        "date": "2016-07-15T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "return": {
+        "name": "MIAMI INTERNTNL",
+        "id": "43244",
+        "date": "2016-07-20T11:00",
+        "location": {
+          "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+        }
+      },
+      "taxes": [{
+        "code": "TX_REM",
+        "description": "Taxa de Remessa",
+        "percent": 0.06,
+        "amount": 31.62,
+        "inTotal": true
+      }],
+      "loyalty": {
+        "parity": 0.025,
+        "min": {
+          "points": 2000,
+          "discount": 0.05
+        },
+        "max": {
+          "points": 30021,
+          "discount": 0.5
+        }
+      }
+    }],
+    "links": {
+      "thumbnailImage": {
+        "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
+      }
+    },
+    "contents": [{
+      "code": "car-full-descriptions",
+      "name": "Descrição Completa",
+      "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+    }]
+  }],
   "meta": {
     "price": {
-      "minWithTax": 82.28,
-      "minWithoutTax": 59.28,
-      "maxWithTax": 141.25,
-      "maxWithoutTax": 118.25
+      "minWithTax": 326.03,
+      "minWithoutTax": 306.03,
+      "maxWithTax": 726.03,
+      "maxWithoutTax": 706.03
     },
-    "counterCars": 13,
+    "countCars": 10,
     "categories": [
       {
-        "code": "ICAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO"
-      },
-      {
-        "code": "IDAR",
-        "name": "CARRO MÉDIO  INTERMEDIARIO"
-      },
-      {
-        "code": "ECAR",
-        "name": "CARRO ECONÔMICO "
-      },
-      {
-        "code": "EDAR",
-        "name": "CARRO ECONÔMICO "
-      },
-      {
-        "code": "CCAR",
-        "name": "CARRO COMPACTO"
-      },
-      {
-        "code": "CDAR",
-        "name": "CARRO COMPACTO"
-      },
-      {
-        "code": "XXAR"
-      },
-      {
-        "code": "SCAR",
-        "name": "CARRO STANDARD"
-      },
-      {
-        "code": "FCAR",
-        "name": "CARRO GRANDE  FULLSIZE"
-      },
-      {
-        "code": "PCAR",
-        "name": "CARRO PREMIUM"
-      },
-      {
-        "code": "MVAR",
-        "name": "MINI VAN"
-      },
-      {
-        "code": "IFAR",
-        "name": "SUV MÉDIO"
-      },
-      {
-        "code": "LCAR",
-        "name": "CARRO LUXO"
+        "code": "carro-economico",
+        "name": "Carro econômico"
+      }, {
+        "code": "carro-economico-com-ar",
+        "name": "Carro econômico com ar"
+      }, {
+        "code": "suv",
+        "name": "SUV"
+      }, {
+        "code": "utilitario",
+        "name": "Utilitário"
       }
     ],
     "rentalCompanies": [
       {
-        "code": "ZR",
-        "name": "DOLLAR"
-      },
-      {
-        "code": "ZI",
-        "name": "AVIS"
-      },
-      {
-        "code": "AL",
-        "name": "ALAMO  EUA"
+        "code": "hertz",
+        "name": "Hertz"
+      }, {
+        "code": "unidas",
+        "name": "Unidas"
+      }, {
+        "code": "localiza",
+        "name": "Localiza"
       }
     ],
     "features": [
       {
         "code": "ar-condicionado",
-        "name": "Ar Condicionado"
-      },
-      {
-        "code": "automatico",
-        "name": "Automático"
+        "name": "Ar condicionado"
+      }, {
+        "code": "direcao-hidraulica",
+        "name": "Direção hidráulica"
+      }, {
+        "code": "radio-am-fm",
+        "name": "Rádio AM/FM"
+      }, {
+        "code": "vidro-eletrico",
+        "name": "Vidro elétrico"
       }
     ]
   }
