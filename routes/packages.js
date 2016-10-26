@@ -2140,50 +2140,213 @@ var packages = {
 
 var rateTokenPackage = {
   "package": {
-    "id": 172384640,
-    "startDate": "2016-11-04",
-    "endDate": "2016-11-07",
-    "days": 3,
-    "type": "Rodoviários",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBuZXRQcmljZT0iMTIwIiBtYXJrdXA9IjAuNSIgbWFya3VwSWQ9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBvcmlnaW5Db3VudHJ5PSJCUiIgb3JpZ2luU3RhdGU9IlNQIiBvcmlnaW5DaXR5PSI4MTYiIGRlc3RpbmF0aW9uQ291bnRyeT0iQlIiIGRlc3RpbmF0aW9uU3RhdGU9IlJKIiBkZXN0aW5hdGlvbkNpdHk9IjciIGFnZW50U2lnbj0iVyIgYnJhbmNoQ29kZT0iMTAwMCIgc2FsZURhdGU9IjIwMTYtMDktMjFaIi8+",
-    "price": 240,
-    "currency": "BRL",
-    "baseDestination": 225683,
-    "hotels": [
-      {
-        "id": 9729160,
-        "name": "POUSADA DALESTE",
-        "description": "TRÊS ESTRELAS",
-        "award": 5,
-        "isPreferential": true,
-        "timeSpan": {
-          "nights": 2,
-          "checkIn": "2016-11-04",
-          "checkOut": "2016-11-05"
-        },
-        "location": {
-          "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
-          "coordinates": {
-            "latitude": 0,
-            "longitude": 0
-          }
-        },
-        "room": {
-          "rph": 1,
-          "description": "Standard - Duplo",
-          "mealPlan": "Diária com café da manhã",
-          "category": "2434",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/290605.jpg"
-            }
-          }
-        },
-        "category": "Standard - Duplo"
-      }
-    ]
-  }
+		"id": 174669688,
+		"startDate": "2016-11-08",
+		"endDate": "2016-11-15",
+		"days": 7,
+		"type": "AIR",
+		"isAvailable": false,
+		"currency": "BRL",
+		"baseDestination": 128776,
+		"packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+		"price": {
+			"priceWithTax": 1100,
+			"priceWithoutTax": 1000,
+			"pricePerDayWithTax": 220,
+			"pricePerDayWithoutTax": 200,
+			"pricePerPaxWithTax": 500,
+			"pricePerPaxWithoutTax": 550
+		},
+		"hotels": [
+			{
+				"id": 8078031,
+				"name": "POUSADA CONDADO BRASILEIRO",
+				"description": "POUSADA DE CHARME MÉDIO CONFORTO",
+				"award": 5,
+				"isPreferential": true,
+				"category": "Apartamento Luxo",
+				"timeSpan": {
+					"nights": 2,
+					"checkIn": "2016-11-04",
+					"checkOut": "2016-11-05"
+				},
+				"location": {
+					"address": "RUA - EDGAR AZEVEDO SOARES, 226",
+					"coordinates": {
+						"latitude": 0,
+						"longitude": 0
+					}
+				},
+				"room": {
+					"rph": 1,
+					"mealPlan": "Diária com café da manhã",
+					"category": "310"
+				},
+				"links": {
+					"thumbnailImage": {
+						"href": "http://www.cvc.com.br/images/292855.jpg"
+					}
+				}
+			},
+			{
+				"id": 3146461,
+				"name": "HOTEL BEST WESTERN VIVÁ PORTO",
+				"description": "HOTEL DE PRAIA CONFORTAVEL",
+				"award": 5,
+				"isPreferential": true,
+				"timeSpan": {
+					"nights": 6,
+					"checkIn": "2016-11-08",
+					"checkOut": "2016-11-13"
+				},
+				"location": {
+					"address": "AVENIDA - BEIRA MAR, 0",
+					"coordinates": {
+						"latitude": 0,
+						"longitude": 0
+					}
+				},
+				"room": {
+					"rph": 1,
+					"mealPlan": "Diária com meia pensão",
+					"category": "238"
+				},
+				"links": {
+					"thumbnailImage": {
+						"href": "http://www.cvc.com.br/images/266886.jpg"
+					}
+				},
+				"category": "Apartamento. Standard "
+			}
+		],
+		"alternativeRooms": [
+			{
+				"mealPlan": "Diária com café da manhã",
+				"category": "Apartamento Standard",
+				"packageRateToken": "ldjkfsapdflj==",
+				"links": {
+					"thumbnailImage": {
+						"href": "http://www.cvc.com.br/static/img01.jpg"
+					}
+				}
+			}
+		],
+		"flights": {
+			"id": 176652023,
+			"inbound": {
+				"period": "NIGHTLY",
+				"departureDate": "2016-08-29T15:50:00-03:00",
+				"duration": 190,
+				"arrivalDate": "2016-08-29T19:00:00-03:00",
+				"class": "Económico",
+				"departureLocation": {
+					"iata": "GRU",
+					"description": "Aeroporto Internacional de São Paulo-Guarulhos"
+				},
+				"arrivalLocation": {
+					"iata": "OPO",
+					"description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+				},
+				"operatingAirline": {
+					"code": "G3",
+					"name": "GOL"
+				},
+				"legs": [
+					{
+						"flightNumber": "1234",
+						"departureDate": "2016-08-29T15:50:00-03:00",
+						"duration": 130,
+						"arrivalDate": "2016-08-29T18:00:00-03:00",
+						"class": "Económico",
+						"departureLocation": {
+							"iata": "GRU",
+							"description": "Aeroporto Internacional de São Paulo-Guarulhos"
+						},
+						"arrivalLocation": {
+							"iata": "LIS",
+							"description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+						},
+						"operatingAirline": {
+							"code": "G3",
+							"name": "GOL"
+						}
+					},
+					{
+						"flightNumber": "4321",
+						"departureDate": "2016-08-29T18:50:00-03:00",
+						"duration": 60,
+						"arrivalDate": "2016-08-29T19:00:00-03:00",
+						"class": "Económico",
+						"departureLocation": {
+							"iata": "LIS",
+							"description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+						},
+						"arrivalLocation": {
+							"iata": "OPO",
+							"description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+						},
+						"operatingAirline": {
+							"code": "G3",
+							"name": "GOL"
+						}
+					}
+				]
+			},
+			"outbound": {
+				"period": "NIGHTLY",
+				"departureDate": "2016-09-29T15:50:00-03:00",
+				"duration": 130,
+				"arrivalDate": "2016-09-29T19:00:00-03:00",
+				"class": "Económico",
+				"departureLocation": {
+					"iata": "LIS",
+					"description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+				},
+				"arrivalLocation": {
+					"iata": "GRU",
+					"description": "Aeroporto Internacional de São Paulo-Guarulhos"
+				},
+				"operatingAirline": {
+					"code": "G3",
+					"name": "GOL"
+				},
+				"legs": [
+					{
+						"flightNumber": "1234",
+						"departureDate": "2016-09-29T15:50:00-03:00",
+						"duration": 130,
+						"arrivalDate": "2016-09-29T18:00:00-03:00",
+						"class": "Económico",
+						"departureLocation": {
+							"iata": "LIS",
+							"description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+						},
+						"arrivalLocation": {
+							"iata": "GRU",
+							"description": "Aeroporto Internacional de São Paulo-Guarulhos"
+						},
+						"operatingAirline": {
+							"code": "G3",
+							"name": "GOL"
+						}
+					}
+				]
+			}
+		},
+		"taxes": [
+			{
+				"code": "TE",
+				"description": "Taxa de Embarque",
+				"percent": 69.36,
+				"amount": 1
+			},
+			{
+				"code": "PackageTaxes_11",
+				"description": "TAXA DE REMESSA",
+				"percent": 0.5
+			}
+		]
+	}
 };
 
 var zones = {
