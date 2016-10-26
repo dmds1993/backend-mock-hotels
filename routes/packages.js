@@ -2145,7 +2145,7 @@ var rateTokenPackage = {
 		"endDate": "2016-11-15",
 		"days": 7,
 		"type": "AIR",
-		"isAvailable": false,
+		"isAvailable": true,
 		"currency": "BRL",
 		"baseDestination": 128776,
 		"packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
