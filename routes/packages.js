@@ -46,6 +46,16 @@ router.get('/:rate_token', function (req, res, next) {
   }
 });
 
+router.post('/booking', function(req, res, next) {
+    if (req.body.paxs && req.body.orderItens) {
+      res.json(booking);
+    } else {
+      res.json({
+        message: 'Error'
+      });
+    }
+});
+
 module.exports = router;
 
 var packages = {
@@ -57,10 +67,10 @@ var packages = {
       "days": 3,
       "type": "ROAD",
       "isAvailable": true,
-			"currency": "BRL",
+      "currency": "BRL",
       "baseDestination": 128776,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -75,7 +85,7 @@ var packages = {
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
           "isPreferential": true,
-					"category": "Apartamento Luxo",
+          "category": "Apartamento Luxo",
           "timeSpan": {
             "nights": 2,
             "checkIn": "2016-11-04",
@@ -93,14 +103,14 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310"
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					}
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          }
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -112,7 +122,7 @@ var packages = {
           }
         }
       ],
-      "flights": null,
+      "flight": null,
       "taxes": [
         {
           "code": "PackageTaxes_11",
@@ -128,10 +138,10 @@ var packages = {
       "days": 7,
       "type": "AIR",
       "isAvailable": false,
-			"currency": "BRL",
+      "currency": "BRL",
       "baseDestination": 128776,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -146,7 +156,7 @@ var packages = {
           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
           "award": 5,
           "isPreferential": true,
-					"category": "Apartamento Luxo",
+          "category": "Apartamento Luxo",
           "timeSpan": {
             "nights": 2,
             "checkIn": "2016-11-04",
@@ -164,11 +174,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310"
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					}
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          }
         },
         {
           "id": 3146461,
@@ -193,15 +203,15 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238"
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -213,14 +223,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652023,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -235,11 +244,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -254,11 +263,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -274,12 +283,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -294,11 +303,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -337,7 +346,7 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9Ik1HIiBlemk9IjEwMTMiIGZncj0iMTc2NjUyMDIzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGlkPSIxNjc0NzY3NjgiIHBraT0iMTY3NDc2NzY4IiBwb3Q9IjEyMCIgcHJkPSJDVkMgUGFja2FnZSIgcHhzPSIzMCIgc2N0PSJCUiIgc2R0PSIyMDE2LTA5LTI2WiIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -371,11 +380,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310"
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -401,11 +410,11 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -432,15 +441,15 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/275345.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/275345.jpg"
+            }
+          },
           "category": "*Apartamento Standard*"
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -452,14 +461,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652024,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -474,11 +482,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -493,11 +501,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -513,12 +521,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -533,11 +541,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -576,7 +584,7 @@ var packages = {
       "type": "AIR",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -611,11 +619,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -642,11 +650,11 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -673,11 +681,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/275345.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/275345.jpg"
+            }
+          },
           "category": "*Apartamento Standard*"
         },
         {
@@ -704,15 +712,15 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -724,14 +732,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652025,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -746,11 +753,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -765,11 +772,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -785,12 +792,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -805,11 +812,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -848,7 +855,7 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0yNCIgZHRpPSIyMDE2LTEwLTIxIiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY0NSIgcGtpPSIxNzc1Mjg2NDUiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -883,11 +890,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -914,11 +921,11 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -945,11 +952,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/275345.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/275345.jpg"
+            }
+          },
           "category": "*Apartamento Standard*"
         },
         {
@@ -976,11 +983,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1007,15 +1014,15 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -1027,14 +1034,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652026,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -1049,11 +1055,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -1068,11 +1074,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1088,12 +1094,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1108,11 +1114,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1151,7 +1157,7 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0zMSIgZHRpPSIyMDE2LTEwLTI4IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODU5MCIgcGtpPSIxNzc1Mjg1OTAiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -1186,11 +1192,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1217,11 +1223,11 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -1248,11 +1254,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "2262",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/275345.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/275345.jpg"
+            }
+          },
           "category": "*Apartamento Standard*"
         },
         {
@@ -1279,11 +1285,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1310,11 +1316,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1341,15 +1347,15 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -1361,14 +1367,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652027,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -1383,11 +1388,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -1402,11 +1407,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1422,12 +1427,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1442,11 +1447,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -1485,7 +1490,7 @@ var packages = {
       "type": "ROAD",
       "isAvailable": true,
       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTA1IiBlY3Q9IkJSIiBlc3Q9IlNDIiBlemk9IjEzNCIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDQzOTA3NCIgcGtpPSIxNzQ0MzkwNzQiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-			"price": {
+      "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
         "pricePerDayWithTax": 220,
@@ -1520,11 +1525,11 @@ var packages = {
             "mealPlan": "Diária com café da manhã",
             "category": "310",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1551,11 +1556,11 @@ var packages = {
             "mealPlan": "Diária com meia pensão",
             "category": "238",
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/266886.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/266886.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -1583,11 +1588,11 @@ var packages = {
             "category": "2262",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/275345.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/275345.jpg"
+            }
+          },
           "category": "*Apartamento Standard*"
         },
         {
@@ -1615,11 +1620,11 @@ var packages = {
             "category": "310",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1647,11 +1652,11 @@ var packages = {
             "category": "310",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1679,11 +1684,11 @@ var packages = {
             "category": "310",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/292855.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/292855.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1711,11 +1716,11 @@ var packages = {
             "category": "3",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/286516.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/286516.jpg"
+            }
+          },
           "category": "Apartamento Standard"
         },
         {
@@ -1743,11 +1748,11 @@ var packages = {
             "category": "238",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/296574.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/296574.jpg"
+            }
+          },
           "category": "Apartamento. Standard "
         },
         {
@@ -1775,11 +1780,11 @@ var packages = {
             "category": "3",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/306120.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/306120.jpg"
+            }
+          },
           "category": "Apartamento Standard"
         },
         {
@@ -1807,11 +1812,11 @@ var packages = {
             "category": "1208",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/310645.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/310645.jpg"
+            }
+          },
           "category": "Apartamento Luxo"
         },
         {
@@ -1839,11 +1844,11 @@ var packages = {
             "category": "6480",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/350586.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/350586.jpg"
+            }
+          },
           "category": "* Apartamento "
         },
         {
@@ -1871,11 +1876,11 @@ var packages = {
             "category": "3",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/350786.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/350786.jpg"
+            }
+          },
           "category": "Apartamento Standard"
         },
         {
@@ -1903,11 +1908,11 @@ var packages = {
             "category": "1752",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/350805.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/350805.jpg"
+            }
+          },
           "category": "Apartamento Superior"
         },
         {
@@ -1935,11 +1940,11 @@ var packages = {
             "category": "3",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/356071.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/356071.jpg"
+            }
+          },
           "category": "Apartamento Standard"
         },
         {
@@ -1967,11 +1972,11 @@ var packages = {
             "category": "218",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/359487.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/359487.jpg"
+            }
+          },
           "category": "Luxo"
         },
         {
@@ -1999,15 +2004,15 @@ var packages = {
             "category": "1752",
             
           },
-					"links": {
-						"thumbnailImage": {
-							"href": "http://www.cvc.com.br/images/343988.jpg"
-						}
-					},
+          "links": {
+            "thumbnailImage": {
+              "href": "http://www.cvc.com.br/images/343988.jpg"
+            }
+          },
           "category": "Apartamento Superior"
         }
       ],
-			"alternativeRooms": [
+      "alternativeRooms": [
         {
           "mealPlan": "Diária com café da manhã",
           "category": "Apartamento Standard",
@@ -2019,14 +2024,13 @@ var packages = {
           }
         }
       ],
-      "flights": {
-        "id": 176652028,
-				"inbound": {
+      "flight": {
+        "inbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-08-29T15:50:00-03:00",
+          "departureDate": "2016-08-29T15:50:00-03:00",
           "duration": 190,
           "arrivalDate": "2016-08-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "GRU",
             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -2041,11 +2045,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-08-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-08-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "GRU",
                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
@@ -2060,11 +2064,11 @@ var packages = {
               }
             },
             {
-							"flightNumber": "4321",
+              "flightNumber": "4321",
               "departureDate": "2016-08-29T18:50:00-03:00",
               "duration": 60,
               "arrivalDate": "2016-08-29T19:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -2080,12 +2084,12 @@ var packages = {
             }
           ]
         },
-				"outbound": {
+        "outbound": {
           "period": "NIGHTLY",
-					"departureDate": "2016-09-29T15:50:00-03:00",
+          "departureDate": "2016-09-29T15:50:00-03:00",
           "duration": 130,
           "arrivalDate": "2016-09-29T19:00:00-03:00",
-					"class": "Económico",
+          "class": "Económico",
           "departureLocation": {
             "iata": "LIS",
             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -2100,11 +2104,11 @@ var packages = {
           },
           "legs": [
             {
-							"flightNumber": "1234",
+              "flightNumber": "1234",
               "departureDate": "2016-09-29T15:50:00-03:00",
               "duration": 130,
               "arrivalDate": "2016-09-29T18:00:00-03:00",
-							"class": "Económico",
+              "class": "Económico",
               "departureLocation": {
                 "iata": "LIS",
                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
@@ -2231,8 +2235,7 @@ var rateTokenPackage = {
 				}
 			}
 		],
-		"flights": {
-			"id": 176652023,
+		"flight": {
 			"inbound": {
 				"period": "NIGHTLY",
 				"departureDate": "2016-08-29T15:50:00-03:00",
@@ -3389,7 +3392,7 @@ var baseDestination = {
       "departureDate": "2016-12-09Z"
     },
     "type": "AIR",
-		"contents": [
+    "contents": [
       {
         "items": [
           {
@@ -3405,20 +3408,24 @@ var baseDestination = {
             "name": "Hospedagem - 7 diárias com café da manhã ou meia pensão (de acordo com o pacote escolhido)."
           },
           {
-						"code": "activitiesIcon",
+            "code": "activitiesIcon",
             "name": "Atividades - passeio aos principais pontos turísticos da cidade."
           }
         ]
       }
     ],
-    "links": [
-      {
-        "href": "http://www.cvc.com.br/images/375872.jpg",
-        "title": "são paulo",
-        "description": " FORMULA 1",
-        "tooltip": "São Paulo - São Paulo - Brasil"
-      }
-    ],
+    "links": {
+      "images": [
+        {
+          "href": "http://www.cvc.com.br/images/201672.jpg",
+          "tooltip": "Natal vista aéria da praia do forte sectur"
+        },
+        {
+          "href": "http://www.cvc.com.br/images/201661.jpg",
+          "tooltip": "Natal vista aéria da praia do forte sectur"
+        }
+      ]
+    },
     "dayByDay": [
       {
         "label": 1,
@@ -3451,10 +3458,12 @@ var destinationzones = {
     "links": {
       "images": [
         {
-          "href": "http://www.cvc.com.br/images/337787.jpg",
-          "title": "Rio de janeiro - resultado - de- pacote",
-          "description": " As belíssimas paisagens, o charme dos botequins, a vibração das praias e a simpatia do povo carioca são só alguns dos elementos que fazem do Rio de Janeiro uma cidade fascinante e muito fácil de amar. Não é à toa que o Rio atrai anualmente cerca de dois milhões de turistas estrangeiros, todos interessados em conferir o encanto do Pão de Açúcar, Corcovado, Ipanema e outras belezas que já serviram de cenário para diversos filmes e transformaram o Rio de Janeiro no cartão-postal do Brasil.",
-          "tooltip": "Rio de Janeiro - Rio de Janeiro - Brasil"
+          "href": "http://www.cvc.com.br/images/201672.jpg",
+          "tooltip": "Natal vista aéria da praia do forte sectur"
+        },
+        {
+          "href": "http://www.cvc.com.br/images/201661.jpg",
+          "tooltip": "Natal vista aéria da praia do forte sectur"
         }
       ]
     }
@@ -3686,3 +3695,21 @@ var basedestinationsdates = {
     }
   ]
 };
+
+var booking = {
+  "packages": {
+    "accommodations": [
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "reservationToken": "ACSLKDJF92383R98FSIUDF9S8DSUIDFHKJSHKVCH",
+    "package": {
+      "id": "73255"
+    }
+  }
+}
