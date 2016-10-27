@@ -401,8 +401,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -431,8 +431,8 @@ var packages = {
           "location": {
             "address": " - RIO GRANDE DO SUL, 1223",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -609,8 +609,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -640,8 +640,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -702,8 +702,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -911,8 +911,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213093,
+              "longitude": -45.5717363
             }
           },
           "room": {
@@ -942,8 +942,8 @@ var packages = {
           "location": {
             "address": " - RIO GRANDE DO SUL, 1223",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213093,
+              "longitude": -45.5717363
             }
           },
           "room": {
@@ -973,8 +973,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213093,
+              "longitude": -45.5717363
             }
           },
           "room": {
