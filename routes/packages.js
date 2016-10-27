@@ -165,8 +165,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7242144,
+              "longitude": -45.5718352
             }
           },
           "room": {
@@ -3392,7 +3392,7 @@ var baseDestination = {
       "departureDate": "2016-12-09Z"
     },
     "type": "AIR",
-    "oldContents": [
+    "contents": [
       {
         "items": [
           {
