@@ -23,7 +23,7 @@ router.get('/:rate_token', function(req, res, next) {
 	if (rateToken.includes('rateToken')) {
     var _car = findCarByRateToken(carReal.cars, base64RateToken);
     if ( typeof(_car) === 'object') {
-      res.json(_car);
+      res.json( { car: _car });
     } else {
     	return res.status(500).send({ 
         code: 500, 
