@@ -194,8 +194,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -671,8 +671,8 @@ var packages = {
           "location": {
             "address": " - RIO GRANDE DO SUL, 1223",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1004,8 +1004,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7213093,
+              "longitude": -45.5717363
             }
           },
           "room": {
@@ -1213,8 +1213,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1244,8 +1244,8 @@ var packages = {
           "location": {
             "address": " - RIO GRANDE DO SUL, 1223",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1275,8 +1275,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1306,8 +1306,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1337,8 +1337,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1546,8 +1546,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - BEIRA MAR, 0",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1577,8 +1577,8 @@ var packages = {
           "location": {
             "address": " - RIO GRANDE DO SUL, 1223",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1609,8 +1609,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1641,8 +1641,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1673,8 +1673,8 @@ var packages = {
           "location": {
             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1705,8 +1705,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - RIO BRANCO, 369",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1737,8 +1737,8 @@ var packages = {
           "location": {
             "address": " - ALBERTO BINS, 514",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1769,8 +1769,8 @@ var packages = {
           "location": {
             "address": "RODOVIA - BR 471, 471",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1801,8 +1801,8 @@ var packages = {
           "location": {
             "address": "AVENIDA - COSTA E SILVA, 1602",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1833,8 +1833,8 @@ var packages = {
           "location": {
             "address": " - INDUSTRIAL, 600",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1865,8 +1865,8 @@ var packages = {
           "location": {
             "address": " - ROQUE SAENZ PEÑA, 991",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1897,8 +1897,8 @@ var packages = {
           "location": {
             "address": " - INDUSTRIAL, 600",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1929,8 +1929,8 @@ var packages = {
           "location": {
             "address": " - AV. CORRIENTES 919, ",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1961,8 +1961,8 @@ var packages = {
           "location": {
             "address": " - J D PERON, 330",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -1993,8 +1993,8 @@ var packages = {
           "location": {
             "address": " - LAMENHA LINS, 712",
             "coordinates": {
-              "latitude": 0,
-              "longitude": 0
+              "latitude": -22.7217135,
+              "longitude": -45.5905814
             }
           },
           "room": {
@@ -2206,8 +2206,8 @@ var rateTokenPackage = {
 				"location": {
 					"address": "AVENIDA - BEIRA MAR, 0",
 					"coordinates": {
-						"latitude": 0,
-						"longitude": 0
+						"latitude": -22.7217135,
+						"longitude": -45.5905814
 					}
 				},
 				"room": {
