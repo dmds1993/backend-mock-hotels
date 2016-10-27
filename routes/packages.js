@@ -2175,12 +2175,12 @@ var rateTokenPackage = {
 					"checkOut": "2016-11-05"
 				},
 				"location": {
-					"address": "RUA - EDGAR AZEVEDO SOARES, 226",
-					"coordinates": {
-						"latitude": 0,
-						"longitude": 0
-					}
-				},
+          "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+          "coordinates": {
+            "latitude": -22.7242144,
+            "longitude": -45.5718352
+          }
+        },
 				"room": {
 					"rph": 1,
 					"mealPlan": "Diária com café da manhã",
@@ -3392,7 +3392,7 @@ var baseDestination = {
       "departureDate": "2016-12-09Z"
     },
     "type": "AIR",
-    "contents": [
+    "oldContents": [
       {
         "items": [
           {
@@ -3426,7 +3426,7 @@ var baseDestination = {
         }
       ]
     },
-    "dayByDay": [
+    "oldDayByDay": [
       {
         "label": 1,
         "description": "Recepção pela equipe CVC no aeroporto e traslado ao hotel. Restante do dia livre. (passagem aérea não inclusa)."
