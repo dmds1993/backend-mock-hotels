@@ -25,17 +25,30 @@ router.get('/:rate_token', function(req, res, next) {
     if ( typeof(_car) === 'object') {
       res.json( { car: _car });
     } else {
-    	return res.status(500).send({ 
-        code: 500, 
-        message: 'Car not found' 
+    	return res.status(500).send({
+        code: 500,
+        message: 'Car not found'
       });
     }
 	} else {
-		return res.status(500).send({ 
-		  code: 500, 
-		  message: 'Invalid Rate Token' 
+		return res.status(500).send({
+		  code: 500,
+		  message: 'Invalid Rate Token'
 		});
 	}
+});
+
+router.get('/:rate_token/optionalservices', function(req, res, next) {
+  var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
+
+  //if (rateToken.includes('rateToken')) {
+    res.json(carOptions);
+  // } else {
+  //   return res.status(500).send({
+  //     code: 500,
+  //     message: 'Invalid Rate Token'
+  //   });
+  // }
 });
 
 
@@ -2789,4 +2802,39 @@ var carsPerCategory = {
       }
     ]
   }
+};
+
+var carOptions = {
+  "optionalServices": [
+    {
+      "id": 1,
+      "name": "Cadeirinha para bebê",
+      "description": "Recomendavel até 9kg (0 a 12 meses)",
+      "quantity": true
+    },
+    {
+      "id": 2,
+      "name": "Cadeirinha para crianças",
+      "description": "Recomendavel até 18kg (1 a 4 anos)",
+      "quantity": true
+    },
+    {
+      "id": 3,
+      "name": "GPS",
+      "description": "Selecione esse campo caso o seu plano não possua a inclusão do equipamento",
+      "quantity": true
+    },
+    {
+      "id": 4,
+      "name": "Seguro proteção veículo",
+      "description": "Pacote que contempla Proteção contra roubo, furto, incêndio e perda total do veículo, danos e/ou avarias.",
+      "quantity": false
+    },
+    {
+      "id": 5,
+      "name": "Assento para criança",
+      "description": "Recomendável para bebês com peso entre 40 lbs e 100 lbs / 18 kg a 45 kg (4 a 12 anos)",
+      "quantity": true
+    }
+  ]
 };
