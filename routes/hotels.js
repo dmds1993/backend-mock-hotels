@@ -31,7 +31,25 @@ router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
 
 // Query Example /hotels/booking/JUNIPER/JC23J
 router.get('/booking/:vendor/:locatorCode', function(req, res, next) {
-  res.json(reservation);
+  switch (req.params.locatorCode) {
+    case '102030': // 500 server error
+    res.status(500).json({
+      "status": "ERROR" ,
+      "message": "A time-out occurred while communicating with the server 0x800ccc19."
+    });
+    break;
+
+    case '203040': // locator not found
+    res.status(200).json({
+      "hotelsBooking": null,
+      "paxs": null
+    });
+    break
+
+    default:
+    res.json(reservation);
+    break;
+  }
 });
 
 
