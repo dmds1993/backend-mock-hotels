@@ -846,7 +846,7 @@ var accommodations = {
           },
           "capacity": 1,
           "rate": {
-            "accommodationToken": "LKJVASDLJIV98WKNL98LKWAEXZ==",
+            "accommodationToken": "1LKJVASDLJIV98WKNL98LKWAEXZ==",
             "pricePerPerson": {
               "currency": "BRL",
               "withTax": 1891.07,
@@ -948,7 +948,7 @@ var accommodations = {
           },
           "capacity": 1,
           "rate": {
-            "accommodationToken": "LKJVASDLJIV98WKNL98LKWAEXZ==",
+            "accommodationToken": "2LKJVASDLJIV98WKNL98LKWAEXZ==",
             "pricePerPerson": {
               "currency": "BRL",
               "withTax": 1891.07,
@@ -1050,7 +1050,7 @@ var accommodations = {
           },
           "capacity": 1,
           "rate": {
-            "accommodationToken": "LKJVASDLJIV98WKNL98LKWAEXZ==",
+            "accommodationToken": "3LKJVASDLJIV98WKNL98LKWAEXZ==",
             "pricePerPerson": {
               "currency": "BRL",
               "withTax": 1891.07,
