@@ -26,9 +26,9 @@ router.get('/:rate_token', function(req, res, next) {
       // res.json({flight: aeroHotelFlights.flights[0]});
     }
   } else {
-    return res.status(500).send({ 
-      code: 500, 
-      message: 'Invalid Rate Token' 
+    return res.status(500).send({
+      code: 500,
+      message: 'Invalid Rate Token'
     });
   }
 });
@@ -3400,8 +3400,8 @@ var aeroHotelFlights = {
     "price": {
       "minWithoutTax": 199.5132,
       "maxWithoutTax": 397.7194,
-      "minWithtTax": 529.8796,
-      "maxWithtTax": 1580.1886
+      "minWithTax": 529.8796,
+      "maxWithTax": 1580.1886
     },
     "routes": [
       {
