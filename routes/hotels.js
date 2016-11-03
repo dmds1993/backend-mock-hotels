@@ -17,7 +17,8 @@ router.get('/:hotel_id/rooms', function(req, res, next) {
 
 router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
 	var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
-
+  var response = rateTokenRoom;
+  response.room.rates[0].rateToken = rateToken;
 	res.json(rateTokenRoom);
  //  if (rateToken.includes('rateToken')) {
 	// } else {
