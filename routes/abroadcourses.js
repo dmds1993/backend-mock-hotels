@@ -31,6 +31,10 @@ router.get('/accommodations', function(req, res, next) {
 	res.json(accommodations);
 });
 
+router.get('/accommodations/:accommodation_token', function(req, res, next) {
+  res.json(accommodationToken);
+});
+
 router.get('/destinations', function(req, res, next) {
   res.json(destinations);
 });
@@ -1164,6 +1168,111 @@ var accommodations = {
         "id": 1,
         "name": "Residencia Estudantil",
         "amount": 10
+      }
+    ]
+  }
+};
+
+var accommodationToken = {
+  "accommodation": {
+    "broker": "ITC",
+    "category": {
+      "id": 12,
+      "name": "Residencia Estudantil"
+    },
+    "name": "BSL BROOKLYN CROWN HEIGHTS INTERCAMBIO",
+    "description": "Esta casa é compartilhada apenas com outros estudantes de Brooklyn School of Languages, e tem 5 quartos (incluindo 3 singles, 1 duplo e 1 twin), 2 banheiros e uma cozinha grande. A cozinha tem uma gama completa de aparelhos modernos, incluindo um grande frigorífico e microondas.",
+    "allowExtraDays": true,
+    "earliestCheckIn": "2016-08-19",
+    "earliestCheckOut": "2016-08-28",
+    "latestCheckOut": "2016-08-29",
+    "checkIn": "2016-08-21",
+    "checkOut": "2016-08-27",
+    "zone": {
+      "id": 25651,
+      "address": "40, RECTOR STREET, NEW YORK, NEW YORK, MANHATTAN, ESTADOS UNIDOS DA AMERICA",
+      "latitude": 40.723143,
+      "longitude": -74.00764
+    },
+    "rooms": [
+      {
+        "id": "400",
+        "category": {
+          "id": 1,
+          "name": "SINGLE"
+        },
+        "bathroomCategory": {
+          "id": 1,
+          "name": "COMPARTILHADO"
+        },
+        "mealPlan": {
+          "id": 1,
+          "name": "SEM REFEICOES"
+        },
+        "capacity": 1,
+        "rate": {
+          "accommodationToken": "LKJVASDLJIV98WKNL98LKWAEXZ==",
+          "currency": "BRL",
+          "pricePerPerson": {
+            "withTax": 1891.07,
+            "withoutTax": 1891.07
+          },
+          "taxes": [
+            {
+              "code": "TX_REM",
+              "description": "Taxa de Remessa",
+              "percent": 0.06,
+              "amount": 31.62,
+              "inTotal": true
+            }
+          ]
+        }
+      }
+    ],
+    "contents": [
+      {
+        "code": "included-services",
+        "items": [
+          {
+            "code": "lazer",
+            "name": "Lazer",
+            "items": [
+              {
+                "name": "Sala de TV"
+              },
+              {
+                "name": "Sala de Jogos"
+              }
+            ]
+          },
+          {
+            "code": "gastronomy",
+            "name": "Gastronomia",
+            "items": [
+              {
+                "name": "Bar"
+              },
+              {
+                "name": "Café da Manhã"
+              }
+            ]
+          },
+          {
+            "code": "services",
+            "name": "Serviços",
+            "items": [
+              {
+                "name": "Wifi"
+              },
+              {
+                "name": "Recepção 24h"
+              },
+              {
+                "name": "Estacionamento Gratuito"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

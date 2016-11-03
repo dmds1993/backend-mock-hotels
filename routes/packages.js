@@ -58,294 +58,2100 @@ router.post('/booking', function(req, res, next) {
 
 module.exports = router;
 
+// var packages = {
+//   "packages": [
+//     {
+//       "id": 177528727,
+//       "startDate": "2016-11-04",
+//       "endDate": "2016-11-07",
+//       "days": 3,
+//       "type": "ROAD",
+//       "isAvailable": true,
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "hotels": [
+//         {
+//           "id": 8078041,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "category": "Apartamento Luxo",
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310"
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": null,
+//       "taxes": [
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 174669688,
+//       "startDate": "2016-11-08",
+//       "endDate": "2016-11-15",
+//       "days": 7,
+//       "type": "AIR",
+//       "isAvailable": false,
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "hotels": [
+//         {
+//           "id": 8078031,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "category": "Apartamento Luxo",
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310"
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           }
+//         },
+//         {
+//           "id": 3146461,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238"
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 167476768,
+//       "startDate": "2016-10-14",
+//       "endDate": "2016-10-17",
+//       "days": 3,
+//       "type": "ROAD",
+//       "isAvailable": true,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9Ik1HIiBlemk9IjEwMTMiIGZncj0iMTc2NjUyMDIzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGlkPSIxNjc0NzY3NjgiIHBraT0iMTY3NDc2NzY4IiBwb3Q9IjEyMCIgcHJkPSJDVkMgUGFja2FnZSIgcHhzPSIzMCIgc2N0PSJCUiIgc2R0PSIyMDE2LTA5LTI2WiIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "hotels": [
+//         {
+//           "id": 8078043,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7213217,
+//               "longitude": -45.5715443
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310"
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 3146462,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 5608756,
+//           "name": "JOIA HOTEL",
+//           "description": "TRÊS ESTRELAS SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": " - RIO GRANDE DO SUL, 1223",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "*Apartamento Standard*",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "2262",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/275345.jpg"
+//             }
+//           },
+//           "category": "*Apartamento Standard*"
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 177528667,
+//       "startDate": "2016-10-14",
+//       "endDate": "2016-10-17",
+//       "days": 3,
+//       "type": "AIR",
+//       "isAvailable": true,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "hotels": [
+//         {
+//           "id": 8078044,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 3146463,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento. Standard ",
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 5608757,
+//           "name": "JOIA HOTEL",
+//           "description": "TRÊS ESTRELAS SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": " - RIO GRANDE DO SUL, 1223",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "*Apartamento Standard*",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "2262",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/275345.jpg"
+//             }
+//           },
+//           "category": "*Apartamento Standard*"
+//         },
+//         {
+//           "id": 8078042,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7242144,
+//               "longitude": -45.5718352
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 177528645,
+//       "startDate": "2016-10-21",
+//       "endDate": "2016-10-24",
+//       "days": 3,
+//       "type": "ROAD",
+//       "isAvailable": true,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0yNCIgZHRpPSIyMDE2LTEwLTIxIiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY0NSIgcGtpPSIxNzc1Mjg2NDUiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "hotels": [
+//         {
+//           "id": 8078045,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7213093,
+//               "longitude": -45.5717363
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 3146464,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7213093,
+//               "longitude": -45.5717363
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento. Standard ",
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 5608758,
+//           "name": "JOIA HOTEL",
+//           "description": "TRÊS ESTRELAS SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": " - RIO GRANDE DO SUL, 1223",
+//             "coordinates": {
+//               "latitude": -22.7213093,
+//               "longitude": -45.5717363
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "*Apartamento Standard*",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "2262",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/275345.jpg"
+//             }
+//           },
+//           "category": "*Apartamento Standard*"
+//         },
+//         {
+//           "id": 8078055,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7213093,
+//               "longitude": -45.5717363
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 8078056,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-21",
+//             "checkOut": "2016-10-22"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7213093,
+//               "longitude": -45.5717363
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 177528590,
+//       "startDate": "2016-10-28",
+//       "endDate": "2016-10-31",
+//       "days": 3,
+//       "type": "ROAD",
+//       "isAvailable": true,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0zMSIgZHRpPSIyMDE2LTEwLTI4IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODU5MCIgcGtpPSIxNzc1Mjg1OTAiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "hotels": [
+//         {
+//           "id": 8078046,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 3146465,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento. Standard ",
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 5608759,
+//           "name": "JOIA HOTEL",
+//           "description": "TRÊS ESTRELAS SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": " - RIO GRANDE DO SUL, 1223",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "*Apartamento Standard*",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "2262",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/275345.jpg"
+//             }
+//           },
+//           "category": "*Apartamento Standard*"
+//         },
+//         {
+//           "id": 8078095,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 8078026,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-21",
+//             "checkOut": "2016-10-22"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 8078047,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-28",
+//             "checkOut": "2016-10-29"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     },
+//     {
+//       "id": 174439074,
+//       "startDate": "2016-11-05",
+//       "endDate": "2016-11-21",
+//       "days": 16,
+//       "type": "ROAD",
+//       "isAvailable": true,
+//       "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTA1IiBlY3Q9IkJSIiBlc3Q9IlNDIiBlemk9IjEzNCIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDQzOTA3NCIgcGtpPSIxNzQ0MzkwNzQiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
+//       "price": {
+//         "priceWithTax": 1100,
+//         "priceWithoutTax": 1000,
+//         "pricePerDayWithTax": 220,
+//         "pricePerDayWithoutTax": 200,
+//         "pricePerPaxWithTax": 500,
+//         "pricePerPaxWithoutTax": 550
+//       },
+//       "currency": "BRL",
+//       "baseDestination": 128776,
+//       "hotels": [
+//         {
+//           "id": 8078077,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-04",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.723573,
+//               "longitude": -45.5583256
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 3146466,
+//           "name": "HOTEL BEST WESTERN VIVÁ PORTO",
+//           "description": "HOTEL DE PRAIA CONFORTAVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 6,
+//             "checkIn": "2016-11-08",
+//             "checkOut": "2016-11-13"
+//           },
+//           "location": {
+//             "address": "AVENIDA - BEIRA MAR, 0",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento. Standard ",
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "238",
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/266886.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 5608766,
+//           "name": "JOIA HOTEL",
+//           "description": "TRÊS ESTRELAS SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": " - RIO GRANDE DO SUL, 1223",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "*Apartamento Standard*",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "2262",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/275345.jpg"
+//             }
+//           },
+//           "category": "*Apartamento Standard*"
+//         },
+//         {
+//           "id": 8078048,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-14",
+//             "checkOut": "2016-10-15"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 8078049,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-21",
+//             "checkOut": "2016-10-22"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 8078051,
+//           "name": "POUSADA CONDADO BRASILEIRO",
+//           "description": "POUSADA DE CHARME MÉDIO CONFORTO",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-10-28",
+//             "checkOut": "2016-10-29"
+//           },
+//           "location": {
+//             "address": "RUA - EDGAR AZEVEDO SOARES, 226",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "310",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/292855.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 1016992,
+//           "name": "RIO BRANCO APART HOTEL",
+//           "description": "HOTEL URBANO SIMPLES",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-05",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "AVENIDA - RIO BRANCO, 369",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 1,
+//             "description": "Apartamento Standard",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "3",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/286516.jpg"
+//             }
+//           },
+//           "category": "Apartamento Standard"
+//         },
+//         {
+//           "id": 1869,
+//           "name": "PLAZA SÃO RAFAEL HOTEL",
+//           "description": "HOTEL URBANO CONFORTÁVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-05",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": " - ALBERTO BINS, 514",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 2,
+//             "description": "Apartamento. Standard ",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "238",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/296574.jpg"
+//             }
+//           },
+//           "category": "Apartamento. Standard "
+//         },
+//         {
+//           "id": 2233,
+//           "name": "BERTELLI HOTEL",
+//           "description": "TRÊS ESTRELAS",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-05",
+//             "checkOut": "2016-11-05"
+//           },
+//           "location": {
+//             "address": "RODOVIA - BR 471, 471",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 3,
+//             "description": "Apartamento Standard",
+//             "mealPlan": "Diária com meia pensão",
+//             "category": "3",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/306120.jpg"
+//             }
+//           },
+//           "category": "Apartamento Standard"
+//         },
+//         {
+//           "id": 2030,
+//           "name": "FALLS GALLI HOTEL",
+//           "description": "HOTEL URBANO CONFORTÁVEL",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-05",
+//             "checkOut": "2016-11-06"
+//           },
+//           "location": {
+//             "address": "AVENIDA - COSTA E SILVA, 1602",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 4,
+//             "description": "Apartamento Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "1208",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/310645.jpg"
+//             }
+//           },
+//           "category": "Apartamento Luxo"
+//         },
+//         {
+//           "id": 10491759,
+//           "name": "CRYSTAL PALACE MONTEVIDÉU NACIONAL",
+//           "description": "TRÊS ESTRELAS",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-06",
+//             "checkOut": "2016-11-07"
+//           },
+//           "location": {
+//             "address": " - INDUSTRIAL, 600",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 5,
+//             "description": "* Apartamento ",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "6480",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/350586.jpg"
+//             }
+//           },
+//           "category": "* Apartamento "
+//         },
+//         {
+//           "id": 3716527,
+//           "name": "HOTEL OBELISCO CENTER - NACIONAL",
+//           "description": "TRÊS ESTRELAS",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 3,
+//             "checkIn": "2016-11-07",
+//             "checkOut": "2016-11-09"
+//           },
+//           "location": {
+//             "address": " - ROQUE SAENZ PEÑA, 991",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 6,
+//             "description": "Apartamento Standard",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "3",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/350786.jpg"
+//             }
+//           },
+//           "category": "Apartamento Standard"
+//         },
+//         {
+//           "id": 8957408,
+//           "name": "BOURBON CONMEBOL ASSUNCION NACIONAL",
+//           "description": "TRÊS ESTRELAS",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 2,
+//             "checkIn": "2016-11-09",
+//             "checkOut": "2016-11-10"
+//           },
+//           "location": {
+//             "address": " - INDUSTRIAL, 600",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 7,
+//             "description": "Apartamento Superior",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "1752",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/350805.jpg"
+//             }
+//           },
+//           "category": "Apartamento Superior"
+//         },
+//         {
+//           "id": 2381419,
+//           "name": "HOTEL PRESIDENTE ROSÁRIO-NACIONAL",
+//           "description": "TURÍSTICA SUPERIOR",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-10",
+//             "checkOut": "2016-11-10"
+//           },
+//           "location": {
+//             "address": " - AV. CORRIENTES 919, ",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 8,
+//             "description": "Apartamento Standard",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "3",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/356071.jpg"
+//             }
+//           },
+//           "category": "Apartamento Standard"
+//         },
+//         {
+//           "id": 5341597,
+//           "name": "AMERIAN HOTEL CASINO GALA NACIONAL",
+//           "description": "SUPERIOR",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-10",
+//             "checkOut": "2016-11-10"
+//           },
+//           "location": {
+//             "address": " - J D PERON, 330",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 9,
+//             "description": "Luxo",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "218",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/359487.jpg"
+//             }
+//           },
+//           "category": "Luxo"
+//         },
+//         {
+//           "id": 10056247,
+//           "name": "HARBOR SAINT MICHEL",
+//           "description": "QUATRO ESTRELAS",
+//           "award": 5,
+//           "isPreferential": true,
+//           "timeSpan": {
+//             "nights": 1,
+//             "checkIn": "2016-11-10",
+//             "checkOut": "2016-11-10"
+//           },
+//           "location": {
+//             "address": " - LAMENHA LINS, 712",
+//             "coordinates": {
+//               "latitude": -22.7217135,
+//               "longitude": -45.5905814
+//             }
+//           },
+//           "room": {
+//             "rph": 10,
+//             "description": "Apartamento Superior",
+//             "mealPlan": "Diária com café da manhã",
+//             "category": "1752",
+            
+//           },
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/images/343988.jpg"
+//             }
+//           },
+//           "category": "Apartamento Superior"
+//         }
+//       ],
+//       "alternativeRooms": [
+//         {
+//           "mealPlan": "Diária com café da manhã",
+//           "category": "Apartamento Standard",
+//           "packageRateToken": "ldjkfsapdflj==",
+//           "links": {
+//             "thumbnailImage": {
+//               "href": "http://www.cvc.com.br/static/img01.jpg"
+//             }
+//           }
+//         }
+//       ],
+//       "flight": {
+//         "inbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-08-29T15:50:00-03:00",
+//           "duration": 190,
+//           "arrivalDate": "2016-08-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "arrivalLocation": {
+//             "iata": "OPO",
+//             "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-08-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-08-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             },
+//             {
+//               "flightNumber": "4321",
+//               "departureDate": "2016-08-29T18:50:00-03:00",
+//               "duration": 60,
+//               "arrivalDate": "2016-08-29T19:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "OPO",
+//                 "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         },
+//         "outbound": {
+//           "period": "NIGHTLY",
+//           "departureDate": "2016-09-29T15:50:00-03:00",
+//           "duration": 130,
+//           "arrivalDate": "2016-09-29T19:00:00-03:00",
+//           "class": "Económico",
+//           "departureLocation": {
+//             "iata": "LIS",
+//             "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//           },
+//           "arrivalLocation": {
+//             "iata": "GRU",
+//             "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//           },
+//           "operatingAirline": {
+//             "code": "G3",
+//             "name": "GOL"
+//           },
+//           "legs": [
+//             {
+//               "flightNumber": "1234",
+//               "departureDate": "2016-09-29T15:50:00-03:00",
+//               "duration": 130,
+//               "arrivalDate": "2016-09-29T18:00:00-03:00",
+//               "class": "Económico",
+//               "departureLocation": {
+//                 "iata": "LIS",
+//                 "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
+//               },
+//               "arrivalLocation": {
+//                 "iata": "GRU",
+//                 "description": "Aeroporto Internacional de São Paulo-Guarulhos"
+//               },
+//               "operatingAirline": {
+//                 "code": "G3",
+//                 "name": "GOL"
+//               }
+//             }
+//           ]
+//         }
+//       },
+//       "taxes": [
+//         {
+//           "code": "TE",
+//           "description": "Taxa de Embarque",
+//           "percent": 69.36,
+//           "amount": 1
+//         },
+//         {
+//           "code": "PackageTaxes_11",
+//           "description": "TAXA DE REMESSA",
+//           "percent": 0.5
+//         }
+//       ]
+//     }
+//   ]
+// };
+
 var packages = {
   "packages": [
     {
-      "id": 177528727,
+      "id": 172384640,
       "startDate": "2016-11-04",
       "endDate": "2016-11-07",
       "days": 3,
       "type": "ROAD",
       "isAvailable": true,
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgbWtpPSJQa2dDVkMgTWFya3VwIEltcG9ydF8xOCIgbWtwPSIwLjUiIHBpZD0iMTc3NTI4NzI3IiBwa2k9IjE3NzUyODcyNyIgcG90PSIxMjAiIHByZD0iQ1ZDIFBhY2thZ2UiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0wOS0yNloiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "hotels": [
-        {
-          "id": 8078041,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "category": "Apartamento Luxo",
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "mealPlan": "Diária com café da manhã",
-            "category": "310"
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          }
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": null,
-      "taxes": [
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 174669688,
-      "startDate": "2016-11-08",
-      "endDate": "2016-11-15",
-      "days": 7,
-      "type": "AIR",
-      "isAvailable": false,
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0xNSIgZHRpPSIyMDE2LTExLTA4IiBlY3Q9IkJSIiBlc3Q9IlBFIiBlemk9IjM3OSIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDY2OTY4OCIgcGtpPSIxNzQ2Njk2ODgiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "hotels": [
-        {
-          "id": 8078031,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "category": "Apartamento Luxo",
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "mealPlan": "Diária com café da manhã",
-            "category": "310"
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          }
-        },
-        {
-          "id": 3146461,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "mealPlan": "Diária com meia pensão",
-            "category": "238"
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
-      "taxes": [
-        {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
-        },
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 167476768,
-      "startDate": "2016-10-14",
-      "endDate": "2016-10-17",
-      "days": 3,
-      "type": "ROAD",
-      "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9Ik1HIiBlemk9IjEwMTMiIGZncj0iMTc2NjUyMDIzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGlkPSIxNjc0NzY3NjgiIHBraT0iMTY3NDc2NzY4IiBwb3Q9IjEyMCIgcHJkPSJDVkMgUGFja2FnZSIgcHhzPSIzMCIgc2N0PSJCUiIgc2R0PSIyMDE2LTA5LTI2WiIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjI1NjgzIiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0wNyIgZHRpPSIyMDE2LTExLTA0IiBlY3Q9IkJSIiBlc3Q9IlJKIiBlemk9IjciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iUk9BRCIgcGlkPSIxNzIzODQ2NDAiIHBraT0iMTcyMzg0NjQwIiBwb3Q9IjEyMCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0wM1oiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
       "price": {
         "priceWithTax": 1100,
         "priceWithoutTax": 1000,
@@ -355,1787 +2161,1061 @@ var packages = {
         "pricePerPaxWithoutTax": 550
       },
       "currency": "BRL",
-      "baseDestination": 128776,
+      "baseDestination": 225683,
       "hotels": [
         {
-          "id": 8078043,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7213217,
-              "longitude": -45.5715443
-            }
-          },
-          "room": {
-            "rph": 1,
-            "mealPlan": "Diária com café da manhã",
-            "category": "310"
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 3146462,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "mealPlan": "Diária com meia pensão",
-            "category": "238",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 5608756,
-          "name": "JOIA HOTEL",
-          "description": "TRÊS ESTRELAS SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": " - RIO GRANDE DO SUL, 1223",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "*Apartamento Standard*",
-            "mealPlan": "Diária com café da manhã",
-            "category": "2262",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/275345.jpg"
-            }
-          },
-          "category": "*Apartamento Standard*"
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
-      "taxes": [
-        {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
-        },
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 177528667,
-      "startDate": "2016-10-14",
-      "endDate": "2016-10-17",
-      "days": 3,
-      "type": "AIR",
-      "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0xNyIgZHRpPSIyMDE2LTEwLTE0IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY2NyIgcGtpPSIxNzc1Mjg2NjciIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "hotels": [
-        {
-          "id": 8078044,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 3146463,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento. Standard ",
-            "mealPlan": "Diária com meia pensão",
-            "category": "238",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 5608757,
-          "name": "JOIA HOTEL",
-          "description": "TRÊS ESTRELAS SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": " - RIO GRANDE DO SUL, 1223",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "*Apartamento Standard*",
-            "mealPlan": "Diária com café da manhã",
-            "category": "2262",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/275345.jpg"
-            }
-          },
-          "category": "*Apartamento Standard*"
-        },
-        {
-          "id": 8078042,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7242144,
-              "longitude": -45.5718352
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
-      "taxes": [
-        {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
-        },
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 177528645,
-      "startDate": "2016-10-21",
-      "endDate": "2016-10-24",
-      "days": 3,
-      "type": "ROAD",
-      "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0yNCIgZHRpPSIyMDE2LTEwLTIxIiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODY0NSIgcGtpPSIxNzc1Mjg2NDUiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "hotels": [
-        {
-          "id": 8078045,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7213093,
-              "longitude": -45.5717363
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 3146464,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7213093,
-              "longitude": -45.5717363
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento. Standard ",
-            "mealPlan": "Diária com meia pensão",
-            "category": "238",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 5608758,
-          "name": "JOIA HOTEL",
-          "description": "TRÊS ESTRELAS SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": " - RIO GRANDE DO SUL, 1223",
-            "coordinates": {
-              "latitude": -22.7213093,
-              "longitude": -45.5717363
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "*Apartamento Standard*",
-            "mealPlan": "Diária com café da manhã",
-            "category": "2262",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/275345.jpg"
-            }
-          },
-          "category": "*Apartamento Standard*"
-        },
-        {
-          "id": 8078055,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7213093,
-              "longitude": -45.5717363
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 8078056,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-21",
-            "checkOut": "2016-10-22"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7213093,
-              "longitude": -45.5717363
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
-      "taxes": [
-        {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
-        },
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 177528590,
-      "startDate": "2016-10-28",
-      "endDate": "2016-10-31",
-      "days": 3,
-      "type": "ROAD",
-      "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMC0zMSIgZHRpPSIyMDE2LTEwLTI4IiBlY3Q9IkJSIiBlc3Q9IlNQIiBlemk9IjE3NiIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NzUyODU5MCIgcGtpPSIxNzc1Mjg1OTAiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "hotels": [
-        {
-          "id": 8078046,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 3146465,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento. Standard ",
-            "mealPlan": "Diária com meia pensão",
-            "category": "238",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 5608759,
-          "name": "JOIA HOTEL",
-          "description": "TRÊS ESTRELAS SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": " - RIO GRANDE DO SUL, 1223",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "*Apartamento Standard*",
-            "mealPlan": "Diária com café da manhã",
-            "category": "2262",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/275345.jpg"
-            }
-          },
-          "category": "*Apartamento Standard*"
-        },
-        {
-          "id": 8078095,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 8078026,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-21",
-            "checkOut": "2016-10-22"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 8078047,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-28",
-            "checkOut": "2016-10-29"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        }
-      ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
-      "taxes": [
-        {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
-        },
-        {
-          "code": "PackageTaxes_11",
-          "description": "TAXA DE REMESSA",
-          "percent": 0.5
-        }
-      ]
-    },
-    {
-      "id": 174439074,
-      "startDate": "2016-11-05",
-      "endDate": "2016-11-21",
-      "days": 16,
-      "type": "ROAD",
-      "isAvailable": true,
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMTI4Nzc2IiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTA1IiBlY3Q9IkJSIiBlc3Q9IlNDIiBlemk9IjEzNCIgZmdyPSIxNzY2NTIwMjMiIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwaWQ9IjE3NDQzOTA3NCIgcGtpPSIxNzQ0MzkwNzQiIHBvdD0iMTIwIiBwcmQ9IkNWQyBQYWNrYWdlIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMDktMjZaIiBzc3Q9IlNQIiBzemk9IjgxNiIvPg==",
-      "price": {
-        "priceWithTax": 1100,
-        "priceWithoutTax": 1000,
-        "pricePerDayWithTax": 220,
-        "pricePerDayWithoutTax": 200,
-        "pricePerPaxWithTax": 500,
-        "pricePerPaxWithoutTax": 550
-      },
-      "currency": "BRL",
-      "baseDestination": 128776,
-      "hotels": [
-        {
-          "id": 8078077,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-04",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.723573,
-              "longitude": -45.5583256
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 3146466,
-          "name": "HOTEL BEST WESTERN VIVÁ PORTO",
-          "description": "HOTEL DE PRAIA CONFORTAVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 6,
-            "checkIn": "2016-11-08",
-            "checkOut": "2016-11-13"
-          },
-          "location": {
-            "address": "AVENIDA - BEIRA MAR, 0",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento. Standard ",
-            "mealPlan": "Diária com meia pensão",
-            "category": "238",
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/266886.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 5608766,
-          "name": "JOIA HOTEL",
-          "description": "TRÊS ESTRELAS SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": " - RIO GRANDE DO SUL, 1223",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "*Apartamento Standard*",
-            "mealPlan": "Diária com café da manhã",
-            "category": "2262",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/275345.jpg"
-            }
-          },
-          "category": "*Apartamento Standard*"
-        },
-        {
-          "id": 8078048,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-14",
-            "checkOut": "2016-10-15"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 8078049,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-21",
-            "checkOut": "2016-10-22"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 8078051,
-          "name": "POUSADA CONDADO BRASILEIRO",
-          "description": "POUSADA DE CHARME MÉDIO CONFORTO",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-10-28",
-            "checkOut": "2016-10-29"
-          },
-          "location": {
-            "address": "RUA - EDGAR AZEVEDO SOARES, 226",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "310",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/292855.jpg"
-            }
-          },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 1016992,
-          "name": "RIO BRANCO APART HOTEL",
-          "description": "HOTEL URBANO SIMPLES",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-05",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": "AVENIDA - RIO BRANCO, 369",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 1,
-            "description": "Apartamento Standard",
-            "mealPlan": "Diária com café da manhã",
-            "category": "3",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/286516.jpg"
-            }
-          },
-          "category": "Apartamento Standard"
-        },
-        {
-          "id": 1869,
-          "name": "PLAZA SÃO RAFAEL HOTEL",
-          "description": "HOTEL URBANO CONFORTÁVEL",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-05",
-            "checkOut": "2016-11-05"
-          },
-          "location": {
-            "address": " - ALBERTO BINS, 514",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 2,
-            "description": "Apartamento. Standard ",
-            "mealPlan": "Diária com café da manhã",
-            "category": "238",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/296574.jpg"
-            }
-          },
-          "category": "Apartamento. Standard "
-        },
-        {
-          "id": 2233,
-          "name": "BERTELLI HOTEL",
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
           "description": "TRÊS ESTRELAS",
-          "award": 5,
-          "isPreferential": true,
+          "award": 3,
+          "isPreferential": false,
           "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-05",
+            "nights": 2,
+            "checkIn": "2016-11-04",
             "checkOut": "2016-11-05"
           },
           "location": {
-            "address": "RODOVIA - BR 471, 471",
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
             "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
+              "latitude": -23.028175,
+              "longitude": -44.232607
             }
           },
           "room": {
-            "rph": 3,
-            "description": "Apartamento Standard",
-            "mealPlan": "Diária com meia pensão",
-            "category": "3",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/306120.jpg"
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
             }
           },
-          "category": "Apartamento Standard"
+          "category": "Standard - Duplo"
         },
         {
-          "id": 2030,
-          "name": "FALLS GALLI HOTEL",
-          "description": "HOTEL URBANO CONFORTÁVEL",
-          "award": 5,
-          "isPreferential": true,
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
           "timeSpan": {
             "nights": 2,
             "checkIn": "2016-11-05",
             "checkOut": "2016-11-06"
           },
           "location": {
-            "address": "AVENIDA - COSTA E SILVA, 1602",
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
             "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
+              "latitude": -23.028175,
+              "longitude": -44.232607
             }
           },
           "room": {
-            "rph": 4,
-            "description": "Apartamento Luxo",
+            "rph": 2,
+            "description": "Standard - Duplo",
             "mealPlan": "Diária com café da manhã",
-            "category": "1208",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/310645.jpg"
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
             }
           },
-          "category": "Apartamento Luxo"
-        },
-        {
-          "id": 10491759,
-          "name": "CRYSTAL PALACE MONTEVIDÉU NACIONAL",
-          "description": "TRÊS ESTRELAS",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-06",
-            "checkOut": "2016-11-07"
-          },
-          "location": {
-            "address": " - INDUSTRIAL, 600",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 5,
-            "description": "* Apartamento ",
-            "mealPlan": "Diária com café da manhã",
-            "category": "6480",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/350586.jpg"
-            }
-          },
-          "category": "* Apartamento "
-        },
-        {
-          "id": 3716527,
-          "name": "HOTEL OBELISCO CENTER - NACIONAL",
-          "description": "TRÊS ESTRELAS",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 3,
-            "checkIn": "2016-11-07",
-            "checkOut": "2016-11-09"
-          },
-          "location": {
-            "address": " - ROQUE SAENZ PEÑA, 991",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 6,
-            "description": "Apartamento Standard",
-            "mealPlan": "Diária com café da manhã",
-            "category": "3",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/350786.jpg"
-            }
-          },
-          "category": "Apartamento Standard"
-        },
-        {
-          "id": 8957408,
-          "name": "BOURBON CONMEBOL ASSUNCION NACIONAL",
-          "description": "TRÊS ESTRELAS",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 2,
-            "checkIn": "2016-11-09",
-            "checkOut": "2016-11-10"
-          },
-          "location": {
-            "address": " - INDUSTRIAL, 600",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 7,
-            "description": "Apartamento Superior",
-            "mealPlan": "Diária com café da manhã",
-            "category": "1752",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/350805.jpg"
-            }
-          },
-          "category": "Apartamento Superior"
-        },
-        {
-          "id": 2381419,
-          "name": "HOTEL PRESIDENTE ROSÁRIO-NACIONAL",
-          "description": "TURÍSTICA SUPERIOR",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-10",
-            "checkOut": "2016-11-10"
-          },
-          "location": {
-            "address": " - AV. CORRIENTES 919, ",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 8,
-            "description": "Apartamento Standard",
-            "mealPlan": "Diária com café da manhã",
-            "category": "3",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/356071.jpg"
-            }
-          },
-          "category": "Apartamento Standard"
-        },
-        {
-          "id": 5341597,
-          "name": "AMERIAN HOTEL CASINO GALA NACIONAL",
-          "description": "SUPERIOR",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-10",
-            "checkOut": "2016-11-10"
-          },
-          "location": {
-            "address": " - J D PERON, 330",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 9,
-            "description": "Luxo",
-            "mealPlan": "Diária com café da manhã",
-            "category": "218",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/359487.jpg"
-            }
-          },
-          "category": "Luxo"
-        },
-        {
-          "id": 10056247,
-          "name": "HARBOR SAINT MICHEL",
-          "description": "QUATRO ESTRELAS",
-          "award": 5,
-          "isPreferential": true,
-          "timeSpan": {
-            "nights": 1,
-            "checkIn": "2016-11-10",
-            "checkOut": "2016-11-10"
-          },
-          "location": {
-            "address": " - LAMENHA LINS, 712",
-            "coordinates": {
-              "latitude": -22.7217135,
-              "longitude": -45.5905814
-            }
-          },
-          "room": {
-            "rph": 10,
-            "description": "Apartamento Superior",
-            "mealPlan": "Diária com café da manhã",
-            "category": "1752",
-            
-          },
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/images/343988.jpg"
-            }
-          },
-          "category": "Apartamento Superior"
+          "category": "Standard - Duplo"
         }
       ],
-      "alternativeRooms": [
-        {
-          "mealPlan": "Diária com café da manhã",
-          "category": "Apartamento Standard",
-          "packageRateToken": "ldjkfsapdflj==",
-          "links": {
-            "thumbnailImage": {
-              "href": "http://www.cvc.com.br/static/img01.jpg"
-            }
-          }
-        }
-      ],
-      "flight": {
-        "inbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-08-29T15:50:00-03:00",
-          "duration": 190,
-          "arrivalDate": "2016-08-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "arrivalLocation": {
-            "iata": "OPO",
-            "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-08-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-08-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "arrivalLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            },
-            {
-              "flightNumber": "4321",
-              "departureDate": "2016-08-29T18:50:00-03:00",
-              "duration": 60,
-              "arrivalDate": "2016-08-29T19:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "OPO",
-                "description": "Aeroporto Francisco Sá Carneiro, Aeroporto na telha Villa Nova, Portugal"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        },
-        "outbound": {
-          "period": "NIGHTLY",
-          "departureDate": "2016-09-29T15:50:00-03:00",
-          "duration": 130,
-          "arrivalDate": "2016-09-29T19:00:00-03:00",
-          "class": "Económico",
-          "departureLocation": {
-            "iata": "LIS",
-            "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-          },
-          "operatingAirline": {
-            "code": "G3",
-            "name": "GOL"
-          },
-          "legs": [
-            {
-              "flightNumber": "1234",
-              "departureDate": "2016-09-29T15:50:00-03:00",
-              "duration": 130,
-              "arrivalDate": "2016-09-29T18:00:00-03:00",
-              "class": "Económico",
-              "departureLocation": {
-                "iata": "LIS",
-                "description": "Aeroporto Humberto Delgado, Aeroporto em Lisboa, Portugal"
-              },
-              "arrivalLocation": {
-                "iata": "GRU",
-                "description": "Aeroporto Internacional de São Paulo-Guarulhos"
-              },
-              "operatingAirline": {
-                "code": "G3",
-                "name": "GOL"
-              }
-            }
-          ]
-        }
-      },
+      "flight": null,
       "taxes": [
         {
-          "code": "TE",
-          "description": "Taxa de Embarque",
-          "percent": 69.36,
-          "amount": 1
+          "code": "TaxesTable_21",
+          "description": "TAXA DE REMESSA",
+          "amount": 23
+        }
+      ]
+    },
+    {
+      "id": 172384874,
+      "startDate": "2016-12-09",
+      "endDate": "2016-12-12",
+      "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjI1NjgzIiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMi0xMiIgZHRpPSIyMDE2LTEyLTA5IiBlY3Q9IkJSIiBlc3Q9IlJKIiBlemk9IjciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iUk9BRCIgcGlkPSIxNzIzODQ4NzQiIHBraT0iMTcyMzg0ODc0IiBwb3Q9IjEyMCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0wM1oiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+      "price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
         },
         {
-          "code": "PackageTaxes_11",
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-06"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-10",
+            "checkOut": "2016-12-11"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null,
+      "taxes": [
+        {
+          "code": "TaxesTable_21",
           "description": "TAXA DE REMESSA",
-          "percent": 0.5
+          "amount": 23
+        }
+      ]
+    },
+    {
+      "id": 172384685,
+      "startDate": "2016-11-25",
+      "endDate": "2016-11-28",
+      "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjI1NjgzIiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yOCIgZHRpPSIyMDE2LTExLTI1IiBlY3Q9IkJSIiBlc3Q9IlJKIiBlemk9IjciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iUk9BRCIgcGlkPSIxNzIzODQ2ODUiIHBraT0iMTcyMzg0Njg1IiBwb3Q9IjEyMCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0wM1oiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+      "price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-06"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-10",
+            "checkOut": "2016-12-11"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-26",
+            "checkOut": "2016-11-27"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null,
+      "taxes": [
+        {
+          "code": "TaxesTable_21",
+          "description": "TAXA DE REMESSA",
+          "amount": 23
+        }
+      ]
+    },
+    {
+      "id": 172384628,
+      "startDate": "2016-11-18",
+      "endDate": "2016-11-21",
+      "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjI1NjgzIiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMS0yMSIgZHRpPSIyMDE2LTExLTE4IiBlY3Q9IkJSIiBlc3Q9IlJKIiBlemk9IjciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iUk9BRCIgcGlkPSIxNzIzODQ2MjgiIHBraT0iMTcyMzg0NjI4IiBwb3Q9IjEyMCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0wM1oiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+      "price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-06"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-10",
+            "checkOut": "2016-12-11"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-26",
+            "checkOut": "2016-11-27"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-18",
+            "checkOut": "2016-11-19"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-19",
+            "checkOut": "2016-11-20"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null,
+      "taxes": [
+        {
+          "code": "TaxesTable_21",
+          "description": "TAXA DE REMESSA",
+          "amount": 23
+        }
+      ]
+    },
+    {
+      "id": 172384872,
+      "startDate": "2016-12-02",
+      "endDate": "2016-12-05",
+      "days": 3,
+      "type": "ROAD",
+      "isAvailable": true,
+      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjI1NjgzIiBicmk9IjEwMDAiIGR0Zj0iMjAxNi0xMi0wNSIgZHRpPSIyMDE2LTEyLTAyIiBlY3Q9IkJSIiBlc3Q9IlJKIiBlemk9IjciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iUk9BRCIgcGlkPSIxNzIzODQ4NzIiIHBraT0iMTcyMzg0ODcyIiBwb3Q9IjEyMCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0wM1oiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
+      "price": {
+        "priceWithTax": 1100,
+        "priceWithoutTax": 1000,
+        "pricePerDayWithTax": 220,
+        "pricePerDayWithoutTax": 200,
+        "pricePerPaxWithTax": 500,
+        "pricePerPaxWithoutTax": 550
+      },
+      "currency": "BRL",
+      "baseDestination": 225683,
+      "hotels": [
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-04",
+            "checkOut": "2016-11-05"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-05",
+            "checkOut": "2016-11-06"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-09",
+            "checkOut": "2016-12-10"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-10",
+            "checkOut": "2016-12-11"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-25",
+            "checkOut": "2016-11-26"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-26",
+            "checkOut": "2016-11-27"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-18",
+            "checkOut": "2016-11-19"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-11-19",
+            "checkOut": "2016-11-20"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-02",
+            "checkOut": "2016-12-03"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 1,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        },
+        {
+          "id": 9729160,
+          "name": "POUSADA DALESTE",
+          "description": "TRÊS ESTRELAS",
+          "award": 3,
+          "isPreferential": false,
+          "timeSpan": {
+            "nights": 2,
+            "checkIn": "2016-12-03",
+            "checkOut": "2016-12-04"
+          },
+          "location": {
+            "address": " - ANTÔNIO BERTHOLDO DA SILVA JORDÃO, 0",
+            "coordinates": {
+              "latitude": -23.028175,
+              "longitude": -44.232607
+            }
+          },
+          "room": {
+            "rph": 2,
+            "description": "Standard - Duplo",
+            "mealPlan": "Diária com café da manhã",
+            "category": "2434",
+            "links": {
+              "thumbnailImage": {
+                "href": "http://www.cvc.com.br/images/290605.jpg"
+              }
+            }
+          },
+          "category": "Standard - Duplo"
+        }
+      ],
+      "flight": null,
+      "taxes": [
+        {
+          "code": "TaxesTable_21",
+          "description": "TAXA DE REMESSA",
+          "amount": 23
         }
       ]
     }
