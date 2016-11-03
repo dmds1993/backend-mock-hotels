@@ -16,17 +16,17 @@ router.get('/:hotel_id/rooms', function(req, res, next) {
 });
 
 router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
-	var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
+  var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
   var response = rateTokenRoom;
-  response.room.rates[0].rateToken = rateToken;
-	res.json(rateTokenRoom);
- //  if (rateToken.includes('rateToken')) {
-	// } else {
-	// 	return res.status(500).send({
-	// 	  code: 500,
-	// 	  message: 'Invalid Rate Token'
-	// 	});
-	// }
+  response.room.rates[0].rateToken = req.params.rate_token;
+  res.json(rateTokenRoom);
+  //  if (rateToken.includes('rateToken')) {
+  // } else {
+  //   return res.status(500).send({
+  //     code: 500,
+  //     message: 'Invalid Rate Token'
+  //   });
+  // }
 
 });
 
