@@ -13,19 +13,17 @@ router.get('/calendar', function(req,res) {
 
 router.get('/:rate_token', function(req, res, next) {
   var rateToken = req.params.rate_token;
-  var base64RateToken = new Buffer(rateToken, 'base64').toString('utf8');
+  var flights = flightsV0.flights;
+  var flight;
 
-  if (base64RateToken.includes('rateToken')) {
-    // Look first for the flight in the structure
-    var _flight = findFlightByRateToken(rateToken);
-
-    // If rate token found in old list
-    if (typeof(_flight) === 'object') {
-      res.json({ flight: keepOnlyRateToken(_flight, rateToken)});
-    } else {
-      res.json(flights);
-      // res.json({flight: aeroHotelFlights.flights[0]});
+  for (var i = 0; i < flights.length && !flight; i++) {
+    if (flights[i].segments[0].rateToken == rateToken) {
+      flight = flights[i];
     }
+  }
+
+  if (typeof(flight) == 'object') {
+    res.json( { flight: flight } );
   } else {
     return res.status(500).send({
       code: 500,
