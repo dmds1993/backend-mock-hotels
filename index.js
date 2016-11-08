@@ -75,6 +75,9 @@ app.use('/dev/packages', packages);
 var orders = require('./routes/orders');
 app.use('/dev/orders', orders);
 
+var giftlists = require('./routes/giftlists');
+app.use('/dev/giftlists', giftlists);
+
 var hotels = require('./routes/hotels');
 app.use('/dev/hotels', hotels);
 
