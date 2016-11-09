@@ -1422,3 +1422,529 @@ var orders = {
     }
   ]
 };
+
+var orderEstimates = {
+  "orderId": 5648,
+  "opportunityId": 123432,
+  "hotels": [{
+    "meta": {
+      "checkIn": "2016-06-03",
+      "checkOut": "2016-06-04",
+      "rooms": [
+        [
+          30,
+          30,
+          7
+        ],
+        [
+          30,
+          30
+        ]
+      ]
+    },
+    "item": {
+      "id": "34121985",
+      "name": "River Park Hotel & Suites",
+      "description": "O hotel, renovado em 2005, compreende 10 andares com um total de 284 quartos. À sua espera, um hall de entrada climatizado com recepção (disponível 24 h por dia), cofre, guichet para câmbio monetário e elevadores. As instalações gastronómicas do hotel contam com um bar e um restaurante com cadeiras para crianças e área exterior. Terá também um quiosque e acesso à Internet à disposição. Os serviços de quartos e de lavandaria completam as ofertas do hotel. Poderá estacionar o seu automóvel no parque de estacionamento do hotel.",
+      "award": 3,
+      "isPreferential": false,
+      "location": {
+        "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA",
+        "coordinates": {
+          "latitude": -30.055,
+          "longitude": -51.22972
+        }
+      },
+      "rooms": [{
+        "description": "Este quarto possui ampla sacada",
+        "mealPlan": "Café da Manhã",
+        "minPax": 0,
+        "maxPax": 4,
+        "quantityAvailable": 1,
+        "isAvailable": true,
+        "rates": [{
+          "packageGroup": "STANDALONE",
+          "currency": "BRL",
+          "priceWithTax": 527.86,
+          "priceWithoutTax": 527.86,
+          "pricePerDayWithTax": 527.86,
+          "pricePerDayWithoutTax": 496.24,
+          "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+          "taxes": [{
+            "code": "TX_REM",
+            "description": "Taxa de Remessa",
+            "percent": 0.06,
+            "amount": 31.62,
+            "inTotal": true
+          }]
+        }],
+        "cancellationPolicies": [{
+          "nonRefundable": false
+        }],
+        "contents": [{
+          "code": "extras",
+          "name": "Extras",
+          "items": [{
+            "code": "MT",
+            "name": "Mesa de Trabalho"
+          }, {
+            "code": "WG",
+            "name": "Wifi Grátis"
+          }]
+        }, {
+          "code": "amenities",
+          "name": "Amenities",
+          "items": [{
+            "code": "MT",
+            "name": "Mesa de Trabalho"
+          }, {
+            "code": "WG",
+            "name": "Wifi Grátis"
+          }]
+        }]
+      }],
+      "links": {
+        "thumbnailImage": {
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        },
+        "images": [{
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img02.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img03.jpg"
+        }, {
+          "href": "http://www.cvc.com.br/static/img04.jpg"
+        }]
+      },
+      "contents": [{
+        "code": "optional-items",
+        "items": [{
+          "code": "MT",
+          "name": "Mesa de Trabalho"
+        }, {
+          "code": "WG",
+          "name": "Wifi Grátis"
+        }]
+      }, {
+        "code": "resort-fee",
+        "description": "A prática cotidiana prova que a expansão dos mercados mundiais maximiza as possibilidades por conta do fluxo de informações."
+      }, {
+        "code": "setting-cancellation-policies",
+        "name": "Politicas de Cancelamento",
+        "description": "Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o fenômeno da Internet possibilita uma melhor visão global da gestão inovadora da qual fazemos parte"
+      }, {
+        "code": "Descrição Completa",
+        "name": "full-description",
+        "description": "Caros amigos, a estrutura atual da organização causa impacto indireto na reavaliação do processo de comunicação como um todo."
+      }]
+    }
+  }],
+  "airs": [{
+    "meta": {
+      "ages": [
+        30,
+        30,
+        7,
+        30,
+        30
+      ]
+    },
+    "item": {
+      "fareGroup": {
+        "reCharging": true,
+        "currency": "BRL",
+        "priceWithTax": 1340.0478,
+        "priceWithoutTax": 214.4978,
+        "fares": [{
+          "priceWithTax": 226.4834,
+          "priceWithoutTax": 107.2489,
+          "passengersCount": 2,
+          "passengersType": "ADT",
+          "taxes": [{
+            "code": "WMOG",
+            "description": "AMB()5K!bTcA",
+            "percent": 91.661,
+            "amount": 65.5397
+          }, {
+            "code": "WKGQ",
+            "description": "T7WcM4l#[]$]x)an(J",
+            "percent": 54.2229,
+            "amount": 84.4175
+          }, {
+            "code": "WUZT",
+            "description": "DlaFJxBGy$fYHP0",
+            "percent": 97.8044,
+            "amount": 94.3317
+          }, {
+            "code": "WCHS",
+            "description": "twmAc",
+            "percent": 19.2782,
+            "amount": 101.3635
+          }, {
+            "code": "KOAR",
+            "description": "3]yu&J1",
+            "percent": 31.557,
+            "amount": 97.8881
+          }]
+        }]
+      },
+      "segments": [{
+        "departure": "SSA",
+        "departureDate": "2016-09-28T16:05:00.000Z",
+        "arrival": "VCP",
+        "arrivalDate": "2016-09-28T19:57:00.000Z",
+        "rateToken": "e479259b-c529-44cb-a47b-2992fd19ada4",
+        "operatedBy": {
+          "iata": "G3",
+          "name": "GOL"
+        },
+        "managedBy": {
+          "iata": "G3",
+          "name": "GOL"
+        },
+        "routeRPH": 1,
+        "rph": 0,
+        "numberOfStops": 0,
+        "duration": 369,
+        "legs": [{
+          "operatedBy": {
+            "iata": "G3",
+            "name": "GOL"
+          },
+          "flightNumber": 6208,
+          "duration": 55,
+          "numberOfStops": 1,
+          "departure": "SSA",
+          "arrival": "CNF",
+          "departureDate": "2016-09-28T16:05:00.000Z",
+          "arrivalDate": "2016-09-28T17:00:00.000Z",
+          "aircraftCode": "WTJL",
+          "seatClass": {
+            "code": "Y",
+            "description": "Classe Ecônomica"
+          }
+        }, {
+          "operatedBy": {
+            "iata": "G3",
+            "name": "GOL"
+          },
+          "flightNumber": 7660,
+          "duration": 37,
+          "numberOfStops": 1,
+          "departure": "CNF",
+          "arrival": "CGH",
+          "departureDate": "2016-09-28T16:51:00.000Z",
+          "arrivalDate": "2016-09-28T17:28:00.000Z",
+          "aircraftCode": "KMWJ",
+          "seatClass": {
+            "code": "Y",
+            "description": "Classe Ecônomica"
+          }
+        }, {
+          "operatedBy": {
+            "iata": "G3",
+            "name": "GOL"
+          },
+          "flightNumber": 1701,
+          "duration": 99,
+          "numberOfStops": 1,
+          "departure": "CGH",
+          "arrival": "VCP",
+          "departureDate": "2016-09-28T18:18:00.000Z",
+          "arrivalDate": "2016-09-28T19:57:00.000Z",
+          "aircraftCode": "WUDQ",
+          "seatClass": 1
+        }]
+      }, {
+        "departure": "VCP",
+        "departureDate": "2016-09-20T16:24:00.000Z",
+        "arrival": "SSA",
+        "arrivalDate": "2016-09-20T18:02:00.000Z",
+        "rateToken": "e2d93f20-0f64-4894-b1ee-3157bfb37e4d",
+        "operatedBy": {
+          "iata": "AV",
+          "name": "AVIANCA"
+        },
+        "routeRPH": 0,
+        "rph": 1,
+        "numberOfStops": 0,
+        "duration": 142,
+        "legs": [{
+          "operatedBy": {
+            "iata": "AV",
+            "name": "AVIANCA"
+          },
+          "flightNumber": 5815,
+          "duration": 98,
+          "numberOfStops": 0,
+          "departure": "VCP",
+          "arrival": "SSA",
+          "departureDate": "2016-09-20T16:24:00.000Z",
+          "arrivalDate": "2016-09-20T18:02:00.000Z",
+          "aircraftCode": "KWJJ",
+          "seatClass": 3
+        }]
+      }]
+    }
+  }],
+  "packages": [{
+    "meta": {
+      "rooms": [
+        [
+          30,
+          30,
+          7
+        ],
+        [
+          30,
+          30
+        ]
+      ]
+    },
+    "item": {
+      "id": 173171109,
+      "type": "AIR",
+      "isAvailable": true,
+      "startDate": "2016-07-25",
+      "endDate": "2016-07-30",
+      "days": 5,
+      "baseDestination": 363,
+      "hotels": [{
+        "id": 3713945,
+        "name": "HOTEL PORTAL DO MUNDAÍ _ REDE SOBERANO",
+        "description": "Localizado a apenas 300 metros do Complexo de Lazer Tôa Tôa, o hotel fica a 5 quilômetros do centro da cidade e a 5,7 quilômetros do aeroporto de Porto Seguro. Oferece restaurante, bar, café da manhã, internet wi-fi, 2 piscinas para adultos e uma para crianças, sauna, playground, salão de jogos e quadra de vôlei. Os quartos são equipados com TV a cabo, ar-condicionado, varanda, frigobar, cofre e telefone.",
+        "award": 3,
+        "isPreferential": "false",
+        "location": {
+          "address": "PORTO SEGURO",
+          "coordinates": {
+            "latitude": -16.469255,
+            "longitude": -39.156742
+          }
+        },
+        "category": "HOTEL DE PRAIA CONFORTAVEL",
+        "links": {
+          "thumbnailImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          }
+        }
+      }, {
+        "award": 2,
+        "location": {
+          "address": "PORTO SEGURO",
+          "coordinates": {
+            "latitude": -16.469255,
+            "longitude": -39.156742
+          }
+        },
+        "id": 4947747,
+        "name": "HOTEL PRAIA MAR _ REDE SOBERANO",
+        "category": "HOTEL URBANO SIMPLES",
+        "room": {
+          "mealPlan": "Diária com café da manhã",
+          "category": "Apartamento Standard"
+        },
+        "description": "Localizado no centro de Porto Seguro, o hotel fica próximo a famosa Passarela do Álcool, shoppings, restaurantes e com fácil acesso as principais praias. Oferece piscinas adulto e infantil, estacionamento, internet wi-fi, café da manhã, room service, churrasqueira, lan house e baby copa. Os quartos são equipados com TV, ar-condicionado, telefone e frigobar.",
+        "isPreferential": "false",
+        "links": {
+          "thumbnailImage": {
+            "href": "http://www.cvc.com.br/static/img01.jpg"
+          }
+        }
+      }],
+      "alternativeRooms": [{
+        "mealPlan": "Diária com café da manhã",
+        "category": "Apartamento Standard",
+        "packageId": 124356
+      }],
+      "flights": [{
+        "id": "167427368",
+        "number": "91559",
+        "period": "Nightly",
+        "departure": {
+          "date": "2016-08-29T15:50:00-03:00",
+          "code": "GRU",
+          "description": "SÃO PAULO- GUARULHOS"
+        },
+        "arrival": {
+          "date": "2016-08-29T17:40:00-03:00",
+          "code": "BPS",
+          "description": "PORTO SEGURO"
+        },
+        "operatingAirline": {
+          "code": "G3",
+          "name": "GOL"
+        }
+      }, {
+        "id": "167427369",
+        "number": "17732",
+        "period": "Nightly",
+        "departure": {
+          "date": "2016-09-05T18:20:00-03:00",
+          "code": "BPS",
+          "description": "PORTO SEGURO"
+        },
+        "arrival": {
+          "date": "2016-09-05T20:30:00-03:00",
+          "code": "GRU",
+          "description": "SÃO PAULO- GUARULHOS"
+        },
+        "operatingAirline": {
+          "code": "G3",
+          "name": "GOL"
+        }
+      }]
+    }
+  }],
+  "cars": [{
+    "item": {
+      "name": "GOL 1.0 OR SI",
+      "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
+      "category": {
+        "code": "CDAR",
+        "name": "CARRO COMPACTO",
+        "numberDoors": 2,
+        "numberBags": 1,
+        "maxPassengers": 5,
+        "contents": [{
+          "code": "additional-items",
+          "name": "Itens Adicionais",
+          "itens": [{
+            "code": "1",
+            "name": "Ar Condicionado"
+          }, {
+            "code": "2",
+            "name": "Automático"
+          }, {
+            "code": "3",
+            "name": "Rádio AM/FM"
+          }]
+        }]
+      },
+      "player": {
+        "code": "AL"
+      },
+      "rates": [{
+        "description": "Km Livre",
+        "currency": "BRL",
+        "priceWithTax": 527.86,
+        "priceWithoutTax": 527.86,
+        "pricePerDayWithTax": 527.86,
+        "pricePerDayWithoutTax": 496.24,
+        "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+        "pickup": {
+          "name": "MIAMI INTERNTNL",
+          "id": "87645",
+          "date": "2016-07-15T11:00",
+          "location": {
+            "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+          }
+        },
+        "return": {
+          "name": "MIAMI INTERNTNL",
+          "id": "43244",
+          "date": "2016-07-20T11:00",
+          "location": {
+            "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+          }
+        },
+        "taxes": [{
+          "code": "TX_REM",
+          "description": "Taxa de Remessa",
+          "percent": 0.06,
+          "amount": 31.62,
+          "inTotal": true
+        }]
+      }],
+      "links": {
+        "thumbnailImage": {
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        }
+      },
+      "contents": [{
+        "code": "car-full-descriptions",
+        "name": "Descrição Completa",
+        "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi??es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve?culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
+      }]
+    }
+  }],
+  "insurances": [{
+    "meta": {
+      "ages": [
+        30,
+        30,
+        7,
+        30,
+        30
+      ],
+      "startDate": "2016-07-20T11:00",
+      "endDate": "2016-07-25T11:00",
+      "zone": {
+        "id": 9626,
+        "country": {
+          "name": "BRASIL",
+          "code": "BR"
+        },
+        "state": {
+          "name": "SÃO PAULO",
+          "code": "SP"
+        },
+        "city": {
+          "name": "SÃO PAULO",
+          "code": "816"
+        }
+      }
+    },
+    "item": {
+      "insuranceToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
+      "name": "INTERNACIONAL - MUNDO BÁSICO",
+      "description": "Serviços de proteção em viagens para qualquer lugar do Brasil.",
+      "company": "TravelAce Assistance",
+      "price": 838.40,
+      "currency": "BRL",
+      "links": {
+        "thumbnailImage": {
+          "href": "http://www.cvc.com.br/static/img01.jpg"
+        }
+      },
+      "contents": [{
+        "code": "coverages",
+        "name": "Coberturas",
+        "items": [{
+          "amount": 4000,
+          "name": "Adiantamento em caso de fiança"
+        }, {
+          "amount": 500,
+          "name": "Adiantamento para assistência jurídica"
+        }]
+      }, {
+        "code": "insurances",
+        "name": "Seguros",
+        "items": [{
+          "amount": 10000,
+          "name": "Despesas médico hospitalares em viagem"
+        }, {
+          "amount": 3000,
+          "name": "Despesas Médicas e hospitalares em caso de doença preexistente"
+        }]
+      }]
+    }
+  }],
+  "giftCards": [{
+    "item": {
+      "id": 465645684545665,
+      "balance": 1000.05
+    }
+  }],
+  "contents": [{
+    "code": "alerts",
+    "items": [{
+      "description": "Os serviços prestados nos hotéis são de inteira responsabilidade do estabelecimento e podem ou não estar incluídos no valor da compra."
+    }, {
+      "description": "Não inclui taxas."
+    }, {
+      "description": "Para voos dentro do Brasil, é preciso apresentar-se com pelo menos 1 hora de antecedência ao voo. Para voos internacionais, procure chegar com 2 horas de antecedência."
+    }]
+  }]
+};
