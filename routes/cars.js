@@ -2,12 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-	if (req.query.carsPerCategory == 1) {
-  	res.json(carsPerCategory);
-	} else {
-    carReal.cars = normalizeCars(carReal.cars);
-  	res.json(carReal);
-	}
+  carReal.cars = normalizeCars(carReal.cars);
+  res.json(carReal);
 });
 
 router.get('/locations', function(req, res, next) {
@@ -62,11 +58,6 @@ var findCarByRateToken = function(cars, rateToken) {
 
   for (var i = 0; i < cars.length; i++ ) {
     for (var j = 0; j < cars[i].rates.length; j++) {
-      console.log('------')
-      console.log(cars[i].rates[j].rateToken);
-      console.log('____')
-      console.log(rateToken);
-      console.log('++++++')
       if (cars[i].rates[j].rateToken === rateToken) {
         return cars[i];
       }
@@ -89,7 +80,6 @@ var normalizeCars = function(cars) {
 var normalizeCarRateToken = function(rateToken) {
   var rateTokenTemplate = '<hot:rateToken xmlns:hot="http://cvc.com.br/model/car" rtk=""/>'
 
-  console.log(rateToken);
   if ( /\w+-\w+-\w+-\w+-\w+/.test(rateToken) ) {
     var s = new Buffer(rateTokenTemplate.replace('rtk=""', `rtk="${rateToken}"`));
     return s.toString('base64');
