@@ -11,8 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/locations', function(req, res, next) {
-  carReal.cars = normalizeCars(carReal.cars);
-  res.json(carReal);
+  res.json(locations);
 });
 
 router.get('/:rate_token', function(req, res, next) {
@@ -99,862 +98,6 @@ var normalizeCarRateToken = function(rateToken) {
   }
 };
 
-// var carReal = {
-//   "cars": [
-//   {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQosdfsdfJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYxcxcvxcvXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZG21213UNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCsdf231sdf1glzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyqweqwDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdqweqwelbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }, {
-//     "name": "GOL 1.0 OR SI",
-//     "description": "BÁSICO II - Quilometragem livre- Seguro total do veículo (CDW)- Seguro a terceiros (EP)- Taxas de serviço inclusas- 1 motorista adicional",
-//     "category": {
-//       "code": "CDAR",
-//       "name": "CARRO COMPACTO",
-//       "numberDoors": 2,
-//       "numberBags": 1,
-//       "maxPassengers": 5,
-//       "contents": [{
-//         "code": "optional-items",
-//         "name": "Itens Opcionais",
-//         "itens": [{
-//           "code": "ar-condicionado",
-//           "name": "Ar Condicionado"
-//         }, {
-//           "code": "automatico",
-//           "name": "Automático"
-//         }, {
-//           "code": "radio-am-fm",
-//           "name": "Rádio AM/FM"
-//         }]
-//       }]
-//     },
-//     "player": {
-//       "code": "AL"
-//     },
-//     "rates": [{
-//       "description": "Km Livre",
-//       "currency": "BRL",
-//       "priceWithTax": 527.86,
-//       "priceWithoutTax": 527.86,
-//       "pricePerDayWithTax": 527.86,
-//       "pricePerDayWithoutTax": 496.24,
-//       "rateToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNlCWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXREYXRlDQoJYWdlbnRTaWduDQoJYnJhbmNoQ29kZQ0KCXBhY2thZ2VHcm91cA0KCXJvb20NCglkb3VibGVCZWQNCglob25leW1vb24NCgljdXJyZW5jeQ0KCXByaWNl",
-//       "pickup": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "87645",
-//         "date": "2016-07-15T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "return": {
-//         "name": "MIAMI INTERNTNL",
-//         "id": "43244",
-//         "date": "2016-07-20T11:00",
-//         "location": {
-//           "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-//         }
-//       },
-//       "taxes": [{
-//         "code": "TX_REM",
-//         "description": "Taxa de Remessa",
-//         "percent": 0.06,
-//         "amount": 31.62,
-//         "inTotal": true
-//       }],
-//       "loyalty": {
-//         "parity": 0.025,
-//         "min": {
-//           "points": 2000,
-//           "discount": 0.05
-//         },
-//         "max": {
-//           "points": 30021,
-//           "discount": 0.5
-//         }
-//       }
-//     }],
-//     "links": {
-//       "thumbnailImage": {
-//         "href": "http://img.cvc.com.br/carros/locadoras/393072.jpg"
-//       }
-//     },
-//     "contents": [{
-//       "code": "car-full-descriptions",
-//       "name": "Descrição Completa",
-//       "description": "*PLANO L8MLB*: INCLUI QUILOMETRAGEM LIVRE; PROTEÇÃO AO VEÍCULO: com cobertura contra roubo, furto, colisão e incêndio até o valor do veículo locado; PROTEÇÃO A TERCEIROS: com cobertura de danos materiais e corporais (consulte valores e condi��es de cobertura); IMPOSTOS LOCAIS; PRIMEIRO TANQUE DE COMBUSTIVEL: o ve�culo pode ser devolvido com o tanque vazio E PRIMEIRO MOTORISTA ADICIONAL - NÃO INCLUI TAXA DE ONE WAY quando o veículo é retirado em um local e devolvido em outro E EQUIPAMENTO PARA NÃO PARAR NO PEDÁGIO que devem ser pagos no balcão da locadora no momento da devolução do veículo."
-//     }]
-//   }],
-//   "meta": {
-//     "price": {
-//       "minWithTax": 326.03,
-//       "minWithoutTax": 306.03,
-//       "maxWithTax": 726.03,
-//       "maxWithoutTax": 706.03
-//     },
-//     "countCars": 10,
-//     "categories": [
-//       {
-//         "code": "carro-economico",
-//         "name": "Carro econômico"
-//       }, {
-//         "code": "carro-economico-com-ar",
-//         "name": "Carro econômico com ar"
-//       }, {
-//         "code": "suv",
-//         "name": "SUV"
-//       }, {
-//         "code": "utilitario",
-//         "name": "Utilitário"
-//       }
-//     ],
-//     "rentalCompanies": [
-//       {
-//         "code": "hertz",
-//         "name": "Hertz"
-//       }, {
-//         "code": "unidas",
-//         "name": "Unidas"
-//       }, {
-//         "code": "localiza",
-//         "name": "Localiza"
-//       }
-//     ],
-//     "features": [
-//       {
-//         "code": "ar-condicionado",
-//         "name": "Ar condicionado"
-//       }, {
-//         "code": "direcao-hidraulica",
-//         "name": "Direção hidráulica"
-//       }, {
-//         "code": "radio-am-fm",
-//         "name": "Rádio AM/FM"
-//       }, {
-//         "code": "vidro-eletrico",
-//         "name": "Vidro elétrico"
-//       }
-//     ]
-//   }
-// };
-
 var carReal = {
   "cars": [
     {
@@ -970,7 +113,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1063,7 +206,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1156,7 +299,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1249,7 +392,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1342,7 +485,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1435,7 +578,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1528,7 +671,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1621,7 +764,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1714,7 +857,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1807,7 +950,7 @@ var carReal = {
           {
             "code": "optional-items",
             "name": "Itens Opcionais",
-            "itens": [
+            "items": [
               {
                 "code": "ar-condicionado",
                 "name": "Ar Condicionado"
@@ -1962,7 +1105,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2042,7 +1185,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2122,7 +1265,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2202,7 +1345,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2282,7 +1425,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2362,7 +1505,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2442,7 +1585,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2522,7 +1665,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2602,7 +1745,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2682,7 +1825,7 @@ var carsPerCategory = {
       "contents": [{
         "code": "optional-items",
         "name": "Itens Opcionais",
-        "itens": [{
+        "items": [{
           "code": "ar-condicionado",
           "name": "Ar Condicionado"
         }, {
@@ -2832,4 +1975,219 @@ var carOptions = {
       "description": "Recomendável para bebês com peso entre 40 lbs e 100 lbs / 18 kg a 45 kg (4 a 12 anos)"
     }
   ]
+};
+
+var locations = {
+  "locations": [{
+    "id": "N06",
+    "name": "MIAMI",
+    "description": {
+      "DS_LOCAL_RETIRADA": "North of City - 16211 NW 57TH AVE - 16211 N W 57Th Ave "
+    },
+    "type": "6",
+    "phone": "877-283-0898",
+    "player": {
+      "code": "ZT"
+    },
+    "location": {
+      "address": "16211 NW 57TH AVE"
+    },
+    "hoursOfOperation": [{
+      "day": "Segunda-Feira",
+      "openingTime": "08:00",
+      "closingTime": "18:00"
+    }, {
+      "day": "Terça-Feira",
+      "openingTime": "08:00",
+      "closingTime": "18:00"
+    }, {
+      "day": "Quarta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "18:00"
+    }, {
+      "day": "Quinta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "18:00"
+    }, {
+      "day": "Sexta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "18:00"
+    }, {
+      "day": "Sábado",
+      "openingTime": "09:00",
+      "closingTime": "12:00"
+    }]
+  }, {
+    "id": "C52",
+    "name": "MIAMI",
+    "description": {
+      "DS_LOCAL_RETIRADA": "City Center - 1520 COLLINS AVENUE - 1520 Collins Avenue "
+    },
+    "type": "2",
+    "phone": "877-283-0898",
+    "player": {
+      "code": "ZT"
+    },
+    "location": {
+      "address": "16211 NW 57TH AVE"
+    },
+    "hoursOfOperation": [{
+      "day": "Domingo",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Segunda-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Terça-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Quarta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Quinta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Sexta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Sábado",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }]
+  }, {
+    "id": "P52",
+    "name": "MIAMI",
+    "description": {
+      "DS_LOCAL_RETIRADA": "Port or Ferry - 3900 NW 25TH STREET - 3900 Nw 25Th Street "
+    },
+    "type": "2",
+    "phone": "877-283-0898",
+    "player": {
+      "code": "ZT"
+    },
+    "location": {
+      "address": "16211 NW 57TH AVE"
+    },
+    "hoursOfOperation": [{
+      "day": "Domingo",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Segunda-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Terça-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Quarta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Quinta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Sexta-Feira",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }, {
+      "day": "Sábado",
+      "openingTime": "08:00",
+      "closingTime": "17:00"
+    }]
+  }, {
+    "id": "S01",
+    "name": "MIAMI",
+    "description": {
+      "DS_LOCAL_RETIRADA": "South of City - 91831 OVERSEAS HWY - 91831 Overseas Highway "
+    },
+    "type": "1",
+    "phone": "877-283-0898",
+    "player": {
+      "code": "ZT"
+    },
+    "location": {
+      "address": "16211 NW 57TH AVE"
+    },
+    "hoursOfOperation": [{
+      "day": "Domingo",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Segunda-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Terça-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Quarta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Quinta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Sexta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Sábado",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }]
+  }, {
+    "id": "T01",
+    "name": "MIAMI",
+    "description": {
+      "DS_LOCAL_RETIRADA": "On Airport - 3900 NORTHWEST 25TH STREET - 3900 NORTHWEST 25TH STREET "
+    },
+    "type": "1",
+    "phone": "877-283-0898",
+    "player": {
+      "code": "ZT"
+    },
+    "location": {
+      "address": "16211 NW 57TH AVE"
+    },
+    "hoursOfOperation": [{
+      "day": "Domingo",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Segunda-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Terça-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Quarta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Quinta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Sexta-Feira",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }, {
+      "day": "Sábado",
+      "openingTime": "00:00",
+      "closingTime": "23:59"
+    }]
+  }]
 };
