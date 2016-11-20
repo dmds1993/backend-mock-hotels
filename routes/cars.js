@@ -1938,34 +1938,24 @@ var carsPerCategory = {
 };
 
 var carOptions = {
-  "optionalServices": [
-    {
-      "id": 1,
-      "name": "Cadeirinha para bebê",
-      "description": "Recomendavel até 9kg (0 a 12 meses)"
-    },
-    {
-      "id": 2,
-      "name": "Cadeirinha para crianças",
-      "description": "Recomendavel até 18kg (1 a 4 anos)"
-    },
-    {
-      "id": 3,
-      "name": "GPS",
-      "description": "Selecione esse campo caso o seu plano não possua a inclusão do equipamento"
-    },
-    {
-      "id": 4,
-      "name": "Seguro proteção veículo",
-      "description": "Pacote que contempla Proteção contra roubo, furto, incêndio e perda total do veículo, danos e/ou avarias."
-    },
-    {
-      "id": 5,
-      "name": "Assento para criança",
-      "description": "Recomendável para bebês com peso entre 40 lbs e 100 lbs / 18 kg a 45 kg (4 a 12 anos)"
-    }
-  ]
-};
+  "optionalServices": [{
+    "id": "BST",
+    "name": "ChildBoosterSeat",
+    "description": "ASSENTO -VENDAS NACIONAIS: CRIANÇAS DE 4 A 8 ANOS // INTERN. 4 A 12 ANOS -  PAGAMENTO NO DESTINO"
+  }, {
+    "id": "CSI",
+    "name": "InfantSeat",
+    "description": "CADEIRINHA PARA BEBÊ - VENDAS NACIONAIS E INTERNACIONAIS: DE 0 A 12 MESES - PAGAMENTO NO DESTINO"
+  }, {
+    "id": "CST",
+    "name": "BabySeat",
+    "description": "CADEIRINHA PARA BEBÊ - VENDAS NACIONAIS E INTER. CRIANÇAS DE 1 A 4 ANOS - PAGAMENTO NO DESTINO"
+  }, {
+    "id": "NAV",
+    "name": "NavigationalSystem",
+    "description": "GPS: RESERVE-O APENAS SE NÃO HOUVER PLANO QUE O INCLUA. NESSE CASO, O MESMO DEVE SER PAGO NO DESTINO"
+  }]
+}
 
 var locations = {
   "locations": [{
