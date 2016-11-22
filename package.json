@@ -1,4 +1,4 @@
-{
+ {
   "name": "CVC-Backend-Mock",
   "version": "0.0.1",
   "description": "backend-mock-api",
@@ -25,5 +25,8 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }

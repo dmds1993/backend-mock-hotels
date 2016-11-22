@@ -3,14 +3,20 @@ var router = express.Router();
 var bodyParser  = require('body-parser');
 
 router.get('/', function(req, res, next) {
-  res.json(orders);
+  res.json(realOrders);
 });
 
 router.post('/', function(req, res, next) {
   res.json({
-  'orderId': (Math.floor(Math.random()*90000) + 10000),
-  'status': 'SUCCESS'
+    'orderId': (Math.floor(Math.random()*90000) + 10000),
+    'status': 'SUCCESS'
 	});
+});
+
+router.put('/', function(req, res, next) {
+  res.json({
+    'status': 'A'
+  });
 });
 
 router.get('/estimates', function(req, res, next) {
@@ -265,9 +271,9 @@ router.get('/estimates', function(req, res, next) {
       }]
     });
   } else {
-    return res.status(400).send({ 
-      code: 400, 
-      message: 'Missing orderId parameter' 
+    return res.status(400).send({
+      code: 400,
+      message: 'Missing orderId parameter'
     });
   }
 });
@@ -1419,6 +1425,547 @@ var orders = {
           }
         }]
       }]
+    }
+  ]
+};
+
+var realOrders = {
+  "orders":[
+    {
+      "id":1234,
+      "reservations":[
+        {
+          "id":12345678,
+          "reservationDate":"2016-10-18T00:00:00.000-02:00",
+          "expiresDate":"2016-12-28T00:00:00.000-02:00",
+          "isProductTypePackage":false,
+          "status":"CONFIRMED",
+          "type":"NORMAL",
+          "packageGroup":"STANDALONE",
+          "excursion":{
+            "code":"2.53539.121801",
+            "description":"CALDAS NOVAS"
+          },
+          "updateAvailable":true,
+          "vendorId":11321132,
+          "branchId":900,
+          "agencyId":4982251,
+          "emitterId":"8263038",
+          "salesType":"CVC",
+          "tour":{
+            "id":66763429,
+            "description":"CALDAS NOVAS",
+            "origin":{
+              "departureDate":"2016-12-18T00:00:00.000-02:00",
+              "arrivalDate":"2016-12-22T00:00:00.000-02:00",
+              "zone":{
+                "id":9626,
+                "country":{
+                  "code":"BR",
+                  "name":"BRASIL"
+                },
+                "state":{
+                  "code":"SP",
+                  "name":"SÃO PAULO"
+                },
+                "city":{
+                  "code":816,
+                  "name":"SÃO PAULO"
+                },
+                "latitude":-23.6742228,
+                "longitude":-46.5436003
+              }
+            },
+            "destinations":[
+              {
+                "departureDate":"2016-12-22T00:00:00.000-02:00",
+                "arrivalDate":"2016-12-25T00:00:00.000-02:00",
+                "zone":{
+                  "id":9626,
+                  "country":{
+                    "code":"BR",
+                    "name":"BRASIL"
+                  },
+                  "state":{
+                    "code":"SP",
+                    "name":"SÃO PAULO"
+                  },
+                  "city":{
+                    "code":816,
+                    "name":"SÃO PAULO"
+                  },
+                  "latitude":-23.6742228,
+                  "longitude":-46.5436003
+                }
+              }
+            ]
+          },
+           "contractors":[
+            {
+              "id":1,
+              "paxsId":[
+                1,
+                2
+              ],
+              "person":{
+                "id":335986,
+                "nationality":0,
+                "name":"José Dirceu",
+                "birthday":"1991-11-01",
+                "email":"teste@cvc.com.br",
+                "gender":"M",
+                "phones":[
+                  {
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"98444488"
+                  }
+                ],
+                "documents":[
+                  {
+                    "code":"41052964850",
+                    "type":"CPF"
+                  },
+                  {
+                    "code":"55579413014",
+                    "type":"DRIVER_LICENCE"
+                  }
+                ],
+                "addresses":[
+                  {
+                    "city":"Guarulhos",
+                    "address":"Av. Pedro de Paula",
+                    "number":"500",
+                    "complement":"Casa",
+                    "zipCode":"09220000",
+                    "country":"BRASIL",
+                    "state":"SÃO PAULO"
+                  }
+                ]
+              },
+              "receipts":[
+                {
+                  "id":1000244945,
+                  "value":1024.12,
+                  "type":"STANDARD",
+                  "status":"DEBITED",
+                  "created":{
+                    "date":"2016-10-25T00:00:00.000-02:00"
+                  },
+                  "cancelled":{
+                    "date":"2016-11-09T00:00:00.000-02:00"
+                  },
+                  "discounts":[
+                    {
+                      "modality":"ABATIMENTOS",
+                      "description":"DESC. CONCEDIDOS",
+                      "value":10.11
+                    }
+                  ],
+                  "payments":[
+                    {
+                      "id":1234,
+                      "modality":{
+                        "type":"PAYMENT_MODALITY_CREDIT_CARD",
+                        "description":"Cartão de Crédito",
+                        "creationDate":"2016-10-25T00:00:00.000-02:00",
+                        "operation":{
+                          "id":5404,
+                          "description":"Mastercard",
+                          "plan":{
+                            "id":23456,
+                            "description":"10% + 3x c/ juros",
+                            "value":375.03,
+                            "interestFreeValue":360.03,
+                            "installments":[
+                              {
+                                "id":1,
+                                "dueDate":"2017-03-04T00:00:00.000-02:00",
+                                "value":125.01,
+                                "interestFreeValue":120.01
+                              },
+                              {
+                                "id":2,
+                                "dueDate":"2017-04-04T00:00:00.000-02:00",
+                                "value":125.01,
+                                "interestFreeValue":120.01
+                              }
+                            ],
+                            "downPayment":{
+                              "value":125.01,
+                              "dueDate":"2017-02-04T00:00:00.000-02:00",
+                              "type":{
+                                "description":"CHEQUE PRÉ - CURTO PRAZO"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs":[
+            {
+              "id":1,
+              "firstName":"José",
+              "lastName":"Dirceu",
+              "birthDate":"1980-01-04",
+              "gender":"M",
+              "updateAvailable":true,
+              "documents":[
+                {
+                  "code":"41052964850",
+                  "type":"CPF"
+                },
+                {
+                  "code":"55579413014",
+                  "type":"DRIVER_LICENCE"
+                }
+              ],
+              "email":"teste@cvc.com.br",
+              "phones":[
+                {
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"88885555"
+                },
+                {
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"22226666"
+                }
+              ],
+              "address":[
+                {
+                  "street":"Av. Pedro de Paula",
+                  "number":"125",
+                  "complement":"Apto. 22",
+                  "district":"Centro",
+                  "city":"São Paulo",
+                  "state":"São Paulo",
+                  "country":"Brasil",
+                  "zipCode":"04225080"
+                }
+              ]
+            },
+            {
+              "id":2,
+              "firstName":"Maria",
+              "lastName":"Joana",
+              "birthDate":"1983-01-04",
+              "gender":"F",
+              "updateAvailable":true,
+              "documents":[
+                {
+                  "code":"41052964850",
+                  "type":"CPF"
+                },
+                {
+                  "code":"55579413014",
+                  "type":"DRIVER_LICENCE"
+                }
+              ],
+              "email":"teste@cvc.com.br",
+              "phones":[
+                {
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"88885555"
+                },
+                {
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"22226666"
+                }
+              ],
+              "address":[
+                {
+                  "street":"Av. Pedro de Paula",
+                  "number":"125",
+                  "complement":"Apto. 22",
+                  "district":"Centro",
+                  "city":"São Paulo",
+                  "state":"São Paulo",
+                  "country":"Brasil",
+                  "zipCode":"04225080"
+                }
+              ]
+            }
+          ],
+          "products":{
+            "cars":[
+              {
+                "meta":{
+                  "agreementCVC":{
+                    "category":"Carro Compacto",
+                    "code":"2135497-1",
+                    "description":"6870577 -  CDAR - 16 dias - Carro Compacto - CDAR/Miami",
+                    "updateAvailable":true
+                  }
+                },
+                "item":{
+                  "category":{
+                    "code":"CDAR",
+                    "name":"Carro Compacto"
+                  },
+                  "channelManager":{
+                    "id":1,
+                    "description":"Sabre",
+                    "reservationCode":"LTSDWE",
+                    "price":40.66,
+                    "currency":"USD"
+                  },
+                  "player":{
+                    "id":"AL",
+                    "description":"Alamo"
+                  },
+                  "pickup":{
+                    "name":"GRU INTERNTNL",
+                    "id":"45214",
+                    "date":"2017-02-07T11:00:00.000-02:00",
+                    "location":{
+                      "address":"Av. Pedro II - Guarulhos - SP",
+                      "coordinates":{
+                        "latitude":"-23.6742228",
+                        "longitude":"-46.5436003"
+                      }
+                    }
+                  },
+                  "return":{
+                    "name":"GRU INTERNTNL",
+                    "id":"45214",
+                    "date":"2017-02-07T11:00:00.000-02:00",
+                    "location":{
+                      "address":"Av. Pedro II - Guarulhos - SP",
+                      "coordinates":{
+                        "latitude":"-23.6742228",
+                        "longitude":"-46.5436003"
+                      }
+                    }
+                  },
+                  "price":375.03,
+                  "currency":"BRL",
+                  "paxId":1,
+                  "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                  "optionalServices":[
+                    {
+                      "description":"GPS: NÃO SELECIONE ESSE EQUIPAMENTO, CASO JÁ TENHA OPTADO PELO PLANO QUE INCLUI ESSE ITEM"
+                    }
+                  ]
+                }
+              }
+            ],
+            "hotels":[
+              {
+                "meta":{
+                  "agreementCVC":{
+                    "category":"Apto Padrão",
+                    "code":"5579874-1",
+                    "description":"3169535 - Diária(s) com café da manhã. *Atenção: Pacotes de Reveillon e Carnaval possuem garantias irrevogáveis de no-show. *Fretamento - (apto quádruplo somente sob consulta).",
+                    "updateAvailable":true
+                  }
+                },
+                "item":{
+                  "id":549785,
+                  "name":"Hotel Pousada Bonsai",
+                  "rooms":[
+                    {
+                      "rph":1,
+                      "channelManager":{
+                        "id":34,
+                        "description":"Juniper",
+                        "reservationCode":"128803360723|260633276",
+                        "price":123.03,
+                        "grossProfit":"25.09",
+                        "currency":"USD"
+                      },
+                      "player":{
+                        "id":"5",
+                        "description":"Tourico",
+                        "reservationCode":"12/4323432"
+                      },
+                      "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                      "location":{
+                        "zone":{
+                          "id":"9626",
+                          "country":{
+                            "code":"BR",
+                            "name":"BRASIL"
+                          },
+                          "state":{
+                            "code":"SP",
+                            "name":"SÃO PAULO"
+                          },
+                          "city":{
+                            "code":"816",
+                            "name":"SÃO PAULO"
+                          },
+                          "latitude":"-23.6742228",
+                          "longitude":"-46.5436003"
+                        },
+                        "address":"Av. Padre Antonio, 655 - São Paulo-SP"
+                      },
+                      "checkIn":"2017-01-08",
+                      "checkOut":"2017-01-12",
+                      "nightsNumber":4,
+                      "packageGroup":"VHI",
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "mealPlan":"Sem Café",
+                      "category":"Standard",
+                      "paxsId":["2"]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "price":{
+            "total":375.03,
+            "discount":10,
+            "charges":0,
+            "paid":125.03,
+            "points":1877,
+            "currency":"BRL"
+          },
+          "history":[
+            {
+              "date":"2013-10-29T00:00:00.000Z",
+              "status":"CHANGED",
+              "tourId":12345633,
+              "products":{
+                "cars":[
+                  {
+                    "meta":{
+                      "agreementCVC":{
+                        "category":"Carro Compacto",
+                        "code":"2135497-1",
+                        "description":"6870577 -  CDAR - 16 dias - Carro Compacto - CDAR/Miami",
+                        "updateAvailable":true
+                      }
+                    },
+                    "item":{
+                      "category":{
+                        "code":"CDAR",
+                        "name":"Carro Compacto"
+                      },
+                      "channelManager":{
+                        "id":1,
+                        "description":"Sabre",
+                        "reservationCode":"LTSDWE",
+                        "price":40.66,
+                        "currency":"USD"
+                      },
+                      "player":{
+                        "id":"AL",
+                        "description":"Alamo"
+                      },
+                      "pickup":{
+                        "name":"GRU INTERNTNL",
+                        "id":"45214",
+                        "date":"2017-02-07T11:00:00.000-02:00",
+                        "location":{
+                          "address":"Av. Pedro II - Guarulhos - SP",
+                          "coordinates":{
+                            "latitude":"-23.6742228",
+                            "longitude":"-46.5436003"
+                          }
+                        }
+                      },
+                      "return":{
+                        "name":"GRU INTERNTNL",
+                        "id":"45214",
+                        "date":"2017-02-07T11:00:00.000-02:00",
+                        "location":{
+                          "address":"Av. Pedro II - Guarulhos - SP",
+                          "coordinates":{
+                            "latitude":"-23.6742228",
+                            "longitude":"-46.5436003"
+                          }
+                        }
+                      },
+                      "price":375.03,
+                      "currency":"BRL",
+                      "paxId":1,
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "optionalServices":[
+                        {
+                          "description":"GPS: NÃO SELECIONE ESSE EQUIPAMENTO, CASO JÁ TENHA OPTADO PELO PLANO QUE INCLUI ESSE ITEM"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "hotels":[
+                  {
+                    "meta":{
+                      "agreementCVC":{
+                        "category":"Apto Padrão",
+                        "code":"5579874-1",
+                        "description":"3169535 - Diária(s) com café da manhã. *Atenção: Pacotes de Reveillon e Carnaval possuem garantias irrevogáveis de no-show. *Fretamento - (apto quádruplo somente sob consulta).",
+                        "updateAvailable":true
+                      }
+                    },
+                    "item":{
+                      "id":549785,
+                      "name":"Hotel Pousada Bonsai",
+                      "rooms":[
+                        {
+                          "rph":1,
+                          "channelManager":{
+                            "id":34,
+                            "description":"Juniper",
+                            "reservationCode":"128803360723|260633276",
+                            "price":123.03,
+                            "grossProfit":"25.09",
+                            "currency":"USD"
+                          },
+                          "player":{
+                            "id":"5",
+                            "description":"Tourico",
+                            "reservationCode":"12/4323432"
+                          },
+                          "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                          "location":{
+                            "zone":{
+                              "id":"9626",
+                              "country":{
+                                "code":"BR",
+                                "name":"BRASIL"
+                              },
+                              "state":{
+                                "code":"SP",
+                                "name":"SÃO PAULO"
+                              },
+                              "city":{
+                                "code":"816",
+                                "name":"SÃO PAULO"
+                              },
+                              "latitude":"-23.6742228",
+                              "longitude":"-46.5436003"
+                            },
+                            "address":"Av. Padre Antonio, 655 - São Paulo-SP"
+                          },
+                          "checkIn":"2017-01-08",
+                          "checkOut":"2017-01-12",
+                          "nightsNumber":4,
+                          "packageGroup":"VHI",
+                          "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                          "mealPlan":"Sem Café",
+                          "category":"Standard",
+                          "paxsId":"2"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 };
