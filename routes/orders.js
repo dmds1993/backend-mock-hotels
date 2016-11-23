@@ -19,6 +19,12 @@ router.put('/', function(req, res, next) {
   });
 });
 
+router.post('/validate', function(req, res, next) {
+  res.json({
+    'status': 'VALID'
+  });
+});
+
 router.get('/estimates', function(req, res, next) {
   if(req.query.orderId) {
     res.json(
