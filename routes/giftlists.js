@@ -33,6 +33,7 @@ var giftlists = {
     {
       "id": 1234,
       "type": "WEDDING",
+      "name": "Casamento de Daniel e Gabriela",
       "address": "Destiny",
       "date": "2016-12-31T20:00:00",
       "giftsGroupId": 456,
@@ -58,7 +59,8 @@ var giftlists = {
     },
     {
       "id": 5678,
-      "type": "WEDDING",
+      "type": "GIFT",
+      "name": "Casamento de Daniel e Gabriela",
       "address": "Destiny",
       "date": "2016-12-31T20:00:00",
       "giftsGroupId": 456,
@@ -85,6 +87,7 @@ var giftlists = {
     {
       "id": 9012,
       "type": "WEDDING",
+      "name": "Casamento de Daniel e Gabriela",
       "address": "Destiny",
       "date": "2016-12-31T20:00:00",
       "giftsGroupId": 456,
@@ -115,6 +118,7 @@ var giftlistId = {
   "giftsList": {
     "id": 1234,
     "type": "WEDDING",
+    "name": "Casamento de Daniel e Gabriela",
     "address": "Destiny",
     "date": "2016-12-31T20:00:00",
     "giftsGroupId": 456,
@@ -169,7 +173,7 @@ var giftlistId = {
         "gifts": [
           30,
           30,
-          45
+          60
         ],
         "message": "Message to the Event Owner",
         "benefactor": {
@@ -178,6 +182,40 @@ var giftlistId = {
           "birthDate": "1991-07-12T21:46:24.726Z",
           "gender": "M",
           "email": "teste@gmail.com",
+          "phones": [
+            {
+              "type": "MOBILE",
+              "internationalCode": 55,
+              "localCode": 11,
+              "number": "987654321"
+            }
+          ],
+          "address": {
+            "street": "Rua Lupércio de Miranda",
+            "number": "1776",
+            "complement": "107B",
+            "district": "Campestre",
+            "city": "Santo André",
+            "state": "SP",
+            "county": "Brasil",
+            "zipCode": "09070-000"
+          }
+        }
+      },
+      {
+        "gifts": [
+          30,
+          60,
+          60,
+          120
+        ],
+        "message": "Message to the Event Owner Good Look",
+        "benefactor": {
+          "firstName": "Daniel",
+          "lastName": "Baptista",
+          "birthDate": "1983-09-25T21:46:24.726Z",
+          "gender": "M",
+          "email": "teste1@gmail.com",
           "phones": [
             {
               "type": "MOBILE",
