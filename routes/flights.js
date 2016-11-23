@@ -16,6 +16,12 @@ router.get('/:rate_token', function(req, res, next) {
   var flights = flightsV0.flights;
   var flight;
 
+  // If we :rate_token is of the form ratetoken,ratetoken
+  // we split by the comma and use the first rateToken
+  if (rateToken.includes(',')) {
+    rateToken = rateToken.split(',')[0];
+  } 
+  
   for (var i = 0; i < flights.length && !flight; i++) {
     if (flights[i].segments[0].rateToken == rateToken) {
       flight = flights[i];
