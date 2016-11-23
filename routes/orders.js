@@ -19,6 +19,12 @@ router.put('/', function(req, res, next) {
   });
 });
 
+router.post('/validate', function(req, res, next) {
+  res.json({
+    'status': 'VALID'
+  });
+});
+
 router.get('/estimates', function(req, res, next) {
   if(req.query.orderId) {
     res.json(
@@ -1500,7 +1506,7 @@ var realOrders = {
               }
             ]
           },
-           "contractors":[
+          "contractors":[
             {
               "id":1,
               "paxsId":[
@@ -1769,7 +1775,7 @@ var realOrders = {
                   }
                 },
                 "item":{
-                  "id":549785,
+                  "id":381418,
                   "name":"Hotel Pousada Bonsai",
                   "rooms":[
                     {
