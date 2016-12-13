@@ -87,6 +87,9 @@ app.use('/dev/flights', flights);
 var cars = require('./routes/cars');
 app.use('/dev/cars', cars);
 
+var finans = require('./routes/finans');
+app.use('/dev/finans', finans);
+
 var payments = require('./routes/payments');
 app.use('/dev/payments', payments);
 
