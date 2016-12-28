@@ -5,14 +5,13 @@ router.get('/', function(req, res, next) {
 	res.json(giftslists);
 });
 
-router.get('/:giftslist_id', function(req, res, next) {
-  res.json(giftslistId);
-});
-
 router.get('/giftgroup', function(req, res, next) {
   res.json(giftGroup);
 });
 
+router.get('/:giftslist_id', function(req, res, next) {
+  res.json(giftslistId);
+});
 
 router.post('/booking', function(req, res, next) {
   if(req.body.paxs.length) {
