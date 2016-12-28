@@ -837,164 +837,209 @@ var hotels = {
 
 var hotel = {
   "hotel": {
-    "id": "4511405115",
-    "name": "ALDEIA DAS AGUAS PARK RESORT",
+    "id": "34036939",
+    "name": "Catalina Hotel",
+    "description": "Em frente à praia, este hotel está situado no coração de South Beach. Com ambiente jet-set europeu e um clube de praia onde pode receber manicuras e pédicures, também oferece 2 restaurantes, 2 piscinas, 4 bares, uma biblioteca multimédia, um terraço, um lago de peixe Koi japonês, e jardim Zen. Ta... Em frente à praia, este hotel está situado no coração de South Beach. Com ambiente jet-set europeu e um clube de praia onde pode receber manicuras e pédicures, também oferece 2 restaurantes, 2 piscinas, 4 bares, uma biblioteca multimédia, um terraço, um lago de peixe Koi japonês, e jardim Zen. Também, uma biblioteca dedicada que pode usar-se como centro de reuniões para grupos pequenos. Este hotel único oferece luxo acessível, num ambiente de estilo e sofisticação, com a ação de South Beach a poucos passos. Estacionamento disponível, mediante pagamento de uma taxa. É proibido fumar no hotel.",
+    "award": 3,
     "isPreferential": false,
     "location": {
-      "address": "BARÃO DO TURVO, DORÂNDIA, RJ, BRASIL"
+      "address": "1720 - 1756 Collins Avenue,  , 33139, Miami Beach  ",
+      "coordinates": {
+        "latitude": "25.793095",
+        "longitude": "-80.129932"
+      }
     },
     "contents": [
       {
-        "code": "lazer",
-        "name": "lazer",
+        "code": "amenites",
         "items": [
           {
-            "code": "256",
-            "description": "Arvorismo"
+            "name": "Acessível a cadeiras de rodas"
           },
           {
-            "code": "120",
-            "description": "Campo de futebol society"
+            "name": "Serviço de paquete"
           },
           {
-            "code": "997",
-            "description": "Entretenimento para crianças"
+            "name": "Internet sem fios"
           },
           {
-            "code": "922",
-            "description": "Lago para pesca esportiva"
+            "name": "Jardim"
           },
           {
-            "code": "339",
-            "description": "Parede de escalada"
+            "name": "Cofre"
           },
           {
-            "code": "199",
-            "description": "Parque aquático"
+            "name": "Equipa multilingue"
           },
           {
-            "code": "290",
-            "description": "Piscinas"
+            "name": "Elevador"
           },
           {
-            "code": "45",
-            "description": "Quadra poliesportiva"
+            "name": "Estacionamento vigiado"
           },
           {
-            "code": "282",
-            "description": "Rapel"
+            "name": "Hora de check-in"
           },
           {
-            "code": "1397",
-            "description": "Rio artificial"
+            "name": "Aluguer de automóveis"
           },
           {
-            "code": "1130",
-            "description": "SPA"
+            "name": "Terraço/solário"
           },
           {
-            "code": "257",
-            "description": "Tirolesa"
+            "name": "Serviço de lavandaria "
           },
           {
-            "code": "55",
-            "description": "Toboágua"
-          }
-        ]
-      },
-      {
-        "code": "acomodacoes",
-        "name": "acomodações",
-        "items": [
-          {
-            "code": "6",
-            "description": "Ar-condicionado"
+            "name": "Terraço"
           },
           {
-            "code": "644",
-            "description": "Cofre"
+            "name": "Detetor de incêndios"
           },
           {
-            "code": "27",
-            "description": "Frigobar"
+            "name": "São permitidos animais de estimação +5 kg"
           },
           {
-            "code": "319",
-            "description": "Internet wi-fi"
+            "name": "Serviço de transferes"
           },
           {
-            "code": "97",
-            "description": "Secador de cabelo"
+            "name": "Ginásio"
           },
           {
-            "code": "58",
-            "description": "TV por assinatura"
+            "name": "Hora de check-out"
           },
           {
-            "code": "52",
-            "description": "Telefone"
-          }
-        ]
-      },
-      {
-        "code": "gastronomia",
-        "name": "gastronomia",
-        "items": [
-          {
-            "code": "125",
-            "description": "Bar molhado"
+            "name": "Ar condicionado em zonas comuns"
           },
           {
-            "code": "775",
-            "description": "Lanchonete"
+            "name": "São permitidos animais de estimação -5 kg"
           },
           {
-            "code": "703",
-            "description": "Restaurantes"
-          }
-        ]
-      },
-      {
-        "code": "servicos",
-        "name": "serviços",
-        "items": [
-          {
-            "code": "588",
-            "description": "Centro de convenções"
+            "name": "Serviço de aluguer de bicicletas"
           },
           {
-            "code": "602",
-            "description": "Recepção 24h"
+            "name": "Serviço de quartos"
           },
           {
-            "code": "866",
-            "description": "Serviço diário de limpeza"
+            "name": "Lavandaria"
+          },
+          {
+            "name": "Estacionamento com motorista"
+          },
+          {
+            "name": "Transfer do aeroporto"
           }
         ]
       }
     ],
     "links": {
       "thumbnailImage": {
-        "href": "http://www.cvc.com.br/images/387190.jpg"
+        "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_001.jpg"
       },
       "images": [
         {
-          "href": "http://www.cvc.com.br/images/387163.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_001.jpg"
         },
         {
-          "href": "http://www.cvc.com.br/images/387189.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_002.jpg"
         },
         {
-          "href": "http://www.cvc.com.br/images/387181.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_003.jpg"
         },
         {
-          "href": "http://www.cvc.com.br/images/387182.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_004.jpg"
         },
         {
-          "href": "http://www.cvc.com.br/images/387190.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_010.jpg"
         },
         {
-          "href": "http://www.cvc.com.br/images/387183.jpg"
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_013.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_012.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_009.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_005.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_006.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_r_007.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_004.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_a_005.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_011.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_p_002.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_003.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_l_009.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_w_001.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_l_008.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_l_010.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_w_003.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_w_002.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_a_002.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_a_001.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_a_004.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_a_003.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_t_001.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_t_002.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_005.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_p_003.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_006.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_007.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_008.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_002.jpg"
+        },
+        {
+          "href": "http://photos.hotelbeds.com/giata/01/013332/013332a_hb_ro_001.jpg"
         }
       ]
     }

@@ -19,6 +19,12 @@ router.put('/', function(req, res, next) {
   });
 });
 
+router.post('/validate', function(req, res, next) {
+  res.json({
+    'status': 'VALID'
+  });
+});
+
 router.get('/estimates', function(req, res, next) {
   if(req.query.orderId) {
     res.json(
@@ -285,1151 +291,1688 @@ router.post('/estimates', function(req, res, next) {
 module.exports = router;
 
 var orders = {
-  "orders": [
+  "orders":[
     {
-      "id": 5846,
-      "reservations": [{
-        "id": 91921042,
-        "reservationDate": "2011-12-06T13:56:11.000-02:00",
-        "expiresDate": "2011-12-07T13:57:24.000-02:00",
-        "isProductTypePackage": false,
-        "status": "CONFIRMED",
-        "reservationType": "NORMAL",
-        "packageGroup": "STANDALONE",
-        "excursion": {
-          "code": "2.53539.121801",
-          "description": null
-        },
-        "notes": null,
-        "updateAvailable": true,
-        "vendorId": 11321132,
-        "branchId": 1000,
-        "agencyId": 0,
-        "emitterId": 145346,
-        "salesType": "CVC",
-        "currency": "BRL",
-        "tour": {
-          "id": 66763429,
-          "description": "CALDAS NOVAS",
-          "origin": {
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
-              }
-            }
+      "id":5846,
+      "reservations":[
+        {
+          "id":91921042,
+          "reservationDate":"2011-12-06T13:56:11.000-02:00",
+          "expiresDate":"2011-12-07T13:57:24.000-02:00",
+          "isProductTypePackage":false,
+          "status":"CONFIRMED",
+          "reservationType":"NORMAL",
+          "packageGroup":"STANDALONE",
+          "excursion":{
+            "code":"2.53539.121801",
+            "description":null
           },
-          "destinations": [{
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+          "notes":null,
+          "updateAvailable":true,
+          "vendorId":11321132,
+          "branchId":1000,
+          "agencyId":0,
+          "emitterId":145346,
+          "salesType":"CVC",
+          "currency":"BRL",
+          "tour":{
+            "id":66763429,
+            "description":"CALDAS NOVAS",
+            "origin":{
+              "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+              "departureDate":"2011-12-22T00:00:00.000-02:00",
+              "zone":{
+                "id":9626,
+                "Country":{
+                  "name":"BRASIL",
+                  "code":"BR"
+                },
+                "state":{
+                  "name":"SÃO PAULO",
+                  "code":"SP"
+                },
+                "city":{
+                  "name":"SÃO PAULO",
+                  "code":"816"
+                }
               }
-            }
-          }]
-        },
-        "contractors": [{
-          "id": 1,
-          "paxsId": [
-            1,
-            2
-          ],
-          "person": {
-            "name": "Marcus Vinicius Costa e Paula",
-            "birthday": "1991-11-01",
-            "email": "m.costa91@hotmail.com",
-            "gender": "M",
-            "phones": [{
-              "internationalCode": 55,
-              "localCode": 11,
-              "number": "984949658"
-            }],
-            "documents": [{
-              "code": "41052964850",
-              "type": "CPF"
-            }],
-            "addresses": [{
-              "cityName": "Guarulhos",
-              "number": "820",
-              "complement": "Casa",
-              "zipCode": "09220000",
-              "street": "Av. Varsóvia",
-              "countryCode": "BR",
-              "stateCode": "SP",
-              "district": "Vila Metalurgica"
-            }]
-          },
-          "receipts": [{
-            "id": 1000244945,
-            "value": 1024.12,
-            "type": "NORMAL",
-            "status": "ACTIVE",
-            "created": {
-              "date": "2011-12-06T00:00:00.000-02:00"
             },
-            "cancelled": {
-              "date": "1900-01-01T00:00:00.000-03:06"
-            },
-            "discounts": [{
-              "modality": "ABATIMENTOS",
-              "description": "DESC. CONCEDIDOS",
-              "value": 1234.11,
-              "discountToken": "234ERFFRW=="
-            }],
-            "payments": [{
-              "plan": {
-                "token": "1204-asaqswqw-q20205-qqqqq",
-                "value": 3123.87
-              },
-              "downPayment": {
-                "token": "1204-asaqswqw-q20205-qqqaq",
-                "value": 5000.87
-              },
-              "creditCard": {
-                "number": "4978523953242222",
-                "name": "Marcus Vinicius Costa e Paula",
-                "expirationYear": 19,
-                "securityCode": 727,
-                "value": 5000.87
+            "destinations":[
+              {
+                "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+                "departureDate":"2011-12-22T00:00:00.000-02:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                }
               }
-            }]
-          }]
-        }],
-        "paxs": [{
-          "id": 1,
-          "firstName": "Flavio",
-          "lastName": "Sousa",
-          "birthDate": "1991-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false,
-          "documents": [{
-            "type": "LICENSE_DRIVER",
-            "doc": "034556865989",
-            "issuingDate": "2004-12-15",
-            "expirationDate": "2019-11-18"
-          }],
-          "email": "teste@gmail.com",
-          "phones": [{
-            "type": "MOBILE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }, {
-            "type": "LANDLINE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }],
-          "address": {
-            "street": "Rua Lupércio de Miranda",
-            "number": "1776",
-            "complement": "107B",
-            "district": "Campestre",
-            "city": "Santo André",
-            "state": "SP",
-            "county": "Brasil",
-            "zipCode": "09070-000"
+            ]
           },
-          "productsData": {
-            "abroadCourses": {
-              "levelLanguage": 2,
-              "acceptAccommodationWithSmokers": false,
-              "allergy": [
-                "Pó",
-                "Poeira",
-                "Cisco",
-                "Terra"
-              ],
-              "dietaryRestrictions": [
-                "Amendoim"
-              ],
-              "animalRestrictions": [
-                "Cachorro",
-                "Gato",
-                "Tigre"
-              ],
-              "guardian": {
-                "name": "",
-                "email": "teste_guardian@gmail.com",
-                "phones": [{
-                  "type": "MOBILE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }, {
-                  "type": "LANDLINE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }]
-              }
-            }
-          }
-        }, {
-          "id": 2,
-          "firstName": "Marcus Vinicius",
-          "lastName": "Costa e Paula",
-          "birthDate": "1989-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false
-        }],
-        "price": {
-          "totalValue": 1024,
-          "discountValue": 0,
-          "chargesValue": 0,
-          "paidValue": 1024,
-          "points": 0,
-          "currency": "BRL"
-        },
-        "products": [{
-          "hotels": [{
-            "id": 34306398,
-            "updateAvailable": false,
-            "rooms": [{
-              "channelManager": {
-                "id": 34,
-                "reservationCode": "128803360723|260633276",
-                "price": 123.03,
-                "grossProfit": 23.03,
-                "currency": "DOLAR_COMERCIAL"
-              },
-              "player": {
-                "id": 5,
-                "reservationCode": "12/4323432"
-              },
-              "price": 2343.03,
-              "currency": "REAL",
-              "description": "Quarto Twin Standard, 2 camas de Solteiro",
-              "checkIn": "2016-06-03",
-              "checkOut": "2016-06-04",
-              "paxsId": [
+          "contractors":[
+            {
+              "id":1,
+              "paxsId":[
                 1,
                 2
               ],
-              "nightsAmount": 1,
-              "markup": 0.6,
-              "packageGroup": "VHI",
-              "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-              "mealPlan": "Sem Café"
-            }]
-          }],
-          "cars": [{
-            "updateAvailable": false,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "channelManager": {
-              "id": 1,
-              "reservationCode": "PZAZHV",
-              "price": 123.03,
-              "currency": "USD"
-            },
-            "player": {
-              "id": "AL"
-            },
-            "pickup": {
-              "name": "MIAMI INTERNTNL",
-              "id": "87645",
-              "date": "2016-07-15T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "return": {
-              "name": "MIAMI INTERNTNL",
-              "id": "43244",
-              "date": "2016-07-20T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "paxId": 1,
-            "price": 2343.03,
-            "currency": "BRL"
-          }],
-          "flights": [{
-            "priceGroup": {
-              "fareGroup": {
-                "reCharging": false,
-                "currency": "BRL",
-                "priceWithTax": 354.58,
-                "priceWithoutTax": 283.22,
-                "fares": [{
-                  "passengersType": "ADT",
-                  "passengersCount": 2,
-                  "priceWithTax": 246.35,
-                  "priceWithoutTax": 124.28,
-                  "taxes": [{
-                    "code": "KRWE",
-                    "description": "Classe tarifária",
-                    "percent": 65.01,
-                    "amount": 77.82
-                  }]
-                }]
-              },
-              "segments": [{
-                "departure": "MIA",
-                "departureDate": "2035-12-31T05:47:39.997Z",
-                "arrival": "SAO",
-                "arrivalDate": "2058-12-04T06:55:28.799Z",
-                "rateToken": "qUkGA2teW",
-                "operatedBy": {
-                  "name": "TAM",
-                  "iata": "JJ"
-                },
-                "routeRPH": 0,
-                "rph": 6,
-                "numberOfStops": 1,
-                "duration": 311,
-                "legs": [{
-                  "operatedBy": {
-                    "name": "GOL",
-                    "iata": "G3"
-                  },
-                  "flightNumber": 5208,
-                  "duration": 186,
-                  "numberOfStops": 1,
-                  "departure": "Miami",
-                  "arrival": "Orlando",
-                  "departureDate": "2045-06-10T15:19:28.832Z",
-                  "arrivalDate": "2078-08-08T08:24:21.254Z",
-                  "aircraftCode": "KSLY",
-                  "seatClass": {
-                    "code": "WRSM",
-                    "description": "Assento de luxo"
+              "person":{
+                "name":"Marcus Vinicius Costa e Paula",
+                "birthday":"1991-11-01",
+                "email":"m.costa91@hotmail.com",
+                "gender":"M",
+                "phones":[
+                  {
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"984949658"
                   }
-                }]
-              }]
-            },
-            "gds": {
-              "provider": "Sabre",
-              "reservationCode": "546312563"
-            },
-            "markup": 60.29,
-            "packageGroup": "VHI",
-            "updateAvailable": false,
-            "reservationToken": "YW55IHNoaXQNCg=="
-          }],
-          "insurances": {
-            "id": 34306398,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "name": "INTERNACIONAL - MUNDO BÁSICO",
-            "description": "Serviços de proteção em viagens para qualquer lugar do Brasil.",
-            "company": "TravelAce Assistance",
-            "price": 838.4,
-            "currency": "BRL",
-            "type": "TRAVEL",
-            "startDate": "2016-07-20T11:00",
-            "endDate": "2016-07-25T11:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
+                ],
+                "documents":[
+                  {
+                    "code":"41052964850",
+                    "type":"CPF"
+                  }
+                ],
+                "addresses":[
+                  {
+                    "cityName":"Guarulhos",
+                    "number":"820",
+                    "complement":"Casa",
+                    "zipCode":"09220000",
+                    "street":"Av. Varsóvia",
+                    "countryCode":"BR",
+                    "stateCode":"SP",
+                    "district":"Vila Metalurgica"
+                  }
+                ]
               },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
+              "receipts":[
+                {
+                  "id":1000244945,
+                  "value":1024.12,
+                  "type":"NORMAL",
+                  "status":"ACTIVE",
+                  "created":{
+                    "date":"2011-12-06T00:00:00.000-02:00"
+                  },
+                  "cancelled":{
+                    "date":"1900-01-01T00:00:00.000-03:06"
+                  },
+                  "discounts":[
+                    {
+                      "modality":"ABATIMENTOS",
+                      "description":"DESC. CONCEDIDOS",
+                      "value":1234.11,
+                      "discountToken":"234ERFFRW=="
+                    }
+                  ],
+                  "payments":[
+                    {
+                      "plan":{
+                        "token":"1204-asaqswqw-q20205-qqqqq",
+                        "value":3123.87
+                      },
+                      "downPayment":{
+                        "token":"1204-asaqswqw-q20205-qqqaq",
+                        "value":5000.87
+                      },
+                      "creditCard":{
+                        "number":"4978523953242222",
+                        "name":"Marcus Vinicius Costa e Paula",
+                        "expirationYear":19,
+                        "securityCode":727,
+                        "value":5000.87
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs":[
+            {
+              "id":1,
+              "firstName":"Flavio",
+              "lastName":"Sousa",
+              "birthDate":"1991-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false,
+              "documents":[
+                {
+                  "type":"LICENSE_DRIVER",
+                  "doc":"034556865989",
+                  "issuingDate":"2004-12-15",
+                  "expirationDate":"2019-11-18"
+                }
+              ],
+              "email":"teste@gmail.com",
+              "phones":[
+                {
+                  "type":"MOBILE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                },
+                {
+                  "type":"LANDLINE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                }
+              ],
+              "address":{
+                "street":"Rua Lupércio de Miranda",
+                "number":"1776",
+                "complement":"107B",
+                "district":"Campestre",
+                "city":"Santo André",
+                "state":"SP",
+                "county":"Brasil",
+                "zipCode":"09070-000"
               },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+              "productsData":{
+                "abroadCourses":{
+                  "levelLanguage":2,
+                  "acceptAccommodationWithSmokers":false,
+                  "allergy":[
+                    "Pó",
+                    "Poeira",
+                    "Cisco",
+                    "Terra"
+                  ],
+                  "dietaryRestrictions":[
+                    "Amendoim"
+                  ],
+                  "animalRestrictions":[
+                    "Cachorro",
+                    "Gato",
+                    "Tigre"
+                  ],
+                  "guardian":{
+                    "name":"",
+                    "email":"teste_guardian@gmail.com",
+                    "phones":[
+                      {
+                        "type":"MOBILE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      },
+                      {
+                        "type":"LANDLINE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      }
+                    ]
+                  }
+                }
               }
             },
-            "paxs": [
-              1,
-              2,
-              3,
-              4
-            ]
-          }
-        }]
-      }]
+            {
+              "id":2,
+              "firstName":"Marcus Vinicius",
+              "lastName":"Costa e Paula",
+              "birthDate":"1989-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false
+            }
+          ],
+          "price":{
+            "totalValue":1024,
+            "discountValue":0,
+            "chargesValue":0,
+            "paidValue":1024,
+            "points":0,
+            "currency":"BRL"
+          },
+          "products":[
+            {
+              "hotels":[
+                {
+                  "id":34306398,
+                  "updateAvailable":false,
+                  "rooms":[
+                    {
+                      "channelManager":{
+                        "id":34,
+                        "reservationCode":"128803360723|260633276",
+                        "price":123.03,
+                        "grossProfit":23.03,
+                        "currency":"DOLAR_COMERCIAL"
+                      },
+                      "player":{
+                        "id":5,
+                        "reservationCode":"12/4323432"
+                      },
+                      "price":2343.03,
+                      "currency":"REAL",
+                      "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                      "checkIn":"2016-06-03",
+                      "checkOut":"2016-06-04",
+                      "paxsId":[
+                        1,
+                        2
+                      ],
+                      "nightsAmount":1,
+                      "markup":0.6,
+                      "packageGroup":"VHI",
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "mealPlan":"Sem Café"
+                    }
+                  ]
+                }
+              ],
+              "cars":[
+                {
+                  "updateAvailable":false,
+                  "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                  "channelManager":{
+                    "id":1,
+                    "reservationCode":"PZAZHV",
+                    "price":123.03,
+                    "currency":"USD"
+                  },
+                  "player":{
+                    "id":"AL"
+                  },
+                  "pickup":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"87645",
+                    "date":"2016-07-15T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "return":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"43244",
+                    "date":"2016-07-20T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "paxId":1,
+                  "price":2343.03,
+                  "currency":"BRL"
+                }
+              ],
+              "flights":[
+                {
+                  "priceGroup":{
+                    "fareGroup":{
+                      "reCharging":false,
+                      "currency":"BRL",
+                      "priceWithTax":354.58,
+                      "priceWithoutTax":283.22,
+                      "fares":[
+                        {
+                          "passengersType":"ADT",
+                          "passengersCount":2,
+                          "priceWithTax":246.35,
+                          "priceWithoutTax":124.28,
+                          "taxes":[
+                            {
+                              "code":"KRWE",
+                              "description":"Classe tarifária",
+                              "percent":65.01,
+                              "amount":77.82
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "segments":[
+                      {
+                        "departure":"MIA",
+                        "departureDate":"2035-12-31T05:47:39.997Z",
+                        "arrival":"SAO",
+                        "arrivalDate":"2058-12-04T06:55:28.799Z",
+                        "rateToken":"qUkGA2teW",
+                        "operatedBy":{
+                          "name":"TAM",
+                          "iata":"JJ"
+                        },
+                        "routeRPH":0,
+                        "rph":6,
+                        "numberOfStops":1,
+                        "duration":311,
+                        "legs":[
+                          {
+                            "operatedBy":{
+                              "name":"GOL",
+                              "iata":"G3"
+                            },
+                            "flightNumber":5208,
+                            "duration":186,
+                            "numberOfStops":1,
+                            "departure":"Miami",
+                            "arrival":"Orlando",
+                            "departureDate":"2045-06-10T15:19:28.832Z",
+                            "arrivalDate":"2078-08-08T08:24:21.254Z",
+                            "aircraftCode":"KSLY",
+                            "seatClass":{
+                              "code":"WRSM",
+                              "description":"Assento de luxo"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "gds":{
+                    "provider":"Sabre",
+                    "reservationCode":"546312563"
+                  },
+                  "markup":60.29,
+                  "packageGroup":"VHI",
+                  "updateAvailable":false,
+                  "reservationToken":"YW55IHNoaXQNCg=="
+                }
+              ],
+              "insurances":{
+                "id":34306398,
+                "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                "name":"INTERNACIONAL - MUNDO BÁSICO",
+                "description":"Serviços de proteção em viagens para qualquer lugar do Brasil.",
+                "company":"TravelAce Assistance",
+                "price":838.4,
+                "currency":"BRL",
+                "type":"TRAVEL",
+                "startDate":"2016-07-20T11:00",
+                "endDate":"2016-07-25T11:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                },
+                "paxs":[
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": 5850,
-      "reservations": [{
-        "id": 91921042,
-        "reservationDate": "2011-12-06T13:56:11.000-02:00",
-        "expiresDate": "2011-12-07T13:57:24.000-02:00",
-        "isProductTypePackage": false,
-        "status": "CONFIRMED",
-        "reservationType": "NORMAL",
-        "packageGroup": "STANDALONE",
-        "excursion": {
-          "code": "2.53539.121801",
-          "description": null
-        },
-        "notes": null,
-        "updateAvailable": true,
-        "vendorId": 11321132,
-        "branchId": 1000,
-        "agencyId": 0,
-        "emitterId": 145346,
-        "salesType": "CVC",
-        "currency": "BRL",
-        "tour": {
-          "id": 66763429,
-          "description": "CALDAS NOVAS",
-          "origin": {
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
-              }
-            }
+      "id":5850,
+      "reservations":[
+        {
+          "id":91921042,
+          "reservationDate":"2011-12-06T13:56:11.000-02:00",
+          "expiresDate":"2011-12-07T13:57:24.000-02:00",
+          "isProductTypePackage":false,
+          "status":"CONFIRMED",
+          "reservationType":"NORMAL",
+          "packageGroup":"STANDALONE",
+          "excursion":{
+            "code":"2.53539.121801",
+            "description":null
           },
-          "destinations": [{
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+          "notes":null,
+          "updateAvailable":true,
+          "vendorId":11321132,
+          "branchId":1000,
+          "agencyId":0,
+          "emitterId":145346,
+          "salesType":"CVC",
+          "currency":"BRL",
+          "tour":{
+            "id":66763429,
+            "description":"CALDAS NOVAS",
+            "origin":{
+              "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+              "departureDate":"2011-12-22T00:00:00.000-02:00",
+              "zone":{
+                "id":9626,
+                "Country":{
+                  "name":"BRASIL",
+                  "code":"BR"
+                },
+                "state":{
+                  "name":"SÃO PAULO",
+                  "code":"SP"
+                },
+                "city":{
+                  "name":"SÃO PAULO",
+                  "code":"816"
+                }
               }
-            }
-          }]
-        },
-        "contractors": [{
-          "id": 1,
-          "paxsId": [
-            1,
-            2
-          ],
-          "person": {
-            "name": "Marcus Vinicius Costa e Paula",
-            "birthday": "1991-11-01",
-            "email": "m.costa91@hotmail.com",
-            "gender": "M",
-            "phones": [{
-              "internationalCode": 55,
-              "localCode": 11,
-              "number": "984949658"
-            }],
-            "documents": [{
-              "code": "41052964850",
-              "type": "CPF"
-            }],
-            "addresses": [{
-              "cityName": "Guarulhos",
-              "number": "820",
-              "complement": "Casa",
-              "zipCode": "09220000",
-              "street": "Av. Varsóvia",
-              "countryCode": "BR",
-              "stateCode": "SP",
-              "district": "Vila Metalurgica"
-            }]
-          },
-          "receipts": [{
-            "id": 1000244945,
-            "value": 1024.12,
-            "type": "NORMAL",
-            "status": "ACTIVE",
-            "created": {
-              "date": "2011-12-06T00:00:00.000-02:00"
             },
-            "cancelled": {
-              "date": "1900-01-01T00:00:00.000-03:06"
-            },
-            "discounts": [{
-              "modality": "ABATIMENTOS",
-              "description": "DESC. CONCEDIDOS",
-              "value": 1234.11,
-              "discountToken": "234ERFFRW=="
-            }],
-            "payments": [{
-              "plan": {
-                "token": "1204-asaqswqw-q20205-qqqqq",
-                "value": 3123.87
-              },
-              "downPayment": {
-                "token": "1204-asaqswqw-q20205-qqqaq",
-                "value": 5000.87
-              },
-              "creditCard": {
-                "number": "4978523953242222",
-                "name": "Marcus Vinicius Costa e Paula",
-                "expirationYear": 19,
-                "securityCode": 727,
-                "value": 5000.87
+            "destinations":[
+              {
+                "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+                "departureDate":"2011-12-22T00:00:00.000-02:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                }
               }
-            }]
-          }]
-        }],
-        "paxs": [{
-          "id": 1,
-          "firstName": "Flavio",
-          "lastName": "Sousa",
-          "birthDate": "1991-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false,
-          "documents": [{
-            "type": "LICENSE_DRIVER",
-            "doc": "034556865989",
-            "issuingDate": "2004-12-15",
-            "expirationDate": "2019-11-18"
-          }],
-          "email": "teste@gmail.com",
-          "phones": [{
-            "type": "MOBILE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }, {
-            "type": "LANDLINE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }],
-          "address": {
-            "street": "Rua Lupércio de Miranda",
-            "number": "1776",
-            "complement": "107B",
-            "district": "Campestre",
-            "city": "Santo André",
-            "state": "SP",
-            "county": "Brasil",
-            "zipCode": "09070-000"
+            ]
           },
-          "productsData": {
-            "abroadCourses": {
-              "levelLanguage": 2,
-              "acceptAccommodationWithSmokers": false,
-              "allergy": [
-                "Pó",
-                "Poeira",
-                "Cisco",
-                "Terra"
-              ],
-              "dietaryRestrictions": [
-                "Amendoim"
-              ],
-              "animalRestrictions": [
-                "Cachorro",
-                "Gato",
-                "Tigre"
-              ],
-              "guardian": {
-                "name": "",
-                "email": "teste_guardian@gmail.com",
-                "phones": [{
-                  "type": "MOBILE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }, {
-                  "type": "LANDLINE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }]
-              }
-            }
-          }
-        }, {
-          "id": 2,
-          "firstName": "Marcus Vinicius",
-          "lastName": "Costa e Paula",
-          "birthDate": "1989-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false
-        }],
-        "price": {
-          "totalValue": 1024,
-          "discountValue": 0,
-          "chargesValue": 0,
-          "paidValue": 1024,
-          "points": 0,
-          "currency": "BRL"
-        },
-        "products": [{
-          "hotels": [{
-            "id": 34306398,
-            "updateAvailable": false,
-            "rooms": [{
-              "channelManager": {
-                "id": 34,
-                "reservationCode": "128803360723|260633276",
-                "price": 123.03,
-                "grossProfit": 23.03,
-                "currency": "DOLAR_COMERCIAL"
-              },
-              "player": {
-                "id": 5,
-                "reservationCode": "12/4323432"
-              },
-              "price": 2343.03,
-              "currency": "REAL",
-              "description": "Quarto Twin Standard, 2 camas de Solteiro",
-              "checkIn": "2016-06-03",
-              "checkOut": "2016-06-04",
-              "paxsId": [
+          "contractors":[
+            {
+              "id":1,
+              "paxsId":[
                 1,
                 2
               ],
-              "nightsAmount": 1,
-              "markup": 0.6,
-              "packageGroup": "VHI",
-              "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-              "mealPlan": "Sem Café"
-            }]
-          }],
-          "cars": [{
-            "updateAvailable": false,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "channelManager": {
-              "id": 1,
-              "reservationCode": "PZAZHV",
-              "price": 123.03,
-              "currency": "USD"
-            },
-            "player": {
-              "id": "AL"
-            },
-            "pickup": {
-              "name": "MIAMI INTERNTNL",
-              "id": "87645",
-              "date": "2016-07-15T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "return": {
-              "name": "MIAMI INTERNTNL",
-              "id": "43244",
-              "date": "2016-07-20T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "paxId": 1,
-            "price": 2343.03,
-            "currency": "BRL"
-          }],
-          "flights": [{
-            "priceGroup": {
-              "fareGroup": {
-                "reCharging": false,
-                "currency": "BRL",
-                "priceWithTax": 354.58,
-                "priceWithoutTax": 283.22,
-                "fares": [{
-                  "passengersType": "ADT",
-                  "passengersCount": 2,
-                  "priceWithTax": 246.35,
-                  "priceWithoutTax": 124.28,
-                  "taxes": [{
-                    "code": "KRWE",
-                    "description": "Classe tarifária",
-                    "percent": 65.01,
-                    "amount": 77.82
-                  }]
-                }]
-              },
-              "segments": [{
-                "departure": "MIA",
-                "departureDate": "2035-12-31T05:47:39.997Z",
-                "arrival": "SAO",
-                "arrivalDate": "2058-12-04T06:55:28.799Z",
-                "rateToken": "qUkGA2teW",
-                "operatedBy": {
-                  "name": "TAM",
-                  "iata": "JJ"
-                },
-                "routeRPH": 0,
-                "rph": 6,
-                "numberOfStops": 1,
-                "duration": 311,
-                "legs": [{
-                  "operatedBy": {
-                    "name": "GOL",
-                    "iata": "G3"
-                  },
-                  "flightNumber": 5208,
-                  "duration": 186,
-                  "numberOfStops": 1,
-                  "departure": "Miami",
-                  "arrival": "Orlando",
-                  "departureDate": "2045-06-10T15:19:28.832Z",
-                  "arrivalDate": "2078-08-08T08:24:21.254Z",
-                  "aircraftCode": "KSLY",
-                  "seatClass": {
-                    "code": "WRSM",
-                    "description": "Assento de luxo"
+              "person":{
+                "name":"Marcus Vinicius Costa e Paula",
+                "birthday":"1991-11-01",
+                "email":"m.costa91@hotmail.com",
+                "gender":"M",
+                "phones":[
+                  {
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"984949658"
                   }
-                }]
-              }]
-            },
-            "gds": {
-              "provider": "Sabre",
-              "reservationCode": "546312563"
-            },
-            "markup": 60.29,
-            "packageGroup": "VHI",
-            "updateAvailable": false,
-            "reservationToken": "YW55IHNoaXQNCg=="
-          }],
-          "insurances": {
-            "id": 34306398,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "name": "INTERNACIONAL - MUNDO BÁSICO",
-            "description": "Serviços de proteção em viagens para qualquer lugar do Brasil.",
-            "company": "TravelAce Assistance",
-            "price": 838.4,
-            "currency": "BRL",
-            "type": "TRAVEL",
-            "startDate": "2016-07-20T11:00",
-            "endDate": "2016-07-25T11:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
+                ],
+                "documents":[
+                  {
+                    "code":"41052964850",
+                    "type":"CPF"
+                  }
+                ],
+                "addresses":[
+                  {
+                    "cityName":"Guarulhos",
+                    "number":"820",
+                    "complement":"Casa",
+                    "zipCode":"09220000",
+                    "street":"Av. Varsóvia",
+                    "countryCode":"BR",
+                    "stateCode":"SP",
+                    "district":"Vila Metalurgica"
+                  }
+                ]
               },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
+              "receipts":[
+                {
+                  "id":1000244945,
+                  "value":1024.12,
+                  "type":"NORMAL",
+                  "status":"ACTIVE",
+                  "created":{
+                    "date":"2011-12-06T00:00:00.000-02:00"
+                  },
+                  "cancelled":{
+                    "date":"1900-01-01T00:00:00.000-03:06"
+                  },
+                  "discounts":[
+                    {
+                      "modality":"ABATIMENTOS",
+                      "description":"DESC. CONCEDIDOS",
+                      "value":1234.11,
+                      "discountToken":"234ERFFRW=="
+                    }
+                  ],
+                  "payments":[
+                    {
+                      "plan":{
+                        "token":"1204-asaqswqw-q20205-qqqqq",
+                        "value":3123.87
+                      },
+                      "downPayment":{
+                        "token":"1204-asaqswqw-q20205-qqqaq",
+                        "value":5000.87
+                      },
+                      "creditCard":{
+                        "number":"4978523953242222",
+                        "name":"Marcus Vinicius Costa e Paula",
+                        "expirationYear":19,
+                        "securityCode":727,
+                        "value":5000.87
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs":[
+            {
+              "id":1,
+              "firstName":"Flavio",
+              "lastName":"Sousa",
+              "birthDate":"1991-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false,
+              "documents":[
+                {
+                  "type":"LICENSE_DRIVER",
+                  "doc":"034556865989",
+                  "issuingDate":"2004-12-15",
+                  "expirationDate":"2019-11-18"
+                }
+              ],
+              "email":"teste@gmail.com",
+              "phones":[
+                {
+                  "type":"MOBILE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                },
+                {
+                  "type":"LANDLINE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                }
+              ],
+              "address":{
+                "street":"Rua Lupércio de Miranda",
+                "number":"1776",
+                "complement":"107B",
+                "district":"Campestre",
+                "city":"Santo André",
+                "state":"SP",
+                "county":"Brasil",
+                "zipCode":"09070-000"
               },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+              "productsData":{
+                "abroadCourses":{
+                  "levelLanguage":2,
+                  "acceptAccommodationWithSmokers":false,
+                  "allergy":[
+                    "Pó",
+                    "Poeira",
+                    "Cisco",
+                    "Terra"
+                  ],
+                  "dietaryRestrictions":[
+                    "Amendoim"
+                  ],
+                  "animalRestrictions":[
+                    "Cachorro",
+                    "Gato",
+                    "Tigre"
+                  ],
+                  "guardian":{
+                    "name":"",
+                    "email":"teste_guardian@gmail.com",
+                    "phones":[
+                      {
+                        "type":"MOBILE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      },
+                      {
+                        "type":"LANDLINE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      }
+                    ]
+                  }
+                }
               }
             },
-            "paxs": [
-              1,
-              2,
-              3,
-              4
-            ]
-          }
-        }]
-      }]
+            {
+              "id":2,
+              "firstName":"Marcus Vinicius",
+              "lastName":"Costa e Paula",
+              "birthDate":"1989-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false
+            }
+          ],
+          "price":{
+            "totalValue":1024,
+            "discountValue":0,
+            "chargesValue":0,
+            "paidValue":1024,
+            "points":0,
+            "currency":"BRL"
+          },
+          "products":[
+            {
+              "hotels":[
+                {
+                  "id":34306398,
+                  "updateAvailable":false,
+                  "rooms":[
+                    {
+                      "channelManager":{
+                        "id":34,
+                        "reservationCode":"128803360723|260633276",
+                        "price":123.03,
+                        "grossProfit":23.03,
+                        "currency":"DOLAR_COMERCIAL"
+                      },
+                      "player":{
+                        "id":5,
+                        "reservationCode":"12/4323432"
+                      },
+                      "price":2343.03,
+                      "currency":"REAL",
+                      "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                      "checkIn":"2016-06-03",
+                      "checkOut":"2016-06-04",
+                      "paxsId":[
+                        1,
+                        2
+                      ],
+                      "nightsAmount":1,
+                      "markup":0.6,
+                      "packageGroup":"VHI",
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "mealPlan":"Sem Café"
+                    }
+                  ]
+                }
+              ],
+              "cars":[
+                {
+                  "updateAvailable":false,
+                  "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                  "channelManager":{
+                    "id":1,
+                    "reservationCode":"PZAZHV",
+                    "price":123.03,
+                    "currency":"USD"
+                  },
+                  "player":{
+                    "id":"AL"
+                  },
+                  "pickup":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"87645",
+                    "date":"2016-07-15T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "return":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"43244",
+                    "date":"2016-07-20T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "paxId":1,
+                  "price":2343.03,
+                  "currency":"BRL"
+                }
+              ],
+              "flights":[
+                {
+                  "priceGroup":{
+                    "fareGroup":{
+                      "reCharging":false,
+                      "currency":"BRL",
+                      "priceWithTax":354.58,
+                      "priceWithoutTax":283.22,
+                      "fares":[
+                        {
+                          "passengersType":"ADT",
+                          "passengersCount":2,
+                          "priceWithTax":246.35,
+                          "priceWithoutTax":124.28,
+                          "taxes":[
+                            {
+                              "code":"KRWE",
+                              "description":"Classe tarifária",
+                              "percent":65.01,
+                              "amount":77.82
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "segments":[
+                      {
+                        "departure":"MIA",
+                        "departureDate":"2035-12-31T05:47:39.997Z",
+                        "arrival":"SAO",
+                        "arrivalDate":"2058-12-04T06:55:28.799Z",
+                        "rateToken":"qUkGA2teW",
+                        "operatedBy":{
+                          "name":"TAM",
+                          "iata":"JJ"
+                        },
+                        "routeRPH":0,
+                        "rph":6,
+                        "numberOfStops":1,
+                        "duration":311,
+                        "legs":[
+                          {
+                            "operatedBy":{
+                              "name":"GOL",
+                              "iata":"G3"
+                            },
+                            "flightNumber":5208,
+                            "duration":186,
+                            "numberOfStops":1,
+                            "departure":"Miami",
+                            "arrival":"Orlando",
+                            "departureDate":"2045-06-10T15:19:28.832Z",
+                            "arrivalDate":"2078-08-08T08:24:21.254Z",
+                            "aircraftCode":"KSLY",
+                            "seatClass":{
+                              "code":"WRSM",
+                              "description":"Assento de luxo"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "gds":{
+                    "provider":"Sabre",
+                    "reservationCode":"546312563"
+                  },
+                  "markup":60.29,
+                  "packageGroup":"VHI",
+                  "updateAvailable":false,
+                  "reservationToken":"YW55IHNoaXQNCg=="
+                }
+              ],
+              "insurances":{
+                "id":34306398,
+                "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                "name":"INTERNACIONAL - MUNDO BÁSICO",
+                "description":"Serviços de proteção em viagens para qualquer lugar do Brasil.",
+                "company":"TravelAce Assistance",
+                "price":838.4,
+                "currency":"BRL",
+                "type":"TRAVEL",
+                "startDate":"2016-07-20T11:00",
+                "endDate":"2016-07-25T11:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                },
+                "paxs":[
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": 5853,
-      "reservations": [{
-        "id": 91921042,
-        "reservationDate": "2011-12-06T13:56:11.000-02:00",
-        "expiresDate": "2011-12-07T13:57:24.000-02:00",
-        "isProductTypePackage": false,
-        "status": "CONFIRMED",
-        "reservationType": "NORMAL",
-        "packageGroup": "STANDALONE",
-        "excursion": {
-          "code": "2.53539.121801",
-          "description": null
-        },
-        "notes": null,
-        "updateAvailable": true,
-        "vendorId": 11321132,
-        "branchId": 1000,
-        "agencyId": 0,
-        "emitterId": 145346,
-        "salesType": "CVC",
-        "currency": "BRL",
-        "tour": {
-          "id": 66763429,
-          "description": "CALDAS NOVAS",
-          "origin": {
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
-              }
-            }
+      "id":5853,
+      "reservations":[
+        {
+          "id":91921042,
+          "reservationDate":"2011-12-06T13:56:11.000-02:00",
+          "expiresDate":"2011-12-07T13:57:24.000-02:00",
+          "isProductTypePackage":false,
+          "status":"CONFIRMED",
+          "reservationType":"NORMAL",
+          "packageGroup":"STANDALONE",
+          "excursion":{
+            "code":"2.53539.121801",
+            "description":null
           },
-          "destinations": [{
-            "arrivalDate": "2011-12-18T00:00:00.000-02:00",
-            "departureDate": "2011-12-22T00:00:00.000-02:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
-              },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
-              },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+          "notes":null,
+          "updateAvailable":true,
+          "vendorId":11321132,
+          "branchId":1000,
+          "agencyId":0,
+          "emitterId":145346,
+          "salesType":"CVC",
+          "currency":"BRL",
+          "tour":{
+            "id":66763429,
+            "description":"CALDAS NOVAS",
+            "origin":{
+              "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+              "departureDate":"2011-12-22T00:00:00.000-02:00",
+              "zone":{
+                "id":9626,
+                "Country":{
+                  "name":"BRASIL",
+                  "code":"BR"
+                },
+                "state":{
+                  "name":"SÃO PAULO",
+                  "code":"SP"
+                },
+                "city":{
+                  "name":"SÃO PAULO",
+                  "code":"816"
+                }
               }
-            }
-          }]
-        },
-        "contractors": [{
-          "id": 1,
-          "paxsId": [
-            1,
-            2
-          ],
-          "person": {
-            "name": "Marcus Vinicius Costa e Paula",
-            "birthday": "1991-11-01",
-            "email": "m.costa91@hotmail.com",
-            "gender": "M",
-            "phones": [{
-              "internationalCode": 55,
-              "localCode": 11,
-              "number": "984949658"
-            }],
-            "documents": [{
-              "code": "41052964850",
-              "type": "CPF"
-            }],
-            "addresses": [{
-              "cityName": "Guarulhos",
-              "number": "820",
-              "complement": "Casa",
-              "zipCode": "09220000",
-              "street": "Av. Varsóvia",
-              "countryCode": "BR",
-              "stateCode": "SP",
-              "district": "Vila Metalurgica"
-            }]
-          },
-          "receipts": [{
-            "id": 1000244945,
-            "value": 1024.12,
-            "type": "NORMAL",
-            "status": "ACTIVE",
-            "created": {
-              "date": "2011-12-06T00:00:00.000-02:00"
             },
-            "cancelled": {
-              "date": "1900-01-01T00:00:00.000-03:06"
-            },
-            "discounts": [{
-              "modality": "ABATIMENTOS",
-              "description": "DESC. CONCEDIDOS",
-              "value": 1234.11,
-              "discountToken": "234ERFFRW=="
-            }],
-            "payments": [{
-              "plan": {
-                "token": "1204-asaqswqw-q20205-qqqqq",
-                "value": 3123.87
-              },
-              "downPayment": {
-                "token": "1204-asaqswqw-q20205-qqqaq",
-                "value": 5000.87
-              },
-              "creditCard": {
-                "number": "4978523953242222",
-                "name": "Marcus Vinicius Costa e Paula",
-                "expirationYear": 19,
-                "securityCode": 727,
-                "value": 5000.87
+            "destinations":[
+              {
+                "arrivalDate":"2011-12-18T00:00:00.000-02:00",
+                "departureDate":"2011-12-22T00:00:00.000-02:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                }
               }
-            }]
-          }]
-        }],
-        "paxs": [{
-          "id": 1,
-          "firstName": "Flavio",
-          "lastName": "Sousa",
-          "birthDate": "1991-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false,
-          "documents": [{
-            "type": "LICENSE_DRIVER",
-            "doc": "034556865989",
-            "issuingDate": "2004-12-15",
-            "expirationDate": "2019-11-18"
-          }],
-          "email": "teste@gmail.com",
-          "phones": [{
-            "type": "MOBILE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }, {
-            "type": "LANDLINE",
-            "internationalCode": 55,
-            "localCode": 11,
-            "number": "987654321"
-          }],
-          "address": {
-            "street": "Rua Lupércio de Miranda",
-            "number": "1776",
-            "complement": "107B",
-            "district": "Campestre",
-            "city": "Santo André",
-            "state": "SP",
-            "county": "Brasil",
-            "zipCode": "09070-000"
+            ]
           },
-          "productsData": {
-            "abroadCourses": {
-              "levelLanguage": 2,
-              "acceptAccommodationWithSmokers": false,
-              "allergy": [
-                "Pó",
-                "Poeira",
-                "Cisco",
-                "Terra"
-              ],
-              "dietaryRestrictions": [
-                "Amendoim"
-              ],
-              "animalRestrictions": [
-                "Cachorro",
-                "Gato",
-                "Tigre"
-              ],
-              "guardian": {
-                "name": "",
-                "email": "teste_guardian@gmail.com",
-                "phones": [{
-                  "type": "MOBILE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }, {
-                  "type": "LANDLINE",
-                  "internationalCode": 55,
-                  "localCode": 11,
-                  "number": "987654321"
-                }]
-              }
-            }
-          }
-        }, {
-          "id": 2,
-          "firstName": "Marcus Vinicius",
-          "lastName": "Costa e Paula",
-          "birthDate": "1989-07-12T21:46:24.726Z",
-          "gender": "M",
-          "updateAvailable": false
-        }],
-        "price": {
-          "totalValue": 1024,
-          "discountValue": 0,
-          "chargesValue": 0,
-          "paidValue": 1024,
-          "points": 0,
-          "currency": "BRL"
-        },
-        "products": [{
-          "hotels": [{
-            "id": 34306398,
-            "updateAvailable": false,
-            "rooms": [{
-              "channelManager": {
-                "id": 34,
-                "reservationCode": "128803360723|260633276",
-                "price": 123.03,
-                "grossProfit": 23.03,
-                "currency": "DOLAR_COMERCIAL"
-              },
-              "player": {
-                "id": 5,
-                "reservationCode": "12/4323432"
-              },
-              "price": 2343.03,
-              "currency": "REAL",
-              "description": "Quarto Twin Standard, 2 camas de Solteiro",
-              "checkIn": "2016-06-03",
-              "checkOut": "2016-06-04",
-              "paxsId": [
+          "contractors":[
+            {
+              "id":1,
+              "paxsId":[
                 1,
                 2
               ],
-              "nightsAmount": 1,
-              "markup": 0.6,
-              "packageGroup": "VHI",
-              "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-              "mealPlan": "Sem Café"
-            }]
-          }],
-          "cars": [{
-            "updateAvailable": false,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "channelManager": {
-              "id": 1,
-              "reservationCode": "PZAZHV",
-              "price": 123.03,
-              "currency": "USD"
-            },
-            "player": {
-              "id": "AL"
-            },
-            "pickup": {
-              "name": "MIAMI INTERNTNL",
-              "id": "87645",
-              "date": "2016-07-15T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "return": {
-              "name": "MIAMI INTERNTNL",
-              "id": "43244",
-              "date": "2016-07-20T11:00",
-              "location": {
-                "address": "100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
-              }
-            },
-            "paxId": 1,
-            "price": 2343.03,
-            "currency": "BRL"
-          }],
-          "flights": [{
-            "priceGroup": {
-              "fareGroup": {
-                "reCharging": false,
-                "currency": "BRL",
-                "priceWithTax": 354.58,
-                "priceWithoutTax": 283.22,
-                "fares": [{
-                  "passengersType": "ADT",
-                  "passengersCount": 2,
-                  "priceWithTax": 246.35,
-                  "priceWithoutTax": 124.28,
-                  "taxes": [{
-                    "code": "KRWE",
-                    "description": "Classe tarifária",
-                    "percent": 65.01,
-                    "amount": 77.82
-                  }]
-                }]
-              },
-              "segments": [{
-                "departure": "MIA",
-                "departureDate": "2035-12-31T05:47:39.997Z",
-                "arrival": "SAO",
-                "arrivalDate": "2058-12-04T06:55:28.799Z",
-                "rateToken": "qUkGA2teW",
-                "operatedBy": {
-                  "name": "TAM",
-                  "iata": "JJ"
-                },
-                "routeRPH": 0,
-                "rph": 6,
-                "numberOfStops": 1,
-                "duration": 311,
-                "legs": [{
-                  "operatedBy": {
-                    "name": "GOL",
-                    "iata": "G3"
-                  },
-                  "flightNumber": 5208,
-                  "duration": 186,
-                  "numberOfStops": 1,
-                  "departure": "Miami",
-                  "arrival": "Orlando",
-                  "departureDate": "2045-06-10T15:19:28.832Z",
-                  "arrivalDate": "2078-08-08T08:24:21.254Z",
-                  "aircraftCode": "KSLY",
-                  "seatClass": {
-                    "code": "WRSM",
-                    "description": "Assento de luxo"
+              "person":{
+                "name":"Marcus Vinicius Costa e Paula",
+                "birthday":"1991-11-01",
+                "email":"m.costa91@hotmail.com",
+                "gender":"M",
+                "phones":[
+                  {
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"984949658"
                   }
-                }]
-              }]
-            },
-            "gds": {
-              "provider": "Sabre",
-              "reservationCode": "546312563"
-            },
-            "markup": 60.29,
-            "packageGroup": "VHI",
-            "updateAvailable": false,
-            "reservationToken": "YW55IHNoaXQNCg=="
-          }],
-          "insurances": {
-            "id": 34306398,
-            "reservationToken": "CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
-            "name": "INTERNACIONAL - MUNDO BÁSICO",
-            "description": "Serviços de proteção em viagens para qualquer lugar do Brasil.",
-            "company": "TravelAce Assistance",
-            "price": 838.4,
-            "currency": "BRL",
-            "type": "TRAVEL",
-            "startDate": "2016-07-20T11:00",
-            "endDate": "2016-07-25T11:00",
-            "zone": {
-              "id": 9626,
-              "Country": {
-                "name": "BRASIL",
-                "code": "BR"
+                ],
+                "documents":[
+                  {
+                    "code":"41052964850",
+                    "type":"CPF"
+                  }
+                ],
+                "addresses":[
+                  {
+                    "cityName":"Guarulhos",
+                    "number":"820",
+                    "complement":"Casa",
+                    "zipCode":"09220000",
+                    "street":"Av. Varsóvia",
+                    "countryCode":"BR",
+                    "stateCode":"SP",
+                    "district":"Vila Metalurgica"
+                  }
+                ]
               },
-              "state": {
-                "name": "SÃO PAULO",
-                "code": "SP"
+              "receipts":[
+                {
+                  "id":1000244945,
+                  "value":1024.12,
+                  "type":"NORMAL",
+                  "status":"ACTIVE",
+                  "created":{
+                    "date":"2011-12-06T00:00:00.000-02:00"
+                  },
+                  "cancelled":{
+                    "date":"1900-01-01T00:00:00.000-03:06"
+                  },
+                  "discounts":[
+                    {
+                      "modality":"ABATIMENTOS",
+                      "description":"DESC. CONCEDIDOS",
+                      "value":1234.11,
+                      "discountToken":"234ERFFRW=="
+                    }
+                  ],
+                  "payments":[
+                    {
+                      "plan":{
+                        "token":"1204-asaqswqw-q20205-qqqqq",
+                        "value":3123.87
+                      },
+                      "downPayment":{
+                        "token":"1204-asaqswqw-q20205-qqqaq",
+                        "value":5000.87
+                      },
+                      "creditCard":{
+                        "number":"4978523953242222",
+                        "name":"Marcus Vinicius Costa e Paula",
+                        "expirationYear":19,
+                        "securityCode":727,
+                        "value":5000.87
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs":[
+            {
+              "id":1,
+              "firstName":"Flavio",
+              "lastName":"Sousa",
+              "birthDate":"1991-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false,
+              "documents":[
+                {
+                  "type":"LICENSE_DRIVER",
+                  "doc":"034556865989",
+                  "issuingDate":"2004-12-15",
+                  "expirationDate":"2019-11-18"
+                }
+              ],
+              "email":"teste@gmail.com",
+              "phones":[
+                {
+                  "type":"MOBILE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                },
+                {
+                  "type":"LANDLINE",
+                  "internationalCode":55,
+                  "localCode":11,
+                  "number":"987654321"
+                }
+              ],
+              "address":{
+                "street":"Rua Lupércio de Miranda",
+                "number":"1776",
+                "complement":"107B",
+                "district":"Campestre",
+                "city":"Santo André",
+                "state":"SP",
+                "county":"Brasil",
+                "zipCode":"09070-000"
               },
-              "city": {
-                "name": "SÃO PAULO",
-                "code": "816"
+              "productsData":{
+                "abroadCourses":{
+                  "levelLanguage":2,
+                  "acceptAccommodationWithSmokers":false,
+                  "allergy":[
+                    "Pó",
+                    "Poeira",
+                    "Cisco",
+                    "Terra"
+                  ],
+                  "dietaryRestrictions":[
+                    "Amendoim"
+                  ],
+                  "animalRestrictions":[
+                    "Cachorro",
+                    "Gato",
+                    "Tigre"
+                  ],
+                  "guardian":{
+                    "name":"",
+                    "email":"teste_guardian@gmail.com",
+                    "phones":[
+                      {
+                        "type":"MOBILE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      },
+                      {
+                        "type":"LANDLINE",
+                        "internationalCode":55,
+                        "localCode":11,
+                        "number":"987654321"
+                      }
+                    ]
+                  }
+                }
               }
             },
-            "paxs": [
-              1,
-              2,
-              3,
-              4
-            ]
-          }
-        }]
-      }]
+            {
+              "id":2,
+              "firstName":"Marcus Vinicius",
+              "lastName":"Costa e Paula",
+              "birthDate":"1989-07-12T21:46:24.726Z",
+              "gender":"M",
+              "updateAvailable":false
+            }
+          ],
+          "price":{
+            "totalValue":1024,
+            "discountValue":0,
+            "chargesValue":0,
+            "paidValue":1024,
+            "points":0,
+            "currency":"BRL"
+          },
+          "products":[
+            {
+              "hotels":[
+                {
+                  "id":34306398,
+                  "updateAvailable":false,
+                  "rooms":[
+                    {
+                      "channelManager":{
+                        "id":34,
+                        "reservationCode":"128803360723|260633276",
+                        "price":123.03,
+                        "grossProfit":23.03,
+                        "currency":"DOLAR_COMERCIAL"
+                      },
+                      "player":{
+                        "id":5,
+                        "reservationCode":"12/4323432"
+                      },
+                      "price":2343.03,
+                      "currency":"REAL",
+                      "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                      "checkIn":"2016-06-03",
+                      "checkOut":"2016-06-04",
+                      "paxsId":[
+                        1,
+                        2
+                      ],
+                      "nightsAmount":1,
+                      "markup":0.6,
+                      "packageGroup":"VHI",
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "mealPlan":"Sem Café"
+                    }
+                  ]
+                }
+              ],
+              "cars":[
+                {
+                  "updateAvailable":false,
+                  "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                  "channelManager":{
+                    "id":1,
+                    "reservationCode":"PZAZHV",
+                    "price":123.03,
+                    "currency":"USD"
+                  },
+                  "player":{
+                    "id":"AL"
+                  },
+                  "pickup":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"87645",
+                    "date":"2016-07-15T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "return":{
+                    "name":"MIAMI INTERNTNL",
+                    "id":"43244",
+                    "date":"2016-07-20T11:00",
+                    "location":{
+                      "address":"100 S.E. 4TH STREET , 33131, MIAMI, UNITED STATES - USA"
+                    }
+                  },
+                  "paxId":1,
+                  "price":2343.03,
+                  "currency":"BRL"
+                }
+              ],
+              "flights":[
+                {
+                  "priceGroup":{
+                    "fareGroup":{
+                      "reCharging":false,
+                      "currency":"BRL",
+                      "priceWithTax":354.58,
+                      "priceWithoutTax":283.22,
+                      "fares":[
+                        {
+                          "passengersType":"ADT",
+                          "passengersCount":2,
+                          "priceWithTax":246.35,
+                          "priceWithoutTax":124.28,
+                          "taxes":[
+                            {
+                              "code":"KRWE",
+                              "description":"Classe tarifária",
+                              "percent":65.01,
+                              "amount":77.82
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "segments":[
+                      {
+                        "departure":"MIA",
+                        "departureDate":"2035-12-31T05:47:39.997Z",
+                        "arrival":"SAO",
+                        "arrivalDate":"2058-12-04T06:55:28.799Z",
+                        "rateToken":"qUkGA2teW",
+                        "operatedBy":{
+                          "name":"TAM",
+                          "iata":"JJ"
+                        },
+                        "routeRPH":0,
+                        "rph":6,
+                        "numberOfStops":1,
+                        "duration":311,
+                        "legs":[
+                          {
+                            "operatedBy":{
+                              "name":"GOL",
+                              "iata":"G3"
+                            },
+                            "flightNumber":5208,
+                            "duration":186,
+                            "numberOfStops":1,
+                            "departure":"Miami",
+                            "arrival":"Orlando",
+                            "departureDate":"2045-06-10T15:19:28.832Z",
+                            "arrivalDate":"2078-08-08T08:24:21.254Z",
+                            "aircraftCode":"KSLY",
+                            "seatClass":{
+                              "code":"WRSM",
+                              "description":"Assento de luxo"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "gds":{
+                    "provider":"Sabre",
+                    "reservationCode":"546312563"
+                  },
+                  "markup":60.29,
+                  "packageGroup":"VHI",
+                  "updateAvailable":false,
+                  "reservationToken":"YW55IHNoaXQNCg=="
+                }
+              ],
+              "insurances":{
+                "id":34306398,
+                "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                "name":"INTERNACIONAL - MUNDO BÁSICO",
+                "description":"Serviços de proteção em viagens para qualquer lugar do Brasil.",
+                "company":"TravelAce Assistance",
+                "price":838.4,
+                "currency":"BRL",
+                "type":"TRAVEL",
+                "startDate":"2016-07-20T11:00",
+                "endDate":"2016-07-25T11:00",
+                "zone":{
+                  "id":9626,
+                  "Country":{
+                    "name":"BRASIL",
+                    "code":"BR"
+                  },
+                  "state":{
+                    "name":"SÃO PAULO",
+                    "code":"SP"
+                  },
+                  "city":{
+                    "name":"SÃO PAULO",
+                    "code":"816"
+                  }
+                },
+                "paxs":[
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 };
 
 var realOrders = {
+  "orders": [
+    {
+      "id": 15507,
+      "reservations": [
+        {
+          "id": 179463418,
+          "reservationDate": "2016-04-15T15:13:35.000+00:00",
+          "expiresDate": "2016-04-18T15:13:35.000+00:00",
+          "isProductTypePackage": false,
+          "status": "CONFIRMED",
+          "type": "ONLINE",
+          "packageGroup": "TERRESTRE",
+          "excursion": {
+            "code": "9.01307799.16091301",
+            "description": "BANGKOK"
+          },
+          "notes": null,
+          "updateAvailable": false,
+          "vendorId": 11105632,
+          "branchId": 1000,
+          "agencyId": null,
+          "emitterId": null,
+          "salesType": "CVC",
+          "tour": {
+            "id": 175921288,
+            "description": "BANGKOK",
+            "origin": {
+              "departureDate": "2016-09-13T00:00:00.000+00:00",
+              "arrivalDate": "2016-09-14T00:00:00.000+00:00",
+              "zone": {
+                "id": 9583,
+                "name": null,
+                "description": null,
+                "address": null,
+                "country": {
+                  "code": "BR",
+                  "name": "BRASIL",
+                  "iataCode": "BR"
+                },
+                "state": {
+                  "code": "SP",
+                  "name": "SÃO PAULO"
+                },
+                "city": {
+                  "code": 773,
+                  "name": "SANTO ANDRÉ"
+                },
+                "latitude": -23.66455,
+                "longitude": -46.53842
+              }
+            },
+            "destinations": [
+              {
+                "departureDate": "2016-09-13T00:00:00.000+00:00",
+                "arrivalDate": "2016-09-14T00:00:00.000+00:00",
+                "zone": {
+                  "id": 34990,
+                  "name": null,
+                  "description": null,
+                  "address": null,
+                  "country": {
+                    "code": "TH",
+                    "name": "TAILANDIA",
+                    "iataCode": null
+                  },
+                  "state": {
+                    "code": "BK",
+                    "name": "BANGKOK"
+                  },
+                  "city": {
+                    "code": 1,
+                    "name": "BANGKOK"
+                  },
+                  "latitude": null,
+                  "longitude": null
+                }
+              }
+            ]
+          },
+          "contractors": [
+            {
+              "id": 1,
+              "paxsId": [
+                1,
+                2
+              ],
+              "person": {
+                "id": 3963221,
+                "nationality": 0,
+                "name": "Claudio Duval De Araujo",
+                "birthday": "1962-02-05T00:00:00.000+00:00",
+                "email": "cduval_1@hotmail.com",
+                "fatherName": "JESUS JUSTINO DE ARAUJO",
+                "motherName": "MARIA DAS DORES DUVAL DE ARAUJO",
+                "gender": "M",
+                "interests": [
+                  null
+                ],
+                "phones": [
+                  {
+                    "typeId": 1,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 31,
+                    "number": "34949092"
+                  },
+                  {
+                    "typeId": 2,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 31,
+                    "number": "92347334"
+                  }
+                ],
+                "documents": [
+                  {
+                    "code": "520413446-87",
+                    "type": "CPF"
+                  },
+                  {
+                    "code": "298650",
+                    "type": "RG"
+                  }
+                ],
+                "banks": [
+                  {
+                    "id": 356,
+                    "agencyCode": 471,
+                    "accountCode": "4730468-5",
+                    "accountType": 1,
+                    "creationDate": "1997-03-01T00:00:00.000+00:00",
+                    "personType": 1
+                  }
+                ],
+                "addresses": [
+                  {
+                    "country": "BRASIL",
+                    "state": "MINAS GERAIS",
+                    "city": "BELO HORIZONTE",
+                    "address": "Rua ABDENAGO LISBOA",
+                    "neighborhood": "HELIÓPOLIS",
+                    "number": "80",
+                    "complement": null,
+                    "zipCode": "31760250",
+                    "email": "cduval_1@hotmail.com"
+                  }
+                ],
+                "commercial": {
+                  "companyName": "GRAFICA JOTAEME",
+                  "department": null,
+                  "cnpj": {
+                    "code": null,
+                    "type": null
+                  },
+                  "occupationId": 10088,
+                  "admissionDate": "1972-09-07T00:00:00.000+00:00",
+                  "earnings": 2700,
+                  "otherEarnings": null
+                }
+              },
+              "receipts": [
+                {
+                  "id": 10000001402452,
+                  "value": 254.47,
+                  "type": "STANDARD",
+                  "status": "DEBITED",
+                  "created": {
+                    "date": "2016-04-15T00:00:00.000+00:00"
+                  },
+                  "cancelled": {
+                    "date": "1900-01-01T00:00:00.000+00:00"
+                  },
+                  "payments": [
+                    {
+                      "id": 28010076,
+                      "modality": {
+                        "type": "PAYMENT_MODALITY_CREDIT_CARD",
+                        "description": "CARTÃO DE CRÉDITO",
+                        "creationDate": "2016-04-15T00:00:00.000+00:00",
+                        "operation": {
+                          "id": 5402,
+                          "description": "MASTERCARD",
+                          "plan": {
+                            "id": null,
+                            "description": null,
+                            "value": 254.47,
+                            "interestFreeValue": 212.23,
+                            "installments": [
+                              {
+                                "id": 1,
+                                "dueDate": "2016-05-15T00:00:00.000+00:00",
+                                "value": 21.25,
+                                "interestFreeValue": 21.25
+                              },
+                              {
+                                "id": 2,
+                                "dueDate": "2016-06-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 3,
+                                "dueDate": "2016-07-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 4,
+                                "dueDate": "2016-08-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 5,
+                                "dueDate": "2016-09-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 6,
+                                "dueDate": "2016-10-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 7,
+                                "dueDate": "2016-11-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 8,
+                                "dueDate": "2016-12-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 9,
+                                "dueDate": "2017-01-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              },
+                              {
+                                "id": 10,
+                                "dueDate": "2017-02-15T00:00:00.000+00:00",
+                                "value": 21.22,
+                                "interestFreeValue": 21.22
+                              }
+                            ],
+                            "downPayment": {
+                              "value": 0,
+                              "dueDate": null,
+                              "type": {
+                                "description": null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs": [
+            {
+              "id": 1,
+              "firstName": "Tereza",
+              "lastName": "Rodrigues",
+              "birthDate": "1973-07-21T00:00:00.000+00:00",
+              "gender": "F",
+              "updateAvailable": false,
+              "notes": null,
+              "email": null,
+              "address": [
+                {
+                  "street": null,
+                  "number": null,
+                  "complement": null,
+                  "district": null,
+                  "city": null,
+                  "state": null,
+                  "country": null,
+                  "zipCode": null
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "firstName": "Claudio",
+              "lastName": "Araujo",
+              "birthDate": "1962-02-08T00:00:00.000+00:00",
+              "gender": "M",
+              "updateAvailable": false,
+              "notes": null,
+              "email": null,
+              "address": [
+                {
+                  "street": null,
+                  "number": null,
+                  "complement": null,
+                  "district": null,
+                  "city": null,
+                  "state": null,
+                  "country": null,
+                  "zipCode": null
+                }
+              ]
+            }
+          ],
+          "products": {
+            "hotels": [
+              {
+                "meta": {
+                  "agreementCVC": {
+                    "category": "SOMENTE AÉREO",
+                    "code": "8043356-1",
+                    "name": "SALIL HOTEL SUKHUMVIT SOI 8",
+                    "description": "8017815 - DIÁRIAS EM APARTAMENTO (Café Da Manhã)",
+                    "updateAvailable": false
+                  }
+                },
+                "item": {
+                  "id": 34264030,
+                  "name": "SALIL HOTEL SUKHUMVIT SOI 8",
+                  "rooms": [
+                    {
+                      "rph": 1,
+                      "channelManager": {
+                        "id": 34,
+                        "description": "JUNIPER",
+                        "reservationCode": "F8VW7V",
+                        "price": 142.16,
+                        "grossProfit": null,
+                        "currency": "USD",
+                        "cancellationPolicies": [
+                          {
+                            "nonRefundable": false
+                          }
+                        ]
+                      },
+                      "player": {
+                        "id": null,
+                        "description": "HOTEL BEDS",
+                        "reservationCode": "321/1950152"
+                      },
+                      "description": "STANDARD",
+                      "location": {
+                        "zone": {
+                          "id": "13528",
+                          "country": {
+                            "code": "US",
+                            "name": "ESTADOS UNIDOS DA AMERICA"
+                          },
+                          "state": {
+                            "code": "FL",
+                            "name": "FLORIDA"
+                          },
+                          "city": {
+                            "code": "429",
+                            "name": "MIAMI"
+                          },
+                          "latitude": null,
+                          "longitude": null
+                        },
+                        "address": " SOMENTE PARTE AÉREA (HOTEL FICTÍCIO), "
+                      },
+                      "checkIn": "2016-09-13T00:00:00.000+00:00",
+                      "checkOut": "2016-09-14T00:00:00.000+00:00",
+                      "nightsNumber": 1,
+                      "packageGroup": "TERRESTRE",
+                      "reservationToken": "PHJ0IGJyaT0iMTAwMCIgY2lkPSIzNDAwMSIgY21pPSIzNCIgZHRpPSIyMDE2LTA5LTEzIiBkdGY9IjIwMTYtMDktMTQiIGhvdD0iMzQyNjQwMzAiIGxhbj0icHRfQlIiIGxvYz0iRjhWVzdWIiBzb2M9IiIgcGxhPSI1IiBwcmQ9IkhPVCIvPg==",
+                      "mealPlan": "DIÁRIAS EM APARTAMENTO (Café Da Manhã)",
+                      "category": "STANDARD"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "price": {
+            "total": 254.47,
+            "discount": 42.24,
+            "charges": 0,
+            "paid": 212.22,
+            "points": 0,
+            "currency": "BRL"
+          }
+        }
+      ]
+    }
+  ]
+};
+
+var realOrders2 = {
   "orders":[
     {
       "id":1234,
@@ -1500,7 +2043,7 @@ var realOrders = {
               }
             ]
           },
-           "contractors":[
+          "contractors":[
             {
               "id":1,
               "paxsId":[
@@ -1769,7 +2312,7 @@ var realOrders = {
                   }
                 },
                 "item":{
-                  "id":549785,
+                  "id":381418,
                   "name":"Hotel Pousada Bonsai",
                   "rooms":[
                     {
@@ -1780,7 +2323,12 @@ var realOrders = {
                         "reservationCode":"128803360723|260633276",
                         "price":123.03,
                         "grossProfit":"25.09",
-                        "currency":"USD"
+                        "currency":"USD",
+                        "cancellationPolicies": [
+                          {
+                            "nonRefundable": false
+                          }
+                        ]
                       },
                       "player":{
                         "id":"5",
