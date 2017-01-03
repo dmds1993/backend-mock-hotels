@@ -13,7 +13,7 @@ router.post('/', function(req, res, next) {
 	});
 });
 
-router.put('/', function(req, res, next) {
+router.put('/*', function(req, res, next) {
   res.json({
     'status': 'A'
   });
@@ -1577,260 +1577,379 @@ var orders = {
 };
 
 var realOrders = {
-  "orders": [
+  "orders":[
     {
-      "id": 15507,
-      "reservations": [
+      "id":29921,
+      "reservations":[
         {
-          "id": 179463418,
-          "reservationDate": "2016-04-15T15:13:35.000+00:00",
-          "expiresDate": "2016-04-18T15:13:35.000+00:00",
-          "isProductTypePackage": false,
-          "status": "CONFIRMED",
-          "type": "ONLINE",
-          "packageGroup": "TERRESTRE",
-          "excursion": {
-            "code": "9.01307799.16091301",
-            "description": "BANGKOK"
+          "id":181102869,
+          "reservationDate":"2016-05-16T18:13:02.000+00:00",
+          "expiresDate":"2016-05-17T18:13:02.000+00:00",
+          "isProductTypePackage":false,
+          "status":"CONFIRMED",
+          "type":"NORMAL",
+          "packageGroup":"TERRESTRE",
+          "excursion":{
+            "code":"2.20798.122601",
+            "description":"FOZ DO IGUAÇU"
           },
-          "notes": null,
-          "updateAvailable": false,
-          "vendorId": 11105632,
-          "branchId": 1000,
-          "agencyId": null,
-          "emitterId": null,
-          "salesType": "CVC",
-          "tour": {
-            "id": 175921288,
-            "description": "BANGKOK",
-            "origin": {
-              "departureDate": "2016-09-13T00:00:00.000+00:00",
-              "arrivalDate": "2016-09-14T00:00:00.000+00:00",
-              "zone": {
-                "id": 9583,
-                "name": null,
-                "description": null,
-                "address": null,
-                "country": {
-                  "code": "BR",
-                  "name": "BRASIL",
-                  "iataCode": "BR"
+          "notes":null,
+          "updateAvailable":false,
+          "vendorId":5500057,
+          "branchId":125,
+          "agencyId":null,
+          "emitterId":null,
+          "salesType":"CVC",
+          "tour":{
+            "id":177576163,
+            "description":"FOZ DO IGUAÇU",
+            "origin":{
+              "departureDate":"2016-12-26T00:00:00.000+00:00",
+              "arrivalDate":"2017-01-01T00:00:00.000+00:00",
+              "zone":{
+                "id":9583,
+                "name":null,
+                "description":null,
+                "address":null,
+                "country":{
+                  "code":"BR",
+                  "name":"BRASIL",
+                  "iataCode":"BR"
                 },
-                "state": {
-                  "code": "SP",
-                  "name": "SÃO PAULO"
+                "state":{
+                  "code":"SP",
+                  "name":"SÃO PAULO"
                 },
-                "city": {
-                  "code": 773,
-                  "name": "SANTO ANDRÉ"
+                "city":{
+                  "code":773,
+                  "name":"SANTO ANDRÉ"
                 },
-                "latitude": -23.66455,
-                "longitude": -46.53842
+                "latitude":-23.66455,
+                "longitude":-46.53842
               }
             },
-            "destinations": [
+            "destinations":[
               {
-                "departureDate": "2016-09-13T00:00:00.000+00:00",
-                "arrivalDate": "2016-09-14T00:00:00.000+00:00",
-                "zone": {
-                  "id": 34990,
-                  "name": null,
-                  "description": null,
-                  "address": null,
-                  "country": {
-                    "code": "TH",
-                    "name": "TAILANDIA",
-                    "iataCode": null
+                "departureDate":"2016-12-26T00:00:00.000+00:00",
+                "arrivalDate":"2017-01-01T00:00:00.000+00:00",
+                "zone":{
+                  "id":6236,
+                  "name":null,
+                  "description":null,
+                  "address":null,
+                  "country":{
+                    "code":"BR",
+                    "name":"BRASIL",
+                    "iataCode":"BR"
                   },
-                  "state": {
-                    "code": "BK",
-                    "name": "BANGKOK"
+                  "state":{
+                    "code":"PR",
+                    "name":"PARANÁ"
                   },
-                  "city": {
-                    "code": 1,
-                    "name": "BANGKOK"
+                  "city":{
+                    "code":361,
+                    "name":"FOZ DO IGUAÇU"
                   },
-                  "latitude": null,
-                  "longitude": null
+                  "latitude":-25.54853,
+                  "longitude":-54.58848
                 }
               }
             ]
           },
-          "contractors": [
+          "contractors":[
             {
-              "id": 1,
-              "paxsId": [
+              "id":1,
+              "paxsId":[
                 1,
-                2
+                2,
+                3,
+                4,
+                5
               ],
-              "person": {
-                "id": 3963221,
-                "nationality": 0,
-                "name": "Claudio Duval De Araujo",
-                "birthday": "1962-02-05T00:00:00.000+00:00",
-                "email": "cduval_1@hotmail.com",
-                "fatherName": "JESUS JUSTINO DE ARAUJO",
-                "motherName": "MARIA DAS DORES DUVAL DE ARAUJO",
-                "gender": "M",
-                "interests": [
+              "person":{
+                "id":8776442,
+                "nationality":0,
+                "name":"Ademar Alcantara Gusmao",
+                "birthday":"1953-02-28T00:00:00.000+00:00",
+                "email":"ADEMARALCANTARA@HOTMAIL.COM",
+                "fatherName":"IZALTINO DA ALCANTARA GUSMAO",
+                "motherName":"MARIA DA CONCEIÇÃO DE JESUS",
+                "gender":"M",
+                "interests":[
                   null
                 ],
-                "phones": [
+                "phones":[
                   {
-                    "typeId": 1,
-                    "addressTypeId": 2,
-                    "internationalCode": 55,
-                    "localCode": 31,
-                    "number": "34949092"
+                    "typeId":1,
+                    "addressTypeId":2,
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"29874022"
                   },
                   {
-                    "typeId": 2,
-                    "addressTypeId": 2,
-                    "internationalCode": 55,
-                    "localCode": 31,
-                    "number": "92347334"
-                  }
-                ],
-                "documents": [
-                  {
-                    "code": "520413446-87",
-                    "type": "CPF"
+                    "typeId":2,
+                    "addressTypeId":2,
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"996659803"
                   },
                   {
-                    "code": "298650",
-                    "type": "RG"
+                    "typeId":3,
+                    "addressTypeId":2,
+                    "internationalCode":55,
+                    "localCode":11,
+                    "number":"985371230"
                   }
                 ],
-                "banks": [
+                "documents":[
                   {
-                    "id": 356,
-                    "agencyCode": 471,
-                    "accountCode": "4730468-5",
-                    "accountType": 1,
-                    "creationDate": "1997-03-01T00:00:00.000+00:00",
-                    "personType": 1
-                  }
-                ],
-                "addresses": [
-                  {
-                    "country": "BRASIL",
-                    "state": "MINAS GERAIS",
-                    "city": "BELO HORIZONTE",
-                    "address": "Rua ABDENAGO LISBOA",
-                    "neighborhood": "HELIÓPOLIS",
-                    "number": "80",
-                    "complement": null,
-                    "zipCode": "31760250",
-                    "email": "cduval_1@hotmail.com"
-                  }
-                ],
-                "commercial": {
-                  "companyName": "GRAFICA JOTAEME",
-                  "department": null,
-                  "cnpj": {
-                    "code": null,
-                    "type": null
+                    "code":"642930178-87",
+                    "type":"CPF"
                   },
-                  "occupationId": 10088,
-                  "admissionDate": "1972-09-07T00:00:00.000+00:00",
-                  "earnings": 2700,
-                  "otherEarnings": null
-                }
+                  {
+                    "code":"69423325",
+                    "type":"RG"
+                  }
+                ],
+                "banks":[
+                  {
+                    "id":341,
+                    "agencyCode":180,
+                    "accountCode":"64312-4",
+                    "accountType":1,
+                    "creationDate":"1981-08-15T00:00:00.000+00:00",
+                    "personType":1
+                  }
+                ],
+                "addresses":[
+                  {
+                    "country":"BRASIL",
+                    "state":"SÃO PAULO",
+                    "city":"SÃO CAETANO DO SUL",
+                    "address":"Alameda CASSAQUERA",
+                    "neighborhood":"BARCELONA",
+                    "number":"560",
+                    "complement":"APTO 42C",
+                    "zipCode":"09560100",
+                    "email":"ADEMARALCANTARA@HOTMAIL.COM"
+                  }
+                ],
+                "commercial":{
+                  "companyName":"DISTRIBUIDORA MASTER UTILIDADE",
+                  "department":null,
+                  "cnpj":{
+                    "code":null,
+                    "type":null
+                  },
+                  "occupationId":10250,
+                  "admissionDate":"2010-05-04T00:00:00.000+00:00",
+                  "earnings":6500,
+                  "otherEarnings":null
+                },
+                "references":[
+                  {
+                    "name":"KARINE GUSMAO",
+                    "phone":"985371230"
+                  },
+                  {
+                    "name":"RODRIGO MALTA",
+                    "phone":"985371247"
+                  }
+                ]
               },
-              "receipts": [
+              "receipts":[
                 {
-                  "id": 10000001402452,
-                  "value": 254.47,
-                  "type": "STANDARD",
-                  "status": "DEBITED",
-                  "created": {
-                    "date": "2016-04-15T00:00:00.000+00:00"
+                  "id":1250000107832,
+                  "value":5270,
+                  "type":"STANDARD",
+                  "status":"DEBITED",
+                  "created":{
+                    "date":"2016-05-16T00:00:00.000+00:00"
                   },
-                  "cancelled": {
-                    "date": "1900-01-01T00:00:00.000+00:00"
+                  "cancelled":{
+                    "date":"1900-01-01T00:00:00.000+00:00"
                   },
-                  "payments": [
+                  "payments":[
                     {
-                      "id": 28010076,
-                      "modality": {
-                        "type": "PAYMENT_MODALITY_CREDIT_CARD",
-                        "description": "CARTÃO DE CRÉDITO",
-                        "creationDate": "2016-04-15T00:00:00.000+00:00",
-                        "operation": {
-                          "id": 5402,
-                          "description": "MASTERCARD",
-                          "plan": {
-                            "id": null,
-                            "description": null,
-                            "value": 254.47,
-                            "interestFreeValue": 212.23,
-                            "installments": [
+                      "id":28363291,
+                      "modality":{
+                        "type":"PAYMENT_MODALITY_CREDIT_CARD",
+                        "description":"CARTÃO DE CRÉDITO",
+                        "creationDate":"2016-05-16T00:00:00.000+00:00",
+                        "operation":{
+                          "id":5414,
+                          "description":"CVC MASTER GOLD",
+                          "plan":{
+                            "id":null,
+                            "description":null,
+                            "value":5270,
+                            "interestFreeValue":3570,
+                            "installments":[
                               {
-                                "id": 1,
-                                "dueDate": "2016-05-15T00:00:00.000+00:00",
-                                "value": 21.25,
-                                "interestFreeValue": 21.25
+                                "id":1,
+                                "dueDate":"2016-06-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 2,
-                                "dueDate": "2016-06-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":2,
+                                "dueDate":"2016-07-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 3,
-                                "dueDate": "2016-07-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":3,
+                                "dueDate":"2016-08-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 4,
-                                "dueDate": "2016-08-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":4,
+                                "dueDate":"2016-09-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 5,
-                                "dueDate": "2016-09-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":5,
+                                "dueDate":"2016-10-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 6,
-                                "dueDate": "2016-10-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":6,
+                                "dueDate":"2016-11-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 7,
-                                "dueDate": "2016-11-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":7,
+                                "dueDate":"2016-12-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 8,
-                                "dueDate": "2016-12-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":8,
+                                "dueDate":"2017-01-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 9,
-                                "dueDate": "2017-01-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":9,
+                                "dueDate":"2017-02-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               },
                               {
-                                "id": 10,
-                                "dueDate": "2017-02-15T00:00:00.000+00:00",
-                                "value": 21.22,
-                                "interestFreeValue": 21.22
+                                "id":10,
+                                "dueDate":"2017-03-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
+                              },
+                              {
+                                "id":11,
+                                "dueDate":"2017-04-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
+                              },
+                              {
+                                "id":12,
+                                "dueDate":"2017-05-15T00:00:00.000+00:00",
+                                "value":297.5,
+                                "interestFreeValue":297.5
                               }
                             ],
-                            "downPayment": {
-                              "value": 0,
-                              "dueDate": null,
-                              "type": {
-                                "description": null
+                            "downPayment":{
+                              "value":0,
+                              "dueDate":null,
+                              "type":{
+                                "description":null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id":28363291,
+                      "modality":{
+                        "type":"PAYMENT_MODALITY_CREDIT_CARD",
+                        "description":"CARTÃO DE CRÉDITO",
+                        "creationDate":"2016-05-16T00:00:00.000+00:00",
+                        "operation":{
+                          "id":5404,
+                          "description":"VISA ",
+                          "plan":{
+                            "id":null,
+                            "description":null,
+                            "value":5270,
+                            "interestFreeValue":1700,
+                            "installments":[
+                              {
+                                "id":1,
+                                "dueDate":"2016-06-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":2,
+                                "dueDate":"2016-07-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":3,
+                                "dueDate":"2016-08-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":4,
+                                "dueDate":"2016-09-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":5,
+                                "dueDate":"2016-10-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":6,
+                                "dueDate":"2016-11-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":7,
+                                "dueDate":"2016-12-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":8,
+                                "dueDate":"2017-01-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":9,
+                                "dueDate":"2017-02-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              },
+                              {
+                                "id":10,
+                                "dueDate":"2017-03-15T00:00:00.000+00:00",
+                                "value":170,
+                                "interestFreeValue":170
+                              }
+                            ],
+                            "downPayment":{
+                              "value":0,
+                              "dueDate":null,
+                              "type":{
+                                "description":null
                               }
                             }
                           }
@@ -1842,129 +1961,244 @@ var realOrders = {
               ]
             }
           ],
-          "paxs": [
+          "paxs":[
             {
-              "id": 1,
-              "firstName": "Tereza",
-              "lastName": "Rodrigues",
-              "birthDate": "1973-07-21T00:00:00.000+00:00",
-              "gender": "F",
-              "updateAvailable": false,
-              "notes": null,
-              "email": null,
-              "address": [
+              "id":1,
+              "firstName":"Andrezza",
+              "lastName":"Gusmao",
+              "birthDate":"1982-10-13T00:00:00.000+00:00",
+              "gender":"F",
+              "updateAvailable":true,
+              "notes":null,
+              "email":null,
+              "address":[
                 {
-                  "street": null,
-                  "number": null,
-                  "complement": null,
-                  "district": null,
-                  "city": null,
-                  "state": null,
-                  "country": null,
-                  "zipCode": null
+                  "street":null,
+                  "number":null,
+                  "complement":null,
+                  "district":null,
+                  "city":null,
+                  "state":null,
+                  "country":null,
+                  "zipCode":null
                 }
               ]
             },
             {
-              "id": 2,
-              "firstName": "Claudio",
-              "lastName": "Araujo",
-              "birthDate": "1962-02-08T00:00:00.000+00:00",
-              "gender": "M",
-              "updateAvailable": false,
-              "notes": null,
-              "email": null,
-              "address": [
+              "id":2,
+              "firstName":"Ademar",
+              "lastName":"Gusmao",
+              "birthDate":"1953-02-28T00:00:00.000+00:00",
+              "gender":"M",
+              "updateAvailable":true,
+              "notes":null,
+              "email":null,
+              "address":[
                 {
-                  "street": null,
-                  "number": null,
-                  "complement": null,
-                  "district": null,
-                  "city": null,
-                  "state": null,
-                  "country": null,
-                  "zipCode": null
+                  "street":null,
+                  "number":null,
+                  "complement":null,
+                  "district":null,
+                  "city":null,
+                  "state":null,
+                  "country":null,
+                  "zipCode":null
+                }
+              ]
+            },
+            {
+              "id":3,
+              "firstName":"Marcia",
+              "lastName":"Gusmao",
+              "birthDate":"1954-12-24T00:00:00.000+00:00",
+              "gender":"F",
+              "updateAvailable":true,
+              "notes":null,
+              "email":null,
+              "address":[
+                {
+                  "street":null,
+                  "number":null,
+                  "complement":null,
+                  "district":null,
+                  "city":null,
+                  "state":null,
+                  "country":null,
+                  "zipCode":null
+                }
+              ]
+            },
+            {
+              "id":4,
+              "firstName":"Rodrigo",
+              "lastName":"Vencigueri",
+              "birthDate":"1982-12-21T00:00:00.000+00:00",
+              "gender":"M",
+              "updateAvailable":true,
+              "notes":null,
+              "email":null,
+              "address":[
+                {
+                  "street":null,
+                  "number":null,
+                  "complement":null,
+                  "district":null,
+                  "city":null,
+                  "state":null,
+                  "country":null,
+                  "zipCode":null
+                }
+              ]
+            },
+            {
+              "id":5,
+              "firstName":"Karine",
+              "lastName":"Gusmao",
+              "birthDate":"1981-04-03T00:00:00.000+00:00",
+              "gender":"F",
+              "updateAvailable":true,
+              "notes":null,
+              "email":null,
+              "address":[
+                {
+                  "street":null,
+                  "number":null,
+                  "complement":null,
+                  "district":null,
+                  "city":null,
+                  "state":null,
+                  "country":null,
+                  "zipCode":null
                 }
               ]
             }
           ],
-          "products": {
-            "hotels": [
+          "products":{
+            "hotels":[
               {
-                "meta": {
-                  "agreementCVC": {
-                    "category": "SOMENTE AÉREO",
-                    "code": "8043356-1",
-                    "name": "SALIL HOTEL SUKHUMVIT SOI 8",
-                    "description": "8017815 - DIÁRIAS EM APARTAMENTO (Café Da Manhã)",
-                    "updateAvailable": false
+                "meta":{
+                  "agreementCVC":{
+                    "category":"QUATRO ESTRELAS",
+                    "code":"6397129-1",
+                    "name":"WYNDHAM GOLDEN FOZ SUITES",
+                    "description":"6366896 - DIÁRIA(S) COM CAFÉ DA MANHÃ",
+                    "updateAvailable":true
                   }
                 },
-                "item": {
-                  "id": 34264030,
-                  "name": "SALIL HOTEL SUKHUMVIT SOI 8",
-                  "rooms": [
+                "item":{
+                  "id":4510538580,
+                  "name":"WYNDHAM GOLDEN FOZ SUITES",
+                  "rooms":[
                     {
-                      "rph": 1,
-                      "channelManager": {
-                        "id": 34,
-                        "description": "JUNIPER",
-                        "reservationCode": "F8VW7V",
-                        "price": 142.16,
-                        "grossProfit": null,
-                        "currency": "USD",
-                        "cancellationPolicies": [
+                      "rph":1,
+                      "channelManager":{
+                        "id":45,
+                        "description":"CVC",
+                        "reservationCode":null,
+                        "price":4876,
+                        "grossProfit":null,
+                        "currency":"BRL",
+                        "cancellationPolicies":[
                           {
-                            "nonRefundable": false
+                            "nonRefundable":false
                           }
                         ]
                       },
-                      "player": {
-                        "id": null,
-                        "description": "HOTEL BEDS",
-                        "reservationCode": "321/1950152"
+                      "player":{
+                        "id":"45",
+                        "description":"CVC",
+                        "reservationCode":null
                       },
-                      "description": "STANDARD",
-                      "location": {
-                        "zone": {
-                          "id": "13528",
-                          "country": {
-                            "code": "US",
-                            "name": "ESTADOS UNIDOS DA AMERICA"
+                      "description":"LUXO COMPRE JÁ",
+                      "location":{
+                        "zone":{
+                          "id":"6236",
+                          "country":{
+                            "code":"BR",
+                            "name":"BRASIL"
                           },
-                          "state": {
-                            "code": "FL",
-                            "name": "FLORIDA"
+                          "state":{
+                            "code":"PR",
+                            "name":"PARANÁ"
                           },
-                          "city": {
-                            "code": "429",
-                            "name": "MIAMI"
+                          "city":{
+                            "code":"361",
+                            "name":"FOZ DO IGUAÇU"
                           },
-                          "latitude": null,
-                          "longitude": null
+                          "latitude":null,
+                          "longitude":null
                         },
-                        "address": " SOMENTE PARTE AÉREA (HOTEL FICTÍCIO), "
+                        "address":" RUI BARBOSA, 394"
                       },
-                      "checkIn": "2016-09-13T00:00:00.000+00:00",
-                      "checkOut": "2016-09-14T00:00:00.000+00:00",
-                      "nightsNumber": 1,
-                      "packageGroup": "TERRESTRE",
-                      "reservationToken": "PHJ0IGJyaT0iMTAwMCIgY2lkPSIzNDAwMSIgY21pPSIzNCIgZHRpPSIyMDE2LTA5LTEzIiBkdGY9IjIwMTYtMDktMTQiIGhvdD0iMzQyNjQwMzAiIGxhbj0icHRfQlIiIGxvYz0iRjhWVzdWIiBzb2M9IiIgcGxhPSI1IiBwcmQ9IkhPVCIvPg==",
-                      "mealPlan": "DIÁRIAS EM APARTAMENTO (Café Da Manhã)",
-                      "category": "STANDARD"
+                      "checkIn":"2016-12-26T00:00:00.000+00:00",
+                      "checkOut":"2017-01-01T00:00:00.000+00:00",
+                      "nightsNumber":6,
+                      "packageGroup":"TERRESTRE",
+                      "reservationToken":"PHJ0IGJyaT0iMTI1IiBwaWQ9IjYzOTcxMjkiIGNpZD0iIiBjbWk9IjQ1IiBkdGk9IjIwMTYtMTItMjYiIGR0Zj0iMjAxNy0wMS0wMSIgaG90PSIxMDUzODU4MCIgbGFuPSJwdF9CUiIgbG9jPSIiIHNvYz0iIiBwbGE9IjQ1IiBwcmQ9IkhPVCIvPg==",
+                      "mealPlan":"DIÁRIA(S) COM CAFÉ DA MANHÃ",
+                      "category":"LUXO COMPRE JÁ"
+                    },
+                    {
+                      "rph":2,
+                      "channelManager":{
+                        "id":45,
+                        "description":"CVC",
+                        "reservationCode":null,
+                        "price":4876,
+                        "grossProfit":null,
+                        "currency":"BRL",
+                        "cancellationPolicies":[
+                          {
+                            "nonRefundable":false
+                          }
+                        ]
+                      },
+                      "player":{
+                        "id":"45",
+                        "description":"CVC",
+                        "reservationCode":null
+                      },
+                      "description":"LUXO COMPRE JÁ",
+                      "location":{
+                        "zone":{
+                          "id":"6236",
+                          "country":{
+                            "code":"BR",
+                            "name":"BRASIL"
+                          },
+                          "state":{
+                            "code":"PR",
+                            "name":"PARANÁ"
+                          },
+                          "city":{
+                            "code":"361",
+                            "name":"FOZ DO IGUAÇU"
+                          },
+                          "latitude":null,
+                          "longitude":null
+                        },
+                        "address":" RUI BARBOSA, 394"
+                      },
+                      "checkIn":"2016-12-26T00:00:00.000+00:00",
+                      "checkOut":"2017-01-01T00:00:00.000+00:00",
+                      "nightsNumber":6,
+                      "packageGroup":"TERRESTRE",
+                      "reservationToken":"PHJ0IGJyaT0iMTI1IiBwaWQ9IjYzOTcxMjkiIGNpZD0iIiBjbWk9IjQ1IiBkdGk9IjIwMTYtMTItMjYiIGR0Zj0iMjAxNy0wMS0wMSIgaG90PSIxMDUzODU4MCIgbGFuPSJwdF9CUiIgbG9jPSIiIHNvYz0iIiBwbGE9IjQ1IiBwcmQ9IkhPVCIvPg==",
+                      "mealPlan":"DIÁRIA(S) COM CAFÉ DA MANHÃ",
+                      "category":"LUXO COMPRE JÁ"
                     }
                   ]
                 }
               }
             ]
           },
-          "price": {
-            "total": 254.47,
-            "discount": 42.24,
-            "charges": 0,
-            "paid": 212.22,
-            "points": 0,
-            "currency": "BRL"
+          "price":{
+            "total":5270,
+            "discount":0,
+            "charges":0,
+            "paid":5270,
+            "points":105400,
+            "currency":"BRL"
           }
         }
       ]
@@ -2316,6 +2550,55 @@ var realOrders2 = {
                   "name":"Hotel Pousada Bonsai",
                   "rooms":[
                     {
+                      "rph":1,
+                      "channelManager":{
+                        "id":34,
+                        "description":"Juniper",
+                        "reservationCode":"128803360723|260633276",
+                        "price":123.03,
+                        "grossProfit":"25.09",
+                        "currency":"USD",
+                        "cancellationPolicies": [
+                          {
+                            "nonRefundable": false
+                          }
+                        ]
+                      },
+                      "player":{
+                        "id":"5",
+                        "description":"Tourico",
+                        "reservationCode":"12/4323432"
+                      },
+                      "description":"Quarto Twin Standard, 2 camas de Solteiro",
+                      "location":{
+                        "zone":{
+                          "id":"9626",
+                          "country":{
+                            "code":"BR",
+                            "name":"BRASIL"
+                          },
+                          "state":{
+                            "code":"SP",
+                            "name":"SÃO PAULO"
+                          },
+                          "city":{
+                            "code":"816",
+                            "name":"SÃO PAULO"
+                          },
+                          "latitude":"-23.6742228",
+                          "longitude":"-46.5436003"
+                        },
+                        "address":"Av. Padre Antonio, 655 - São Paulo-SP"
+                      },
+                      "checkIn":"2017-01-08",
+                      "checkOut":"2017-01-12",
+                      "nightsNumber":4,
+                      "packageGroup":"VHI",
+                      "reservationToken":"CWNoYW5uZWxNYW5hZ2VyDQoJcGxheWVyDQoJem9uZUNvZGUNCglzZWFyY2hEYXRlVGltZQ0KCWNoZWNrSW5EYXRlDQoJY2hlY2tPdXRE",
+                      "mealPlan":"Sem Café",
+                      "category":"Standard",
+                      "paxsId":["2"]
+                    },{
                       "rph":1,
                       "channelManager":{
                         "id":34,
