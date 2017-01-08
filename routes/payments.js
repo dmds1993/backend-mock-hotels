@@ -9,7 +9,7 @@ router.get('/finans/plans', function(req, res, next) {
   res.json(plans);
 });
 
-router.post('/finans/plans/calculate', function(req, res, next) {
+router.post('/finans/calculate', function(req, res, next) {
   if (req.body.orderItems || req.body.orderId) {
     res.json(calculate);
   } else {
