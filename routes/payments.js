@@ -46,8 +46,8 @@ var calculate = {
     {
       "finanKeys": [
         {
-          "productType": "ALL",
-          "packageGroup": "ALL"
+          "productType": "HOT",
+          "packageGroup": "VHI"
         }
       ],
       "maxInstallments": 6,
@@ -61,6 +61,7 @@ var calculate = {
       "modalities": [
         {
           "description": "Cartão de Crédito",
+          "type": "PAYMENT_MODALITY_DEBIT_CARD"
           "operations": [
             {
               "description": "AMEX",
@@ -106,6 +107,70 @@ var calculate = {
         }
       ]
     },
+    {
+      "finanKeys": [
+        {
+          "productType": "HOT",
+          "packageGroup": "STANDALONE"
+        }
+      ],
+      "maxInstallments": 6,
+      "totalValue": 367.84,
+      "bonusPoints": 8,
+      "settingsBonusPoints": {
+        "min": 123,
+        "max": 789,
+        "granularity": 12
+      },
+      "modalities": [
+        {
+          "description": "Cartão de Crédito",
+          "type": "PAYMENT_MODALITY_CREDIT_CARD"
+          "operations": [
+            {
+              "description": "AMEX",
+              "plans": {
+                "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
+                "value": 1234,
+                "bonusPoints": 321,
+                "countInstallments": 12,
+                "description": "Site CVC Demais Cartoes"
+              }
+            },
+            {
+              "description": "AMEX",
+              "plans": {
+                "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
+                "value": 1234,
+                "bonusPoints": 321,
+                "countInstallments": 12,
+                "description": "Site CVC Demais Cartoes"
+              }
+            },
+            {
+              "description": "AMEX",
+              "plans": {
+                "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
+                "value": 1234,
+                "bonusPoints": 321,
+                "countInstallments": 12,
+                "description": "Site CVC Demais Cartoes"
+              }
+            },
+            {
+              "description": "AMEX",
+              "plans": {
+                "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
+                "value": 1234,
+                "bonusPoints": 321,
+                "countInstallments": 12,
+                "description": "Site CVC Demais Cartoes"
+              }
+            }
+          ]
+        }
+      ]
+    }
     
   ]
 }
