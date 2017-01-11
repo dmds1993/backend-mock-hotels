@@ -11,31 +11,22 @@ router.get('/calendar', function(req,res) {
   res.json(aeroHotelFares);
 });
 
-router.get('/:rate_token', function(req, res, next) {
-  var rateToken = req.params.rate_token;
-  var flights = flightsV0.flights;
-  var flight;
+router.get('/on-header', function(req, res, next) {
+  var tokenizedToken = req.get('Gtw-Tokenized-Rate-Tokens');
 
-  // If we :rate_token is of the form ratetoken,ratetoken
-  // we split by the comma and use the first rateToken
-  if (rateToken.includes(',')) {
-    rateToken = rateToken.split(',')[0];
-  } 
-  
-  for (var i = 0; i < flights.length && !flight; i++) {
-    if (flights[i].segments[0].rateToken == rateToken) {
-      flight = flights[i];
+  if (tokenizedToken) {
+    tokenizedToken = tokenizedToken.split(',')[0];
+    var rateTokenDecoded = new Buffer(tokenizedToken, 'base64').toString('utf8');
+
+    if(rateTokenDecoded.includes('Token')) {
+      res.json(newFlightResponse);
+    } else {
+      return res.status(500).send({
+        code: 500,
+        message: 'Invalid Rate Token'
+      });
     }
-  }
-
-  if (typeof(flight) == 'object') {
-    res.json( { flight: flight } );
-  } else {
-    return res.status(500).send({
-      code: 500,
-      message: 'Invalid Rate Token'
-    });
-  }
+  } 
 });
 
 
