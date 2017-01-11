@@ -26,7 +26,12 @@ router.get('/on-header', function(req, res, next) {
         message: 'Invalid Rate Token'
       });
     }
-  } 
+  }
+
+  return res.status(500).send({
+    code: 500,
+    message: 'Invalid Request'
+  }); 
 });
 
 
