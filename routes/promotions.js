@@ -2,19 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/', function(req, res, next) {
-	if(req.body.availableItens) {
+	if(req.body.availableItems) {
     setTimeout(function() {
-  	 res.json(availableItens);
+  	 res.json(availableItems);
     }, 2000);
 	} else {
-  	res.json({ reason: 'Missing body "availableItens" in payload' });
+  	res.json({ reason: 'Missing body "availableItems" in payload' });
 	}
 });
 
 module.exports = router;
 
-var availableItens = {
-  "availableItens": [
+var availableItems = {
+  "availableItems": [
     {
       "rph":"1",
       "rateToken":"PHJhdGVUb2tlbiBwa2c9InVuZGVmaW5lZCIgcGxhPSIzOCIgY21pPSIzOCIgaXpvPSI5NjI2IiBhZ3M9IlciIGJyYz0iMTAwMCIgbGFuPSJwdF9CUiIgZGluPSIyMDE2LTA3LTI4IiBkb3U9IjIwMTYtMDctMjkiIHB4cz0iMzAsMzAiLz4=",

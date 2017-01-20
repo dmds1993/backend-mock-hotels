@@ -20,15 +20,17 @@ router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
   var response = rateTokenRoom;
   response.room.rates[0].rateToken = req.params.rate_token;
   response.room.rates[0].packageGroup = req.query.packageGroup;
-  res.json(rateTokenRoom);
+  if (req.query.packageGroup === 'VHI') {
+    response.room.rates[0].priceWithoutTax += 20;
+  }
+  res.json(response);
   //  if (rateToken.includes('rateToken')) {
   // } else {
   //   return res.status(500).send({
   //     code: 500,
   //     message: 'Invalid Rate Token'
   //   });
-  // }
-
+  //
 });
 
 // Query Example /hotels/booking/JUNIPER/JC23J
