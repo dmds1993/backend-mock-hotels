@@ -21,7 +21,9 @@ router.get('/:hotel_id/rooms/:rate_token', function(req, res, next) {
   response.room.rates[0].rateToken = req.params.rate_token;
   response.room.rates[0].packageGroup = req.query.packageGroup;
   if (req.query.packageGroup === 'VHI') {
-    response.room.rates[0].priceWithoutTax += 20;
+    response.room.rates[0].priceWithoutTax = 300.15;
+  } else {
+    response.room.rates[0].priceWithoutTax = 280.15;
   }
   res.json(response);
   //  if (rateToken.includes('rateToken')) {
