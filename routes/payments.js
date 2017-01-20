@@ -42,88 +42,160 @@ var plans = {
 };
 
 var calculate = {
-  "finans": [
+  "finans":[
     {
-      "finanKeys": [
+      "finanKeys":[
         {
-          "productType": "HOT",
-          "packageGroup": "VHI"
+          "productType":"ALL",
+          "packageGroup":"ALL"
         }
       ],
-      "maxInstallments": 6,
-      "totalValue": 367.84,
-      "bonusPoints": 8,
-      "settingsBonusPoints": {
-        "min": 123,
-        "max": 789,
-        "granularity": 12
-      },
-      "modalities": [
+      "maxInstallments":1
+    },
+    {
+      "finanKeys":[
         {
-          "description": "Cartão de Crédito",
-          "type": "PAYMENT_MODALITY_CREDIT_CARD",
-          "operations": [
+          "productType":"HOT",
+          "packageGroup":"STANDALONE"
+        }
+      ],
+      "maxInstallments":1,
+      "totalValue":471.35,
+      "modalities":[
+        {
+          "description":"Cartão de Crédito",
+          "type":"PAYMENT_MODALITY_CREDIT_CARD",
+          "operations":[
             {
-              "description": "AMEX",
-              "plans": [
+              "description":"AMEX",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 1000,
-                  "bonusPoints": 321,
-                  "countInstallments": 1,
-                  "description": "0 + 2x c/ juros"
-                },
-                {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 500,
-                  "bonusPoints": 321,
-                  "countInstallments": 2,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
                 }
               ]
             },
             {
-              "description": "MASTERCARD",
-              "plans": [
+              "description":"MASTERCARD",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 1000,
-                  "bonusPoints": 321,
-                  "countInstallments": 1,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
                 },
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 500,
-                  "bonusPoints": 321,
-                  "countInstallments": 2,
-                  "description": "0 + 2x c/ juros"
-                },
-                {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 333,
-                  "bonusPoints": 321,
-                  "countInstallments": 3,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjEwMDIxIiBvcGU9IjU0MDIiIG1vZD0iNSIgbWlzPSIxIiB2YWw9IjQ3MS4zNSI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlNUQU5EQUxPTkUiIHZhbD0iNDcxLjM1Ii8+PC9maW5hbnM+",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC CartÃÂÃÂ£o com entrada"
                 }
               ]
             },
             {
-              "description": "VISA",
-              "plans": [
+              "description":"VISA ",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 1000,
-                  "bonusPoints": 321,
-                  "countInstallments": 1,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
                 },
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 500,
-                  "bonusPoints": 321,
-                  "countInstallments": 2,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjEwMDIxIiBvcGU9IjU0MDQiIG1vZD0iNSIgbWlzPSIxIiB2YWw9IjQ3MS4zNSI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlNUQU5EQUxPTkUiIHZhbD0iNDcxLjM1Ii8+PC9maW5hbnM+",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC CartÃÂÃÂ£o com entrada"
+                }
+              ]
+            },
+            {
+              "description":"HIPERCARD",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"CABAL CRÉDITO",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQxOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"DINERS",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"CVC VISA GOLD",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC VISA INTER",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC MASTER GOLD",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC MASTER INTER",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxMyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"ELO CRÉDITO",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQwOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
                 }
               ]
             }
@@ -132,86 +204,137 @@ var calculate = {
       ]
     },
     {
-      "finanKeys": [
+      "finanKeys":[
         {
-          "productType": "HOT",
-          "packageGroup": "STANDALONE"
+          "productType":"HOT",
+          "packageGroup":"VHI"
         }
       ],
-      "maxInstallments": 6,
-      "totalValue": 367.84,
-      "bonusPoints": 8,
-      "settingsBonusPoints": {
-        "min": 123,
-        "max": 789,
-        "granularity": 12
-      },
-      "modalities": [
+      "maxInstallments":1,
+      "totalValue":471.35,
+      "modalities":[
         {
-          "description": "Cartão de Crédito",
-          "type": "PAYMENT_MODALITY_FINANCING",
-          "operations": [
+          "description":"Cartão de Crédito",
+          "type":"PAYMENT_MODALITY_CREDIT_CARD",
+          "operations":[
             {
-              "description": "AMEX",
-              "plans": [
+              "description":"AMEX",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 333,
-                  "bonusPoints": 321,
-                  "countInstallments": 3,
-                  "description": "0 + 2x c/ juros"
-                },
-                {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 250,
-                  "bonusPoints": 321,
-                  "countInstallments": 4,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
                 }
               ]
             },
             {
-              "description": "MASTERCARD",
-              "plans": [
+              "description":"MASTERCARD",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 250,
-                  "bonusPoints": 321,
-                  "countInstallments": 4,
-                  "description": "0 + 2x c/ juros"
-                },
-                {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 200,
-                  "bonusPoints": 321,
-                  "countInstallments": 5,
-                  "description": "0 + 2x c/ juros"
-                },
-                {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 166,
-                  "bonusPoints": 321,
-                  "countInstallments": 6,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
                 }
               ]
             },
             {
-              "description": "VISA",
-              "plans": [
+              "description":"VISA ",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 333,
-                  "bonusPoints": 321,
-                  "countInstallments": 3,
-                  "description": "0 + 2x c/ juros"
-                },
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"HIPERCARD",
+              "plans":[
                 {
-                  "planToken": "PGZpbmFucyBwbGFuSWQ9IjIiIG9wZXJhdGlvbklEPSIxMiIgbW9kYWxpdHlJRD0iMzIiIGNvdW50SW5zdGFsbG1lbnRzPSIyIiB2YWx1ZT0iMjAwMCIgb3JkZXJJZD0iMTQzMiIgYW1vdW50Qm9udXNQb2ludHM9IjUwMCI+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlZISSIgdmFsdWU9IjE0MDAiIC8+DQogICAgICAgIDxmaW5hbiBwcm9kdWN0VHlwZT0iSE9UIiBwYWNrYWdlR3JvdXA9IlNUQU5EQUxPTkUiIHZhbHVlPSIxMDAwIiAvPg0KICAgICAgICA8ZmluYW4gcHJvZHVjdFR5cGU9IkFJUiIgcGFja2FnZUdyb3VwPSJWSEkiIHZhbHVlPSI3MDAiIC8+DQogICAgICA8L2ZpbmFucz4=",
-                  "value": 250,
-                  "bonusPoints": 321,
-                  "countInstallments": 4,
-                  "description": "0 + 2x c/ juros"
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"CABAL CRÉDITO",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQxOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"DINERS",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Demais Cartoes"
+                }
+              ]
+            },
+            {
+              "description":"CVC VISA GOLD",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC VISA INTER",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC MASTER GOLD",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"CVC MASTER INTER",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxMyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
+                }
+              ]
+            },
+            {
+              "description":"ELO CRÉDITO",
+              "plans":[
+                {
+                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQwOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
+                  "value":"471.35",
+                  "countInstallments":1,
+                  "description":"Site CVC Cartao CVC e Elo"
                 }
               ]
             }
@@ -219,6 +342,5 @@ var calculate = {
         }
       ]
     }
-    
   ]
 }
