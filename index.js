@@ -111,6 +111,8 @@ app.use('/dev/contactUs', contactUs);
 var promotions = require('./routes/promotions');
 app.use('/dev/promotions', promotions);
 
+var promotions = require('./routes/accounts_passwordResetTokens');
+app.use('/dev/accounts/passwordResetTokens', passwordResetTokens);
 // Set Error
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
