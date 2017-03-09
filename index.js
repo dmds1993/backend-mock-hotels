@@ -111,7 +111,7 @@ app.use('/dev/contactUs', contactUs);
 var promotions = require('./routes/promotions');
 app.use('/dev/promotions', promotions);
 
-var promotions = require('./routes/accounts_passwordResetTokens');
+var accounts = require('./routes/accounts');
 app.use('/dev/accounts/passwordResetTokens', passwordResetTokens);
 // Set Error
 app.use(function(req, res, next) {
