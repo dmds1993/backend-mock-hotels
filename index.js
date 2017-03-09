@@ -112,7 +112,7 @@ var promotions = require('./routes/promotions');
 app.use('/dev/promotions', promotions);
 
 var accounts = require('./routes/accounts');
-app.use('/dev/accounts/passwordResetTokens', passwordResetTokens);
+app.use('/dev/accounts', accounts);
 // Set Error
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
