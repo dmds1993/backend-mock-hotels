@@ -24,4 +24,10 @@ router.get('/policies', function(req, res, next) {
 	res.json({ "policies": [ { "name": "courtesy" }, { "name": "discounts" }, { "name": "salesLimitSeller", "value": "40" } ], "menus": [ { "link": { "name": "Lojas" }, "menus": [ { "link": { "name": "Vendas" }, "menus": [ { "link": { "name": "Aéreo", "href": "http://ig.com.br" } }, { "link": { "name": "Hotel", "href": "http://uol.com.br" } } ] } ] } ] });
 });
 
+router.get('/sessionvalidate', function(req, res, next) {
+  res.json({
+    'status': 'ACTIVE'
+  });
+});
+
 module.exports = router;

@@ -87,9 +87,6 @@ app.use('/dev/flights', flights);
 var cars = require('./routes/cars');
 app.use('/dev/cars', cars);
 
-var sessionvalidate = require('./routes/sessionvalidate'); 
-app.use('/dev/sessionvalidate', sessionvalidate);
-
 var payments = require('./routes/payments');
 app.use('/dev/payments', payments);
 
