@@ -18,9 +18,7 @@ router.get('/policies', function(req, res, next) {
 });
 
 router.get('/sessionvalidate', function(req, res, next) {
-  res.json({
-    'status': 'ACTIVE'
-  });
+  res.status(204).json({ error: 'message' })
 });
 
 module.exports = router;
