@@ -78,6 +78,9 @@ app.use('/dev/orders', orders);
 var giftslists = require('./routes/giftslists');
 app.use('/dev/giftslists', giftslists);
 
+var logout = require('./routes/logout');
+app.use('/dev/logout', logout);
+
 var hotels = require('./routes/hotels');
 app.use('/dev/hotels', hotels);
 
