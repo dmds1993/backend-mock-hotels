@@ -34,8 +34,8 @@ router.get('/policies', function(req, res, next) {
 	res.json({ "policies": [ { "name": "courtesy" }, { "name": "discounts" }, { "name": "salesLimitSeller", "value": "40" } ], "menus": [ { "link": { "name": "Lojas" }, "menus": [ { "link": { "name": "Vendas" }, "menus": [ { "link": { "name": "Aéreo", "href": "http://ig.com.br" } }, { "link": { "name": "Hotel", "href": "http://uol.com.br" } } ] } ] } ] });
 });
 
-router.get('/sessionValidate', function(req, res, next) {
-  res.status(204).json({ error: 'message' })
+router.post('/sessionValidate', function(req, res, next) {
+  res.status(204);
 });
 
 module.exports = router;
