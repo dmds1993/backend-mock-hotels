@@ -6,8 +6,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:branch_id/agencies', function(req, res, next) {
-	res.json(agencies);
+  if (req.params.branch_id === "7843") {
+      res.json({})
+  } else {
+	   res.json(agencies);
+  }
 });
+
 
 module.exports = router;
 
@@ -30,7 +35,7 @@ var branches = {
       {
          "cvcbranchId":7843,
          "personCode":32901378,
-         "name":"Wifat gu nijehe va bagulow.",
+         "name":"Essa filial não tem agência",
          "shortName":"Kekzizkan ugmusgi ule gulawje kuzimoga.",
          "tradingName":"Toba hufudu siedu duwaci wu.",
          "abbreviation":"&5&9LSae*67jWEzr",
