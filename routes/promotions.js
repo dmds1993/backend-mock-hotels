@@ -1,54 +1,39 @@
 var express = require('express');
 var router = express.Router();
+var xml2js = require('xml2js');
+var parser = new xml2js.Parser();
 
 router.post('/', function(req, res, next) {
-	if(req.body.availableItems) {
-    setTimeout(function() {
-  	 res.json(availableItems);
-    }, 2000);
-	} else {
-  	res.json({ reason: 'Missing body "availableItems" in payload' });
-	}
+  let response = buildResponse(req.body.availableItems);
+  res.json(response);
 });
 
 module.exports = router;
 
-var availableItems = {
-  "availableItems": [
-    {
-      "rph":"1",
-      "rateToken":"PHJhdGVUb2tlbiBwa2c9InVuZGVmaW5lZCIgcGxhPSIzOCIgY21pPSIzOCIgaXpvPSI5NjI2IiBhZ3M9IlciIGJyYz0iMTAwMCIgbGFuPSJwdF9CUiIgZGluPSIyMDE2LTA3LTI4IiBkb3U9IjIwMTYtMDctMjkiIHB4cz0iMzAsMzAiLz4=",
-      "percent":0.30,
-      "promotion": {
-        "priceWithTax": 327.86,
-        "priceWithoutTax": 327.86,
-        "pricePerDayWithTax": 327.86,
-        "pricePerDayWithoutTax": 396.24
-      }
-    },
-    {
-      "rph":"2",
-      "rateToken":"PHJhdGVUb2tlbiBwa2c9InVuZGVmaW5lZCIgcGxhPSIzOCIgY21pPSIzOCIgaXpvPSI5NjI2IiBhZ3M9IlciIGJyYz0iMTAwMCIgbGFuPSJwdF9CUiIgZGluPSIyMDE2LTA3LTI4IiBkb3U9IjIwMTYtMDctMjkiIHB4cz0iMzAsMzAiLz4=",
-      "percent":0.15,
-      "promotion": {
-        "priceWithTax": 527.86,
-        "priceWithoutTax": 527.86,
-        "pricePerDayWithTax": 527.86,
-        "pricePerDayWithoutTax": 496.24
-      }
+function buildResponse(items) {
+  items.forEach(function(item) {
+    var rateToken = undefined;
+
+    parser.parseString(new Buffer(item.rateToken, 'base64').toString('ascii'), function(err, result) {
+      rateToken = result.rateToken.$;
+    });
+
+    let daysDiff = daysDifference(new Date(rateToken.dti), new Date(rateToken.dtf));
+
+    item.promotion = {
+      priceWithTax: rateToken.pwt * 0.8,
+      priceWithoutTax: rateToken.pot * 0.8,
+      pricePerDayWithTax: (rateToken.pwt * 0.8) / daysDiff,
+      pricePerDayWithoutTax: (rateToken.pot * 0.8) / daysDiff,
+      percentage: 0.2
     }
-  ],
-  "selectedItens": [
-    {
-      "rph":"4",
-      "rateToken":"PHJhdGVUb2tlbiBwa2c9InVuZGVmaW5lZCIgcGxhPSIzOCIgY21pPSIzOCIgaXpvPSI5NjI2IiBhZ3M9IlciIGJyYz0iMTAwMCIgbGFuPSJwdF9CUiIgZGluPSIyMDE2LTA3LTI4IiBkb3U9IjIwMTYtMDctMjkiIHB4cz0iMzAsMzAiLz4=",
-      "percent":0.15,
-      "promotion": {
-        "priceWithTax": 527.86,
-        "priceWithoutTax": 527.86,
-        "pricePerDayWithTax": 527.86,
-        "pricePerDayWithoutTax": 496.24
-      }
-    }
-  ]
+  });
+  return {
+    availableItems: items
+  };
+};
+
+function daysDifference(startDate, endDate) {
+  var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  return Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / (oneDay)));
 }
