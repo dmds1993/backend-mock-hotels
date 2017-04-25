@@ -1,16 +1,88 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 var bodyParser  = require('body-parser');
+var request = require('request');
 
 router.get('/', function(req, res, next) {
   res.json(realOrders);
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res, next) { 
+  let orderId = (Math.floor(Math.random()*90000) + 10000) 
   res.json({
-    'orderId': (Math.floor(Math.random()*90000) + 10000),
+    'orderId': orderId,
     'status': 'SUCCESS'
 	});
+  if (req.headers['gtw-sec-websocket-key']){
+    let status1 = 'CONFIRMED';
+    let status2 = 'CONFIRMED';
+    if (req.body.vendorId == 1) {
+      status1 = 'CANCELLED';
+    } else if (req.body.vendorId == 2) {
+      status1 = 'CANCELLED';
+      status2 = 'CANCELLED';
+    };  
+    let body = {
+      code: 'return',
+      data: {
+        order: {
+          id: orderId,
+          reservations: [{
+            id: 1,
+            reservationDate: new Date().toDateString(),
+            expiresDate: new Date().toDateString(),
+            status: status1,
+            products: [{
+              hotels: [{
+                id: 1,
+                name: 'River Park Hotel & Suites',
+                rooms: [{
+                  reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMSIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                }]
+              }]
+            }],
+            LOC: 'SD7687687'
+          },
+          {
+            id: 2,
+            reservationDate: new Date().toDateString(),
+            expiresDate: new Date().toDateString(),
+            status: status2,
+            products: [{
+              hotels: [
+              {
+                id: 2,
+                name: 'River Park Hotel & Suites',
+                rooms: [{
+                  reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMiIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                }]
+              }]
+            }],
+            LOC: 'SD73442432'
+          }]
+        }
+      },
+      message: {
+        level: 'info',
+        text: 'partial response'
+      }
+    };
+
+    let postOptions = {
+      headers: {},
+      url: '',
+      method: 'POST',
+      body: body,
+      json: true,
+      encoding: 'utf8'
+    };
+    let websocketInfo = new Buffer(req.headers['gtw-sec-websocket-key'], 'base64').toString('ascii').split('|');
+    postOptions.headers['gtw-sec-websocket-key'] = websocketInfo[1];
+    postOptions.url = websocketInfo[0] + '/socket';
+    return request(postOptions);
+  }
 });
 
 router.put('/*', function(req, res, next) {
