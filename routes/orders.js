@@ -16,14 +16,21 @@ router.post('/', function(req, res, next) {
     'status': 'SUCCESS'
 	});
   if (req.headers['gtw-sec-websocket-key']){
+
     let status1 = 'CONFIRMED';
     let status2 = 'CONFIRMED';
-    if (req.body.vendorId == 1) {
+    let messageLevel = 'FINISHED'
+
+    if (req.body.paxs[0].firstName == 'Cancelada') {
       status1 = 'CANCELLED';
-    } else if (req.body.vendorId == 2) {
+    } else if (req.body.paxs[0].firstName == 'Falha') {
       status1 = 'CANCELLED';
       status2 = 'CANCELLED';
-    };  
+      messageLevel = 'FAILED'
+    }; 
+
+    //First partial response
+    //order id only 
     let body = {
       code: 'return',
       data: {
@@ -75,55 +82,110 @@ router.post('/', function(req, res, next) {
     postOptions.url = websocketInfo[0] + '/socket';
     request(postOptions);
 
-    body = {
-      code: 'return',
-      data: {
-        order: {
-          id: orderId,
-          reservations: [{
-            id: 1,
-            reservationDate: new Date().toDateString(),
-            expiresDate: new Date().toDateString(),
-            status: status1,
-            products: [{
-              hotels: [{
-                id: 1,
-                name: 'River Park Hotel & Suites',
-                rooms: [{
-                  reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMSIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+    //Second partial return
+    //reservation date, expiration date
+    
+    setTimeout(function(){
+      body = {
+        code: 'return',
+        data: {
+          order: {
+            id: orderId,
+            reservations: [{
+              id: 1,
+              reservationDate: new Date().toDateString(),
+              expiresDate: new Date().toDateString(),
+              products: [{
+                hotels: [{
+                  id: 1,
+                  name: 'River Park Hotel & Suites',
+                  rooms: [{
+                    reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMSIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                  }]
                 }]
               }]
-            }],
-            LOC: 'SD7687687'
-          },
-          {
-            id: 2,
-            reservationDate: new Date().toDateString(),
-            expiresDate: new Date().toDateString(),
-            status: status2,
-            products: [{
-              hotels: [
-              {
-                id: 2,
-                name: 'River Park Hotel & Suites',
-                rooms: [{
-                  reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMiIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+            },
+            {
+              id: 2,
+              reservationDate: new Date().toDateString(),
+              expiresDate: new Date().toDateString(),
+              products: [{
+                hotels: [
+                {
+                  id: 2,
+                  name: 'River Park Hotel & Suites',
+                  rooms: [{
+                    reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMiIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                  }]
                 }]
               }]
-            }],
-            LOC: 'SD73442432'
-          }]
+            }]
+          }
+        },
+        message: {
+          level: 'PROCESS',
+          text: 'partial response'
         }
-      },
-      message: {
-        level: 'FINISHED',
-        text: 'final response'
-      }
-    };
+      };
 
-    postOptions.body = body;
+      postOptions.body = body;
+      
+      request(postOptions);
 
-    return setTimeout(function(){request(postOptions)}, 30000);
+    }, 1000);
+
+    //Final return
+    return setTimeout(function(){
+      body = {
+        code: 'return',
+        data: {
+          order: {
+            id: orderId,
+            reservations: [{
+              id: 1,
+              reservationDate: new Date().toDateString(),
+              expiresDate: new Date().toDateString(),
+              status: status1,
+              products: [{
+                hotels: [{
+                  id: 1,
+                  name: 'River Park Hotel & Suites',
+                  rooms: [{
+                    reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMSIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                  }]
+                }]
+              }],
+              LOC: 'SD7687687'
+            },
+            {
+              id: 2,
+              reservationDate: new Date().toDateString(),
+              expiresDate: new Date().toDateString(),
+              status: status2,
+              products: [{
+                hotels: [
+                {
+                  id: 2,
+                  name: 'River Park Hotel & Suites',
+                  rooms: [{
+                    reservationToken: 'PHJhdGVUb2tlbiBhZ3M9IldFQiIgYnJpPSIxMDAwIiBjYXQ9IjMyOCIgY2lkPSI0NTAwMiIgY21pPSI0NSIgY216PSI3MTEwIiBjdXI9IkJSTCIgZHRmPSIyMDE2LTEyLTIzIiBkdGk9IjIwMTYtMTItMjAiIGViaz0iTiIgZWN0PSJCUiIgZXN0PSJSSiIgZXppPSI3MTEwIiBob3Q9IjQ1MTA2NjM3NzkiIGxhbj0icHRfQlIiIG1raT0iMTE3MzgiIG1rcD0iMC4xNjAiIHBrZz0iVkhJIiBwbGE9IjQ1IiBwcmQ9IkhPVCIgcHd0PSI4MjUiIHB4cz0iMzAiIHJldD0iIiByb209IjYxNDM4MjEiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0xNFoiIHNzdD0iU1AiIHN6aT0iNzczIi8+'
+                  }]
+                }]
+              }],
+              LOC: 'SD73442432'
+            }]
+          }
+        },
+        message: {
+          level: messageLevel,
+          text: 'final response'
+        }
+      };
+
+      postOptions.body = body;
+
+      request(postOptions);
+    }, 30000);
   }
 });
 
