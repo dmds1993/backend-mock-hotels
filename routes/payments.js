@@ -42,160 +42,29 @@ var plans = {
 };
 
 var calculate = {
-  "finans":[
+  "finans": [
     {
-      "finanKeys":[
+      "finanKeys": [
         {
-          "productType":"ALL",
-          "packageGroup":"ALL"
+          "productType": "ALL",
+          "packageGroup": "ALL"
         }
       ],
-      "maxInstallments":1
-    },
-    {
-      "finanKeys":[
+      "maxInstallments": null,
+      "totalValue": 3706.41,
+      "modalities": [
         {
-          "productType":"HOT",
-          "packageGroup":"STANDALONE"
-        }
-      ],
-      "maxInstallments":1,
-      "totalValue":471.35,
-      "modalities":[
-        {
-          "description":"Cartão de Crédito",
-          "type":"PAYMENT_MODALITY_CREDIT_CARD",
-          "operations":[
+          "description": "Depósito",
+          "type": "PAYMENT_MODALITY_BANK_TRANSFER",
+          "operations": [
             {
-              "description":"AMEX",
-              "plans":[
+              "description": "DEPÓSITO BRADESCO SND",
+              "plans": [
                 {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"MASTERCARD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                },
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjEwMDIxIiBvcGU9IjU0MDIiIG1vZD0iNSIgbWlzPSIxIiB2YWw9IjQ3MS4zNSI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlNUQU5EQUxPTkUiIHZhbD0iNDcxLjM1Ii8+PC9maW5hbnM+",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC CartÃÂÃÂ£o com entrada"
-                }
-              ]
-            },
-            {
-              "description":"VISA ",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                },
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjEwMDIxIiBvcGU9IjU0MDQiIG1vZD0iNSIgbWlzPSIxIiB2YWw9IjQ3MS4zNSI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlNUQU5EQUxPTkUiIHZhbD0iNDcxLjM1Ii8+PC9maW5hbnM+",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC CartÃÂÃÂ£o com entrada"
-                }
-              ]
-            },
-            {
-              "description":"HIPERCARD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"CABAL CRÉDITO",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQxOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"DINERS",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"CVC VISA GOLD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC VISA INTER",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC MASTER GOLD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC MASTER INTER",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxMyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"ELO CRÉDITO",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQwOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iU1RBTkRBTE9ORSIgdmFsPSI0NzEuMzUiLz48L2ZpbmFucz4=",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
+                  "planToken": "PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjM3MDYuNDEiPjxmaW5hbiBwcmQ9IkFMTCIgcGtnPSJBTEwiIHZhbD0iMzcwNi40MSIvPjwvZmluYW5zPg==",
+                  "value": 3706.41,
+                  "countInstallments": 0,
+                  "description": null
                 }
               ]
             }
@@ -204,137 +73,56 @@ var calculate = {
       ]
     },
     {
-      "finanKeys":[
+      "finanKeys": [
         {
-          "productType":"HOT",
-          "packageGroup":"VHI"
+          "productType": "AIR",
+          "packageGroup": "PACKAGE"
         }
       ],
-      "maxInstallments":1,
-      "totalValue":471.35,
-      "modalities":[
+      "maxInstallments": null,
+      "totalValue": 3380.38,
+      "modalities": [
         {
-          "description":"Cartão de Crédito",
-          "type":"PAYMENT_MODALITY_CREDIT_CARD",
-          "operations":[
+          "description": "Depósito",
+          "type": "PAYMENT_MODALITY_BANK_TRANSFER",
+          "operations": [
             {
-              "description":"AMEX",
-              "plans":[
+              "description": "DEPÓSITO BRADESCO SND",
+              "plans": [
                 {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
+                  "planToken": "PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMzODAuMzgiPjxmaW5hbiBwcmQ9IkFJUiIgcGtnPSJQQUNLQUdFIiB2YWw9IjMzODAuMzgiLz48L2ZpbmFucz4=",
+                  "value": 3380.38,
+                  "countInstallments": 0,
+                  "description": null
                 }
               ]
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "finanKeys": [
+        {
+          "productType": "HOT",
+          "packageGroup": "PACKAGE"
+        }
+      ],
+      "maxInstallments": null,
+      "totalValue": 326.03,
+      "modalities": [
+        {
+          "description": "Depósito",
+          "type": "PAYMENT_MODALITY_BANK_TRANSFER",
+          "operations": [
             {
-              "description":"MASTERCARD",
-              "plans":[
+              "description": "DEPÓSITO BRADESCO SND",
+              "plans": [
                 {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwMiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"VISA ",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"HIPERCARD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"CABAL CRÉDITO",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQxOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"DINERS",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIwODgiIG9wZT0iNTQwNyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Demais Cartoes"
-                }
-              ]
-            },
-            {
-              "description":"CVC VISA GOLD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNiIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC VISA INTER",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC MASTER GOLD",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxNCIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"CVC MASTER INTER",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQxMyIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
-                }
-              ]
-            },
-            {
-              "description":"ELO CRÉDITO",
-              "plans":[
-                {
-                  "planToken":"PGZpbmFucyBwbG49IjIxMDAiIG9wZT0iNTQwOSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iNDcxLjM1Ij48ZmluYW4gcHJkPSJIT1QiIHBrZz0iVkhJIiB2YWw9IjQ3MS4zNSIvPjwvZmluYW5zPg==",
-                  "value":"471.35",
-                  "countInstallments":1,
-                  "description":"Site CVC Cartao CVC e Elo"
+                  "planToken": "PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMyNi4wMyI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlBBQ0tBR0UiIHZhbD0iMzI2LjAzIi8+PC9maW5hbnM+",
+                  "value": 326.03,
+                  "countInstallments": 0,
+                  "description": null
                 }
               ]
             }
