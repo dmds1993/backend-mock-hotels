@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
   res.json(realOrders);
 });
 
-router.post('/', function(req, res, next) { 
-  let orderId = (Math.floor(Math.random()*90000) + 10000) 
+router.post('/', function(req, res, next) {
+  let orderId = (Math.floor(Math.random()*90000) + 10000)
   res.json({
     'orderId': orderId,
     'status': 'SUCCESS'
@@ -27,10 +27,10 @@ router.post('/', function(req, res, next) {
       status1 = 'CANCELLED';
       status2 = 'CANCELLED';
       messageLevel = 'FAILED'
-    }; 
+    };
 
     //First partial response
-    //order id only 
+    //order id only
     let body = {
       code: 'return',
       data: {
@@ -84,7 +84,7 @@ router.post('/', function(req, res, next) {
 
     //Second partial return
     //reservation date, expiration date
-    
+
     setTimeout(function(){
       body = {
         code: 'return',
@@ -129,7 +129,7 @@ router.post('/', function(req, res, next) {
       };
 
       postOptions.body = body;
-      
+
       request(postOptions);
 
     }, 1000);
@@ -1753,628 +1753,35 @@ var orders = {
 };
 
 var realOrders = {
-  "orders":[
+  "orders": [
     {
-      "id":29921,
-      "reservations":[
+      "id": 5846,
+      "reservations": [
         {
-          "id":181102869,
-          "reservationDate":"2016-05-16T18:13:02.000+00:00",
-          "expiresDate":"2016-05-17T18:13:02.000+00:00",
-          "isProductTypePackage":false,
-          "status":"CONFIRMED",
-          "type":"NORMAL",
-          "packageGroup":"TERRESTRE",
-          "excursion":{
-            "code":"2.20798.122601",
-            "description":"FOZ DO IGUAÇU"
+          "id": 91921042,
+          "reservationDate": "2011-12-06T13:56:11.000-02:00",
+          "expiresDate": "2011-12-07T13:57:24.000-02:00",
+          "isProductTypePackage": false,
+          "status": "CONFIRMED",
+          "type": "NORMAL",
+          "packageGroup": "TERRESTRE",
+          "excursion": {
+            "code": "2.53539.121801",
+            "description": "CALDAS NOVAS"
           },
-          "notes":null,
-          "updateAvailable":false,
-          "vendorId":5500057,
-          "branchId":125,
-          "agencyId":null,
-          "emitterId":null,
-          "salesType":"CVC",
-          "tour":{
-            "id":177576163,
-            "description":"FOZ DO IGUAÇU",
-            "origin":{
-              "departureDate":"2016-12-26T00:00:00.000+00:00",
-              "arrivalDate":"2017-01-01T00:00:00.000+00:00",
-              "zone":{
-                "id":9583,
-                "name":null,
-                "description":null,
-                "address":null,
-                "country":{
-                  "code":"BR",
-                  "name":"BRASIL",
-                  "iataCode":"BR"
-                },
-                "state":{
-                  "code":"SP",
-                  "name":"SÃO PAULO"
-                },
-                "city":{
-                  "code":773,
-                  "name":"SANTO ANDRÉ"
-                },
-                "latitude":-23.66455,
-                "longitude":-46.53842
-              }
-            },
-            "destinations":[
-              {
-                "departureDate":"2016-12-26T00:00:00.000+00:00",
-                "arrivalDate":"2017-01-01T00:00:00.000+00:00",
-                "zone":{
-                  "id":6236,
-                  "name":null,
-                  "description":null,
-                  "address":null,
-                  "country":{
-                    "code":"BR",
-                    "name":"BRASIL",
-                    "iataCode":"BR"
-                  },
-                  "state":{
-                    "code":"PR",
-                    "name":"PARANÁ"
-                  },
-                  "city":{
-                    "code":361,
-                    "name":"FOZ DO IGUAÇU"
-                  },
-                  "latitude":-25.54853,
-                  "longitude":-54.58848
-                }
-              }
-            ]
-          },
-          "contractors":[
-            {
-              "id":1,
-              "paxsId":[
-                1,
-                2,
-                3,
-                4,
-                5
-              ],
-              "person":{
-                "id":8776442,
-                "nationality":0,
-                "name":"Ademar Alcantara Gusmao",
-                "birthday":"1953-02-28T00:00:00.000+00:00",
-                "email":"ADEMARALCANTARA@HOTMAIL.COM",
-                "fatherName":"IZALTINO DA ALCANTARA GUSMAO",
-                "motherName":"MARIA DA CONCEIÇÃO DE JESUS",
-                "gender":"M",
-                "interests":[
-                  null
-                ],
-                "phones":[
-                  {
-                    "typeId":1,
-                    "addressTypeId":2,
-                    "internationalCode":55,
-                    "localCode":11,
-                    "number":"29874022"
-                  },
-                  {
-                    "typeId":2,
-                    "addressTypeId":2,
-                    "internationalCode":55,
-                    "localCode":11,
-                    "number":"996659803"
-                  },
-                  {
-                    "typeId":3,
-                    "addressTypeId":2,
-                    "internationalCode":55,
-                    "localCode":11,
-                    "number":"985371230"
-                  }
-                ],
-                "documents":[
-                  {
-                    "code":"642930178-87",
-                    "type":"CPF"
-                  },
-                  {
-                    "code":"69423325",
-                    "type":"RG"
-                  }
-                ],
-                "banks":[
-                  {
-                    "id":341,
-                    "agencyCode":180,
-                    "accountCode":"64312-4",
-                    "accountType":1,
-                    "creationDate":"1981-08-15T00:00:00.000+00:00",
-                    "personType":1
-                  }
-                ],
-                "addresses":[
-                  {
-                    "country":"BRASIL",
-                    "state":"SÃO PAULO",
-                    "city":"SÃO CAETANO DO SUL",
-                    "address":"Alameda CASSAQUERA",
-                    "neighborhood":"BARCELONA",
-                    "number":"560",
-                    "complement":"APTO 42C",
-                    "zipCode":"09560100",
-                    "email":"ADEMARALCANTARA@HOTMAIL.COM"
-                  }
-                ],
-                "commercial":{
-                  "companyName":"DISTRIBUIDORA MASTER UTILIDADE",
-                  "department":null,
-                  "cnpj":{
-                    "code":null,
-                    "type":null
-                  },
-                  "occupationId":10250,
-                  "admissionDate":"2010-05-04T00:00:00.000+00:00",
-                  "earnings":6500,
-                  "otherEarnings":null
-                },
-                "references":[
-                  {
-                    "name":"KARINE GUSMAO",
-                    "phone":"985371230"
-                  },
-                  {
-                    "name":"RODRIGO MALTA",
-                    "phone":"985371247"
-                  }
-                ]
-              },
-              "receipts":[
-                {
-                  "id":1250000107832,
-                  "value":5270,
-                  "type":"STANDARD",
-                  "status":"DEBITED",
-                  "created":{
-                    "date":"2016-05-16T00:00:00.000+00:00"
-                  },
-                  "cancelled":{
-                    "date":"1900-01-01T00:00:00.000+00:00"
-                  },
-                  "payments":[
-                    {
-                      "id":28363291,
-                      "modality":{
-                        "type":"PAYMENT_MODALITY_CREDIT_CARD",
-                        "description":"CARTÃO DE CRÉDITO",
-                        "creationDate":"2016-05-16T00:00:00.000+00:00",
-                        "operation":{
-                          "id":5414,
-                          "description":"CVC MASTER GOLD",
-                          "plan":{
-                            "id":null,
-                            "description":null,
-                            "value":5270,
-                            "interestFreeValue":3570,
-                            "installments":[
-                              {
-                                "id":1,
-                                "dueDate":"2016-06-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":2,
-                                "dueDate":"2016-07-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":3,
-                                "dueDate":"2016-08-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":4,
-                                "dueDate":"2016-09-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":5,
-                                "dueDate":"2016-10-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":6,
-                                "dueDate":"2016-11-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":7,
-                                "dueDate":"2016-12-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":8,
-                                "dueDate":"2017-01-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":9,
-                                "dueDate":"2017-02-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":10,
-                                "dueDate":"2017-03-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":11,
-                                "dueDate":"2017-04-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              },
-                              {
-                                "id":12,
-                                "dueDate":"2017-05-15T00:00:00.000+00:00",
-                                "value":297.5,
-                                "interestFreeValue":297.5
-                              }
-                            ],
-                            "downPayment":{
-                              "value":0,
-                              "dueDate":null,
-                              "type":{
-                                "description":null
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    {
-                      "id":28363291,
-                      "modality":{
-                        "type":"PAYMENT_MODALITY_CREDIT_CARD",
-                        "description":"CARTÃO DE CRÉDITO",
-                        "creationDate":"2016-05-16T00:00:00.000+00:00",
-                        "operation":{
-                          "id":5404,
-                          "description":"VISA ",
-                          "plan":{
-                            "id":null,
-                            "description":null,
-                            "value":5270,
-                            "interestFreeValue":1700,
-                            "installments":[
-                              {
-                                "id":1,
-                                "dueDate":"2016-06-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":2,
-                                "dueDate":"2016-07-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":3,
-                                "dueDate":"2016-08-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":4,
-                                "dueDate":"2016-09-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":5,
-                                "dueDate":"2016-10-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":6,
-                                "dueDate":"2016-11-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":7,
-                                "dueDate":"2016-12-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":8,
-                                "dueDate":"2017-01-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":9,
-                                "dueDate":"2017-02-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              },
-                              {
-                                "id":10,
-                                "dueDate":"2017-03-15T00:00:00.000+00:00",
-                                "value":170,
-                                "interestFreeValue":170
-                              }
-                            ],
-                            "downPayment":{
-                              "value":0,
-                              "dueDate":null,
-                              "type":{
-                                "description":null
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "paxs":[
-            {
-              "id":1,
-              "firstName":"Andrezza",
-              "lastName":"Gusmao",
-              "birthDate":"1982-10-13T00:00:00.000+00:00",
-              "gender":"F",
-              "updateAvailable":true,
-              "notes":null,
-              "email":null,
-              "address":[
-                {
-                  "street":null,
-                  "number":null,
-                  "complement":null,
-                  "district":null,
-                  "city":null,
-                  "state":null,
-                  "country":null,
-                  "zipCode":null
-                }
-              ]
-            },
-            {
-              "id":2,
-              "firstName":"Ademar",
-              "lastName":"Gusmao",
-              "birthDate":"1953-02-28T00:00:00.000+00:00",
-              "gender":"M",
-              "updateAvailable":true,
-              "notes":null,
-              "email":null,
-              "address":[
-                {
-                  "street":null,
-                  "number":null,
-                  "complement":null,
-                  "district":null,
-                  "city":null,
-                  "state":null,
-                  "country":null,
-                  "zipCode":null
-                }
-              ]
-            },
-            {
-              "id":3,
-              "firstName":"Marcia",
-              "lastName":"Gusmao",
-              "birthDate":"1954-12-24T00:00:00.000+00:00",
-              "gender":"F",
-              "updateAvailable":true,
-              "notes":null,
-              "email":null,
-              "address":[
-                {
-                  "street":null,
-                  "number":null,
-                  "complement":null,
-                  "district":null,
-                  "city":null,
-                  "state":null,
-                  "country":null,
-                  "zipCode":null
-                }
-              ]
-            },
-            {
-              "id":4,
-              "firstName":"Rodrigo",
-              "lastName":"Vencigueri",
-              "birthDate":"1982-12-21T00:00:00.000+00:00",
-              "gender":"M",
-              "updateAvailable":true,
-              "notes":null,
-              "email":null,
-              "address":[
-                {
-                  "street":null,
-                  "number":null,
-                  "complement":null,
-                  "district":null,
-                  "city":null,
-                  "state":null,
-                  "country":null,
-                  "zipCode":null
-                }
-              ]
-            },
-            {
-              "id":5,
-              "firstName":"Karine",
-              "lastName":"Gusmao",
-              "birthDate":"1981-04-03T00:00:00.000+00:00",
-              "gender":"F",
-              "updateAvailable":true,
-              "notes":null,
-              "email":null,
-              "address":[
-                {
-                  "street":null,
-                  "number":null,
-                  "complement":null,
-                  "district":null,
-                  "city":null,
-                  "state":null,
-                  "country":null,
-                  "zipCode":null
-                }
-              ]
-            }
-          ],
-          "products":{
-            "hotels":[
-              {
-                "meta":{
-                  "agreementCVC":{
-                    "category":"QUATRO ESTRELAS",
-                    "code":"6397129-1",
-                    "name":"WYNDHAM GOLDEN FOZ SUITES",
-                    "description":"6366896 - DIÁRIA(S) COM CAFÉ DA MANHÃ",
-                    "updateAvailable":true
-                  }
-                },
-                "item":{
-                  "id":4510538580,
-                  "name":"WYNDHAM GOLDEN FOZ SUITES",
-                  "rooms":[
-                    {
-                      "rph":1,
-                      "channelManager":{
-                        "id":45,
-                        "description":"CVC",
-                        "reservationCode":null,
-                        "price":4876,
-                        "grossProfit":null,
-                        "currency":"BRL",
-                        "cancellationPolicies":[
-                          {
-                            "nonRefundable":false
-                          }
-                        ]
-                      },
-                      "player":{
-                        "id":"45",
-                        "description":"CVC",
-                        "reservationCode":null
-                      },
-                      "description":"LUXO COMPRE JÁ",
-                      "location":{
-                        "zone":{
-                          "id":"6236",
-                          "country":{
-                            "code":"BR",
-                            "name":"BRASIL"
-                          },
-                          "state":{
-                            "code":"PR",
-                            "name":"PARANÁ"
-                          },
-                          "city":{
-                            "code":"361",
-                            "name":"FOZ DO IGUAÇU"
-                          },
-                          "latitude":null,
-                          "longitude":null
-                        },
-                        "address":" RUI BARBOSA, 394"
-                      },
-                      "checkIn":"2016-12-26T00:00:00.000+00:00",
-                      "checkOut":"2017-01-01T00:00:00.000+00:00",
-                      "nightsNumber":6,
-                      "packageGroup":"TERRESTRE",
-                      "reservationToken":"PHJ0IGJyaT0iMTI1IiBwaWQ9IjYzOTcxMjkiIGNpZD0iIiBjbWk9IjQ1IiBkdGk9IjIwMTYtMTItMjYiIGR0Zj0iMjAxNy0wMS0wMSIgaG90PSIxMDUzODU4MCIgbGFuPSJwdF9CUiIgbG9jPSIiIHNvYz0iIiBwbGE9IjQ1IiBwcmQ9IkhPVCIvPg==",
-                      "mealPlan":"DIÁRIA(S) COM CAFÉ DA MANHÃ",
-                      "category":"LUXO COMPRE JÁ"
-                    },
-                    {
-                      "rph":2,
-                      "channelManager":{
-                        "id":45,
-                        "description":"CVC",
-                        "reservationCode":null,
-                        "price":4876,
-                        "grossProfit":null,
-                        "currency":"BRL",
-                        "cancellationPolicies":[
-                          {
-                            "nonRefundable":false
-                          }
-                        ]
-                      },
-                      "player":{
-                        "id":"45",
-                        "description":"CVC",
-                        "reservationCode":null
-                      },
-                      "description":"LUXO COMPRE JÁ",
-                      "location":{
-                        "zone":{
-                          "id":"6236",
-                          "country":{
-                            "code":"BR",
-                            "name":"BRASIL"
-                          },
-                          "state":{
-                            "code":"PR",
-                            "name":"PARANÁ"
-                          },
-                          "city":{
-                            "code":"361",
-                            "name":"FOZ DO IGUAÇU"
-                          },
-                          "latitude":null,
-                          "longitude":null
-                        },
-                        "address":" RUI BARBOSA, 394"
-                      },
-                      "checkIn":"2016-12-26T00:00:00.000+00:00",
-                      "checkOut":"2017-01-01T00:00:00.000+00:00",
-                      "nightsNumber":6,
-                      "packageGroup":"TERRESTRE",
-                      "reservationToken":"PHJ0IGJyaT0iMTI1IiBwaWQ9IjYzOTcxMjkiIGNpZD0iIiBjbWk9IjQ1IiBkdGk9IjIwMTYtMTItMjYiIGR0Zj0iMjAxNy0wMS0wMSIgaG90PSIxMDUzODU4MCIgbGFuPSJwdF9CUiIgbG9jPSIiIHNvYz0iIiBwbGE9IjQ1IiBwcmQ9IkhPVCIvPg==",
-                      "mealPlan":"DIÁRIA(S) COM CAFÉ DA MANHÃ",
-                      "category":"LUXO COMPRE JÁ"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "price":{
-            "total":5270,
-            "discount":0,
-            "charges":0,
-            "paid":5270,
-            "points":105400,
-            "currency":"BRL"
+          "notes": null,
+          "vendorId": null,
+          "branchId": 1000,
+          "agencyId": null,
+          "emitterId": null,
+          "salesType": null,
+          "price": {
+            "total": 1024,
+            "discount": 0,
+            "charges": 0,
+            "paid": 1024,
+            "points": 0,
+            "currency": "BRL"
           }
         }
       ]
