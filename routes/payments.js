@@ -50,7 +50,7 @@ var calculate = {
                "packageGroup":"ALL"
             }
          ],
-         "maxInstallments":null,
+         "maxInstallments":10,
          "totalValue":3706.41,
          "modalities":[
             {
@@ -475,7 +475,7 @@ var calculate = {
                "packageGroup":"PACKAGE"
             }
          ],
-         "maxInstallments":null,
+         "maxInstallments":8,
          "totalValue":3380.38,
          "modalities":[
             {
@@ -900,7 +900,7 @@ var calculate = {
                "packageGroup":"PACKAGE"
             }
          ],
-         "maxInstallments":null,
+         "maxInstallments":10,
          "totalValue":326.03,
          "modalities":[
             {
