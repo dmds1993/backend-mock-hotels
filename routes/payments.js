@@ -20,6 +20,24 @@ router.post('/finans/calculate', function(req, res, next) {
   }
 });
 
+router.get('/finans/plans/:plan_token/validate', function(req, res, next) {
+  if (req.query.value != 666) {
+    res.json(validate);
+  } else {
+    res.json({
+  "code": "500",
+  "message": "Unexpected error",
+  "errors": [
+    {
+      "code": "OSB-380001",
+      "message": "Internal Server Error",
+      "route": "route to destination"
+    }
+  ]
+})
+  }
+});
+
 module.exports = router;
 
 var finans = {};
@@ -40,6 +58,27 @@ var plans = {
    "productType": "HOT"
  }
 };
+
+var validate = {
+  "installments": [
+    {
+      "dueDate": "2017-06-15",
+      "value": 326.03
+    }
+  ],
+  "downPayment": [
+    {
+      "types": [
+        {
+          "description": null,
+          "token": "PGZpbmFucyBwbG49IjU2MzUiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iMzI2LjAzIj48ZmluYW4gcHJkPSJBTEwiIHBrZz0iQUxMIiB2YWw9IjMyNi4wMyIvPjwvZmluYW5zPg=="
+        }
+      ],
+      "dueDate": null,
+      "value": 0.0
+    }
+  ]
+}
 
 var calculate = {
    "finans":[
