@@ -26,7 +26,7 @@ router.post('/finans/calculate', function(req, res, next) {
     });
     }
       res.json(calculate);
-     
+
 
   } else {
     res.json({
@@ -52,6 +52,12 @@ router.get('/finans/plans/:plan_token/validate', function(req, res, next) {
   ]
 })
   }
+});
+
+router.post('/finans/orders/:orderId', function(req, res, next) {
+  postOrderResponse.orderId = req.params.orderId;
+  postOrderResponse.orderPaymentResponse.contractors = req.body.orderPayment.contractors;
+  return res.json(postOrderResponse);
 });
 
 module.exports = router;
@@ -1392,3 +1398,10 @@ var calculate = {
       }
    ]
 }
+
+var postOrderResponse = {
+    "orderPaymentResponse": {
+        "status": "SUCCESS",
+        "type": "INFO"
+    }
+};
