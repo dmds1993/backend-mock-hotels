@@ -11,14 +11,14 @@ router.get('/finans/plans', function(req, res, next) {
 
 router.post('/finans/calculate', function(req, res, next) {
   if (req.body.orderItems || req.body.orderId) {
-      if(req.body.orderItems.totalValue){
+      if(req.body.orderItems.value){
         calculate.finans.forEach(function(finan) {
-            finan.totalValue = req.body.orderItems.totalValue;
+            finan.totalValue = req.body.orderItems.value;
 
         finan.modalities.forEach(function(modality) {
           modality.operations.forEach(function(operation) {
             operation.plans.forEach(function(plan){
-              plan.value = req.body.orderItems.totalValue;
+              plan.value = req.body.orderItems.value;
             });
           });
         });
