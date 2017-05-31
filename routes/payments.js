@@ -110,6 +110,23 @@ var calculate = {
                ]
             },
             {
+               "description": "Boleto",
+               "type": "PAYMENT_MODALITY_BANK_BILLET",
+               "operations": [
+                  {
+                       "description": "BOLETO A VISTA / ENTRADA",
+                       "plans": [
+                          {
+                              "planToken": "PGZpbmFucyBwbG49IjIyMjEyIiBvcGU9IjU3MDQiIG1vZD0iOCIgbWlzPSIwIiB2YWw9IjY1Mi4wNiI+PGZpbmFuIHByZD0iQUxMIiBwa2c9IkFMTCIgdmFsPSI2NTIuMDYiLz48L2ZpbmFucz4=",
+                              "value": 652.06,
+                              "countInstallments": 0,
+                              "description": "Todos os Produtos Cartao Debito e Deposito"
+                          }
+                      ]
+                  }
+               ]
+            },
+            {
                "description":"Cartão de Crédito",
                "type":"PAYMENT_MODALITY_CREDIT_CARD",
                "operations":[
