@@ -11,7 +11,23 @@ router.get('/finans/plans', function(req, res, next) {
 
 router.post('/finans/calculate', function(req, res, next) {
   if (req.body.orderItems || req.body.orderId) {
-    res.json(calculate);
+      if(req.body.orderItems.totalValue){
+        calculate.finans.forEach(function(finan) {
+            finan.totalValue = req.body.orderItems.totalValue;
+
+        finan.modalities.forEach(function(modality) {
+          modality.operations.forEach(function(operation) {
+            operation.plans.forEach(function(plan){
+              plan.value = req.body.orderItems.totalValue;
+            });
+          });
+        });
+
+    });
+    }
+      res.json(calculate);
+     
+
   } else {
     res.json({
       "status": "ERROR" ,
@@ -118,7 +134,7 @@ var calculate = {
                        "plans": [
                           {
                               "planToken": "PGZpbmFucyBwbG49IjIyMjEyIiBvcGU9IjU3MDQiIG1vZD0iOCIgbWlzPSIwIiB2YWw9IjY1Mi4wNiI+PGZpbmFuIHByZD0iQUxMIiBwa2c9IkFMTCIgdmFsPSI2NTIuMDYiLz48L2ZpbmFucz4=",
-                              "value": 652.06,
+                              "value": 3706.41,
                               "countInstallments": 0,
                               "description": "Todos os Produtos Cartao Debito e Deposito"
                           }
