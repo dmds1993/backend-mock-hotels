@@ -1775,12 +1775,316 @@ var realOrders = {
           "agencyId": null,
           "emitterId": null,
           "salesType": null,
+          "contractors": [
+            {
+              "id": 1,
+              "paxsId": [
+                1,
+                2,
+                3
+              ],
+              "person": {
+                "id": 186201,
+                "nationality": 0,
+                "name": "Pedro Ventura Da Silva Neto",
+                "birthday": "1971-01-22",
+                "email": "pedroventura@ext.cvc.com.br",
+                "fatherName": null,
+                "motherName": null,
+                "gender": "M",
+                "interests": [
+                  null
+                ],
+                "phones": [
+                  {
+                    "typeId": 1,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 11,
+                    "number": "74971646"
+                  },
+                  {
+                    "typeId": 2,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 11,
+                    "number": "74971646"
+                  },
+                  {
+                    "typeId": 3,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 11,
+                    "number": "42218610"
+                  },
+                  {
+                    "typeId": 4,
+                    "addressTypeId": 2,
+                    "internationalCode": 55,
+                    "localCode": 11,
+                    "number": "42218710"
+                  }
+                ],
+                "documents": [
+                  {
+                    "code": "80150568-29",
+                    "type": "CPF"
+                  },
+                  {
+                    "code": "17.866.348.7",
+                    "type": "RG"
+                  }
+                ],
+                "addresses": [
+                  {
+                    "country": "BRASIL",
+                    "state": "SÃO PAULO",
+                    "city": "SÃO CAETANO DO SUL",
+                    "address": "Alameda SÃO CAETANO",
+                    "neighborhood": "SANTA PAULA",
+                    "number": "1072",
+                    "complement": "AP 34",
+                    "zipCode": "09560051",
+                    "email": "pedroventura@ext.cvc.com.br"
+                  }
+                ],
+                "commercial": {
+                  "companyName": null,
+                  "department": null,
+                  "cnpj": {
+                    "code": null,
+                    "type": null
+                  },
+                  "occupationId": 10004,
+                  "admissionDate": "2010-09-16",
+                  "earnings": null,
+                  "otherEarnings": null
+                }
+              },
+              "receipts": [
+                {
+                  "id": 1000244945,
+                  "value": 1024,
+                  "type": "STANDARD",
+                  "status": "DEBITED",
+                  "created": {
+                    "date": "2011-12-06"
+                  },
+                  "cancelled": {
+                    "date": "1900-01-01"
+                  },
+                  "discounts": [
+                    {
+                      "modality": "ABATIMENTOS",
+                      "description": "DESC. CONCEDIDOS",
+                      "value": 204.8
+                    }
+                  ],
+                  "payments": [
+                    {
+                      "id": 12946246,
+                      "modality": {
+                        "type": "PAYMENT_MODALITY_CREDIT_CARD",
+                        "description": "CARTÃO DE CRÉDITO",
+                        "creationDate": "2011-12-06T00:00:00.000-02:00",
+                        "operation": {
+                          "id": 5402,
+                          "description": "MASTERCARD",
+                          "plan": {
+                            "id": null,
+                            "description": null,
+                            "value": 1024,
+                            "interestFreeValue": 819.2,
+                            "installments": [
+                              {
+                                "id": 5,
+                                "dueDate": "2012-05-05T00:00:00.000-03:00",
+                                "value": 163.84,
+                                "interestFreeValue": 163.84
+                              },
+                              {
+                                "id": 1,
+                                "dueDate": "2012-01-05T00:00:00.000-02:00",
+                                "value": 163.84,
+                                "interestFreeValue": 163.84
+                              },
+                              {
+                                "id": 2,
+                                "dueDate": "2012-02-05T00:00:00.000-02:00",
+                                "value": 163.84,
+                                "interestFreeValue": 163.84
+                              },
+                              {
+                                "id": 3,
+                                "dueDate": "2012-03-05T00:00:00.000-03:00",
+                                "value": 163.84,
+                                "interestFreeValue": 163.84
+                              },
+                              {
+                                "id": 4,
+                                "dueDate": "2012-04-05T00:00:00.000-03:00",
+                                "value": 163.84,
+                                "interestFreeValue": 163.84
+                              }
+                            ],
+                            "downPayment": {
+                              "value": 0,
+                              "dueDate": null,
+                              "type": {
+                                "description": null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "paxs": [
+            {
+              "id": 1,
+              "firstName": "Pedro",
+              "lastName": "Silva Neto",
+              "birthDate": "1971-01-23",
+              "gender": "M",
+              "notes": null,
+              "email": null,
+              "address": [
+                {
+                  "street": null,
+                  "number": null,
+                  "complement": null,
+                  "district": null,
+                  "city": null,
+                  "state": null,
+                  "country": null,
+                  "zipCode": null
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "firstName": "Rosilene",
+              "lastName": "Silva",
+              "birthDate": "1969-09-20",
+              "gender": "F",
+              "notes": null,
+              "email": null,
+              "address": [
+                {
+                  "street": null,
+                  "number": null,
+                  "complement": null,
+                  "district": null,
+                  "city": null,
+                  "state": null,
+                  "country": null,
+                  "zipCode": null
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "firstName": "Juliana",
+              "lastName": "Silva",
+              "birthDate": "1999-01-25",
+              "gender": "F",
+              "notes": null,
+              "email": null,
+              "address": [
+                {
+                  "street": null,
+                  "number": null,
+                  "complement": null,
+                  "district": null,
+                  "city": null,
+                  "state": null,
+                  "country": null,
+                  "zipCode": null
+                }
+              ]
+            }
+          ],
+          "products": {
+            "hotels": [
+              {
+                "meta": {
+                  "agreementCVC": {
+                    "category": "APTO STANDARD",
+                    "code": "606931-1",
+                    "name": "HOT STAR CNPJ ANTIGO",
+                    "description": "395867 - DIÁRIA(S) COM MEIA PENSÃO (REFEIÇÃO SERVIDA NO THERMAS PRIVÉ) - (3º E 4º PASSAGEIROS PODEM SER ACOMODADOS EM SOFÁ CAMA)- (BRASIL FÁCIL) -",
+                    "updateAvailable": false
+                  }
+                },
+                "item": {
+                  "id": 453471712,
+                  "name": "HOT STAR CNPJ ANTIGO",
+                  "rooms": [
+                    {
+                      "rph": 1,
+                      "channelManager": {
+                        "id": 45,
+                        "description": "CVC",
+                        "reservationCode": null,
+                        "price": 264,
+                        "grossProfit": null,
+                        "currency": "BRL"
+                      },
+                      "player": {
+                        "id": "45",
+                        "description": "CVC",
+                        "reservationCode": null
+                      },
+                      "description": "APTO STANDARD",
+                      "location": {
+                        "zone": {
+                          "id": "2263",
+                          "country": {
+                            "code": "BR",
+                            "name": "BRASIL"
+                          },
+                          "state": {
+                            "code": "GO",
+                            "name": "GOIÁS"
+                          },
+                          "city": {
+                            "code": "59",
+                            "name": "CALDAS NOVAS"
+                          },
+                          "latitude": null,
+                          "longitude": null
+                        },
+                        "address": "RUA FRANCISCA ALLÁ CUNHA, 0"
+                      },
+                      "checkIn": "2011-12-18",
+                      "checkOut": "2011-12-22",
+                      "nightsNumber": 4,
+                      "packageGroup": "TERRESTRE",
+                      "reservationToken": "PHJ0IGJyaT0iMTAwMCIgcGlkPSI2MDY5MzEiIGNpZD0iIiBjbWk9IjQ1IiBkdGk9IjIwMTEtMTItMTgiIGR0Zj0iMjAxMS0xMi0yMiIgaG90PSIzNDcxNzEyIiBsYW49InB0X0JSIiBsb2M9IiIgc29jPSIiIHBsYT0iNDUiIHByZD0iSE9UIi8+",
+                      "mealPlan": "DIÁRIA(S) COM MEIA PENSÃO (REFEIÇÃO SERVIDA NO THERMAS PRIVÉ) - (3º E 4º PASSAGEIROS PODEM SER ACOMODADOS EM SOFÁ CAMA)",
+                      "category": "APTO STANDARD",
+                      "paxsId": [
+                        1,
+                        2,
+                        3
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
           "price": {
             "total": 1024,
             "discount": 0,
             "charges": 0,
             "paid": 1024,
             "points": 0,
+            "cpp": 35.08772,
             "currency": "BRL"
           }
         }
