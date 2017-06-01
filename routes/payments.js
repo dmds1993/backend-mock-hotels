@@ -118,11 +118,6 @@ var validate = {
         "value": 125.01,
         "interestFreeValue": 120.01,
         "dueDate": "2017-03-04T00:00:00.000Z"
-      },
-      {
-        "value": 125.01,
-        "interestFreeValue": 120.01,
-        "dueDate": "2017-04-04T00:00:00.000Z"
       }
     ]
   }
