@@ -82,24 +82,50 @@ var plans = {
 };
 
 var validate = {
-  "installments": [
-    {
-      "dueDate": "2017-06-15",
-      "value": 326.03
-    }
-  ],
-  "downPayment": [
-    {
-      "types": [
-        {
-          "description": null,
-          "token": "PGZpbmFucyBwbG49IjU2MzUiIG9wZT0iNTQwMSIgbW9kPSI1IiBtaXM9IjEiIHZhbD0iMzI2LjAzIj48ZmluYW4gcHJkPSJBTEwiIHBrZz0iQUxMIiB2YWw9IjMyNi4wMyIvPjwvZmluYW5zPg=="
-        }
-      ],
-      "dueDate": null,
-      "value": 0.0
-    }
-  ]
+  "downPayment": {
+    "value": 250.01,
+    "dueDate": "2017-02-04T00:00:00.000Z",
+    "minValue": 12,
+    "maxValue": 200,
+    "types": [
+      {
+        "description": "ARREDONDAMENTO",
+        "token": "955a7f41-55fb-4880-94f9-737ba4b4106c"
+      },
+      {
+        "description": "DEPÓSITO BRADESCO SND",
+        "token": "955a7f41-55fb-4880-94f9-737ba4b4106c"
+      },
+      {
+        "description": "CHEQUE PRÉ - CURTO PRAZO",
+        "token": "955a7f41-55fb-4880-94f9-737ba4b4106c"
+      },
+      {
+        "description": "DEPÓSITO DIA SEGUINTE",
+        "token": "955a7f41-55fb-4880-94f9-737ba4b4106c"
+      },
+      {
+        "description": "VISA ELECTRON",
+        "token": "955a7f41-55fb-4880-94f9-737ba4b4106c"
+      }
+    ]
+  },
+  "installments": {
+    "minDueDate": "2017-02-01T00:00:00.000Z",
+    "maxDueDate": "2017-02-30T00:00:00.000Z",
+    "values": [
+      {
+        "value": 125.01,
+        "interestFreeValue": 120.01,
+        "dueDate": "2017-03-04T00:00:00.000Z"
+      },
+      {
+        "value": 125.01,
+        "interestFreeValue": 120.01,
+        "dueDate": "2017-04-04T00:00:00.000Z"
+      }
+    ]
+  }
 }
 
 var calculate = {
