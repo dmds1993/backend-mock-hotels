@@ -591,7 +591,7 @@ var calculate = {
                            "planToken":"PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMzODAuMzgiPjxmaW5hbiBwcmQ9IkFJUiIgcGtnPSJQQUNLQUdFIiB2YWw9IjMzODAuMzgiLz48L2ZpbmFucz4=",
                            "value":3380.38,
                            "countInstallments":0,
-                           "description": "A Vista",
+                           "description": "A Vista"
                         }
                      ]
                   }
@@ -1016,7 +1016,7 @@ var calculate = {
                            "planToken":"PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMyNi4wMyI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlBBQ0tBR0UiIHZhbD0iMzI2LjAzIi8+PC9maW5hbnM+",
                            "value":326.03,
                            "countInstallments":0,
-                           "description":"A Vista",
+                           "description":"A Vista"
                         }
                      ]
                   }
