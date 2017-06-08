@@ -24,6 +24,9 @@ router.post('/finans/calculate', function(req, res, next) {
         });
 
     });
+    } else {
+       finan.totalValue = 3706.41;
+       plan.value = 3706.41;
     }
       res.json(calculate);
 
@@ -163,7 +166,7 @@ var calculate = {
                               "planToken": "PGZpbmFucyBwbG49IjIyMjEyIiBvcGU9IjU3MDQiIG1vZD0iOCIgbWlzPSIwIiB2YWw9IjY1Mi4wNiI+PGZpbmFuIHByZD0iQUxMIiBwa2c9IkFMTCIgdmFsPSI2NTIuMDYiLz48L2ZpbmFucz4=",
                               "value": 3706.41,
                               "countInstallments": 0,
-                              "description": "Todos os Produtos Cartao Debito e Deposito"
+                              "description": "A Vista"
                           }
                       ]
                   }
@@ -588,7 +591,7 @@ var calculate = {
                            "planToken":"PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMzODAuMzgiPjxmaW5hbiBwcmQ9IkFJUiIgcGtnPSJQQUNLQUdFIiB2YWw9IjMzODAuMzgiLz48L2ZpbmFucz4=",
                            "value":3380.38,
                            "countInstallments":0,
-                           "description":null
+                           "description": "A Vista",
                         }
                      ]
                   }
@@ -1013,7 +1016,7 @@ var calculate = {
                            "planToken":"PGZpbmFucyBwbG49IjIyNzk3IiBvcGU9IjUxMDEiIG1vZD0iMiIgbWlzPSIwIiB2YWw9IjMyNi4wMyI+PGZpbmFuIHByZD0iSE9UIiBwa2c9IlBBQ0tBR0UiIHZhbD0iMzI2LjAzIi8+PC9maW5hbnM+",
                            "value":326.03,
                            "countInstallments":0,
-                           "description":null
+                           "description":"A Vista",
                         }
                      ]
                   }
