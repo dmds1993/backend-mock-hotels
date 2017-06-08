@@ -24,9 +24,6 @@ router.post('/finans/calculate', function(req, res, next) {
         });
 
     });
-    } else {
-       finan.totalValue = 3706.41;
-       plan.value = 3706.41;
     }
       res.json(calculate);
 
