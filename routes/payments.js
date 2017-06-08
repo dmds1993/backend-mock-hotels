@@ -55,9 +55,7 @@ router.get('/finans/plans/:plan_token/validate', function(req, res, next) {
 });
 
 router.post('/finans/orders/:orderId', function(req, res, next) {
-  postOrderResponse.orderId = req.params.orderId;
-  postOrderResponse.orderPaymentResponse.contractors = req.body.orderPayment.contractors;
-  return res.json(postOrderResponse);
+  res.json(postOrderResponse);
 });
 
 module.exports = router;
@@ -1421,8 +1419,24 @@ var calculate = {
 }
 
 var postOrderResponse = {
-    "orderPaymentResponse": {
-        "status": "SUCCESS",
-        "type": "INFO"
-    }
+  "status": "SUCCESS",
+  "contractors":[
+     {
+        "id":53569,
+        "payments":[
+           {
+              "plan":{
+                 "token":"1204-asaqswqw-q20205-qqqqq",
+                 "value":3123.87,
+                 "dueDate":"2017-06-19T00:00:00",
+                 "paxs":[
+                    {
+
+                    },
+                 ]
+              }
+           }
+        ]
+     }
+  ]
 };
