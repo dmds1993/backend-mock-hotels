@@ -109,8 +109,8 @@ var validate = {
     ]
   },
   "installments": {
-    "minDueDate": "2017-02-01T00:00:00.000Z",
-    "maxDueDate": "2017-02-30T00:00:00.000Z",
+    "minDueDate": "2017-09-01T00:00:00.000Z",
+    "maxDueDate": "2017-10-30T00:00:00.000Z",
     "values": [
       {
         "value": 125.01,
