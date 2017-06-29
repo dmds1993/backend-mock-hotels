@@ -35,13 +35,13 @@ router.get('/', function (req, res, next) {
 
 router.get('/:rate_token', function (req, res, next) {
   var rateToken = new Buffer(req.params.rate_token, 'base64').toString('utf8');
-  
+
   if (rateToken.includes('rateToken')) {
     res.json(rateTokenPackage);
   } else {
-    return res.status(500).send({ 
-      code: 500, 
-      message: 'Invalid Rate Token' 
+    return res.status(500).send({
+      code: 500,
+      message: 'Invalid Rate Token'
     });
   }
 });
@@ -2280,109 +2280,109 @@ var destinationzones = {
 var destinationzonesdates = {
   "departureDates": [
     {
-      "date": "2016-07-15",
+      "date": "2017-07-15",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-08-05",
+      "date": "2017-08-05",
       "isAvailable": true,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-08-12",
+      "date": "2017-08-12",
       "isAvailable": true,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-08-19",
+      "date": "2017-08-19",
       "isAvailable": true,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-08-26",
+      "date": "2017-08-26",
       "isAvailable": true,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-09-02",
+      "date": "2017-09-02",
       "isAvailable": true,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-09-16",
+      "date": "2017-09-16",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-09-23",
+      "date": "2017-09-23",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-09-30",
+      "date": "2017-09-30",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-10-07",
+      "date": "2017-10-07",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-10-14",
+      "date": "2017-10-14",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-10-21",
+      "date": "2017-10-21",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-10-28",
+      "date": "2017-10-28",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-11-04",
+      "date": "2017-11-04",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-11-18",
+      "date": "2017-11-18",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-11-25",
+      "date": "2017-11-25",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-12-02",
+      "date": "2017-12-02",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
     },
     {
-      "date": "2016-12-09",
+      "date": "2017-12-09",
       "isAvailable": false,
       "isPromotional": false,
       "bestPrice": 1076
