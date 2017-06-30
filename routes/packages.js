@@ -59,1580 +59,2385 @@ router.post('/booking', function(req, res, next) {
 module.exports = router;
 
 var packages = {
-  "packages": [{
-    "id": 177005589,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-05",
-    "days": 4,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU1ODkiIHBraT0iMTc3MDA1NTg5IiBwb3Q9IjExMTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIyMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 2237,
-      "priceWithoutTax": 2236,
-      "pricePerDayWithTax": 559.25,
-      "pricePerDayWithoutTax": 559,
-      "pricePerPaxWithTax": 2237,
-      "pricePerPaxWithoutTax": 2236
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 3872361,
-      "name": "COSTA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA SIMPLES ",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 3,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-03"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 140",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
+    "packages": [
+        {
+            "id": 176900277,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMDI3NyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMDI3NyIgcG90PSIxMTI0LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMTI0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTI2NS43OCIgc3N0PSJTUCIgc3d0PSIxMzIxLjk4IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1379.5,
+                "priceWithoutTax": 1265.78,
+                "pricePerDayWithTax": 172.4375,
+                "pricePerDayWithoutTax": 158.2225,
+                "pricePerPaxWithTax": 1379.5,
+                "pricePerPaxWithoutTax": 1265.78
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 451019672,
+                    "name": "HOTEL ARRAIAL SOL",
+                    "description": "TRÊS ESTRELAS",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - ESTRADA DO ARRAIAL, 1556",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3266",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313021.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3266",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMDI3NyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMDI3NyIgcG90PSIxMTI0LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMTI0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTI2NS43OCIgc3N0PSJTUCIgc3d0PSIxMzIxLjk4IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1265.78
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3266",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2MSIgcG90PSIxMTI0LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMTI0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTI2NS43OCIgc3N0PSJTUCIgc3d0PSIxMzIxLjk4IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1265.78
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91559",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 56.2
+                }
+            ]
+        },
+        {
+            "id": 176965719,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcxOSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcxOSIgcG90PSIxMjM0IiBwcmQ9IlBBQyIgcHd0PSIxMjM0IiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTM4OS42NCIgc3N0PSJTUCIgc3d0PSIxNDUxLjM0IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1508.8600000000001,
+                "priceWithoutTax": 1389.64,
+                "pricePerDayWithTax": 188.60750000000002,
+                "pricePerDayWithoutTax": 173.705,
+                "pricePerPaxWithTax": 1508.8600000000001,
+                "pricePerPaxWithoutTax": 1389.64
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 451004638,
+                    "name": "TRAVEL INN VILLAGE ARRAIAL ´ANTIGA XÃO´",
+                    "description": "POUSADA URBANA SIMPLES",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - JEQUITIBÁ, 73",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313417.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcxOSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcxOSIgcG90PSIxMjM0IiBwcmQ9IlBBQyIgcHd0PSIxMjM0IiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTM4OS42NCIgc3N0PSJTUCIgc3d0PSIxNDUxLjM0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1389.64
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNTM2MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNTM2MiIgcG90PSIxMjM0IiBwcmQ9IlBBQyIgcHd0PSIxMjM0IiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTM4OS42NCIgc3N0PSJTUCIgc3d0PSIxNDUxLjM0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1389.64
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 61.7
+                }
+            ]
+        },
+        {
+            "id": 176938041,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzODA0MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzODA0MSIgcG90PSIxMjk5LjUyIiBwcmQ9IlBBQyIgcHd0PSIxMjk5LjUyIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTQ2My40MiIgc3N0PSJTUCIgc3d0PSIxNTI4LjQwIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1585.92,
+                "priceWithoutTax": 1463.42,
+                "pricePerDayWithTax": 198.24,
+                "pricePerDayWithoutTax": 182.9275,
+                "pricePerPaxWithTax": 1585.92,
+                "pricePerPaxWithoutTax": 1463.42
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 451019672,
+                    "name": "HOTEL ARRAIAL SOL",
+                    "description": "TRÊS ESTRELAS",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - ESTRADA DO ARRAIAL, 1556",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3266",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313021.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3266",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzODA0MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzODA0MSIgcG90PSIxMjk5LjUyIiBwcmQ9IlBBQyIgcHd0PSIxMjk5LjUyIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTQ2My40MiIgc3N0PSJTUCIgc3d0PSIxNTI4LjQwIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1463.42
+                }
+            ],
+            "flight": {
+                "id": 179370837,
+                "outbound": {
+                    "number": "926122",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "departureDate": "2017-06-01T21:10:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "departureDate": "2017-06-01T21:10:00.000-03:00",
+                            "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                            "flightNumber": "926122",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "926011",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2017-05-25T18:50:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "arrivalLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "departureDate": "2017-05-25T18:50:00.000-03:00",
+                            "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                            "flightNumber": "926011",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 64.98
+                }
+            ]
+        },
+        {
+            "id": 176965674,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY3NCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY3NCIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1632.3600000000001,
+                "priceWithoutTax": 1507.89,
+                "pricePerDayWithTax": 204.04500000000002,
+                "pricePerDayWithoutTax": 188.48625,
+                "pricePerPaxWithTax": 1632.3600000000001,
+                "pricePerPaxWithoutTax": 1507.89
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 456767588,
+                    "name": "BOSSA NOVA ARRAIAL QUINTA DO PORTO",
+                    "description": "HOTEL DE PRAIA CONFORTAVEL",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "TRAVESSIA - DO PORTO, ",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/314626.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY3NCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY3NCIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1507.89
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMDY2MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMDY2MiIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1507.89
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 66.95
+                }
+            ]
+        },
+        {
+            "id": 176965672,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY3MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY3MiIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1632.3600000000001,
+                "priceWithoutTax": 1507.89,
+                "pricePerDayWithTax": 204.04500000000002,
+                "pricePerDayWithoutTax": 188.48625,
+                "pricePerPaxWithTax": 1632.3600000000001,
+                "pricePerPaxWithoutTax": 1507.89
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 45976198,
+                    "name": "HOTEL ANCORADOURO",
+                    "description": "POUSADA DE PRAIA SIMPLES",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "ESTRADA - DO ARRAIAL D´AJUDA, 450",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/312912.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY3MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY3MiIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1507.89
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjM2MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjM2MSIgcG90PSIxMzM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxMzM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTUwNy44OSIgc3N0PSJTUCIgc3d0PSIxNTc0Ljg0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1507.89
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 66.95
+                }
+            ]
+        },
+        {
+            "id": 176965692,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY5MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY5MiIgcG90PSIxNDIzLjAxIiBwcmQ9IlBBQyIgcHd0PSIxNDIzLjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTYwMi40OSIgc3N0PSJTUCIgc3d0PSIxNjczLjY0IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1731.16,
+                "priceWithoutTax": 1602.49,
+                "pricePerDayWithTax": 216.395,
+                "pricePerDayWithoutTax": 200.31125,
+                "pricePerPaxWithTax": 1731.16,
+                "pricePerPaxWithoutTax": 1602.49
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 451591,
+                    "name": "POUSADA ERVA DOCE",
+                    "description": "POUSADA URBANA SIMPLES",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - DO MUCUGE, 200",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/312985.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY5MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY5MiIgcG90PSIxNDIzLjAxIiBwcmQ9IlBBQyIgcHd0PSIxNDIzLjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTYwMi40OSIgc3N0PSJTUCIgc3d0PSIxNjczLjY0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1602.49
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjM5OCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjM5OCIgcG90PSIxNDIzLjAxIiBwcmQ9IlBBQyIgcHd0PSIxNDIzLjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTYwMi40OSIgc3N0PSJTUCIgc3d0PSIxNjczLjY0IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1602.49
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 71.15
+                }
+            ]
+        },
+        {
+            "id": 176937691,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzNzY5MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzNzY5MSIgcG90PSIxNDczLjUzIiBwcmQ9IlBBQyIgcHd0PSIxNDczLjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTY1OS4zOCIgc3N0PSJTUCIgc3d0PSIxNzMzLjA2IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1790.5800000000002,
+                "priceWithoutTax": 1659.38,
+                "pricePerDayWithTax": 223.82250000000002,
+                "pricePerDayWithoutTax": 207.4225,
+                "pricePerPaxWithTax": 1790.5800000000002,
+                "pricePerPaxWithoutTax": 1659.38
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 451591,
+                    "name": "POUSADA ERVA DOCE",
+                    "description": "POUSADA URBANA SIMPLES",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - DO MUCUGE, 200",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/312985.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzNzY5MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzNzY5MSIgcG90PSIxNDczLjUzIiBwcmQ9IlBBQyIgcHd0PSIxNDczLjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTY1OS4zOCIgc3N0PSJTUCIgc3d0PSIxNzMzLjA2IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1659.38
+                }
+            ],
+            "flight": {
+                "id": 179370837,
+                "outbound": {
+                    "number": "926122",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "departureDate": "2017-06-01T21:10:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "departureDate": "2017-06-01T21:10:00.000-03:00",
+                            "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                            "flightNumber": "926122",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "926011",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2017-05-25T18:50:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "arrivalLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "departureDate": "2017-05-25T18:50:00.000-03:00",
+                            "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                            "flightNumber": "926011",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 73.68
+                }
+            ]
+        },
+        {
+            "id": 176965665,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY2NSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY2NSIgcG90PSIxNTA3LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTA3LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTY5Ny4wOCIgc3N0PSJTUCIgc3d0PSIxNzcyLjQzIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1829.9499999999998,
+                "priceWithoutTax": 1697.08,
+                "pricePerDayWithTax": 228.74374999999998,
+                "pricePerDayWithoutTax": 212.135,
+                "pricePerPaxWithTax": 1829.9499999999998,
+                "pricePerPaxWithoutTax": 1697.08
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 453721321,
+                    "name": "SANTA FÉ HOTEL",
+                    "description": "HOTEL DE PRAIA CONFORTAVEL",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "ESTRADA - DO ARRAIAL, 2020",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Suíte Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "19",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313319.jpg"
+                            }
+                        }
+                    },
+                    "category": "Suíte Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Suíte Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "19",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY2NSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY2NSIgcG90PSIxNTA3LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTA3LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTY5Ny4wOCIgc3N0PSJTUCIgc3d0PSIxNzcyLjQzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1697.08
+                },
+                {
+                    "description": "Suíte Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "19",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMDYzNCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMDYzNCIgcG90PSIxNTA3LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTA3LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTY5Ny4wOCIgc3N0PSJTUCIgc3d0PSIxNzcyLjQzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1697.08
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 75.35
+                }
+            ]
+        },
+        {
+            "id": 176902161,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjE2MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjE2MSIgcG90PSIxNTI4LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTI4LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTcyMC43MyIgc3N0PSJTUCIgc3d0PSIxNzk3LjEzIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1854.65,
+                "priceWithoutTax": 1720.73,
+                "pricePerDayWithTax": 231.83125,
+                "pricePerDayWithoutTax": 215.09125,
+                "pricePerPaxWithTax": 1854.65,
+                "pricePerPaxWithoutTax": 1720.73
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 452234061,
+                    "name": "POUSADA CHEIRO VERDE",
+                    "description": "POUSADA URBANA MÉDIO CONFORTO",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - ESTR. DA PRAIA DO MUCUGÊ, 448",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313118.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjE2MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjE2MSIgcG90PSIxNTI4LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTI4LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTcyMC43MyIgc3N0PSJTUCIgc3d0PSIxNzk3LjEzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1720.73
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2MiIgcG90PSIxNTI4LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTI4LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTcyMC43MyIgc3N0PSJTUCIgc3d0PSIxNzk3LjEzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1720.73
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91559",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 76.4
+                }
+            ]
+        },
+        {
+            "id": 176965564,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2NCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2NCIgcG90PSIxNTQ5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTQ5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTc0NC4zOCIgc3N0PSJTUCIgc3d0PSIxODIxLjgzIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 1879.3500000000001,
+                "priceWithoutTax": 1744.38,
+                "pricePerDayWithTax": 234.91875000000002,
+                "pricePerDayWithoutTax": 218.0475,
+                "pricePerPaxWithTax": 1879.3500000000001,
+                "pricePerPaxWithoutTax": 1744.38
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 454348732,
+                    "name": "MANACÁ POUSADA PARQUE - ARRAIAL D´AJUDA",
+                    "description": "POUSADA URBANA MÉDIO CONFORTO",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "ESTRADA - ESTRADA ARRAIAL/TRANCOSO, 500",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313035.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2NCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2NCIgcG90PSIxNTQ5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTQ5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTc0NC4zOCIgc3N0PSJTUCIgc3d0PSIxODIxLjgzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1744.38
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMDc1NyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMDc1NyIgcG90PSIxNTQ5LjAxIiBwcmQ9IlBBQyIgcHd0PSIxNTQ5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTc0NC4zOCIgc3N0PSJTUCIgc3d0PSIxODIxLjgzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 1744.38
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 77.45
+                }
+            ]
+        },
+        {
+            "id": 176937031,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzNzAzMSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzNzAzMSIgcG90PSIxNjgzLjUzIiBwcmQ9IlBBQyIgcHd0PSIxNjgzLjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTg5NS44NyIgc3N0PSJTUCIgc3d0PSIxOTgwLjA1IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 2037.57,
+                "priceWithoutTax": 1895.87,
+                "pricePerDayWithTax": 254.69625,
+                "pricePerDayWithoutTax": 236.98375,
+                "pricePerPaxWithTax": 2037.57,
+                "pricePerPaxWithoutTax": 1895.87
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 453721321,
+                    "name": "SANTA FÉ HOTEL",
+                    "description": "HOTEL DE PRAIA CONFORTAVEL",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "ESTRADA - DO ARRAIAL, 2020",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Suíte Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "19",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313319.jpg"
+                            }
+                        }
+                    },
+                    "category": "Suíte Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Suíte Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "19",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzNzAzMSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzNzAzMSIgcG90PSIxNjgzLjUzIiBwcmQ9IlBBQyIgcHd0PSIxNjgzLjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMTg5NS44NyIgc3N0PSJTUCIgc3d0PSIxOTgwLjA1IiBzemk9Ijk2MjYiLz4=",
+                    "price": 1895.87
+                }
+            ],
+            "flight": {
+                "id": 179370837,
+                "outbound": {
+                    "number": "926122",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "departureDate": "2017-06-01T21:10:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "departureDate": "2017-06-01T21:10:00.000-03:00",
+                            "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                            "flightNumber": "926122",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "926011",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2017-05-25T18:50:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "arrivalLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "departureDate": "2017-05-25T18:50:00.000-03:00",
+                            "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                            "flightNumber": "926011",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 84.18
+                }
+            ]
+        },
+        {
+            "id": 176965563,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2MyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2MyIgcG90PSIyMDM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjI5Ni4xOCIgc3N0PSJTUCIgc3d0PSIyMzk4LjEzIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 2455.6499999999996,
+                "priceWithoutTax": 2296.18,
+                "pricePerDayWithTax": 306.95624999999995,
+                "pricePerDayWithoutTax": 287.0225,
+                "pricePerPaxWithTax": 2455.6499999999996,
+                "pricePerPaxWithoutTax": 2296.18
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 453665552,
+                    "name": "HOTEL ENSEADA DOS CORAIS",
+                    "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "RUA - RUA DA PRAIA DO MUCUGÊ, 100",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Standard",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "3",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/302302.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Standard"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTU2MyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTU2MyIgcG90PSIyMDM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjI5Ni4xOCIgc3N0PSJTUCIgc3d0PSIyMzk4LjEzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2296.18
+                },
+                {
+                    "description": "Apartamento Standard",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "3",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjY3MiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjY3MiIgcG90PSIyMDM5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDM5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjI5Ni4xOCIgc3N0PSJTUCIgc3d0PSIyMzk4LjEzIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2296.18
+                },
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "2",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwMjg4MCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwMjg4MCIgcG90PSIyMzU0LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMzU0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjY1MC45MSIgc3N0PSJTUCIgc3d0PSIyNzY4LjYxIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2650.91
+                },
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "2",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcwNyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcwNyIgcG90PSIyMzU0LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMzU0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjY1MC45MSIgc3N0PSJTUCIgc3d0PSIyNzY4LjYxIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2650.91
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 101.95
+                }
+            ]
+        },
+        {
+            "id": 176905255,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNTI1NSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNTI1NSIgcG90PSIyMDc0LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDc0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjMzNS42MCIgc3N0PSJTUCIgc3d0PSIyNDM5LjMwIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 2496.8199999999997,
+                "priceWithoutTax": 2335.6,
+                "pricePerDayWithTax": 312.10249999999996,
+                "pricePerDayWithoutTax": 291.95,
+                "pricePerPaxWithTax": 2496.8199999999997,
+                "pricePerPaxWithoutTax": 2335.6
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 457228501,
+                    "name": "POUSADA VILA DO BECO",
+                    "description": "POUSADA URBANA MÉDIO CONFORTO",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": " - BECO DOS JEGUES, 173",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Luxo",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "2",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313142.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Luxo"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "2",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNTI1NSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNTI1NSIgcG90PSIyMDc0LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDc0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjMzNS42MCIgc3N0PSJTUCIgc3d0PSIyNDM5LjMwIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2335.6
+                },
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "2",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcwNiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcwNiIgcG90PSIyMDc0LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMDc0LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjMzNS42MCIgc3N0PSJTUCIgc3d0PSIyNDM5LjMwIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2335.6
+                },
+                {
+                    "description": "Apartamento Especial",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "1251",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNTMzMSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNTMzMSIgcG90PSIyNTI5IiBwcmQ9IlBBQyIgcHd0PSIyNTI5IiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjg0Ny45NyIgc3N0PSJTUCIgc3d0PSIyOTc0LjQyIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2847.97
+                },
+                {
+                    "description": "Apartamento Especial",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "1251",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcxNyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcxNyIgcG90PSIyNTI5IiBwcmQ9IlBBQyIgcHd0PSIyNTI5IiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjg0Ny45NyIgc3N0PSJTUCIgc3d0PSIyOTc0LjQyIiBzemk9Ijk2MjYiLz4=",
+                    "price": 2847.97
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91559",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 103.7
+                }
+            ]
+        },
+        {
+            "id": 176904722,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNDcyMiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNDcyMiIgcG90PSIyMTA5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMTA5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjM3NS4wMSIgc3N0PSJTUCIgc3d0PSIyNDgwLjQ2IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 2537.98,
+                "priceWithoutTax": 2375.01,
+                "pricePerDayWithTax": 317.2475,
+                "pricePerDayWithoutTax": 296.87625,
+                "pricePerPaxWithTax": 2537.98,
+                "pricePerPaxWithoutTax": 2375.01
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 455023996,
+                    "name": "MAR PARAÍSO HOTEL",
+                    "description": "HOTEL DE PRAIA CONFORTAVEL",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "PRAIA - DO MUCUGÊ, 476",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Luxo",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "1208",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313070.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Luxo"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "1208",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNDcyMiIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNDcyMiIgcG90PSIyMTA5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMTA5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjM3NS4wMSIgc3N0PSJTUCIgc3d0PSIyNDgwLjQ2IiBzemk9Ijk2MjYiLz4=",
+                    "price": 2375.01
+                },
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "1208",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY5MSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY5MSIgcG90PSIyMTA5LjAxIiBwcmQ9IlBBQyIgcHd0PSIyMTA5LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjM3NS4wMSIgc3N0PSJTUCIgc3d0PSIyNDgwLjQ2IiBzemk9Ijk2MjYiLz4=",
+                    "price": 2375.01
+                },
+                {
+                    "description": "Suíte Master",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "17",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTY5MyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTY5MyIgcG90PSIyOTA3LjAxIiBwcmQ9IlBBQyIgcHd0PSIyOTA3LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzI3My42NiIgc3N0PSJTUCIgc3d0PSIzNDE5LjAxIiBzemk9Ijk2MjYiLz4=",
+                    "price": 3273.66
+                },
+                {
+                    "description": "Suíte Master",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "17",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNDcwOSIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNDcwOSIgcG90PSIyOTA3LjAxIiBwcmQ9IlBBQyIgcHd0PSIyOTA3LjAxIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzI3My42NiIgc3N0PSJTUCIgc3d0PSIzNDE5LjAxIiBzemk9Ijk2MjYiLz4=",
+                    "price": 3273.66
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91559",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 105.45
+                }
+            ]
+        },
+        {
+            "id": 176938388,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": false,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzODM4OCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzODM4OCIgcG90PSIyMjg1LjUzIiBwcmQ9IlBBQyIgcHd0PSIyMjg1LjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjU3My44MCIgc3N0PSJTUCIgc3d0PSIyNjg4LjA4IiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 2745.6000000000004,
+                "priceWithoutTax": 2573.8,
+                "pricePerDayWithTax": 343.20000000000005,
+                "pricePerDayWithoutTax": 321.725,
+                "pricePerPaxWithTax": 2745.6000000000004,
+                "pricePerPaxWithoutTax": 2573.8
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 455023996,
+                    "name": "MAR PARAÍSO HOTEL",
+                    "description": "HOTEL DE PRAIA CONFORTAVEL",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "PRAIA - DO MUCUGÊ, 476",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Luxo",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "1208",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/313070.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Luxo"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Luxo",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "1208",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzODM4OCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzODM4OCIgcG90PSIyMjg1LjUzIiBwcmQ9IlBBQyIgcHd0PSIyMjg1LjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMjU3My44MCIgc3N0PSJTUCIgc3d0PSIyNjg4LjA4IiBzemk9Ijk2MjYiLz4=",
+                    "price": 2573.8
+                },
+                {
+                    "description": "Suíte Master",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "17",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkyNjAxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkzODU2OCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkzODU2OCIgcG90PSIzMTUzLjUzIiBwcmQ9IlBBQyIgcHd0PSIzMTUzLjUzIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzU1MS4yNyIgc3N0PSJTUCIgc3d0PSIzNzA4Ljk1IiBzemk9Ijk2MjYiLz4=",
+                    "price": 3551.27
+                }
+            ],
+            "flight": {
+                "id": 179370837,
+                "outbound": {
+                    "number": "926122",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "departureDate": "2017-06-01T21:10:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "departureDate": "2017-06-01T21:10:00.000-03:00",
+                            "arrivalDate": "2017-06-01T23:00:00.000-03:00",
+                            "flightNumber": "926122",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "926011",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "GRU",
+                        "description": "GUARULHOS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2017-05-25T18:50:00.000-03:00",
+                    "duration": 110,
+                    "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "GRU",
+                                "description": "GUARULHOS"
+                            },
+                            "arrivalLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "departureDate": "2017-05-25T18:50:00.000-03:00",
+                            "arrivalDate": "2017-05-25T20:40:00.000-03:00",
+                            "flightNumber": "926011",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 110
+                        }
+                    ]
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 114.28
+                }
+            ]
+        },
+        {
+            "id": 176965718,
+            "startDate": "2017-05-25",
+            "endDate": "2017-06-01",
+            "days": 8,
+            "type": "AIR",
+            "isAvailable": true,
+            "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcxOCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcxOCIgcG90PSIzMDgyIiBwcmQ9IlBBQyIgcHd0PSIzMDgyIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzQ3MC43MiIgc3N0PSJTUCIgc3d0PSIzNjI0LjgyIiBzemk9Ijk2MjYiLz4=",
+            "price": {
+                "priceWithTax": 3682.3399999999997,
+                "priceWithoutTax": 3470.72,
+                "pricePerDayWithTax": 460.29249999999996,
+                "pricePerDayWithoutTax": 433.84,
+                "pricePerPaxWithTax": 3682.3399999999997,
+                "pricePerPaxWithoutTax": 3470.72
+            },
+            "currency": "BRL",
+            "baseDestination": 25,
+            "hotels": [
+                {
+                    "id": 458835631,
+                    "name": "SAINT TROPEZ PRAIA HOTEL",
+                    "description": "TRÊS ESTRELAS",
+                    "isPreferential": false,
+                    "timeSpan": {
+                        "nights": 7,
+                        "checkIn": "2017-05-25",
+                        "checkOut": "2017-05-31"
+                    },
+                    "location": {
+                        "address": "ESTRADA - ESTRADA DA PITINGA, 100",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    },
+                    "room": {
+                        "rph": 1,
+                        "description": "Apartamento Luxo Vista Jardim",
+                        "mealPlan": "Diária com café da manhã",
+                        "category": "6797",
+                        "links": {
+                            "thumbnailImage": {
+                                "href": "http://www.cvc.com.br/images/384390.jpg"
+                            }
+                        }
+                    },
+                    "category": "Apartamento Luxo Vista Jardim"
+                }
+            ],
+            "alternativeRooms": [
+                {
+                    "description": "Apartamento Luxo Vista Jardim",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "6797",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3Njk2NTcxOCIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3Njk2NTcxOCIgcG90PSIzMDgyIiBwcmQ9IlBBQyIgcHd0PSIzMDgyIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzQ3MC43MiIgc3N0PSJTUCIgc3d0PSIzNjI0LjgyIiBzemk9Ijk2MjYiLz4=",
+                    "price": 3470.72
+                },
+                {
+                    "description": "Apartamento Luxo Vista Jardim",
+                    "mealPlan": "Diária com café da manhã",
+                    "category": "6797",
+                    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IldFQiIgYmRlPSIyNSIgYnJpPSIxMDAwIiBkdGY9IjIwMTctMDYtMDEiIGR0aT0iMjAxNy0wNS0yNSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDMyIiBmZ3I9IjkxNTUxIiBta2k9IjIxNDEiIG1rcD0iMC44ODgiIHBhY2thZ2VUeXBlPSJBSVIiIHBjcT0iMS4wMDAwMDAwMDAwIiBwaWQ9IjE3NjkwNDkwNyIgcGtnPSJQQUNLQUdFIiBwa2k9IjE3NjkwNDkwNyIgcG90PSIzMDgyIiBwcmQ9IlBBQyIgcHd0PSIzMDgyIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTctMDYtMzAtMDM6MDAiIHNvdD0iMzQ3MC43MiIgc3N0PSJTUCIgc3d0PSIzNjI0LjgyIiBzemk9Ijk2MjYiLz4=",
+                    "price": 3470.72
+                }
+            ],
+            "flight": {
+                "id": 180802711,
+                "outbound": {
+                    "number": "13982",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "arrivalLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "departureDate": "2016-11-28T11:00:00.000-02:00",
+                    "duration": 175,
+                    "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico",
+                    "legs": [
+                        {
+                            "departureLocation": {
+                                "iata": "BPS",
+                                "description": "PORTO SEGURO"
+                            },
+                            "arrivalLocation": {
+                                "iata": "CGH",
+                                "description": "SÃO PAULO- CONGONHAS"
+                            },
+                            "departureDate": "2016-11-28T11:00:00.000-02:00",
+                            "arrivalDate": "2016-11-28T13:55:00.000-02:00",
+                            "flightNumber": "13982",
+                            "operatingAirline": {
+                                "code": "G3",
+                                "name": null
+                            },
+                            "duration": 175
+                        }
+                    ]
+                },
+                "inbound": {
+                    "number": "91551",
+                    "period": "D",
+                    "departureLocation": {
+                        "iata": "CGH",
+                        "description": "SÃO PAULO- CONGONHAS"
+                    },
+                    "arrivalLocation": {
+                        "iata": "BPS",
+                        "description": "PORTO SEGURO"
+                    },
+                    "departureDate": "2016-11-21T14:40:00.000-02:00",
+                    "arrivalDate": "2016-11-21T15:41:00.000-02:00",
+                    "operatingAirline": {
+                        "code": "G3",
+                        "name": null
+                    },
+                    "class": "Economico"
+                }
+            },
+            "taxes": [
+                {
+                    "code": "E",
+                    "description": "TAXA DE EMBARQUE",
+                    "amount": 57.52
+                },
+                {
+                    "code": "TAXA_5PCT_COST",
+                    "description": "TAXA_5%",
+                    "percent": 0.05,
+                    "amount": 154.1
+                }
+            ]
         }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/368612.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU2MzciIHBraT0iMTc3MDA1NjM3IiBwb3Q9IjE0NzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI5NTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2956
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ1ODciIHBraT0iMTc2OTY0NTg3IiBwb3Q9IjE2MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMyMTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3216
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2MzgiIHBraT0iMTc2OTY0NjM4IiBwb3Q9IjI0MzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjQ4NzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 4876
-    }],
-    "flight": {
-      "id": 179370633,
-      "outbound": {
-        "number": "92612",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-04T20:30:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-04T22:20:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-04T20:30:00.000Z",
-          "arrivalDate": "2016-12-04T22:20:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "92601",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "92601",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 177005432,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-05",
-    "days": 4,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU0MzIiIHBraT0iMTc3MDA1NDMyIiBwb3Q9IjExODgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIzNzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 2377,
-      "priceWithoutTax": 2376,
-      "pricePerDayWithTax": 594.25,
-      "pricePerDayWithoutTax": 594,
-      "pricePerPaxWithTax": 2377,
-      "pricePerPaxWithoutTax": 2376
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 7134335,
-      "name": "HOTEL SUEDS CABRALIA",
-      "description": "POUSADA DE PRAIA SIMPLES",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 3,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-03"
-      },
-      "location": {
-        "address": "AVENIDA - BEIRA MAR, 6",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3266",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/388009.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3266",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQzNDAiIHBraT0iMTc2OTY0MzQwIiBwb3Q9IjE3NTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM1MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3516
-    }],
-    "flight": {
-      "id": 179370633,
-      "outbound": {
-        "number": "92612",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-04T20:30:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-04T22:20:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-04T20:30:00.000Z",
-          "arrivalDate": "2016-12-04T22:20:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "92601",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "92601",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 177005732,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-05",
-    "days": 4,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU3MzIiIHBraT0iMTc3MDA1NzMyIiBwb3Q9IjEyMDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI0MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 2417,
-      "priceWithoutTax": 2416,
-      "pricePerDayWithTax": 604.25,
-      "pricePerDayWithoutTax": 604,
-      "pricePerPaxWithTax": 2417,
-      "pricePerPaxWithoutTax": 2416
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 4784341,
-      "name": "BAIA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 3,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-03"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 141",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/314087.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU4NTEiIHBraT0iMTc3MDA1ODUxIiBwb3Q9IjE1NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMxMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3136
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "6869",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ3NjciIHBraT0iMTc2OTY0NzY3IiBwb3Q9IjE2NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMzMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3336
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjU1MDAiIHBraT0iMTc2OTY1NTAwIiBwb3Q9IjE4MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM2MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3616
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2NjciIHBraT0iMTc2OTY0NjY3IiBwb3Q9IjI2NDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjUyOTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 5296
-    }],
-    "flight": {
-      "id": 179370633,
-      "outbound": {
-        "number": "92612",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-04T20:30:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-04T22:20:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-04T20:30:00.000Z",
-          "arrivalDate": "2016-12-04T22:20:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "92601",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "92601",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 177005637,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-05",
-    "days": 4,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU2MzciIHBraT0iMTc3MDA1NjM3IiBwb3Q9IjE0NzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI5NTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 2957,
-      "priceWithoutTax": 2956,
-      "pricePerDayWithTax": 739.25,
-      "pricePerDayWithoutTax": 739,
-      "pricePerPaxWithTax": 2957,
-      "pricePerPaxWithoutTax": 2956
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 3872361,
-      "name": "COSTA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA SIMPLES ",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 3,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-03"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 140",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com meia pensão",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/368612.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU1ODkiIHBraT0iMTc3MDA1NTg5IiBwb3Q9IjExMTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIyMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2236
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ1ODciIHBraT0iMTc2OTY0NTg3IiBwb3Q9IjE2MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMyMTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3216
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2MzgiIHBraT0iMTc2OTY0NjM4IiBwb3Q9IjI0MzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjQ4NzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 4876
-    }],
-    "flight": {
-      "id": 179370633,
-      "outbound": {
-        "number": "92612",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-04T20:30:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-04T22:20:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-04T20:30:00.000Z",
-          "arrivalDate": "2016-12-04T22:20:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "92601",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "92601",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 177005851,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-05",
-    "days": 4,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU4NTEiIHBraT0iMTc3MDA1ODUxIiBwb3Q9IjE1NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMxMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 3137,
-      "priceWithoutTax": 3136,
-      "pricePerDayWithTax": 784.25,
-      "pricePerDayWithoutTax": 784,
-      "pricePerPaxWithTax": 3137,
-      "pricePerPaxWithoutTax": 3136
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 4784341,
-      "name": "BAIA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 3,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-03"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 141",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com meia pensão",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/314087.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU3MzIiIHBraT0iMTc3MDA1NzMyIiBwb3Q9IjEyMDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI0MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2416
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "6869",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ3NjciIHBraT0iMTc2OTY0NzY3IiBwb3Q9IjE2NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMzMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3336
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjU1MDAiIHBraT0iMTc2OTY1NTAwIiBwb3Q9IjE4MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM2MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3616
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2NjciIHBraT0iMTc2OTY0NjY3IiBwb3Q9IjI2NDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjUyOTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 5296
-    }],
-    "flight": {
-      "id": 179370633,
-      "outbound": {
-        "number": "92612",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-04T20:30:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-04T22:20:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-04T20:30:00.000Z",
-          "arrivalDate": "2016-12-04T22:20:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "92601",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "92601",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176964587,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ1ODciIHBraT0iMTc2OTY0NTg3IiBwb3Q9IjE2MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMyMTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 3217,
-      "priceWithoutTax": 3216,
-      "pricePerDayWithTax": 402.125,
-      "pricePerDayWithoutTax": 402,
-      "pricePerPaxWithTax": 3217,
-      "pricePerPaxWithoutTax": 3216
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 3872361,
-      "name": "COSTA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA SIMPLES ",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 140",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/368612.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU1ODkiIHBraT0iMTc3MDA1NTg5IiBwb3Q9IjExMTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIyMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2236
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU2MzciIHBraT0iMTc3MDA1NjM3IiBwb3Q9IjE0NzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI5NTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2956
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2MzgiIHBraT0iMTc2OTY0NjM4IiBwb3Q9IjI0MzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjQ4NzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 4876
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176964767,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": false,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ3NjciIHBraT0iMTc2OTY0NzY3IiBwb3Q9IjE2NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMzMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 3337,
-      "priceWithoutTax": 3336,
-      "pricePerDayWithTax": 417.125,
-      "pricePerDayWithoutTax": 417,
-      "pricePerPaxWithTax": 3337,
-      "pricePerPaxWithoutTax": 3336
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 4784341,
-      "name": "BAIA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 141",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard - Compre Já",
-        "mealPlan": "Diária com café da manhã",
-        "category": "6869",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/314087.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard - Compre Já"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU3MzIiIHBraT0iMTc3MDA1NzMyIiBwb3Q9IjEyMDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI0MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2416
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU4NTEiIHBraT0iMTc3MDA1ODUxIiBwb3Q9IjE1NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMxMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3136
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjU1MDAiIHBraT0iMTc2OTY1NTAwIiBwb3Q9IjE4MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM2MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3616
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2NjciIHBraT0iMTc2OTY0NjY3IiBwb3Q9IjI2NDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjUyOTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 5296
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176964340,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQzNDAiIHBraT0iMTc2OTY0MzQwIiBwb3Q9IjE3NTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM1MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 3517,
-      "priceWithoutTax": 3516,
-      "pricePerDayWithTax": 439.625,
-      "pricePerDayWithoutTax": 439.5,
-      "pricePerPaxWithTax": 3517,
-      "pricePerPaxWithoutTax": 3516
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 7134335,
-      "name": "HOTEL SUEDS CABRALIA",
-      "description": "POUSADA DE PRAIA SIMPLES",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "AVENIDA - BEIRA MAR, 6",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3266",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/388009.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3266",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU0MzIiIHBraT0iMTc3MDA1NDMyIiBwb3Q9IjExODgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIzNzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2376
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176965500,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjU1MDAiIHBraT0iMTc2OTY1NTAwIiBwb3Q9IjE4MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM2MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 3617,
-      "priceWithoutTax": 3616,
-      "pricePerDayWithTax": 452.125,
-      "pricePerDayWithoutTax": 452,
-      "pricePerPaxWithTax": 3617,
-      "pricePerPaxWithoutTax": 3616
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 4784341,
-      "name": "BAIA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 141",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com café da manhã",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/314087.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU3MzIiIHBraT0iMTc3MDA1NzMyIiBwb3Q9IjEyMDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI0MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2416
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU4NTEiIHBraT0iMTc3MDA1ODUxIiBwb3Q9IjE1NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMxMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3136
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "6869",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ3NjciIHBraT0iMTc2OTY0NzY3IiBwb3Q9IjE2NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMzMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3336
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2NjciIHBraT0iMTc2OTY0NjY3IiBwb3Q9IjI2NDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjUyOTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 5296
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176964638,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2MzgiIHBraT0iMTc2OTY0NjM4IiBwb3Q9IjI0MzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjQ4NzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 4877,
-      "priceWithoutTax": 4876,
-      "pricePerDayWithTax": 609.625,
-      "pricePerDayWithoutTax": 609.5,
-      "pricePerPaxWithTax": 4877,
-      "pricePerPaxWithoutTax": 4876
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 3872361,
-      "name": "COSTA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA SIMPLES ",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 140",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com meia pensão",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/368612.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU1ODkiIHBraT0iMTc3MDA1NTg5IiBwb3Q9IjExMTgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjIyMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2236
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU2MzciIHBraT0iMTc3MDA1NjM3IiBwb3Q9IjE0NzgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI5NTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2956
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ1ODciIHBraT0iMTc2OTY0NTg3IiBwb3Q9IjE2MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMyMTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3216
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 176964667,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ2NjciIHBraT0iMTc2OTY0NjY3IiBwb3Q9IjI2NDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjUyOTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-    "price": {
-      "priceWithTax": 5297,
-      "priceWithoutTax": 5296,
-      "pricePerDayWithTax": 662.125,
-      "pricePerDayWithoutTax": 662,
-      "pricePerPaxWithTax": 5297,
-      "pricePerPaxWithoutTax": 5296
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 4784341,
-      "name": "BAIA CABRÁLIA HOTEL",
-      "description": "HOTEL DE PRAIA MÉDIO CONFORTO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "RUA - SIDRACK CARVALHO, 141",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Standard",
-        "mealPlan": "Diária com meia pensão",
-        "category": "3",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/314087.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Standard"
-    }],
-    "alternativeRooms": [{
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU3MzIiIHBraT0iMTc3MDA1NzMyIiBwb3Q9IjEyMDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjI0MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 2416
-    }, {
-      "mealPlan": "Diária com meia pensão",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDUiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNjMzIiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzcwMDU4NTEiIHBraT0iMTc3MDA1ODUxIiBwb3Q9IjE1NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMxMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3136
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "6869",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjQ3NjciIHBraT0iMTc2OTY0NzY3IiBwb3Q9IjE2NjgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjMzMzYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3336
-    }, {
-      "mealPlan": "Diária com café da manhã",
-      "category": "3",
-      "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSI2NjgiIGZncj0iMTc5MzcwNzg3IiBta2k9IlBrZ0NWQyBNYXJrdXAgSW1wb3J0XzE4IiBta3A9IjAuNSIgcGFja2FnZVR5cGU9IkFJUiIgcGlkPSIxNzY5NjU1MDAiIHBraT0iMTc2OTY1NTAwIiBwb3Q9IjE4MDgiIHByZD0iUEFDIiBweHM9IjMwIiBzY3Q9IkJSIiBzZHQ9IjIwMTYtMTEtMjdaIiBzb3Q9IjM2MTYuMDAiIHNzdD0iU1AiIHN6aT0iODE2Ii8+",
-      "price": 3616
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }, {
-    "id": 177942312,
-    "startDate": "2016-12-01",
-    "endDate": "2016-12-09",
-    "days": 8,
-    "type": "AIR",
-    "isAvailable": true,
-    "packageRateToken": "PHJhdGVUb2tlbiBhZ3M9IlciIGJkZT0iMjIwNyIgYnJpPSIxMDAwIiBkdGY9IjIwMTYtMTItMDkiIGR0aT0iMjAxNi0xMi0wMSIgZWN0PSJCUiIgZXN0PSJCQSIgZXppPSIxMDIwOSIgZmdyPSIxNzkzNzA3ODciIG1raT0iUGtnQ1ZDIE1hcmt1cCBJbXBvcnRfMTgiIG1rcD0iMC41IiBwYWNrYWdlVHlwZT0iQUlSIiBwaWQ9IjE3Nzk0MjMxMiIgcGtpPSIxNzc5NDIzMTIiIHBvdD0iNDE5OCIgcHJkPSJQQUMiIHB4cz0iMzAiIHNjdD0iQlIiIHNkdD0iMjAxNi0xMS0yN1oiIHNvdD0iODM5Ni4wMCIgc3N0PSJTUCIgc3ppPSI4MTYiLz4=",
-    "price": {
-      "priceWithTax": 8397,
-      "priceWithoutTax": 8396,
-      "pricePerDayWithTax": 1049.625,
-      "pricePerDayWithoutTax": 1049.5,
-      "pricePerPaxWithTax": 8397,
-      "pricePerPaxWithoutTax": 8396
-    },
-    "currency": "BRL",
-    "baseDestination": 2207,
-    "hotels": [{
-      "id": 1041476,
-      "name": "COSTA BRASILIS RESORT",
-      "description": "RESORT PADRÃO LUXO",
-      "isPreferential": false,
-      "timeSpan": {
-        "nights": 7,
-        "checkIn": "2016-12-01",
-        "checkOut": "2016-12-07"
-      },
-      "location": {
-        "address": "AVENIDA - BEIRA MAR, 2000",
-        "coordinates": {
-          "latitude": 0,
-          "longitude": 0
-        }
-      },
-      "room": {
-        "rph": 1,
-        "description": "Apartamento Superior",
-        "mealPlan": "Diária com meia pensão",
-        "category": "239",
-        "links": {
-          "thumbnailImage": {
-            "href": "http://www.cvc.com.br/images/318365.jpg"
-          }
-        }
-      },
-      "category": "Apartamento Superior"
-    }],
-    "flight": {
-      "id": 179370787,
-      "outbound": {
-        "number": "926122",
-        "period": "D",
-        "departureLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "arrivalLocation": {
-          "iata": "GRU",
-          "description": "GUARULHOS"
-        },
-        "departureDate": "2016-12-08T21:10:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-08T23:00:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "arrivalLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "departureDate": "2016-12-08T21:10:00.000Z",
-          "arrivalDate": "2016-12-08T23:00:00.000Z",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      },
-      "inbound": {
-        "number": "926011",
-        "period": "D",
-        "arrivalLocation": {
-          "iata": "BPS",
-          "description": "PORTO SEGURO"
-        },
-        "departureDate": "2016-12-01T18:50:00.000Z",
-        "duration": 110,
-        "arrivalDate": "2016-12-01T20:40:00.000Z",
-        "operatedBy": "G3",
-        "class": "Economico",
-        "legs": [{
-          "departureLocation": {
-            "iata": "GRU",
-            "description": "GUARULHOS"
-          },
-          "arrivalLocation": {
-            "iata": "BPS",
-            "description": "PORTO SEGURO"
-          },
-          "departureDate": "2016-12-01T18:50:00.000Z",
-          "arrivalDate": "2016-12-01T20:40:00.000Z",
-          "flightNumber": "926011",
-          "operatedBy": "G3",
-          "duration": 110
-        }]
-      }
-    },
-    "taxes": [{
-      "code": "TE",
-      "description": "Taxa de Embarque",
-      "percent": 63.44,
-      "amount": 1
-    }]
-  }]
+    ]
 };
 
 var rateTokenPackage = {
